@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import MineralCard from './MineralCard';
+import RaisedButton from 'material-ui/RaisedButton';
+import {Link} from 'react-router';
+import MinList from './MinList';
+import MinCard from './MinCard';
 
-injectTapEventPlugin();
 // App component - represents the whole app
 export default class App extends Component {
-
-  render() {
-    return (
+	getChildContext() {
+		return { muiTheme: getMuiTheme(baseTheme) };
+	}
+	render() {
+		return (
       <MuiThemeProvider>
-          <MineralCard/>
+				<div className="container">
+					<MinCard/>
+				</div>
       </MuiThemeProvider>
-    );
-  }
+		);
+	}
 }
+
+App.childContextTypes = {
+	muiTheme: React.PropTypes.object.isRequired,
+};
