@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-import Divider from 'material-ui/Divider';
+import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 
 
@@ -21,7 +19,7 @@ const mineral = {
 };
 
 const tableStyle={
-	fontSize: '25px',
+	fontSize: '15px',
 };
 
 
@@ -29,18 +27,18 @@ export default class MinCard extends Component {
 
 	render() {
 		return (
-      <Card>
-        <CardTitle title={mineral.minName}/>
-				<div className="row">
-				<CardMedia className="col s6" style={{height: '50%', width: '50%'}} >
+      <Card
+				style={{border:'2px black solid'}}>
+        <CardTitle>
+					<h4>{mineral.minName}</h4>
+				</CardTitle>
+				<CardMedia mediaStyle={{height: '50%', width: '50%', margin: 'auto'}}>
 				<img src="minImage.jpg"/>
 				</CardMedia>
-				<CardText className="col s6">
+				<CardText>
 					<h5>Summary</h5>
-				<Divider/>
           {mineral.summary}
         </CardText>
-			</div>
 				<Table>
 					<TableBody
 						displayRowCheckbox={false}
@@ -61,62 +59,92 @@ export default class MinCard extends Component {
 							<TableRowColumn style={tableStyle}>
 								Crystal System
 							</TableRowColumn>
-							<TableRowColumn>{mineral.crystalSystem}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.crystalSystem}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Crystal Habit</TableRowColumn>
-							<TableRowColumn>{mineral.crystalHabit}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Crystal Habit
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.crystalHabit
+							}</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Cleavage</TableRowColumn>
-							<TableRowColumn>{mineral.cleavage}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Cleavage
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.cleavage}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Luster</TableRowColumn>
-							<TableRowColumn>{mineral.luster}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Luster
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.luster}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Color</TableRowColumn>
-							<TableRowColumn>{mineral.color}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Color
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.color}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Streak</TableRowColumn>
-							<TableRowColumn>{mineral.streak}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Streak
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.streak}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Class Type</TableRowColumn>
-							<TableRowColumn>{mineral.classType}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Class Type
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.classType}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Fracture</TableRowColumn>
-							<TableRowColumn>{mineral.fracture}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Fracture
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.fracture}
+							</TableRowColumn>
 						</TableRow>
 						<TableRow
 							selectable={false}
 							>
-							<TableRowColumn>Hardness</TableRowColumn>
-							<TableRowColumn>{mineral.hardness}</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								Hardness
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{mineral.hardness}
+							</TableRowColumn>
 						</TableRow>
 					</TableBody>
 				</Table>
-        <CardActions>
-          <FlatButton label="Action1" />
-          <FlatButton label="Action2" />
-        </CardActions>
       </Card>
 		);
 	}

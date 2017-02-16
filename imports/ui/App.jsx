@@ -17,7 +17,7 @@ export default class App extends Component {
 		return (
       <MuiThemeProvider>
 				<div className="container">
-					<MinCard/>
+					<MinList/>
 				</div>
       </MuiThemeProvider>
 		);
