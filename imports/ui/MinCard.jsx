@@ -1,22 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
-
-
-const mineral = {
-	'minName': 'Acanthite',
-	'summary': 'Named after the Greek word "acanthi", meaning “thorn,” in reference to the mineral’s common crystal habit. Acanthite is a common mineral that occurs in medium- to low-temperature hydrothermal sulfide veins and in secondary enrichment zones. It can be found in association with silver, pyrargyrite, proustite, polybasite, stephanite, aguilarite, galena, chalcopyrite, sphalerite, calcite, and quartz. A widespread mineral, but fine crystals can be found in localities in the Czech Republic, Germany, Mexico, the United States, Canada, and Chile. Found in silver rich deposits as lead grey to black tarnished, soft, metallic pseudocubic crystals or elongatic prismatic crystals with rounded corners commonly associated with Silver. Sectile and easily cut by a knife.',
-	'formula': 'Ag2S',
-	'crystalSystem': 'Monoclinic',
-	'crystalHabit': 'Blocky, Skeletal, Arborescent',
-	'cleavage': 'poor to none',
-	'luster': 'Metallic',
-	'color': 'lead gray, gray, iron black',
-	'streak': 'shining black',
-	'classType': 'Monoclinic - Prismatic',
-	'fracture': 'Sectile',
-	'hardness': '2-2.5'
-};
 
 const tableStyle={
 	fontSize: '15px',
@@ -26,12 +10,11 @@ const tableStyle={
 export default class MinCard extends Component {
 
 	render() {
+		const mineral = this.props.mineral;
 		return (
       <Card
 				style={{border:'2px black solid'}}>
-        <CardTitle>
-					<h4>{mineral.minName}</h4>
-				</CardTitle>
+
 				<CardMedia mediaStyle={{height: '50%', width: '50%', margin: 'auto'}}>
 				<img src="minImage.jpg"/>
 				</CardMedia>
@@ -149,3 +132,7 @@ export default class MinCard extends Component {
 		);
 	}
 }
+
+MinCard.propTypes = {
+	mineral: PropTypes.object.isRequired,
+};
