@@ -1,11 +1,13 @@
 import React, { Component, PropTypes } from 'react';
+import {Link} from 'react-router';
+//MUi stuff
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {List} from 'material-ui/List';
+import AppBar from 'material-ui/AppBar';
 
 //import {Link} from 'react-router';
-import MinList from './MinList';
+import MinList from './listModule/MinList';
 const minerals = [{
 	'_id': 0,
 	'minName': 'Acanthite',
@@ -70,11 +72,13 @@ export default class App extends Component {
 	render() {
 
 		return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={getMuiTheme(baseTheme)}>
 				<div className="container">
-					<List>
-						{this.renderMinerals()}
-					</List>
+					<AppBar
+						showMenuIconButton={false}
+						title="Mineral ID"
+					/>
+					<Link to="/list"className="waves-effect waves-light btn light-blue darken-3">Mineral List</Link>
 				</div>
       </MuiThemeProvider>
 		);

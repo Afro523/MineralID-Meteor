@@ -1,4 +1,11 @@
 module.exports = {
+	"parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
   "env": {
     "browser": true,
     "commonjs": true,
@@ -6,13 +13,6 @@ module.exports = {
     "node": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
   "plugins": [ "react" ],
   "rules": {
     "indent": ["error", "tab"],
