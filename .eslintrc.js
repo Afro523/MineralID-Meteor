@@ -16,7 +16,6 @@ module.exports = {
   "plugins": [ "react" ],
   "rules": {
     "indent": ["error", "tab"],
-    "linebreak-style": ["error","windows"],
     "quotes": ["error","single"],
     "semi": ["error","always"],
     "no-console": ["warn", { "allow": ["info", "error"] }]

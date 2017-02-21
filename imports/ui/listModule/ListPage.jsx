@@ -7,6 +7,7 @@ import {List} from 'material-ui/List';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import {Link} from 'react-router';
 
 import MinList from './MinList';
 const minerals = [{
@@ -75,7 +76,7 @@ export default class ListPage extends Component {
 		return (
 				<div className="container">
 					<AppBar
-						iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
 					<List>
