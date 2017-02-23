@@ -3,26 +3,21 @@ import {ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-
 import MinCard from './MinCard';
 
 const customContentStyle = {
-	width: '85%',
+	width: '95%',
 	maxWidth: 'none',
-	height: '85%',
-	maxHeight: 'none'
 };
 
 export default class MinList extends Component {
 	constructor(props) {
 		super(props);
-		//Setting up state
+		//Setting up state for dialog
 		this.state = {
 			open:false
 		};
 	}
-
-
 
 	handleOpen() {
 		this.setState({open: true});
@@ -32,8 +27,8 @@ export default class MinList extends Component {
 		this.setState({open: false});
 	}
 
-
 	render() {
+		const mineral =  this.props.mineral;
 		const actions = [
 			<FlatButton
         label="Close"
@@ -44,13 +39,13 @@ export default class MinList extends Component {
 		return (
 			<div>
 				<ListItem
-					primaryText={this.props.mineral.minName}
-					leftAvatar={<Avatar src="minImage.jpg"/>}
-					secondaryText={this.props.mineral.formula}
+					primaryText={mineral.minName}
+					leftAvatar={<Avatar src={'./img/'+mineral.minName+'.jpg'}/>}
+					secondaryText={mineral.formula}
 					onTouchTap={this.handleOpen.bind(this)}
 				/>
 				<Dialog
-					title={this.props.mineral.minName}
+					title={mineral.minName}
 					leftAvatar={<Avatar src="minImage.jpg"/>}
 					actions={actions}
 					modal={false}
@@ -59,14 +54,14 @@ export default class MinList extends Component {
 					autoScrollBodyContent={true}
 					contentStyle={customContentStyle}
 				>
-				<MinCard mineral={this.props.mineral}/>
+				<MinCard mineral={mineral}/>
 				</Dialog>
 		</div>
 		);
 	}
 }
 
-MinList.PropTypes ={
-	mineral: PropTypes.object.isRequired,
-	minName: PropTypes.string.isRequired,
+MinList.propTypes ={
+	minerals: PropTypes.array.isRequired,
+	mineral : PropTypes.object.isRequired,
 };
