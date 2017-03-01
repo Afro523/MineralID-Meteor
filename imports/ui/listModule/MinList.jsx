@@ -1,9 +1,15 @@
+//React
 import React, {Component, PropTypes} from 'react';
+
+//Components
+import MinCard from './MinCard';
+
+//MUI
 import {ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import MinCard from './MinCard';
+
 
 const customContentStyle = {
 	width: '95%',

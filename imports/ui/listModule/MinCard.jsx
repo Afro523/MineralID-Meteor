@@ -1,4 +1,7 @@
+//React
 import React, {Component, PropTypes} from 'react';
+
+//MUI
 import {Card, CardMedia, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 
@@ -8,6 +11,19 @@ const tableStyle={
 
 
 export default class MinCard extends Component {
+
+	setHardness(arr){
+		if(arr.length == 1){
+			return arr[0];
+		} else {
+			return arr[0] +'-'+ arr[1];
+		}
+	}
+
+	capWord(str){
+		//start of string or whitespace character followed by a letter
+		return str.replace(/(^|\s|-)[a-z]/g,function(f){return f.toUpperCase();});
+	}
 
 	render() {
 		const mineral = this.props.mineral;
@@ -38,10 +54,20 @@ export default class MinCard extends Component {
 							selectable={false}
 							>
 							<TableRowColumn style={tableStyle}>
+								Category
+							</TableRowColumn>
+							<TableRowColumn style={tableStyle}>
+								{this.capWord(mineral.category)}
+							</TableRowColumn>
+						</TableRow>
+						<TableRow
+							selectable={false}
+							>
+							<TableRowColumn style={tableStyle}>
 								Crystal System
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.crystalSystem}
+								{this.capWord(mineral.crystalSystem)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -51,7 +77,7 @@ export default class MinCard extends Component {
 								Crystal Habit
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.crystalHabit}
+								{this.capWord(mineral.crystalHabit)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -61,7 +87,7 @@ export default class MinCard extends Component {
 								Cleavage
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.cleavage}
+								{this.capWord(mineral.cleavage)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -71,7 +97,7 @@ export default class MinCard extends Component {
 								Luster
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.luster}
+								{this.capWord(mineral.luster)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -81,7 +107,7 @@ export default class MinCard extends Component {
 								Color
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.color}
+								{this.capWord(mineral.color)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -91,7 +117,7 @@ export default class MinCard extends Component {
 								Streak
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.streak}
+								{this.capWord(mineral.streak)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -101,7 +127,7 @@ export default class MinCard extends Component {
 								Class Type
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.classType}
+								{this.capWord(mineral.classType)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -111,7 +137,7 @@ export default class MinCard extends Component {
 								Fracture
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.fracture}
+								{this.capWord(mineral.fracture)}
 							</TableRowColumn>
 						</TableRow>
 						<TableRow
@@ -121,7 +147,7 @@ export default class MinCard extends Component {
 								Hardness
 							</TableRowColumn>
 							<TableRowColumn style={tableStyle}>
-								{mineral.hardness}
+								{this.setHardness(mineral.hardness)}
 							</TableRowColumn>
 						</TableRow>
 					</TableBody>

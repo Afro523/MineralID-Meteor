@@ -14,7 +14,9 @@ const MineralSchema = new SimpleSchema ({
 	streak: {type: String},
 	classType : {type: String},
 	fracture: {type:String},
-	hardness: {type:String},
+	hardness: {type:Array},
+	'hardness.$':{type:Number},
+	category: {type:String},
 });
 
 Minerals.attachSchema(MineralSchema);
