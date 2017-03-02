@@ -1,9 +1,7 @@
 //React
 import React, {Component, PropTypes} from 'react';
-
 //Components
 import MinCard from './MinCard';
-
 //MUI
 import {ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';

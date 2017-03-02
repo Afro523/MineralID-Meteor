@@ -10,7 +10,6 @@ import {Meteor} from 'meteor/meteor';
 //Components and API
 import {Minerals} from '../../api/minerals';
 import MinList from './MinList';
-
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -25,6 +24,7 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 	}
+
 	getChildContext() {
 		return { muiTheme: getMuiTheme(baseTheme) };
 	}
@@ -32,10 +32,11 @@ export default class ListPage extends Component {
 	getMeteorData(){
 		const handle = Meteor.subscribe('minerals');
 
+		const minData = Minerals.find({minName:{$regex: '^A'}}).fetch();
 		return {
 			ready: handle.ready(),
 			//minerals: Minerals.find({}, {sort: {name: 1}}).fetch(),
-			minerals: Minerals.find({}, {limit:101}).fetch(),
+			minerals: minData,
 		};
 	}
 
@@ -55,6 +56,7 @@ export default class ListPage extends Component {
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
+					{/*<SortBy/>*/}
 					<div style={{position: 'relative'}}>
 						<CircularProgress
 							size={80}
@@ -72,6 +74,7 @@ export default class ListPage extends Component {
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
+					{/*<SortBy onClick={this.handleOpen()} />*/}
 					<List>
 						{	this.renderMinerals()	}
 					</List>
