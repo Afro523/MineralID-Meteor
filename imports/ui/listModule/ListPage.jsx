@@ -23,23 +23,32 @@ export default class ListPage extends Component {
 
 	constructor(props) {
 		super(props);
+		this.changeContent = this.changeContent.bind(this);
 	}
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(baseTheme) };
 	}
 
+	onComponentWillMount(){
+		this.setState({currChar : 'A'});
+	}
+
 	getMeteorData(){
 		const handle = Meteor.subscribe('minerals');
 
-		const minData = Minerals.find({minName:{$regex: '^A'}}).fetch();
+		const minData = this.getMinFromDb(this.state.currChar);
 		return {
 			ready: handle.ready(),
 			//minerals: Minerals.find({}, {sort: {name: 1}}).fetch(),
 			minerals: minData,
 		};
 	}
-
+	getMinFromDb(letter){
+		const minLetter = letter;
+		const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+		return minData;
+	}
 	renderMinerals () {
 		return  this.data.minerals.map((mineral) => (
 
