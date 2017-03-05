@@ -5,18 +5,24 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+import Drawer from 'material-ui/Drawer';
 
 export default class SortBy extends React.Component {
-
-
-	handleOpen(){
-		this.setState({open: true});
+	constructor(props) {
+		super(props);
+		this.state = {open: false};
+		this.handleToggle = this.handleToggle.bind(this);
+		this.submitFilter = this.submitFilter.bind(this);
 	}
 
-	handleClose(){
+
+	handleToggle(){
+		this.setState({open: !this.state.open});
+	}
+
+	submitFilter(){
 		this.setState({open: false});
 	}
-
 	render() {
 		const abc = [
 			'-','A', 'B', 'C', 'D', 'E', 'F', 'G',
@@ -34,55 +40,35 @@ export default class SortBy extends React.Component {
 			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
 		}
 		return (
-      <div>
-				<div>
-					<nav className="nav-wrapper">
-						<a className="brand-logo">Filters</a>
-						<ul className="right">
-							<li>
-								Letter
-							</li>
-							<li>
-							<DropDownMenu
-								label={'Letter'}
-								maxHeight={300}
-								value={'A'}
-								onChange={this.handleChange}
-								className="dropdown-button"
-								>
-									{menItem}
-							</DropDownMenu>
-						</li>
-						<li>
-							{'Hardness: Min'}
-						</li>
-						<li>
-							<DropDownMenu
-								maxHeight={300}
-								value={'0'}
-								onChange={this.handleChange}
-								>
-									{minMenuItem}
-							</DropDownMenu>
-						</li>
-						<li>{'-'}</li>
-						<li>
-							Max
-						</li>
-						<li>
-							<DropDownMenu
-								maxHeight={300}
-								value={'8'}
-								onChange={this.handleChange}
-								>
-										{minMenuItem}
-							</DropDownMenu>
-						</li>
-						</ul>
-					</nav>
-				</div>
-
-			</div>
+			<div>
+        <RaisedButton
+          label="Toggle Drawer"
+          onTouchTap={this.handleToggle}
+        />
+        <Drawer docked={false} open={this.state.open}>
+					<h3>Filters:</h3>
+					<MenuItem>
+					Hardness: Low-High
+					</MenuItem>
+					<DropDownMenu
+						maxHeight={300}
+						value={'0'}
+						onChange={this.handleChange}
+						>
+							{minMenuItem}
+					</DropDownMenu>
+					<DropDownMenu
+						maxHeight={300}
+						value={'8'}
+						onChange={this.handleChange}
+						>
+							{minMenuItem}
+					</DropDownMenu>
+					<button className="btn waves-effect waves-light" onClick={this.submitFilter}>Submit
+						<i className="material-icons right">send</i>
+					</button>
+        </Drawer>
+      </div>
 		);
 	}
 }

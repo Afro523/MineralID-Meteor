@@ -11,6 +11,7 @@ import {Meteor} from 'meteor/meteor';
 import {Minerals} from '../../api/minerals';
 import MinList from './MinList';
 import Filter from './Filter';
+import SortBy from './SortBy';
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -120,7 +121,7 @@ export default class ListPage extends Component {
 							mohMin={this.state.mohMin}
 							mohMax={this.state.mohMax}
 						/>
-					{/*<SortBy onClick={this.handleOpen()} />*/}
+						<SortBy/>
 					<List>
 						{	this.renderMinerals()	}
 					</List>
