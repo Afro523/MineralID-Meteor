@@ -15,7 +15,7 @@ export default class Filter extends Component {
 		for (let i = 0; i< abc.length; i++){
 			menItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
 		}
-		const mohsScale = ['0','1','2','3','4','5','6','7','8'];
+		const mohsScale = ['0','1','2','3','4','5','6','7','8', '9'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
 			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
