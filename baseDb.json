@@ -45,7 +45,7 @@
         5,
         6
     ],
-    "category": "Oxides Spinel group"
+    "category": "Oxides"
 }, {
     "minName": "Gedrite",
     "summary": "Bluish black tightly compact crystals.",
@@ -278,7 +278,7 @@
         6,
         7
     ],
-    "category": "Sorosilicates Epidote group"
+    "category": "Sorosilicates"
 }, {
     "minName": "Biehlite",
     "summary": "Snow white long acicular sprays.",
@@ -463,7 +463,7 @@
     "classType": "Hexagonal - Dipyramidal",
     "fracture": "Brittle - Conchoidal",
     "hardness": [5],
-    "category": "Phosphate Apatite group"
+    "category": "Phosphates"
 }, {
     "minName": "Barbertonite",
     "summary": "Named after the type locality in the Barberton district in the Mpumamanga Province of South Africa. Barbertonite is a rare mineral with additional localities in Australia, New Zealand, Scotland, and the Czech Republic. It occurs as an alteration product of chromite in serpentinite in association with stichtite, chromite, and antigorite. Barbertonite has a distinct greasy feel to it.",
@@ -665,7 +665,7 @@
     "classType": "Triclinic - Pedial",
     "fracture": "",
     "hardness": [3],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Celestine",
     "summary": "Named in reference to the mineral’s usual pale blue color after the Latin word caelestis, meaning “celestial.” Celestine is the most common strontium mineral and can be found in many widespread localities all over the world. Particularly large and fine crystals can be found in the United States, most notably at the Crystal Cave in Ohio which is the world’s largest geode, as well as in Canada, Mexico, Italy, Germany, England, Norway, Egypt, and Madagascar. Celestine occurs of sedimentary origin as diagenetic or fissure and cavity fillings, as well as in hydrothermal veins and in volcanic rocks. Celestine is the strontium analogue of baryte.",
@@ -926,7 +926,7 @@
     "classType": "Trigonal - Trapezohedral",
     "fracture": "Conchoidal",
     "hardness": [6.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Bastnasite-(Ce)",
     "summary": "Named for the type locality at the Bastnas mines in Vastmanland, Sweden and for the dominance of cerium over the other rare earth elements in the composition. Bastasite-Ce is an uncommon mineral, but is the most common rare earth bearing mineral. It is usually a hydrothermal mineral although it is possible to be a primary mineral as well. It can be found in granite, alkali syenites and pegmatites, carbonatites, contact metamorphic deposits, and as a detrital mineral in placer deposits. Localities include in, additionally, France, Turkey, Afghanistan, Pakistan, Madagascar, Burundi, Zambia, the United States, Canada, China, and several others. Bastnasite-Ce has a dark red cathodoluminescence. It is strongly piezoelectric and generated a charge in response to pressure.",
@@ -1069,7 +1069,7 @@
         3.5,
         4
     ],
-    "category": "Uranium silicate"
+    "category": "Silicates"
 }, {
     "minName": "Agardite-(Y)",
     "summary": "Beautiful bluish green acicular sprays to 2mm.",
@@ -1324,7 +1324,7 @@
         2.5,
         3.5
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Dickinsonite",
     "summary": "Now considered a synonym of Dickinsonite-(KMnNa), this mineral was named after Reverend John William Dickinson of Connecticut, USA who was an early collector of Branchville minerals where the mineral gets its type locality from the Fillow quarry in Branchville, Connecticut. Dickinsonite is a rare mineral that can be found in additional USA localities including here in the Black Hills of South Dakota at the Nickel Plate mine, as well as in Rwanda, Namibia, the Czech Republic, and Australia. Associated minerals at the type locality include eosphorite, triploidite, lithiophilite, rhodochrosite, eddingite, and fairfieldite.",
@@ -1380,7 +1380,7 @@
     "classType": "",
     "fracture": "",
     "hardness": [5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Dzhalindite",
     "summary": "1mm \"stringer\" of orange microcrystalline Dzalindite. It is sometimes a psuedomorph after Indite in Cassiterite. That is not the case with this specimen. Identified by Dr. Igor Pekov.",
@@ -1453,7 +1453,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "Brittle",
     "hardness": [3],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Beryl",
     "summary": "Named for the Greek beryllos, now meaning “beryl,” but previously used in reference to antiquated blue-green stones which may or may not have been Beryl. Beryl is a common mineral that occurs in granite, granite pegmatites, nepheline syenite, mafic metamorphic rocks, hydrothermal veins, and in vugs in rhyolite. Thousands of localities but fine specimens come from localities in Russia, Ukraine, Mozambique, Madagascar, Nigeria, Zimbabwe, Colombia, Brazil, Pakistan, Afghanistan, and the United States. Minerals associated with Beryl include quartz, feldspar, muscovite, lepidolite, spodumene, amblygonite, tourmaline, topaz, cassiterite, columbite, and tantalite. Popular varieties of Beryl that are prized for gemstones are Emerald, Aquamarine, and Morganite.",
@@ -1495,7 +1495,7 @@
     "classType": "Trigonal - Hexagonal Scalenohedral",
     "fracture": "Tough",
     "hardness": [9],
-    "category": "Oxide – Hematite group"
+    "category": "Oxide"
 }, {
     "minName": "Pyrrhotite",
     "summary": "Named after the Greek pyrrhos, meaning “russet,” which is a dark brown with hints of red-orange similar to the color of the mineral. Pyrrhotite has thousands of localities and occurs in igneous rocks as magmatic segregations and can also be found in pegmatites, hydrothermal and replacement veins, sedimentary rock, metamorphic rock, and in iron meteorites. Pyrrhotite is magnetic, however the degree to which it is magnetic varies inversely with the iron content.",
@@ -1509,7 +1509,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Uneven",
     "hardness": [3.5],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Digenite",
     "summary": "A cabinet specimen with a deep bluish black, metallic 2.5cm thick vein shooting up through sulfide matrix.",
@@ -1579,7 +1579,7 @@
     "classType": "Isometric - Hexoctahedral",
     "fracture": "Uneven",
     "hardness": [5.5],
-    "category": "Oxides Spinel group"
+    "category": "Oxides"
 }, {
     "minName": "Gersdorffite",
     "summary": "Kind of an odd-ball for Montana and a pegmatite. But solid choice piece. Some alterations to secondary nickel minerals.",
@@ -1624,7 +1624,7 @@
     "classType": "Trigonal - Ditrigonal Pyramidal",
     "fracture": "Brittle - Conchoidal",
     "hardness": [5.5],
-    "category": "Silicate , Cyclosilicate"
+    "category": "Cyclosilicate"
 }, {
     "minName": "Dolerophanite",
     "summary": "Dolerophanite was recently found at this volcano along with a host of new minerals. These crystals are perhaps some of the finest found. The crystals are about 1-2mm in size and mostly euhedral as seen. The green is Euchlorine.",
@@ -1736,7 +1736,7 @@
     "classType": "Isometric - Hexoctahedral",
     "fracture": "Sub Conchoidal",
     "hardness": [5.5],
-    "category": "Oxides Spinel group"
+    "category": "Oxides"
 }, {
     "minName": "Lalondeite",
     "summary": "Named in honor of Andre Lalonde, a professor in the Department of Earth Sciences at the University of Ottawa in Canada for his work in alkaline intrusions and mica schists. Lalondeite can be found only at its type locality in the Poudrette quarry at Mont Saint-Hilaire in Quebec, Canada where it occurs as a late-stage, low-temperature hydrothermal mineral. Lalondeite can have a medium to strong fluorescence of violet-blue under mid-range ultraviolet wavelengths.",
@@ -1868,7 +1868,7 @@
     "classType": "Isometric - Hexoctahedral",
     "fracture": "Brittle - Uneven",
     "hardness": [5.5],
-    "category": "Oxides Spinel group"
+    "category": "Oxides"
 }, {
     "minName": "Magnesiohastingsite",
     "summary": "Named for the magnesium content in the composition and for its relationship to hastingsite. Magnesiohastingsite is an uncommon mineral that is found in alkaline basalts, in andesites, latites, tephrites, and tuffs, and in carbonatites. Localities include Austria, the Czech Republic, Germany, Sweden, Russia, Greenland, Canada, the United States, and Zimbabwe.",
@@ -2036,7 +2036,7 @@
     "classType": "Monoclinic",
     "fracture": "",
     "hardness": [2],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Andorite",
     "summary": "Tabular crystal with striations and bronze iridescence. The needles are apparently Zinkenite and there are also tiny yellow crystals which look like sulfur, but may be Cervantite. .",
@@ -2751,7 +2751,7 @@
     "classType": "Trigonal - Rhombohedral",
     "fracture": "Brittle - Conchoidal",
     "hardness": [3.5],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Dioptase",
     "summary": "Named after the Greek words dia mesou, which means “through,” and optasia, for “vision,” in reference to the ability of the viewer to look through the mineral and see the internal cleavage directions. Found in oxidixed copper deposits, Dioptase is a somewhat uncommon mineral that can be found in localities in Kazakhstan, Romania, the United States, Argentina, Chile, the Congo Republic, the Democratic Republic of the Congo, Namibia, Angola, Zimbabwe, and many other min or localities. Dioptase is pyroelectric and will generate a charge in response to temperature changes.",
@@ -2807,7 +2807,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "",
     "hardness": [6.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Sulphur",
     "summary": "Most native sulphur is found in sedimentary rocks, where large deposits are formed by reduction of sulfates, often biogenically. Sulfur is a common sublimate from volcanic gases associated with realgar, cinnabar and other minerals. It is also found in some vein deposits and as an alteration product of sulphide minerals. ",
@@ -3231,7 +3231,7 @@
         5,
         5.5
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Devilline",
     "summary": "Named for Henri Etienne Sainte-Claire Deville, who was a French chemist of the 1800’s whose most important work was in inorganic and thermal chemistry and had many experiments in the artificial preparation of minerals. Devilline is an uncommon mineral that occurs in localities in England, Slovakia, Germany, Italy, Namibia, Japan, New Zealand, the United States and many others. It forms as a secondary mineral in oxidized copper sulfide deposits and can be found of post-mine origin in dumps and on timbers. Devilline is soluble in water.",
@@ -3422,7 +3422,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Conchoidal - Uneven",
     "hardness": [5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Descloizite",
     "summary": "Named after Alfred Lewis Oliver Legrand Des Cloizeaux (1817-1897), a Professor of Mineralogy at the University of Paris in France who was the first to describe the mineral. Occurs widespread in the oxidation zone of hydrothermal ore deposits rich in lead and zinc. Crystals often as flaming orange red drusy crusts and micro thin platy crystals. Can occur in beautiful dark chocolate plumose aggregates with dipyramidal crystals in the centimeter range.",
@@ -3509,7 +3509,7 @@
     "classType": "Tetragonal - Ditetragonal Dipyramidal",
     "fracture": "Flexible",
     "hardness": [2, 2.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Clinoclase",
     "summary": "Named after the Greek words for “incline,” klino, and “fraction,” klasma, in reference to the inclined cleavage planes. Clinclase is an uncommon mineral that occurs in small amounts in oxidized arsenic-rich hydrothermal base metal deposits. Localities for Clinoclase include in England, France, Germany, Italy, Slovakia, the United States, Argentina, Chile, South Africa, Japan, and Australia, among several other minor localities. Associated minerals include olivenite, cornwallite, cornubite, and conichalcite.",
@@ -3568,7 +3568,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Uneven",
     "hardness": [3],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Cobaltarthurite",
     "summary": "Named as the cobalt analogue of the mineral arthurite. Cobaltarthurite is a rare mineral that occurs on at the type locality at the Dolores prospect in Murcia, Spain and one other at Bou Azzer in Morocco. It occurs at the type locality in pellet-like spheres of straw-colored radial aggregates in association with olivenite, jarosite, and other oxidation products within a sulfide-depleted lens.",
@@ -3596,7 +3596,7 @@
     "classType": "Monoclinic",
     "fracture": "",
     "hardness": [4],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Hilairite",
     "summary": "Named for the type locality at Mont Saint-Hilaire in Quebec, Canada. Hilairite is a rare mineral that occurs in additional localities in Canada, Norway, Russia, and Brazil as well as newer localities in Namibia, Portugal, and South Africa. At its type locality if forms “in miarolitic cavities and altered pegmatite dikes in nepheline syenite in an intrusive alkalic gabbro-syenite complex.”",
@@ -4393,7 +4393,7 @@
         5.5,
         6.5
     ],
-    "category": "Oxides Spinel group"
+    "category": "Oxides"
 }, {
     "minName": "Jarosite",
     "summary": "Named after the Barranco del Jaroso in Spain, from which the first studied specimens came from. Jarosite is a widespread and relatively common mineral that occurs “as a secondary mineral in oxidized portions of sulfide-bearing rocks, typically altering from pyrite” as well as less commonly in low-temperature hydrothermal deposits, including those around hot springs, as a primary mineral. Localities for well studies Jarosite specimens include in Spain, the Czech Republic, Germany, Greece, the United States, Mexico, Chile, and Russia. Jarosite is strongly pyroelectric, generates a charge in response to heat.",
@@ -4469,7 +4469,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "",
     "hardness": [3.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Hibbingite",
     "summary": "Rusty red 1mm crusts of Hibbingite on the small piece of drill core.",
@@ -4570,7 +4570,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Sectile",
     "hardness": [2.5, 3],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Linarite",
     "summary": "Named after the type locality at Linares in Spain. Linarite is a common mineral with hundreds of localities worldwide including in, additionally, Italy, England, Scotland, Japan, Australia, the United States, and Namibia among many others. Although common and widespread, it is an uncommon mineral at its localities and is found in only small amounts as a secondary mineral in oxidized lead-copper deposits.",
@@ -4780,7 +4780,7 @@
     "classType": "Hexagonal - Pyramidal",
     "fracture": "",
     "hardness": [3],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Klebelsbergite",
     "summary": "Named to honor the former Hungarian Minister of Education, Kuno Klebelsberg. Klebelsbergite is a rare mineral that occurs as “an alteration product of stibnite in antimony deposits.” It can be found in Romania, Italy, France, Hungary, the United States, Slovakia, Japan, and Portugal, among a couple others. Klebelsbergite can be weakly magnetic if there is an impurity of iron present in the mineral.",
@@ -5111,7 +5111,7 @@
     "classType": "Trigonal - Rhombohedral",
     "fracture": "",
     "hardness": [2.5],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Argyrodite",
     "summary": "Excellent thumbnail piece with thick exceptional, well formend stacked pseudo-orthrhombic black crystals of Argyrodite to 4mm associated with orange Sphalerite.",
@@ -5436,7 +5436,7 @@
         5.5,
         6
     ],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Luneburgite",
     "summary": "Mass of compact pseudohexagonal platelets. From historic specimen according to the Gebhard label.",
@@ -5610,7 +5610,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "",
     "hardness": [3.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Aenigmatite",
     "summary": "Named for the Greek word ainigma, meaning “a riddle” and also the root of the common word enigma, in reference to the mineral’s, at the time, unknown or uncertain chemical composition. Aenigmatite is an uncommon mineral that is often a primary constituent of sodium-bearing alkalic volcanic rocks, pegmatites, and other igneous rocks that are silica-poor. Localities for Aenigmatite include in Greenland, Russia, Norway, Italy, the United States, Australia, and New Zealand, among many others.",
@@ -6385,7 +6385,7 @@
     "classType": "Isometric - Hexoctahedral",
     "fracture": "Uneven",
     "hardness": [7.5],
-    "category": "Oxides Spinel group"
+    "category": "Oxides"
 }, {
     "minName": "Spodumene",
     "summary": "Named in reference to its color and, some argue, its appearance after being ignited, after the Greek spodoumenos, meaning “burnt to ashes.” The gem varieties of Spodumene, hiddenite and kunzite, are named for mineralogist William E. Hidden and a former mineralogist at Tiffany & Co., George Frederick Kunz, respectively. Interestingly, the town of Hiddenite in North Carolina, USA is named after the mineral hiddenite and not the other way around, as many believe. Spodumene, an important lithium ore, is a common mineral in lithium-bearing granite pegmatites and can also be found in aplites and gneisses. Spodumene has hundreds of localities, but one of the more interesting ones is right here in the Black Hills of South Dakota. The Etta mine near the town of Keystone is known for its giant crystals of spodumene.  Crystals of over 14 meters (47 feet) have been reported!",
@@ -6399,7 +6399,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Splintery",
     "hardness": [6.5],
-    "category": "Silicate , pyroxene"
+    "category": "Silicates"
 }, {
     "minName": "Volborthite",
     "summary": "Named for Alexander Fedorovich von Volborth, the Russian paleontologist who first observed the mineral. Volborthite is an uncommon secondary mineral that is found in oxidized zones of hydrothermal Vanadium-bearing deposits and is associated with brochantite and malachite, among others. Despite its uncommonness, Volborthite can be found in many localities worldwide.",
@@ -6618,7 +6618,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "",
     "hardness": [4],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Botryogen",
     "summary": "Deep orange magnesium-iron hydrous sulfate originally found at this locality, Falun, Sweden. The name is taken from its usual botryoidal habit in allusion to its habit being shaped much like a bunch of grapes.",
@@ -6750,7 +6750,7 @@
     "classType": "Hexagonal - Dipyramidal",
     "fracture": "Brittle - Conchoidal",
     "hardness": [3],
-    "category": "Vanadate Apatite group"
+    "category": "Vanadate"
 }, {
     "minName": "Plumbogummite",
     "summary": "Light blue coating of Plumbogummite on light green Pyromorphite. Tiny crystals of yellow Mimetite have overgrown on the Pyromorphite/Plumbogummite. Yellowish light blue spheroidal crystals to about 0.5mm scattered about Quartz.Rich coat of Plumbogummite with tiny less than 1mm tufts of prismatic yellow Pyromorphite.Sky blue scales of Plumbogummite across matrix with tiny, yellow, Wulfenite crystals to 0.5mm and yellow Mimetite.Dark bluish green botryoidal Plumbogummite.",
@@ -6955,7 +6955,7 @@
         6,
         6.5
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Pyrargyrite",
     "summary": "Named after the Greek pyr, for “fire,” and argyros, for “silver,” in reference to the color and silver in the composition. AN important silver ore, Pyrargyrite can be found in hydrothermal veins both as a primary and secondary mineral and can also be found in oxidized silver deposits. There are hundreds of localities, a few include Germany, Spain, the Czech Republic, the United States, Canada, Bolivia, Mexico, Peru, Chile, and Australia.",
@@ -6986,7 +6986,7 @@
         3.5,
         4
     ],
-    "category": "Arsenates Apatite group"
+    "category": "Arsenates"
 }, {
     "minName": "Molybdenite",
     "summary": "Named for the molybdenum content which in turn derives its name from the Greek word molybdos, meaning “lead,” in allusion to its lead-like color and metallic luster. Molybdeinte is a common, widespread mineral and is the most abundant molybdenum-bearing mineral that occurs as excellent crystals in localities in the United States, Canada, Norway, Russia, Germany, Morocco, Australia, and Japan. It occurs on the rare occasion in meteorites, but more commonly in contact metamorphosed limestone, pegmatites, granites, aplites, disseminated prophry deposits that sometimes are associated with major copper mineralization, and in high-temperature hydrothermal vein deposits. Molybdenite has a notably greasy feel to it.",
@@ -7306,7 +7306,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle - Splintery",
     "hardness": [4],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Pretulite",
     "summary": "Named after the Pretu Mountain, or Pretualpe, in Austria where the mineral was first discovered. Pretulite is a rare mineral that forms in lazulite-quartz veins in phyllite-mica schist at its type locality in Austria at the Höllkogel Mountains. Pretulite may have additional localities in the Czech Republic, France, and Norway, according to mindat. Pretulite will weakly fluoresce an orange color under short-wave ultraviolet light and produces a bright blue cathodoluminesence.",
@@ -7348,7 +7348,7 @@
     "classType": "Tetartoidal (23)",
     "fracture": "",
     "hardness": [-1],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Weberite",
     "summary": "Theobald Weber is the namesake of Weberite as one of the developers of the Ivigut cryolite deposit in Greenland. Weberite occurs in cryolite deposits. Found in only a few locations worldwide: Greenland, the USA in Colorado and Nevada, Australia, Ukraine, among a couple others. Weberite is somewhat soluble in water.",
@@ -7418,7 +7418,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Splintery",
     "hardness": [3.5],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Richterite",
     "summary": "Theodor Richter, a German mineralogist, professor, and co-doscoverer of indium, is the namesake of the mineral Richterite. Richterite is found in metamorphosed limestones, igneous rocks, carbonatites and also in meteorites. Many localites, historic localities and localities for good specimens include Sweden, Greenland, Russia, the USA, Canada, Brazil, Japan, and Madagascar.",
@@ -7637,7 +7637,7 @@
         3.5,
         4
     ],
-    "category": "Phosphate Apatite group"
+    "category": "Phosphates"
 }, {
     "minName": "Pyroaurite",
     "summary": "Named after the golden yellow color it develops upon exposure to hear, Pyroaurite is named for the Greek pyr, meaning “fire,” and aurum, meaning “gold.” Few localities worldwide including Sweden, Italy, Austria, Scotland, Russia, Japan, Canada, the USA, and South Africa, among others. Pyroaurite occurs as an authigenic weathering product and in hydrothermal veins, serpentinite, and ophiolite.",
@@ -7668,7 +7668,7 @@
         1.5,
         2
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Rhabdophane-(Ce)",
     "summary": "Named for the Greek rhabdos, meaning “rod,” and phainesthai, meaning “to appear,” in reference to the bands that appear in the emission spectrum, and for its cerium dominance over the other rare earth elements in the species. A rare mineral found in ore deposits of hydrothermal origin. Localities include England, Germany, Greenland, Canada, the USA, Russia, Ukraine, and Burundi.",
@@ -7915,7 +7915,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle - Uneven",
     "hardness": [6],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Pyrosmalite-(Mn)",
     "summary": "Brownish orange, short hexagonal prisms, well-defined to 4mm across face.Hexagonal, light brown crystals to 1.5mm.",
@@ -8089,7 +8089,7 @@
         3.5,
         4
     ],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Santabarbaraite",
     "summary": "Named for the type locality at the Santa Barbara mining district in Tuscany, Italy, where it is found in concretionary nodules in clay in a lignite-bearing basin. Other known localities include in the Iron ore deposits on the Kerch peninsula in Ukraine, in the clays overlain by Pleistocene basalts at Wannon Falls near Hamilton in Victoria, Australia, and others in Cameroon and Germany. Santabarbaraite appears as brown to light brown amorphous masses, or as vivianite crystal and aggregate pseudomorphs. Santabarbaraite is a product of the oxidation of vivianite through metavivianite.",
@@ -8442,7 +8442,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Uneven",
     "hardness": [1],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Norsethite",
     "summary": "Named for Keith Norseth who was an engineering geologist as the Westvaco trona mine in Wyoming, USA and assisted greatly in mineralogical studies. Norsethite is a rare mineral that occurs authigenically in and under the Green River Formation in the United States and is also found in carbonatites as a primary mineral as well as in hydrothermal deposits that have undergone metamorphism. Localities for Norsethite include in other US localities, Canada, Brazil, Russia, China, Scotland, Sweden, and Namibia among a few others. Norsethite can fluoresce dark red under ultraviolet light.",
@@ -8678,7 +8678,7 @@
         1.5,
         2
     ],
-    "category": "Phosphate Vivianite group"
+    "category": "Phosphates"
 }, {
     "minName": "Witherite",
     "summary": "Named for Dr. William Withering, an English mineralogist, botanist, chemist, and physician who was the first to describe the mineral. Occurs typically as a product of alteration of barite in low-temperature hydrothermal deposits, though it is possible that it can be of sedimentary origin with the barium being supplied by volcanic activity in hot springs. Can also be found, albeit rarely, in coal. Witherite is a widespread mineral with many localities worldwide.",
@@ -9164,7 +9164,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Brittle - Conchoidal",
     "hardness": [3],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Samsonite",
     "summary": "Short prismatic crystals to 8mm. There are numerous smaller from minute 1mm to the longest at about 8mm. Some deep internal red reflections can be seen. Backside contains some nice Pyrargyrite. Some possible Dyscrasite. Some Pyrite. EDS confirmed.The second specimen are also from Andreasberg, which is the classical locality in which Samsonite is known for and is the type locality, named after the mine.  The crystals are all deeply striated with hints of red internal reflections typically seen in silver sulfosalts. The largest crystal is 7mm long but is not terminated. There is another 5mm crystal, which is nearly parallel to the largest crystal, but it is seperated by about 1mm at the base. The crystals merge together at the top giving the appearance that there is only one crystal, which is not the case. There is another 1mm stubby crystal seperate from the main crystals. As stated, Samsonite is extremely hard to obtain.",
@@ -9379,7 +9379,7 @@
     "classType": "",
     "fracture": "",
     "hardness": [6],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Cyanotrichite",
     "summary": "Named after the Greek words kyanos, meaning “blue,” and tricha, meaning “hair,” in reference to the mineral’s common blue color and hair-like habit. Cyanotrichite is an uncommon mineral that occurs in oxidized copper sulfide deposits in localities in Romania, France, England, Italy, Greece Russia, Kazakhstan, South Africa, the United States, Chile, and quite a few others. Associated minerals include brochantite, spangolite, chalcophyllite, olivenite, tyrolite, parnauite, azurite, and malachite.",
@@ -9649,7 +9649,7 @@
         1.5,
         2
     ],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Stibnite",
     "summary": "Shiny metallic group of prismatic Stibnite crystals.  The largest crystal measures 5cm.Long steely crystals of Stibnite to 3cm.The Stibnite shoots through a natural cavity in the Baryte cluster. What you are seeing are the terminations of several Stibnite needles from divergent sprays originating at the base of the specimen.  Divergent sprays of Stibnite are approximately 2 to 3cm in length and the Baryte crystals are up to 1cm. These Stibnites are becoming scarce at shows. This is a good grouping of Stibnite with two divergent groups to 6 and 6.5cm.Sprays of Stibnite to 5 or 6mmGroup of radial and divergent prismatic Stibnite crystals. The longest crystals are about 3cm.",
@@ -9733,7 +9733,7 @@
     "classType": "Trigonal - Pyramidal",
     "fracture": "Conchoidal",
     "hardness": [6.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Seeligerite",
     "summary": "Named for Erich Seeliger, a Professor of Mineralogy at the Technical University in Berlin, Germany. Found only in Chile, Seeligerite gets its type locality from the Santa Ana mine, and occurs there as a secondary mineral the forms in the oxidized zones of hydrothermal metallic mineral deposits. Seeligerite is associated with boleite, paralaurionite, and schwartzembergite. Interestingly, the type material is now missing from the Technical University.",
@@ -9820,7 +9820,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "Uneven",
     "hardness": [7.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Auricupride",
     "summary": "Named for the gold and copper in the composition, which in Latin are aurum and cuprum, respectively. Auricupride is a rare mineral that can be found in localities in Russia, the island of Cyprus, Switzerland, Chile, and additional localities in Argentina, South Africa, Australia, the Czech Republic, and Greece. At its Russian localities, Auricupride occurs “in serpentinites as a product of low-temperature ordering and [separation] of Au-Cu solid solution alloys,” and at a Swiss locality it can be found in reduction halos in red beds.",
@@ -9994,7 +9994,7 @@
     "classType": "Monoclinic",
     "fracture": "Waxy or gummy",
     "hardness": [2],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Derriksite",
     "summary": "Named for Jean Marie Francois Joseph Derriks, a Belgian mineralogist who studied the uranium deposit at Shinkolobwe in the Democratic Republic of the Congo. This is the same country where Derriksite finds its type and only locality at the Musonoi mine at Kolwezi in the Katanga Copper Crescent. It occurs there in the oxidized selenium-bearing copper-cobalt deposit. Associated minerals include selenian digenite, chalcomenite, demesmaekerite, and malachite. Derriksite is quite radioactive.",
@@ -10022,7 +10022,7 @@
     "classType": "Tetragonal - Ditetragonal Dipyramidal",
     "fracture": "Brittle",
     "hardness": [6.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Minyulite",
     "summary": "Named for the type locality at the Minyulo Well in Western Australia, Australia. --- and specifically in Australia in a weathered glauconitic, phosphatic ironstone. Other localities for Minyulite include the Shetland Islands near Antarctica, Italy, Belgium, France, and the United States including here in the Black Hills at the Ross Hannibal and Wharf mines in South Dakota. Occurs as white, slender to acicular crystals typically is radial sprays up to 1cm or more across. Crystals are square in cross-section and clear. Found in sedimentary phosphate deposits. ",
@@ -10036,7 +10036,7 @@
     "classType": "Orthorhombic - Pyramidal",
     "fracture": "Uneven",
     "hardness": [3.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Dufrenite",
     "summary": "More properly spelled Dufrénite, this mineral is named for Professor Ours Pierre Armand Petit-Dufrénoy, a French mineralogist at the National School of Mines in Paris, France. Dufrenite is a secondary mineral that typically forms in iron ore deposits. It is an uncommon mineral, and localities for Dufrenite include in Germany, England, Portugal, the United States including here in the Black Hills of South Dakota in the Tip Top, Wharf, Tin Queen, Etta, and Hugo mines, Australia, Argentina, and other additional localities.",
@@ -10210,7 +10210,7 @@
         2.5,
         3
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Darrellhenryite",
     "summary": "Pink prismatic crystals to 8mm in Albite. Darrellhenryite is one of the latest new member of the Tourmaline group with lithium. A one locality mineral (so far). Confirmed by Dr. Jaroslav Hyrsl.",
@@ -10286,7 +10286,7 @@
         3,
         4
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Clintonite",
     "summary": "Named for DeWitt Clinton, an American Statesman and naturalist from New York, USA where the mineral finds its type locality at Amity in Orange County. Clintonite is an uncommon but widespread mineral that can be found in additional USA localities as well as in Italy, Finland, Russia, Japan, on the island of New Guinea, among a few others. It occurs in chlorite schists, altered limestone, and siliceous skarn associated with contact metamorphism.",
@@ -10314,7 +10314,7 @@
     "classType": "Monoclinic - Domatic",
     "fracture": "Brittle",
     "hardness": [5.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Parahopeite",
     "summary": "Named after the Greek word para, meaning “near”, and for being a dimorph of hopeite. A rare mineral, Parahopeite can be found in Zambia, Canada, England, Germany, Australia, and China. It occurs in oxidized zinc-bearing hydrothermal deposits as a secondary mineral. Parahopeite occurs in association with hemimorphite, tarbuttite, hopeite, scholzite, spencerite, and pyromorphite.",
@@ -10418,7 +10418,7 @@
         3,
         4
     ],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Pharmacolite",
     "summary": "Named for the arsenic content after the Greek word farmaki, or pharmaki, meaning “poison.” Pharmacolite is an uncommon mineral that forms as a secondary oxidation product of arsenic-rich minerals. It can be found in Germany, Poland, the Czech Republic, Romania, France, Morocco, the United States, and other older localities. Pharmacolite is associated with picropharmacolite, hornesite, and haidingerite.",
@@ -10654,7 +10654,7 @@
         5.5,
         6.5
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Liskeardite",
     "summary": "Named after its type locality at the Marke Valley mine in the Liskeard district in Cornwall, England. Liskeardite is a rare mineral that occurs as a product of the oxidization of arsenic-rich sulfides. It can be found in additional localities at the Cap Garrone mine in France and the Tannenberg tin mine in Germany.  Associated minerals include scorodite, arsenopyrite, chalcopyrite, pyrite, and quartz.",
@@ -10682,7 +10682,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle",
     "hardness": [4],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Holfertite",
     "summary": "Opaque yellow needle-like crystal to 1mm with Hematite.Yellow orange acicular crystals to about 0.75mm along side a Hematite plate.",
@@ -10859,7 +10859,7 @@
         5,
         5.5
     ],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Aguilarite",
     "summary": "Interesting cavernous growth on this rare silver-selenium sulfide. The crystal group is about 9mm long.",
@@ -10985,7 +10985,7 @@
     "classType": "Orthorhombic - Disphenoidal",
     "fracture": "",
     "hardness": [4],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Uvarovite",
     "summary": "A member of the Garnet Group, Uvarovite gets its name from the President of the Academy of Sciences in St. Petersberg and Russian nobleman Count Sergei Semenovich Uvarov. Uvarovite can be found as an alteration mineral of chromite-bearing serpentinite as well as in response to a reaction between dolomite and chromite in metamorphosed limestone and skarn. It is an uncommon garnet, but with several localities including Russia, exceptional crystals from Finland, Spain, Canada, the United States, Taiwan, and Turkey, among others. The name “Uvarovite” is occasionally used to describe chromium bearing garnets or green garnets of other species, however this is a misnomer.",
@@ -11350,7 +11350,7 @@
         5.5,
         7
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Laurionite",
     "summary": "Named for the type locality at Laurium, also called Laurion, in Greece. Laurionite is a rare mineral that is “produced by the action of saline water on lead-bearing slag [and] in the oxidized zone of lead-bearing mineral deposits.” It can be found in, additionally, Italy, Germany, South Africa, England, Wales, Turkmenistan, Australia, and the United states, among a few others. Laurionite is slightly soluble in water, more so in hot water.",
@@ -11583,7 +11583,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Even",
     "hardness": [6],
-    "category": "Sorosilicate - epidote group"
+    "category": "Sorosilicate"
 }, {
     "minName": "Yuksporite",
     "summary": "Named after its discovery locality near Mt. Yukspor in the Kola Peninsula, Russia.  Found only in Russian alkali massifs, Yuksporite occurs in nepheline syenite veins. Yuksporite is one of the only two members of the Umbite Group.",
@@ -11765,7 +11765,7 @@
     "classType": "Dipyramidal (6/m)",
     "fracture": "",
     "hardness": [5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Pilsenite",
     "summary": "Named after the type locality at Nagybörzsöny, also called Deutsch-Pilsen, in Hungary. Also found in localities including Romania, Macedonia, Russia, the USA, Brazil, and China, Pilsenite occurs as a hydrothermal mineral. It can be found in association with hessite, joseite, bismuthinite, tsumoite, argentian pentlandite, and argentian tetrahedrite, depending on the type of hydrothermal deposit.",
@@ -12218,7 +12218,7 @@
         4,
         4.5
     ],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Whitecapsite",
     "summary": "IMA approved (IMA 2012-030). Publlished in Mineral News v. 28 N. 9, Sept. 2012 Igor Pekov, Anthony Nikischer, Martin Jensen, Joseph Leising.  Occurs as splendid fiery orange to amber colored doubly terminated, hexagonal crystals to 1mm.  Whitecapsite forms in late supergene enriched zones with corroded realgar.Bright orange hexagonal crystals from 0.3 to 1mm.",
@@ -12398,7 +12398,7 @@
         1,
         2
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Legrandite",
     "summary": "Named for a Belgian mine engineer known only as a Mr. Legrand, who was the first to collect the mineral. An uncommon mineral that occurs in oxidized zinc-arsenic bearing deposits, and can be found, albeit rarely, in granite pegmatites. Localities for Legrandite include in Mexico, Namibia, the United States, Japan, and Brazil.",
@@ -12505,7 +12505,7 @@
     "classType": "Pinacoidal",
     "fracture": "Irregular/Uneven",
     "hardness": [4.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Woodhouseite",
     "summary": "This is a really good specimen from this locality. For that matter, it's a very good specimen of Woodhouseite. Dozens of creamy white, euhedral to 4mm.",
@@ -12617,7 +12617,7 @@
     "classType": "Trigonal - Rhombohedral",
     "fracture": "Uneven",
     "hardness": [5.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Cervandonite-(Ce)",
     "summary": "Named for type locality which lies on the border of Italy and Switzerland at Mt. Cervandone, also called Scherbadung, in Piedmont, Italy. The only additional localities for Cervandonite lie in Switzerland at Gorb and the Wanni glacier-Scherbadung area in Wallis. Cervandonite is found I narrow veins that cut through a two-mica gneiss. Associated minerals include senaite, chernovite, rutile, anatase, muscovite, albite, chlorite, tourmaline, magnetite, hematite, quartz, and synchysite.",
@@ -12771,7 +12771,7 @@
     "classType": "Trigonal - Hexagonal Scalenohedral",
     "fracture": "Brittle - Conchoidal",
     "hardness": [3],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Atelestite",
     "summary": "Light yellow pointed crystals and ball-like aggregates less than 0.5mm scattered about with green Mixite.",
@@ -12953,7 +12953,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle - Uneven",
     "hardness": [6],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Dundasite",
     "summary": "Named after the type locality at the Adelaide mine in the Dundas mineral field of the Zeehan District of Tasmania, Australia. Dundasite is an uncommon mineral that forms in oxidized lead-bearing deposits. Additional localities for Dundasite include others in Australia, New Zealand, Wales, Ireland, England, Germany, Austria, Italy, Greece, France, Morocco, Namibia, and in the United States. Associated minerals include cerussite, plattnerite, azurite, malachite, pyromorphite, mimetite, beudantite, duftite, crocoite, gibbsite, allophone, and limonite.",
@@ -12995,7 +12995,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Brittle - Conchoidal",
     "hardness": [6],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Wermlandite",
     "summary": "Bluish platy, well-formed crystals less than 1mm.",
@@ -13107,7 +13107,7 @@
     "classType": "Trigonal - Hexagonal Scalenohedral",
     "fracture": "Brittle",
     "hardness": [6],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Whiteite-(CaFeMg)",
     "summary": "All Whiteite species are named after JohnS. White Jr., the Associate Curator of Mineralogy in the Department of Mineral Sciences at the Smithsonian Institution in Washington D.C, USA and also founder and former editor of the Mineralogical Record magazine. Whiteite was formerly described as one mineral but has since been split into alternate species depending on the dominant chemical composition of the mineral in question. At only three localities worldwide, Whiteite-(CaFeMg) is found in “complex zoned granite pegmatites” and iron formations.",
@@ -13233,7 +13233,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Sectile",
     "hardness": [2],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Tyrolite",
     "summary": "Radial platy crystals to 1.5cm across.",
@@ -13362,7 +13362,7 @@
     "classType": "Orthorhombic - Disphenoidal",
     "fracture": "",
     "hardness": [2.5],
-    "category": "Silicate ,Calcium silicate hydrate"
+    "category": "Silicates"
 }, {
     "minName": "Ulrichite",
     "summary": "Named to honor George Henry Frederick Ulrich after his contributions to Victoria, Australia mineralogy. Found in only one locality in the world at the Lake Boga granite quarry in Victoria, Australia, Ulrichite occurs as a secondary mineral in irregular, crystal lined cavities in pegmatoidal granite. Ulrichite is radioactive and can fluoresce a strong yellow under short-wave ultraviolet light.",
@@ -13376,7 +13376,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "",
     "hardness": [3.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Kyanite",
     "summary": "Named in 1789 by Abraham Gottlieb Werner from the Greek word \"kyanos\", meaning \"blue,\" the common color of the species. The French spelling, \"Cyanite\", was commonly used by mineralogists through much of the 19th and early 20th centuries.",
@@ -13424,7 +13424,7 @@
         5,
         6
     ],
-    "category": "Silicate , Cyclosilicate"
+    "category": "Cyclosilicate"
 }, {
     "minName": "Topaz",
     "summary": "Named for an island in the Red Sea that was referred to as Topazios or Topazion, and is called St. John’s Island today. The name of the island itself refers to its difficulty to be found, as Topazion means “to seek” in Greek. The island was not known for the mineral Topaz, however, and any reference to Topaz in ancient texts actually translates to the yellow green olivine variety peridot.  Topaz can befound in veins and cavities within granites, pregmatites, rhyolites and is formed from hot, volatile, hydrothermal fluids. It can also be found in high-grade metamorphic and as a detrital mineral. It can be found in thousands of localities worldwide. Topaz can, albeit rarely, fluoresce under ultraviolet light. Topaz from certain localities must be kept away from sunlight, such as the brown variety from Baldface Mountain, New Hampshire, USA and the sherry-colored crystals from The Cove, Utah, USA, as the color may fade with exposure.",
@@ -13438,7 +13438,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Brittle - Uneven",
     "hardness": [8],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Whitmoreite",
     "summary": "Named for Robert William Whitmore, a mineral collector and owner of the Palermo No.1 mine in New Hampshire, USA where Whitmoreite finds its type locality. Whitemoreite can be found in several localities in Europe and the Unites States, including the Tip Top, Big Chief, and White Cap mines here in the Black Hills of South Dakota. Occurs as “a secondary mineral in complex zoned granite pegmatites” and can be a product of hydrothermally altered triphylite.",
@@ -13842,7 +13842,7 @@
     "classType": "Trigonal - Rhombohedral",
     "fracture": "Brittle - Conchoidal",
     "hardness": [6.5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Huntite",
     "summary": "Named in honor of Professor Walter Frederick Hunt of the University of Michigan in the United States and former chemist at the United States Geological Survey. Huntite is an uncommon mineral that forms as vug fillings and fracture coatings in rock, flowstones and incrustations in caves after being precipitated by the evaporation of concentrated meteoric solutions that have weathered magnesitic or dolomitic rocks, serpentinites, or ophiolites. It can be found in localities in the United States, Australia, Uzbekistan, Canada, Hungary, Romania, Malaysia, and others.",
@@ -13873,7 +13873,7 @@
     "classType": "Orthorhombic - Pyramidal",
     "fracture": "Uneven",
     "hardness": [1.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Jahnsite-(NaFeMg)",
     "summary": "Jahnsite - (NaFeMg) occurs in at the Tip Top pegmatite west of Custer, South Dakota. Thus far it has been a one-time find. Crystals occur as 1mm pseudo-orthorhombic twinned prisms to 1mm in tiny vugs within Heterosite with dark purple Leucophosphite and Dufrenite. The crystals are translucent yellow with orange bands near the termination. Two other new Jahnsites (NaMnMg) and (CaMgMg) are present in the crystals but can be characterized due to insufficient volumes.",
@@ -13915,7 +13915,7 @@
     "classType": "Triclinic - Pedial",
     "fracture": "",
     "hardness": [3],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Smrkovecite",
     "summary": "Little yellow bead-like crystals to about 0.75mm. Good coverage. Very rare bismuth phosphate found in only two localities in one country worldwide.",
@@ -14305,7 +14305,7 @@
         3,
         4
     ],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Ilvaite",
     "summary": "Tiny black crystals of Ilvaite with 4mm Siderite rhombs.",
@@ -14519,7 +14519,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "",
     "hardness": [3],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Schneiderhohnite",
     "summary": "More appropriately spelled Schneiderhöhnite, this mineral is named in honor of Hans Schneiderhöhn, a former Professor of Mineralogy at the University of Freiburg in Freiburg in Breisgau, Germany. Found in only a few localities, Schneiderhohnite is found at its type locality at the Tsumeb mine in Namibia as a secondary mineral in an oxidized dolostone hydrothermal metallic ore deposit.",
@@ -14912,7 +14912,7 @@
     "classType": "Trigonal - Ditrigonal Pyramidal",
     "fracture": "Brittle - Conchoidal",
     "hardness": [8],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Phenakite",
     "summary": "Quartz matrix specimen with face totally covered by tiny 1mm and less colorless phenakite crystals.A small 7mm white crystal on a bit of matrix.",
@@ -14940,7 +14940,7 @@
     "classType": "Trigonal - Hexagonal Scalenohedral",
     "fracture": "Conchoidal - Irregular",
     "hardness": [3],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Astrophyllite",
     "summary": "Deep reddish brown long bladed crystals to 3.5cm. Astrophyllite is NOT a mica but is an inosilicate, which can resemble mica plates in hand specimen, as is the case and with most of the Astrophyllite. Astrophyllite has a perfect cleavage, can be split like a mica in thin sheets, but is very brittle (Ency. of Minerals). The color is much like a mica also being a bronze to orange yellow. Usually found in pegmatites of nepheline syenites, alkaline granites of MSH and Magnet Cove (typical for titanium minerals). Finest crystals come from Khibiny massif (Bernard & Jaroslav).A nice specimen with long bronze plates of Astrophyllite to 2.5cm and a large crystal of Aenigmatite to 4.5cm.Astrophyllite is NOT a mica but is an inosilicate, which can resemble mica plates in hand specimen, as is the case. Astrophyllite has a perfect cleavage, can be split like a mica in thin sheets, but is very brittle (Ency. of Minerals). The color is much like a mica also being a bronze to orange yellow. Usually found in pegmatites of nepheline syenites, alkaline granites of MSH and Magnet Cove (typical for titanium minerals). Finest crystals come from Khibiny massif (Bernard & Jaroslav).This is a smaller specimen but with beautiful elongated bronze crystals to 1cm.Long excellent blades to 4cm of golden brown Astrophyllite. This is an old University of Chicago piece from Paul Moore. See prov. tab.Long bladed golden crystals to over 2cm.",
@@ -15288,7 +15288,7 @@
     "classType": "Triclinic",
     "fracture": "",
     "hardness": [-1],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Moctezumite",
     "summary": "Named after the type locality, and only locality, at the Moctezuma mine in Sonora, Mexico. Moctezumite is a rare mineral that occurs only in the Moctezuma mine in the oxidized portion of the hydrothermal gold-tellurium deposits. Moctezumite occurs in association with schmitterite, burckhardtite, zemannite, emmonsite, pyrite, barite, and limonite. Moctezumite is strongly radioactive.",
@@ -15403,7 +15403,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "Uneven",
     "hardness": [3.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Xanthoxenite",
     "summary": "Light yellow platy crystals covering much of the specimen like a crust.",
@@ -15507,7 +15507,7 @@
         4,
         4.5
     ],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Manganogrunerite",
     "summary": "Tan radial fibrous sprays.",
@@ -15908,7 +15908,7 @@
         5,
         6
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Uranosphaerite",
     "summary": "A very rich specimen with lemon drop-like crystal groups of Schumacherite to 1mm throughout the spongy matrix. I suspect as old as this specimen is since it was collected (ca 1880's) the Uranosphaerite is a bit dehydrated.  It's a fabulous specimen taken from a group specimens from the Georg Gebhard collection.",
@@ -15950,7 +15950,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Flexible",
     "hardness": [-1],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Urancalcarite",
     "summary": "Named for its composition of uranium (uran), calcium (cal), and carbonate (car). Urancalcarite occurs in uranium deposits in the oxidized zones in only a few localities including the Democratic Republic of the Congo and China. Urancalcarite is highly very strongly radioactive.",
@@ -16040,7 +16040,7 @@
         5,
         6
     ],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Teallite",
     "summary": "Named for Jethro Justinian Harris Teall, who was the Director of the Geological Survey of Great Britian and Ireland.  This hydrothermal mineral can be found in tin veins and can be a locally important tin ore mineral in some places. Found in only a few localities worldwide, a large number of specimens that have been identified as Teallite may actually be franckeite. Teallite is a flexible mineral and may even be somewhat malleable.",
@@ -16122,7 +16122,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle",
     "hardness": [2.5],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Teineite",
     "summary": "Named after the type locality at the Teine mine in Hokkaido, Japan. This rare secondary mineral  occurs and a producr of the ozidation of copper- bearing and tellurium-bearing sulfides in only a few localities that include Japan, Mexico, the USA, Belgium, Norway and, purportedly, Russia. ",
@@ -16136,7 +16136,7 @@
     "classType": "Orthorhombic - Disphenoidal",
     "fracture": "Brittle",
     "hardness": [2.5],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Talnakhite",
     "summary": "Brassy metallic mass. An uncommon copper-nickel sulfide.",
@@ -16529,7 +16529,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle - Splintery",
     "hardness": [4.5],
-    "category": "Mineral"
+    "category": ""
 }, {
     "minName": "Jamborite",
     "summary": "One small tuft to 1mm of bright green Jamborite with a tiny octahedral Vaesite crystal clinging on.Quite nice and easily visible acicular green crystals in vug. Type Locality!",
@@ -16644,7 +16644,7 @@
     "classType": "Orthorhombic - Disphenoidal",
     "fracture": "Brittle",
     "hardness": [3.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Sulvanite",
     "summary": "Light brasy metallic crystal grains of Sulvanite to 8mm in Quartz with alterations to green Volborthite. The green may also be Tangeite.",
@@ -17048,7 +17048,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "brittle",
     "hardness": [3],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Silvialite",
     "summary": "Named for the daughter of Asutrian mineralogist Gustav Tschermak von Sessenegg, Silvia Hillebrand. Localities for Silvialite include the type locality in the McBride Province of Queensland, and at Kayrunnerra in New South Wales, Australia, in the Furua magmatic complex in Tanzania, at Doddakanay in India, and at the Loitsch Quarry in Thuringia, Germany. Silvialite appears as pale yellow elongated grains.",
@@ -17118,7 +17118,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "Brittle",
     "hardness": [4],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Hendricksite",
     "summary": "Phyllosilicate - Monoclinic - Mica group member. Ordinary (True or Common) Mica - Trioctahderal. Zinc occupies the (M) octahedral sites between the layers of (T) sites of Si and Al. K is the interlayer, making this an ordinary (True) mica. For more information on Mica minerals and other phyllosilicates please reference our article - Click Here.Hendricksite is the only zinc bearing mica. Occurs as plate-shaped or short prismatic crystals with rough terminations up to 40cm with a copper deep red to blackish red color. (Bernard & Hrysl). As pointed out by Reider et al (Can Min.), Hendricksite could be included in a solid solution series with \"zincohendricksite\" and \"manganoanhendricksite\" at the ends.Phyllosilicate - Monoclinic - Mica group member. Ordinary (True or Common) Mica - Trioctahderal. Zinc occupies the (M) octahedral sites between the layers of (T) sites of Si and Al. K is the interlayer, making this an ordinary (True) mica. For more information on Mica minerals and other phyllosilicates please reference our article - Click Here.Occurs as plate-shaped or short prismatic crystals with rough terminations up to 40cm with a copper deep red to blackish red color. (Bernard & Hrysl). As pointed out by Reider et al (Can Min.), Hendricksite could be included in a solid solution series with \"zincohendricksite\" and \"manganoanhendricksite\" at the ends.Phyllosilicate - Monoclinic - Mica group member. Ordinary (True or Common) Mica - Trioctahderal. Zinc occupies the (M) octahedral sites between the layers of (T) sites of Si and Al. K is the interlayer, making this an ordinary (True) mica. For more information on Mica minerals and other phyllosilicates please reference our article - Click Here.Hendricksite is the only zinc bearing mica.Occurs as plate-shaped or short prismatic crystals with rough terminations up to 40cm with a copper deep red to blackish red color. (Bernard & Hrysl). As pointed out by Reider et al (Can Min.), Hendricksite could be included in a solid solution series with \"zincohendricksite\" and \"manganoanhendricksite\" at the ends.This is a large impressive specimen with large crystal sheets. Occurs in only a handful of worldwide localities.",
@@ -17289,7 +17289,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "",
     "hardness": [2.5],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Gonnardite",
     "summary": "White radial crystals. Ex. Rudy Tschernich.Tiny snow white square-tabular crystals with excellent coverage.",
@@ -17401,7 +17401,7 @@
     "classType": "Tetragonal - Ditetragonal Dipyramidal",
     "fracture": "Sectile",
     "hardness": [2],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Picropharmacolite",
     "summary": "Named for its similarity to pharmacolite in chemical composition and physical appearance as well as for its magnesium content after the Greek word pikros, meaning “bitter.” Despite physical and chemical similarities, picropharmacolite and pharmacolite are otherwise unrelated. Picorpharmacolite is an uncommon but widespread mineral that forms as a product of the oxidation of arsenic sulfides as they react with surrounding calcic rocks and can also form as an efflorescence in mines. Localities for picropharmacolite can be found in Germany, France, the Czech Republic, Russia, England, Scotland, Morocco, Corsica, and the United States among a few others.",
@@ -17516,7 +17516,7 @@
     "classType": "",
     "fracture": "",
     "hardness": [-1],
-    "category": "Oxides,uranyl hydroxides"
+    "category": "Oxides"
 }, {
     "minName": "Pectolite",
     "summary": "Named for the Greek word pektos, meaning “compact,” in reference to its resistance to being crushed. Pectolite is a widespread mineral with many localities including in Italy, Germany, Scotland, Russia, the United States, Canada, India, Morocco, and South Africa, to name just a few. Pectolite occurs in nepheline syenite, as a hydrothermal mineral in basalts and diabases, in serpentinites, peridotites and calcium-rich rocks. Pectolite can be triboluminescent, produces light when broken.",
@@ -17533,7 +17533,7 @@
         4.5,
         5
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Arthurite",
     "summary": "Named to honor Sir Arthur Edward Ian Montagu Russell and Arthur William Gerald Kingsbury, for their contributions to British mineralogy. Arthurite is a rare mineral that occurs in oxidized copper deposits and forms as a result of the alteration of arsenopyrite or enargite. Localities for Arthurite include in England, Germany, Portugal, Spain, Chile, the United States, and Australia among a few others.",
@@ -17676,7 +17676,7 @@
     "classType": "Triclinic - Pinacoidal",
     "fracture": "Conchoidal",
     "hardness": [2.5, 3],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Ericssonite",
     "summary": "Dark red crystal grains in matrix probably with Rhodonite.",
@@ -17704,7 +17704,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "",
     "hardness": [2],
-    "category": "Uranyl phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Dorfmanite",
     "summary": "Named after Moisei Davidovich Dorfman, a Russian mineralogist formerly of the A.E. Fersman Mineralogical Museum in Moscow, and an investigator of the minerals in the Khibiny massif within which the mineral gets its co-type localities in Koashva Mountain and in the Material’naya adit of Yukspor Mountain. Other localities for Dorfmanite occur in other Russia localities in the Khibiny and Lovozero massifs, in Greenland in the Illimaussaq complex, and in Canada in Manitoba at Tanco mine, Quebec at the Poudrette quarry in Mont Saint-Hilaire, and Yukon Territory at Big Fish River. This rare mineral occurs as an alteration product of lomonosovite and nacaphite in Russia and in sodalite xenoliths at Mont Saint-Hilaire. Dorfmanite is very soluble in water.",
@@ -17942,7 +17942,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle",
     "hardness": [6],
-    "category": "Silicate , Pyroxene"
+    "category": "Silicates"
 }, {
     "minName": "Pahasapaite",
     "summary": "Named for the Lakota Sioux Native American word Pahasapa, which is the traditional name for the Black Hills after its type and only locality at the Tip Top mine in the Black Hills of South Dakota, USA. Pahasapaite occurs as “a rare late-stage mineral in seams in fractured beryl crystals, within the inner-intermediate zone of a complex granite pegmatite.” It can be found in association with englishite, roscherite, esophoite-childrenite, tiptopite, and montgomeryite.",
@@ -18040,7 +18040,7 @@
     "classType": "Trigonal - Hexagonal Scalenohedral",
     "fracture": "Brittle - Conchoidal",
     "hardness": [3.5, 4],
-    "category": "Carbonates"
+    "category": "Carbonate"
 }, {
     "minName": "Papagoite",
     "summary": "Named for the Papago American Indians, now called the Tohono O’odam, who inhabit the area around the type locality of Papagoite at Ajo in Arizona, USA. Papagoite is a rare mineral found at, in addition to the type locality, localities including South Africa, Namibia, and a newer locality in Slovakia. It occurs at the type locality in thin veinlets in altered granodiorite and at the South African locality as inclusion in quartz crystals. Papagoite can be found in association with aurichalcite, shattuckite, ajoite, barite, and quartz.",
@@ -18130,7 +18130,7 @@
         5,
         6
     ],
-    "category": "Silicate , Cyclosilicate"
+    "category": "Cyclosilicate"
 }, {
     "minName": "Vayrynenite",
     "summary": "Generally, and correctly, spelled Väyrynenite, Vayrynenite is named for Heikki Allen Väyrynen, a Professor of Mineralogy at Technical Institute in Helsinki, Finland. Vayrynenite is found as “an alteration product of beryl and triphylite in complex zoned granite pegmatites” in a few localitites including Finland, Sweden, Portugal, Spain, Kazakhstan, and Pakistan.",
@@ -18413,7 +18413,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "",
     "hardness": [2.5],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Nevadaite",
     "summary": "Named for the state of its discovery, Nevada, in the United States, with the type locality at the Gold Quarry mine near Carlin. Nevadaite has on other locality in Kyrgyzstan at Kara-Chagyr Mountain. It appears as pate green to turquoise blue prismatic crystals in radiating clusters, spherules, or druses in association with fluellite, wavellite, strengite, variscite, hewettite, anatase, kazakhstanite, tinticite, leucophosphite, torbernite, and tyuyamunite.",
@@ -18808,7 +18808,7 @@
     "classType": "Isometric - Hexoctahedral",
     "fracture": "Conchoidal",
     "hardness": [4.5],
-    "category": "Sulfide Thiospinel group (Spinel structural group)"
+    "category": "Sulfide"
 }, {
     "minName": "Metanovacekite",
     "summary": "More properly spelled, Metanováčekite is named as a mineral relating to novacekite with lower hydration, hence the prefix meta-. Intuitively, metanovacekite forms as a dehydration product of novacekite and can be found in Germany, England, and the United States as well as newer localities in Morocco and Namibia. Metanovacekite is highly radioactive and will fluoresce yellow to green under ultraviolet light. Metanovacekite can be reversibly hydrated back to novacekite under ambient conditions.",
@@ -19666,7 +19666,7 @@
     "classType": "Orthorhombic - Dipyramidal",
     "fracture": "Brittle - Uneven",
     "hardness": [5],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Kitkaite",
     "summary": "This specimen contains two flashy brassy crystal grains to 2mm.",
@@ -19899,7 +19899,7 @@
         5,
         5.5
     ],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Bikitaite",
     "summary": "Named for the type locality at the Nolan property in Bikita in the Masvingo District of Zimbabwe. The only other locality for Bikitaite is in the United States at the Foote Lithium Co. Mine in North Carolina, USA. Bikitaite occurs as a late-forming mineral within fractures in lithium-rich pegmatites. Associated minerals include eucryptite, quartz, Petalite, feldspar, calcite, stilbite, allophone, albite, and fairfieldite.",
@@ -20395,7 +20395,7 @@
     "classType": "Monoclinic - Prismatic",
     "fracture": "Brittle",
     "hardness": [3],
-    "category": "Phosphate"
+    "category": "Phosphates"
 }, {
     "minName": "Cronstedtite",
     "summary": "Named for Axel Fredrik Cronstedt, Swedish mineralogist and chemist. Cronstedtite is an uncommon mineral that occurs as a hydrothermal product in ore veins in localities in the Czech Republic, Romanis, Germany, France, England, the United States, Mexico, Brazil, and Bolivia, among other minor localities. Assocaited minerals include siderite, pyrite, sphalerite, clinochlore, and quartz.",
@@ -20989,7 +20989,7 @@
         3,
         4
     ],
-    "category": "Silicate"
+    "category": "Silicates"
 }, {
     "minName": "Magnussonite",
     "summary": "Named after Nils Harald Magnusson who was the former Director at the Geological Survey of Sweden and contributed greatly to the knowledge of the Langban mine in Sweden where the mineral finds its type locality. In addition to Sweden, Magnussonite can be found in only one other locality at the Sterling mine in Sterling Hill, New Jersey, USA. At Langban it occurs in a metamorphosed ion-manganese orebody, and in a metamorphosed stratiform zinc orebody at Sterling Hill.",
@@ -21286,7 +21286,7 @@
     "classType": "Ditrigonal Pyramidal",
     "fracture": "Brittle",
     "hardness": [5],
-    "category": "Silicate , Cyclosilicate"
+    "category": "Cyclosilicate"
 }, {
     "minName": "Christelite",
     "summary": "Named to honor German mineral collector, Christel Gebhard-Giesen. The type locality and only locality for Christelite is at the San Francisco mine in the Antofagasta province of Chile. There, it occurs as a secondary mineral in the oxidized copper-zinc sulfide deposit. Associated minerals include zincian paratacamite, anglesite, hemimorphite, gordaite, and quartz.",
