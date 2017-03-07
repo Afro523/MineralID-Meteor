@@ -11,7 +11,7 @@ import {Meteor} from 'meteor/meteor';
 import {Minerals} from '../../api/minerals';
 import MinList from './MinList';
 import Filter from './Filter';
-import SortBy from './SortBy';
+
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -33,14 +33,10 @@ export default class ListPage extends Component {
 		this.state = {
 			currChar: '-',
 			mohMin:'0',
-			mohMax:'8'
+			mohMax:'8',
+			currCat:'None'
 		};
-		this.handleChange = this.handleChange.bind(this);
 		this.getMinFromDb = this.getMinFromDb.bind(this);
-	}
-
-	componentDidUpdate(){
-
 	}
 
 	getChildContext() {
@@ -49,11 +45,9 @@ export default class ListPage extends Component {
 
 	getMeteorData(){
 		const handle = Meteor.subscribe('minerals');
-
 		const minData = this.getMinFromDb();
 		return {
 			ready: handle.ready(),
-			//minerals: Minerals.find({}, {sort: {name: 1}}).fetch(),
 			minerals: minData,
 		};
 	}
@@ -63,8 +57,9 @@ export default class ListPage extends Component {
 		return minData;
 	}
 
-	handleChange (event, index, value) {
-		this.setState({currChar:value});
+	handleSelect(event){
+		console.log('PARENT' +event.target.textContent);
+		//this.setState({ event.target.textContent});
 	}
 
 	renderMinerals () {
@@ -120,8 +115,9 @@ export default class ListPage extends Component {
 							currChar={this.state.currChar}
 							mohMin={this.state.mohMin}
 							mohMax={this.state.mohMax}
+							currCat={this.state.currCat}
+							onChange={this.props.handleSelect().bind(this)}
 						/>
-						<SortBy/>
 					<List>
 						{	this.renderMinerals()	}
 					</List>
