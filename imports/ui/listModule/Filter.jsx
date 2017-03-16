@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import DropDownMenu from 'material-ui/DropDownMenu';
@@ -12,15 +12,31 @@ import Send from 'material-ui/svg-icons/content/send';
 export default class Filter extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {open: false};
+		this.state = {
+			open: false,
+			currChar:'',
+			currCat:'',
+			mohMin:'0',
+			mohMax:'8'
+		};
 	}
 	cancelFilter(){
 		this.setState({open: false});
 	}
 
-	handleSelect(event){
-		console.log(event.target.textContent);
-		this.value = event.target.textContent;
+	setChar(event){
+		this.setState( {currChar:event.target.textContent});
+	}
+
+	setMohMin(event){
+		this.setState( {mohMin:event.target.textContent});
+	}
+
+	setMohMax(event){
+		this.setState( {mohMax:event.target.textContent});
+	}
+	setCat(event){
+		this.setState( {currCat:event.target.textContent});
 	}
 
 	handleToggle() {
@@ -31,7 +47,7 @@ export default class Filter extends React.Component {
 	}
 	render() {
 		const abc = [
-			'-','A', 'B', 'C', 'D', 'E', 'F', 'G',
+			'A', 'B', 'C', 'D', 'E', 'F', 'G',
 			'H', 'I', 'J', 'K', 'L', 'M', 'N',
 			'O', 'P', 'Q', 'R', 'S', 'T', 'U',
 			'V', 'W', 'X', 'Y', 'Z'
@@ -71,9 +87,10 @@ export default class Filter extends React.Component {
 					</MenuItem>
 
 					<DropDownMenu
+						id='CharMenu'
 						maxHeight={300}
-						value={this.props.currChar}
-						onChange={this.handleSelect}
+						value={this.state.currChar}
+						onChange={this.setChar.bind(this)}
 						>
 							{charMenuItem}
 					</DropDownMenu>
@@ -84,15 +101,15 @@ export default class Filter extends React.Component {
 
 					<DropDownMenu
 						maxHeight={300}
-						value={this.props.mohMin}
-						onChange={this.handleSelect}
+						value={this.state.mohMin}
+						onChange={this.setMohMin.bind(this)}
 						>
 							{minMenuItem}
 					</DropDownMenu>
 					<DropDownMenu
 						maxHeight={300}
-						value={this.props.mohMax}
-						onChange={this.handleSelect}
+						value={this.state.mohMax}
+						onChange={this.setMohMax.bind(this)}
 						>
 							{minMenuItem}
 					</DropDownMenu>
@@ -102,8 +119,8 @@ export default class Filter extends React.Component {
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
-						value={this.props.currCat}
-						onChange={this.handleSelect}
+						value={this.state.currCat}
+						onChange={this.setCat.bind(this)}
 						>
 							{catMenuItem}
 					</DropDownMenu>
@@ -127,10 +144,3 @@ export default class Filter extends React.Component {
 		);
 	}
 }
-
-Filter.propTypes ={
-	currChar: PropTypes.string.isRequired,
-	mohMin : PropTypes.string.isRequired,
-	mohMax: PropTypes.string.isRequired,
-	currCat: PropTypes.string.isRequired
-};

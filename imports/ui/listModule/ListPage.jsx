@@ -111,13 +111,7 @@ export default class ListPage extends Component {
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
-						<Filter
-							currChar={this.state.currChar}
-							mohMin={this.state.mohMin}
-							mohMax={this.state.mohMax}
-							currCat={this.state.currCat}
-							onChange={this.props.handleSelect().bind(this)}
-						/>
+						<Filter/>
 					<List>
 						{	this.renderMinerals()	}
 					</List>
