@@ -38,14 +38,19 @@ export default class Filter extends React.Component {
 	setCat(event){
 		this.setState( {currCat:event.target.textContent});
 	}
+	handleSelect(event){
+		console.log(event.target.textContent);
+		return event.target.textContent;
+	}
 
 	handleToggle() {
 		this.setState({open: !this.state.open});
 	}
 	submitFilter(){
-		this.setState({open: false});
+		this.setState({open: false, currChar: this.state.currChar, currCat: this.state.currCat, mohMin: this.state.mohMin, mohMax:this.state.mohMax});
 	}
 	render() {
+		//Creates Character list for drop down
 		const abc = [
 			'A', 'B', 'C', 'D', 'E', 'F', 'G',
 			'H', 'I', 'J', 'K', 'L', 'M', 'N',
@@ -56,11 +61,13 @@ export default class Filter extends React.Component {
 		for (let i = 0; i< abc.length; i++){
 			charMenuItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
 		}
+		//Creates Mohs Scale list for drop down
 		const mohsScale = ['0','1','2','3','4','5','6','7','8'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
 			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
 		}
+		//Creates Category list for drop down
 		var catList = [
 			'Nesosilicates', 'Oxides','Inosilicates','Sorosilicates','Phosphates',
 			'Arsenites','Halides','Arsenates','Sulfates','Silicates','Sulfides',
@@ -70,17 +77,21 @@ export default class Filter extends React.Component {
 			'Selenides','Pyroxenes'];
 		const catMenuItem = [];
 		catList = catList.sort();
+
 		for (let i = 0; i< catList.length; i++){
 			catMenuItem.push(<MenuItem value={catList[i]} key={i} primaryText={catList[i]}/>);
 		}
+
+		//Throws a 'None' option to the top
+		catMenuItem.unshift(<MenuItem value={'None'} key={catMenuItem.length + 1} primaryText={'None'}/>);
 		return (
 			<div>
         <RaisedButton
-          label="Toggle Drawer"
+          label="Toggle Filter Pane"
           onTouchTap={this.handleToggle.bind(this)}
         />
         <Drawer docked={false} open={this.state.open}>
-					<h3>Sort By:</h3>
+					<h4>Sort By:</h4>
 					<Divider />
 					<MenuItem>
 					Letter
@@ -95,10 +106,10 @@ export default class Filter extends React.Component {
 							{charMenuItem}
 					</DropDownMenu>
 					<Divider />
+
 					<MenuItem>
 					Hardness: Low - High
 					</MenuItem>
-
 					<DropDownMenu
 						maxHeight={300}
 						value={this.state.mohMin}
@@ -114,6 +125,7 @@ export default class Filter extends React.Component {
 							{minMenuItem}
 					</DropDownMenu>
 					<Divider />
+
 					<MenuItem>
 					Category
 					</MenuItem>
@@ -125,6 +137,7 @@ export default class Filter extends React.Component {
 							{catMenuItem}
 					</DropDownMenu>
 					<Divider />
+
 						<RaisedButton
 							label="Cancel"
 							labelPosition="before"

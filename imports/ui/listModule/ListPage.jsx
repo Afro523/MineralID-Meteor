@@ -31,7 +31,7 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currChar: '-',
+			currChar: 'A',
 			mohMin:'0',
 			mohMax:'8',
 			currCat:'None'
@@ -111,7 +111,12 @@ export default class ListPage extends Component {
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
-						<Filter/>
+						<Filter
+							currChar={this.state.currChar}
+							mohMin={this.state.mohMin}
+							mohMax={this.state.mohMax}
+							currCat={this.state.currCat}
+						/>
 					<List>
 						{	this.renderMinerals()	}
 					</List>
