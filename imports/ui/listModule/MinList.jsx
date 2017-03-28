@@ -66,6 +66,5 @@ export default class MinList extends Component {
 }
 
 MinList.propTypes ={
-	minerals: PropTypes.array.isRequired,
 	mineral : PropTypes.object.isRequired,
 };

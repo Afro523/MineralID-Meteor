@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import DropDownMenu from 'material-ui/DropDownMenu';
@@ -7,7 +7,6 @@ import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
 import Clear from 'material-ui/svg-icons/content/clear';
-import Send from 'material-ui/svg-icons/content/send';
 
 export default class Filter extends React.Component {
 	constructor(props) {
@@ -20,23 +19,14 @@ export default class Filter extends React.Component {
 		this.setState({open: false});
 	}
 
-
-	handleSelect(event){
-		console.log(event.target.textContent);
-		return event.target.textContent;
-	}
-
 	handleToggle() {
 		this.setState({open: !this.state.open});
 	}
-	submitFilter(){
-		this.setState({open: false});
-		this.props.handleClick();
-	}
+
 	render() {
 		//Creates Character list for drop down
 		const abc = [
-			'A', 'B', 'C', 'D', 'E', 'F', 'G',
+			'-', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
 			'H', 'I', 'J', 'K', 'L', 'M', 'N',
 			'O', 'P', 'Q', 'R', 'S', 'T', 'U',
 			'V', 'W', 'X', 'Y', 'Z'
@@ -46,7 +36,7 @@ export default class Filter extends React.Component {
 			charMenuItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
 		}
 		//Creates Mohs Scale list for drop down
-		const mohsScale = ['0','1','2','3','4','5','6','7','8'];
+		const mohsScale = ['0','1','2','3','4','5','6','7','8', '9', '10'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
 			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
@@ -121,23 +111,36 @@ export default class Filter extends React.Component {
 							{catMenuItem}
 					</DropDownMenu>
 					<Divider />
-
+					<div className='container'>
 						<RaisedButton
-							label="Cancel"
+							style={{display:'inline'}}
+							label="Close"
 							labelPosition="before"
 							icon={<Clear />}
 							onTouchTap={this.cancelFilter.bind(this)}
 
 						/>
-						<RaisedButton
-							label="Submit"
-							labelPosition="before"
-							icon={<Send />}
-							onTouchTap={this.submitFilter.bind(this)}
-
-						/>
+					</div>
         </Drawer>
       </div>
 		);
 	}
 }
+
+Filter.defaultProps ={
+	currCat: 'None',
+	currChar: '-',
+	mohMin: '0',
+	mohMax: '10',
+};
+
+Filter.propTypes = {
+	handleCat: PropTypes.func.isRequired,
+	handleChar: PropTypes.func.isRequired,
+	handleMohMin: PropTypes.func.isRequired,
+	handleMohMax: PropTypes.func.isRequired,
+	currCat: PropTypes.string.isRequired,
+	currChar: PropTypes.string.isRequired,
+	mohMin: PropTypes.string.isRequired,
+	mohMax: PropTypes.string.isRequired,
+};

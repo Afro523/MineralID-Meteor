@@ -3204,7 +3204,7 @@
 }, {
     "minName": "Ferrotschermakite",
     "summary": "Rusty red fibrous Ferrotschermakite in a small void about 3mm wide.",
-    "formula": "[box]Ca2(Fe2+3AlFe3+)(Si6Al2)O22(OH)2",
+    "formula": "[]Ca2(Fe2+3AlFe3+)(Si6Al2)O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "",
     "cleavage": "Perfect, None, None",
@@ -6156,7 +6156,7 @@
 }, {
     "minName": "Glaucophane",
     "summary": "Bluish black splintery and bladed crystals to 2cm in a tight packed aggregate.",
-    "formula": "[box]Na2(Mg3Al2)Si8O22(OH)2",
+    "formula": "[]Na2(Mg3Al2)Si8O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "Massive - Fibrous, Columnar, Granular",
     "cleavage": "Good, Good, None",
@@ -7905,7 +7905,7 @@
 }, {
     "minName": "Riebeckite",
     "summary": "Blue-gray fibrous Riebeckite occurs in three bands on this sample, with the largest being around a centimeter at its widest.",
-    "formula": "[box]Na2(Fe2+3Fe3+2)Si8O22(OH)2",
+    "formula": "[]Na2(Fe2+3Fe3+2)Si8O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "Striated, Fibrous, Massive - Fibrous",
     "cleavage": "Perfect, Perfect, None",
@@ -12943,7 +12943,7 @@
 }, {
     "minName": "Magnesioriebeckite",
     "summary": "Cabinet specimen with \"veins\" of felted, fibrous bluish Magnesioriebeckite.",
-    "formula": "[box]Na2(Mg3Fe3+2)Si8O22(OH)2",
+    "formula": "[]Na2(Mg3Fe3+2)Si8O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "Acicular, Prismatic",
     "cleavage": "Perfect, None, None",
@@ -13338,7 +13338,7 @@
 }, {
     "minName": "Laihunite",
     "summary": "Interesting greenish yellow to brown, malformed or rice-shaped \"crystals\", a few with good form, dotting the volcanic(?), matrix. Laihunite is a rare member of the Olivine group.",
-    "formula": "(Fe3+,Fe2+,[box])2SiO4",
+    "formula": "(Fe3+,Fe2+,[])2SiO4",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "",
     "cleavage": "Good, Perfect, Perfect",
@@ -13641,7 +13641,7 @@
 }, {
     "minName": "Tremolite",
     "summary": "A 4cm long prismatic crystal formerly of Dioside now replced by Tremolite in marble matrix.Prismatic aggregate of uncommon purple Tremolite variety called hexagonite.",
-    "formula": "[box]Ca2Mg5Si8O22(OH)2",
+    "formula": "[]Ca2Mg5Si8O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "Columnar, Massive - Fibrous, Massive - Granular",
     "cleavage": "Perfect, Distinct, None",
@@ -15449,7 +15449,7 @@
 }, {
     "minName": "Wiluite",
     "summary": "Partial crystals - rare member of the Vesuvianite group.",
-    "formula": "Ca19(Al,Mg)13(B,[box],Al)5(SiO4)10(Si2O7)4(O,OH)10",
+    "formula": "Ca19(Al,Mg)13(B,[],Al)5(SiO4)10(Si2O7)4(O,OH)10",
     "crystalSystem": "Tetragonal",
     "crystalHabit": "Euhedral Crystals",
     "cleavage": "Poor, None, None",
@@ -15511,7 +15511,7 @@
 }, {
     "minName": "Manganogrunerite",
     "summary": "Tan radial fibrous sprays.",
-    "formula": "[box]Mn2+2Fe2+5Si8O22(OH)2",
+    "formula": "[]Mn2+2Fe2+5Si8O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "Massive - Fibrous, Radial",
     "cleavage": "Perfect, Imperfect, None",
@@ -18221,7 +18221,7 @@
 }, {
     "minName": "Cummingtonite",
     "summary": "Yellow fibrous Cummingtonite all over metallic-gray platy Hematite.Massive compact fibrous crystals in divergent fans to 5cm - impressive. Old Russian label see prov. tab.",
-    "formula": "[box]Mg7Si8O22(OH)2",
+    "formula": "[]Mg7Si8O22(OH)2",
     "crystalSystem": "Monoclinic",
     "crystalHabit": "Columnar, Fibrous, Granular",
     "cleavage": "Perfect, Distinct, None",
@@ -21007,7 +21007,7 @@
 }, {
     "minName": "Cancrinite",
     "summary": "Yellow crystalline Cancrinite throughout matrix. Rich.A rich specimen with large crystal grains of deep yellow Cancrinite with feldspar and aegerine.",
-    "formula": "(Na,Ca,[box])8(Al6Si6)O24(CO3,SO4)2·2H2O",
+    "formula": "(Na,Ca,[])8(Al6Si6)O24(CO3,SO4)2·2H2O",
     "crystalSystem": "Hexagonal",
     "crystalHabit": "Massive, Prismatic",
     "cleavage": "Perfect, None, None",

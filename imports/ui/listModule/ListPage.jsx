@@ -20,11 +20,7 @@ import {List} from 'material-ui/List';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
-import MenuItem from 'material-ui/MenuItem';
 
-const buttonStyles ={
-	border:'1px solid black'
-};
 export default class ListPage extends Component {
 
 
@@ -33,7 +29,7 @@ export default class ListPage extends Component {
 		this.state = {
 			currChar: '-',
 			mohMin:'0',
-			mohMax:'8',
+			mohMax:'10',
 			currCat:'None'
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
@@ -66,22 +62,52 @@ export default class ListPage extends Component {
 			minerals: minData,
 		};
 	}
+	//Uses the subscription to find minerals
 	getMinFromDb(){
 		const minLetter = this.state.currChar;
-		const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+		var minData;
+		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 
-		if(minData.length != 0){
-			for(var i = 0; i < minData.length; i++){
-				if(minData[i].category != this.state.currCat){
-					minData.splice(i, 1);
+		if(this.state.currChar == '-'){
+			minData = Minerals.find({}, {sort:{minName:1}}).fetch();
+		} else {
+			minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+		}
+
+		//minData is loaded
+		if(minData.length > 0){
+			var tempData=[];
+			//Apply category filter through this.state.currCat
+			if(this.state.currCat != 'None'){
+				for(var i=0; i < minData.length; i++){
+					//Matches the categories and pushes the matching objects
+					if(minData[i].category == this.state.currCat ){
+						tempData.push(minData[i]);
+					}
 				}
 			}
+
+			//Filter by Hardness
+			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
+				//Temp Data Exists
+				if(tempData.length > 0){
+					//one hardness value
+					if(tempData.hardness.length == 1){
+						console.log('1 hard');
+					}else if (tempData.hardness.length == 2){
+						console.log('2 hard');
+					} else{
+						console.log('no hardness');
+					}
+				}
+				//Temp Data Does not Exist
+			}
+
+			if(tempData.length > 0)
+				return tempData;
 		}
 		return minData;
-	}
 
-	handleClick(){
-		this.getMinFromDb.bind(this);
 	}
 
 	handleSelect(event){
@@ -127,7 +153,6 @@ export default class ListPage extends Component {
 							mohMin={this.state.mohMin}
 							mohMax={this.state.mohMax}
 							currCat={this.state.currCat}
-							handleClick={this.handleClick.bind(this)}
 							handleChar={this.setChar.bind(this)}
 							handleCat={this.setCat.bind(this)}
 							handleMohMin={this.setMohMin.bind(this)}
@@ -146,6 +171,10 @@ ReactMixin(ListPage.prototype, ReactMeteorData);
 
 ListPage.propTypes = {
 	minerals: PropTypes.array.isRequired,
+};
+
+ListPage.defaultProps ={
+	minerals:[],
 };
 
 ListPage.childContextTypes = {
