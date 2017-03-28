@@ -14,30 +14,13 @@ export default class Filter extends React.Component {
 		super(props);
 		this.state = {
 			open: false,
-			currChar:'',
-			currCat:'',
-			mohMin:'0',
-			mohMax:'8'
 		};
 	}
 	cancelFilter(){
 		this.setState({open: false});
 	}
 
-	setChar(event){
-		this.setState( {currChar:event.target.textContent});
-	}
 
-	setMohMin(event){
-		this.setState( {mohMin:event.target.textContent});
-	}
-
-	setMohMax(event){
-		this.setState( {mohMax:event.target.textContent});
-	}
-	setCat(event){
-		this.setState( {currCat:event.target.textContent});
-	}
 	handleSelect(event){
 		console.log(event.target.textContent);
 		return event.target.textContent;
@@ -47,7 +30,8 @@ export default class Filter extends React.Component {
 		this.setState({open: !this.state.open});
 	}
 	submitFilter(){
-		this.setState({open: false, currChar: this.state.currChar, currCat: this.state.currCat, mohMin: this.state.mohMin, mohMax:this.state.mohMax});
+		this.setState({open: false});
+		this.props.handleClick();
 	}
 	render() {
 		//Creates Character list for drop down
@@ -100,8 +84,8 @@ export default class Filter extends React.Component {
 					<DropDownMenu
 						id='CharMenu'
 						maxHeight={300}
-						value={this.state.currChar}
-						onChange={this.setChar.bind(this)}
+						value={this.props.currChar}
+						onChange={this.props.handleChar}
 						>
 							{charMenuItem}
 					</DropDownMenu>
@@ -112,15 +96,15 @@ export default class Filter extends React.Component {
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
-						value={this.state.mohMin}
-						onChange={this.setMohMin.bind(this)}
+						value={this.props.mohMin}
+						onChange={this.props.handleMohMin}
 						>
 							{minMenuItem}
 					</DropDownMenu>
 					<DropDownMenu
 						maxHeight={300}
-						value={this.state.mohMax}
-						onChange={this.setMohMax.bind(this)}
+						value={this.props.mohMax}
+						onChange={this.props.handleMohMax}
 						>
 							{minMenuItem}
 					</DropDownMenu>
@@ -131,8 +115,8 @@ export default class Filter extends React.Component {
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
-						value={this.state.currCat}
-						onChange={this.setCat.bind(this)}
+						value={this.props.currCat}
+						onChange={this.props.handleCat}
 						>
 							{catMenuItem}
 					</DropDownMenu>

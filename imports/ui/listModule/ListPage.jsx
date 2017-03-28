@@ -31,12 +31,27 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currChar: 'A',
+			currChar: '-',
 			mohMin:'0',
 			mohMax:'8',
 			currCat:'None'
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
+	}
+
+	setChar(event){
+		this.setState( {currChar:event.target.textContent});
+	}
+
+	setMohMin(event){
+		this.setState( {mohMin:event.target.textContent});
+	}
+
+	setMohMax(event){
+		this.setState( {mohMax:event.target.textContent});
+	}
+	setCat(event){
+		this.setState( {currCat:event.target.textContent});
 	}
 
 	getChildContext() {
@@ -54,7 +69,19 @@ export default class ListPage extends Component {
 	getMinFromDb(){
 		const minLetter = this.state.currChar;
 		const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+
+		if(minData.length != 0){
+			for(var i = 0; i < minData.length; i++){
+				if(minData[i].category != this.state.currCat){
+					minData.splice(i, 1);
+				}
+			}
+		}
 		return minData;
+	}
+
+	handleClick(){
+		this.getMinFromDb.bind(this);
 	}
 
 	handleSelect(event){
@@ -70,22 +97,6 @@ export default class ListPage extends Component {
 	}
 
 	render() {
-		const abc = [
-			'-','A', 'B', 'C', 'D', 'E', 'F', 'G',
-			'H', 'I', 'J', 'K', 'L', 'M', 'N',
-			'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-			'V', 'W', 'X', 'Y', 'Z'
-		];
-		const menItem = [];
-		for (let i = 0; i< abc.length; i++){
-			menItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
-		}
-
-		const mohsScale = ['0','1','2','3','4','5','6','7','8'];
-		const minMenuItem = [];
-		for (let i = 0; i< mohsScale.length; i++){
-			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
-		}
 		if(!this.data.ready){
 			return (
 				<div className="container">
@@ -116,6 +127,11 @@ export default class ListPage extends Component {
 							mohMin={this.state.mohMin}
 							mohMax={this.state.mohMax}
 							currCat={this.state.currCat}
+							handleClick={this.handleClick.bind(this)}
+							handleChar={this.setChar.bind(this)}
+							handleCat={this.setCat.bind(this)}
+							handleMohMin={this.setMohMin.bind(this)}
+							handleMohMax={this.setMohMax.bind(this)}
 						/>
 					<List>
 						{	this.renderMinerals()	}
