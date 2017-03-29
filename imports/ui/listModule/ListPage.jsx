@@ -91,24 +91,44 @@ export default class ListPage extends Component {
 			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
 				//Temp Data Exists
 				if(tempData.length > 0){
-
-					//one hardness value
-					if(tempData.hardness.length == 1){
-						console.log('1 hard');
-					}else if (tempData.hardness.length == 2){
-						console.log('2 hard');
-					} else{
-						console.log('no hardness');
+					for(var k=0; tempData.length>k; k++){
+						//one hardness value
+						if(tempData[k].hardness.length == 1){
+							var moh = tempData[k].hardness[0];
+							//Remove all minerals where mohMin <= hardness >= mohMax
+							if (moh < this.state.mohMin || moh > this.state.mohMax){
+								tempData.splice(k, 1);
+							}
+						}else if (tempData[k].hardness.length == 2){
+							var mohMin = tempData[k].hardness[0];
+							var mohMax = tempData[k].hardness[1];
+							if (mohMin < this.state.mohMin || mohMax > this.state.mohMax){
+								tempData.splice(k, 1);
+							}
+						} else{
+							console.log('no hardness');
+						}
 					}
-				}else if(tempData.length == undefined){
 
-					//one hardness value
-					if(minData.hardness.length == 1){
-						console.log('1 hard');
-					}else if (minData.hardness.length == 2){
-						console.log('2 hard');
-					} else{
-						console.log('no hardness');
+					//tempData doesnt exist
+				}else if(tempData.length == undefined){
+					for(var j=0; minData.length>j; j++){
+						//one hardness value
+						if(minData[j].hardness.length == 1){
+							moh = minData[j].hardness[0];
+							//Remove all minerals where mohMin <= hardness >= mohMax
+							if (moh < this.state.mohMin || moh > this.state.mohMax){
+								minData.splice(j, 1);
+							}
+						}else if (minData[j].hardness.length == 2){
+							mohMin = minData[j].hardness[0];
+							mohMax = minData[j].hardness[1];
+							if (mohMin < this.state.mohMin || mohMax > this.state.mohMax){
+								minData.splice(j, 1);
+							}
+						} else{
+							console.log('no hardness');
+						}
 					}
 				}
 			}
