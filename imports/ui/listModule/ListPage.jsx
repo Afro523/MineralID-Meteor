@@ -91,6 +91,7 @@ export default class ListPage extends Component {
 			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
 				//Temp Data Exists
 				if(tempData.length > 0){
+
 					//one hardness value
 					if(tempData.hardness.length == 1){
 						console.log('1 hard');
@@ -99,8 +100,17 @@ export default class ListPage extends Component {
 					} else{
 						console.log('no hardness');
 					}
+				}else if(tempData.length == undefined){
+
+					//one hardness value
+					if(minData.hardness.length == 1){
+						console.log('1 hard');
+					}else if (minData.hardness.length == 2){
+						console.log('2 hard');
+					} else{
+						console.log('no hardness');
+					}
 				}
-				//Temp Data Does not Exist
 			}
 
 			if(tempData.length > 0)
