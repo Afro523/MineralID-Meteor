@@ -36,7 +36,7 @@ export default class Filter extends React.Component {
 			charMenuItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
 		}
 		//Creates Mohs Scale list for drop down
-		const mohsScale = ['0','1','2','3','4','5','6','7','8', '9', '10'];
+		const mohsScale = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
 			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
@@ -130,8 +130,8 @@ export default class Filter extends React.Component {
 Filter.defaultProps ={
 	currCat: 'None',
 	currChar: '-',
-	mohMin: '0',
-	mohMax: '10',
+	mohMin: 0,
+	mohMax: 10,
 };
 
 Filter.propTypes = {
@@ -141,6 +141,6 @@ Filter.propTypes = {
 	handleMohMax: PropTypes.func.isRequired,
 	currCat: PropTypes.string.isRequired,
 	currChar: PropTypes.string.isRequired,
-	mohMin: PropTypes.string.isRequired,
-	mohMax: PropTypes.string.isRequired,
+	mohMin: PropTypes.number.isRequired,
+	mohMax: PropTypes.number.isRequired,
 };

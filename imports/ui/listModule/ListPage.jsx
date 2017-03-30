@@ -28,8 +28,8 @@ export default class ListPage extends Component {
 		super(props);
 		this.state = {
 			currChar: '-',
-			mohMin:'0',
-			mohMax:'10',
+			mohMin: 0,
+			mohMax: 10,
 			currCat:'None'
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
@@ -44,10 +44,10 @@ export default class ListPage extends Component {
 	}
 
 	setMohMax(event){
-		this.setState( {mohMax:event.target.textContent});
+		this.setState( {mohMax:parseFloat(event.target.textContent)});
 	}
 	setCat(event){
-		this.setState( {currCat:event.target.textContent});
+		this.setState( {currCat:parseFloat(event.target.textContent)});
 	}
 
 	getChildContext() {
@@ -62,6 +62,7 @@ export default class ListPage extends Component {
 			minerals: minData,
 		};
 	}
+
 	//Uses the subscription to find minerals
 	getMinFromDb(){
 		const minLetter = this.state.currChar;
@@ -91,17 +92,18 @@ export default class ListPage extends Component {
 			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
 				//Temp Data Exists
 				if(tempData.length > 0){
+					console.log('temp data');
 					for(var k=0; tempData.length>k; k++){
 						//one hardness value
 						if(tempData[k].hardness.length == 1){
-							var moh = tempData[k].hardness[0];
+							var moh = parseFloat(tempData[k].hardness[0]);
 							//Remove all minerals where mohMin <= hardness >= mohMax
 							if (moh < this.state.mohMin || moh > this.state.mohMax){
 								tempData.splice(k, 1);
 							}
 						}else if (tempData[k].hardness.length == 2){
-							var mohMin = tempData[k].hardness[0];
-							var mohMax = tempData[k].hardness[1];
+							var mohMin = parseFloat(tempData[k].hardness[0]);
+							var mohMax = parseFloat(tempData[k].hardness[1]);
 							if (mohMin < this.state.mohMin || mohMax > this.state.mohMax){
 								tempData.splice(k, 1);
 							}
@@ -111,18 +113,19 @@ export default class ListPage extends Component {
 					}
 
 					//tempData doesnt exist
-				}else if(tempData.length == undefined){
+				}else if(tempData.length == 0){
+
 					for(var j=0; minData.length>j; j++){
 						//one hardness value
 						if(minData[j].hardness.length == 1){
-							moh = minData[j].hardness[0];
+							moh = parseFloat(minData[j].hardness[0]);
 							//Remove all minerals where mohMin <= hardness >= mohMax
 							if (moh < this.state.mohMin || moh > this.state.mohMax){
 								minData.splice(j, 1);
 							}
 						}else if (minData[j].hardness.length == 2){
-							mohMin = minData[j].hardness[0];
-							mohMax = minData[j].hardness[1];
+							mohMin = parseFloat(minData[j].hardness[0]);
+							mohMax = parseFloat(minData[j].hardness[1]);
 							if (mohMin < this.state.mohMin || mohMax > this.state.mohMax){
 								minData.splice(j, 1);
 							}
