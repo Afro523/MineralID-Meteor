@@ -58,6 +58,7 @@ export default class Filter extends React.Component {
 
 		//Throws a 'None' option to the top
 		catMenuItem.unshift(<MenuItem value={'None'} key={catMenuItem.length + 1} primaryText={'None'}/>);
+
 		return (
 			<div>
         <RaisedButton

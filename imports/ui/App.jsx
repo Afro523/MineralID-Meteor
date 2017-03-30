@@ -6,9 +6,6 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
-//import {Link} from 'react-router';
-import MinList from './listModule/MinList';
-
 // App component - represents the whole app
 export default class App extends Component {
 

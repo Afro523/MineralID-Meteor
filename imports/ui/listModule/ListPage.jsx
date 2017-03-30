@@ -35,19 +35,53 @@ export default class ListPage extends Component {
 		this.getMinFromDb = this.getMinFromDb.bind(this);
 	}
 
+	applyCatFilter(data){
+		var tempData = [];
+		for(var i=0; i < data.length; i++){
+			//Matches the categories and pushes the matching objects
+			if(data[i].category == this.state.currCat ){
+				tempData.push(data[i]);
+			}
+		}
+		return tempData;
+	}
+
+	applyMohFilter(data){
+		var tempData = [];
+		for(var i=0; data.length>i; i++){
+			//one hardness value
+			if(data[i].hardness.length == 1){
+				var moh = parseFloat(data[i].hardness[0]);
+				//Remove all minerals where mohMin <= hardness >= mohMax
+				if (moh >= this.state.mohMin && moh <= this.state.mohMax){
+					tempData.push(data[i]);
+				}
+			}else if (data[i].hardness.length == 2){
+				var mohMin = parseFloat(data[i].hardness[0]);
+				var mohMax = parseFloat(data[i].hardness[1]);
+				if (mohMin >= this.state.mohMin && mohMax <= this.state.mohMax){
+					tempData.push(data[i]);
+				}
+			} else{
+				console.log('no hardness');
+			}
+		}
+		return tempData;
+	}
+
 	setChar(event){
 		this.setState( {currChar:event.target.textContent});
 	}
 
 	setMohMin(event){
-		this.setState( {mohMin:event.target.textContent});
+		this.setState( {mohMin: parseFloat(event.target.textContent)});
 	}
 
 	setMohMax(event){
 		this.setState( {mohMax:parseFloat(event.target.textContent)});
 	}
 	setCat(event){
-		this.setState( {currCat:parseFloat(event.target.textContent)});
+		this.setState( {currCat:event.target.textContent});
 	}
 
 	getChildContext() {
@@ -77,70 +111,18 @@ export default class ListPage extends Component {
 
 		//minData is loaded
 		if(minData.length > 0){
-			var tempData=[];
+
 			//Apply category filter through this.state.currCat
 			if(this.state.currCat != 'None'){
-				for(var i=0; i < minData.length; i++){
-					//Matches the categories and pushes the matching objects
-					if(minData[i].category == this.state.currCat ){
-						tempData.push(minData[i]);
-					}
-				}
+				minData = this.applyCatFilter(minData);
 			}
 
 			//Filter by Hardness
 			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
-				//Temp Data Exists
-				if(tempData.length > 0){
-					console.log('temp data');
-					for(var k=0; tempData.length>k; k++){
-						//one hardness value
-						if(tempData[k].hardness.length == 1){
-							var moh = parseFloat(tempData[k].hardness[0]);
-							//Remove all minerals where mohMin <= hardness >= mohMax
-							if (moh < this.state.mohMin || moh > this.state.mohMax){
-								tempData.splice(k, 1);
-							}
-						}else if (tempData[k].hardness.length == 2){
-							var mohMin = parseFloat(tempData[k].hardness[0]);
-							var mohMax = parseFloat(tempData[k].hardness[1]);
-							if (mohMin < this.state.mohMin || mohMax > this.state.mohMax){
-								tempData.splice(k, 1);
-							}
-						} else{
-							console.log('no hardness');
-						}
-					}
-
-					//tempData doesnt exist
-				}else if(tempData.length == 0){
-
-					for(var j=0; minData.length>j; j++){
-						//one hardness value
-						if(minData[j].hardness.length == 1){
-							moh = parseFloat(minData[j].hardness[0]);
-							//Remove all minerals where mohMin <= hardness >= mohMax
-							if (moh < this.state.mohMin || moh > this.state.mohMax){
-								minData.splice(j, 1);
-							}
-						}else if (minData[j].hardness.length == 2){
-							mohMin = parseFloat(minData[j].hardness[0]);
-							mohMax = parseFloat(minData[j].hardness[1]);
-							if (mohMin < this.state.mohMin || mohMax > this.state.mohMax){
-								minData.splice(j, 1);
-							}
-						} else{
-							console.log('no hardness');
-						}
-					}
-				}
+				minData = this.applyMohFilter(minData);
 			}
-
-			if(tempData.length > 0)
-				return tempData;
 		}
 		return minData;
-
 	}
 
 	handleSelect(event){
@@ -163,12 +145,10 @@ export default class ListPage extends Component {
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
-					{/*<SortBy/>*/}
-					<div style={{position: 'relative'}}>
+					<div style={{textAlign: 'center'}}>
 						<CircularProgress
-							size={80}
-							thickness={5}
-							style={{marginLeft: '50%'}}
+							size={300}
+							thickness={10}
 						/>
 					</div>
 			</div>
