@@ -29,7 +29,7 @@ export default class MinCard extends Component {
 		const mineral = this.props.mineral;
 		return (
       <Card>
-				<CardMedia mediaStyle={{height: '50%', width: '50%', margin: 'auto'}}>
+				<CardMedia mediaStyle={{height: '75%', width: '75%', margin: 'auto'}}>
 				<img src={'./img/'+mineral.minName+'.jpg'}/>
 				</CardMedia>
 				<CardText>

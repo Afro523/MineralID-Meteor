@@ -10,8 +10,8 @@ import FlatButton from 'material-ui/FlatButton';
 
 
 const customContentStyle = {
-	width: '95%',
-	maxWidth: 'none',
+	width: '97%',
+	maxWidth: 'none'
 };
 
 export default class MinList extends Component {
@@ -57,6 +57,7 @@ export default class MinList extends Component {
 					onRequestClose={this.handleClose.bind(this)}
 					autoScrollBodyContent={true}
 					contentStyle={customContentStyle}
+					bodyStyle={{padding:'0px'}}
 				>
 				<MinCard mineral={mineral}/>
 				</Dialog>

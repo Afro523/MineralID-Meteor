@@ -6,6 +6,10 @@ import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import FilterList from 'material-ui/svg-icons/content/filter-list';
+
 import Clear from 'material-ui/svg-icons/content/clear';
 
 export default class Filter extends React.Component {
@@ -61,10 +65,20 @@ export default class Filter extends React.Component {
 
 		return (
 			<div>
-        <RaisedButton
-          label="Toggle Filter Pane"
-          onTouchTap={this.handleToggle.bind(this)}
-        />
+				<FloatingActionButton
+					style={{
+						margin: 0,
+						top: 'auto',
+						right: 20,
+						bottom: 20,
+						left: 'auto',
+						position: 'fixed',
+						zIndex:2
+					}}
+					onTouchTap={this.handleToggle.bind(this)}
+				>
+					<FilterList />
+				</FloatingActionButton>
         <Drawer docked={false} open={this.state.open}>
 					<h4>Sort By:</h4>
 					<Divider />

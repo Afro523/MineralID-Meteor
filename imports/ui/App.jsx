@@ -6,6 +6,9 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
+import GoToButton from './GoToButton';
+import List from 'material-ui/svg-icons/action/list';
+
 // App component - represents the whole app
 export default class App extends Component {
 
@@ -22,12 +25,15 @@ export default class App extends Component {
 
 		return (
       <MuiThemeProvider muiTheme={getMuiTheme(baseTheme)}>
-				<div className="container">
+				<div className="container-fluid">
 					<AppBar
 						showMenuIconButton={false}
 						title="Mineral ID"
 					/>
 					<Link to="/list"className="waves-effect waves-light btn light-blue darken-3">Mineral List</Link>
+					<GoToButton
+						icon={<List style={{width:'100%', height:'100%'}}/>}
+					/>
 				</div>
       </MuiThemeProvider>
 		);

@@ -27,7 +27,7 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currChar: '-',
+			currChar: 'A',
 			mohMin: 0,
 			mohMax: 10,
 			currCat:'None'
@@ -140,7 +140,7 @@ export default class ListPage extends Component {
 	render() {
 		if(!this.data.ready){
 			return (
-				<div className="container">
+				<div className="container-fluid">
 					<AppBar
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
@@ -156,11 +156,13 @@ export default class ListPage extends Component {
 		} else {
 
 			return (
-				<div className="container">
+				<div className="container-fluid">
 					<AppBar
+						style={{position:'fixed'}}
 						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
 						title="Mineral ID"
 					/>
+					<div style={{height:'50px'}} />
 						<Filter
 							currChar={this.state.currChar}
 							mohMin={this.state.mohMin}
@@ -174,6 +176,7 @@ export default class ListPage extends Component {
 					<List>
 						{	this.renderMinerals()	}
 					</List>
+
 				</div>
 			);
 		}
