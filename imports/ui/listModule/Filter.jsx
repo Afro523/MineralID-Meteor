@@ -79,7 +79,7 @@ export default class Filter extends React.Component {
 				>
 					<FilterList />
 				</FloatingActionButton>
-        <Drawer docked={false} open={this.state.open}>
+        <Drawer docked={false} modal={false} open={this.state.open}>
 					<h4>Sort By:</h4>
 					<Divider />
 					<MenuItem>

@@ -6,8 +6,8 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
-import GoToButton from './GoToButton';
 import List from 'material-ui/svg-icons/action/list';
+import Page from 'material-ui/svg-icons/action/pageview';
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -30,10 +30,22 @@ export default class App extends Component {
 						showMenuIconButton={false}
 						title="Mineral ID"
 					/>
-					<Link to="/list"className="waves-effect waves-light btn light-blue darken-3">Mineral List</Link>
-					<GoToButton
-						icon={<List style={{width:'100%', height:'100%'}}/>}
-					/>
+					<div style={{display:'flex', alignContent:'space-between', justifyContent:'center'}}>
+						<Link
+							to="/list"
+							className="waves-effect waves-light btn light-blue darken-3"
+							style={{width:'25%', height:'25%'}}>
+							<div style={{fontSize:'20px'}}>Mineral I.D.</div>
+								<Page style={{alignContent:'center', width:'100%', height:'100%'}}/>
+							</Link>
+						<Link
+							to="/list"
+							className="waves-effect waves-light btn light-blue darken-3"
+							style={{width:'25%', height:'25%'}}>
+							<div style={{fontSize:'20px'}}>Mineral DB</div>
+								<List style={{alignContent:'center', width:'100%', height:'100%'}}/>
+						</Link>
+					</div>
 				</div>
       </MuiThemeProvider>
 		);
