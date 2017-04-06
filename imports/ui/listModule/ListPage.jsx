@@ -27,7 +27,7 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currChar: 'A',
+			currChar: '-',
 			mohMin: 0,
 			mohMax: 10,
 			currCat:'None'

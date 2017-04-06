@@ -30,18 +30,18 @@ export default class App extends Component {
 						showMenuIconButton={false}
 						title="Mineral ID"
 					/>
-					<div style={{display:'flex', alignContent:'space-between', justifyContent:'center'}}>
+					<div style={{display:'flex', justifyContent:'space-around', marginTop:'10px'}}>
 						<Link
-							to="/list"
+							to="/id"
 							className="waves-effect waves-light btn light-blue darken-3"
-							style={{width:'25%', height:'25%'}}>
+							style={{width:'40%', height:'40%'}}>
 							<div style={{fontSize:'20px'}}>Mineral I.D.</div>
 								<Page style={{alignContent:'center', width:'100%', height:'100%'}}/>
 							</Link>
 						<Link
 							to="/list"
 							className="waves-effect waves-light btn light-blue darken-3"
-							style={{width:'25%', height:'25%'}}>
+							style={{width:'40%', height:'40%'}}>
 							<div style={{fontSize:'20px'}}>Mineral DB</div>
 								<List style={{alignContent:'center', width:'100%', height:'100%'}}/>
 						</Link>
