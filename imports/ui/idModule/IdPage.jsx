@@ -2,6 +2,8 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 
+import QuestionContainer from './QuestionContainer';
+
 //MUi
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
@@ -26,7 +28,7 @@ export default class IdPage extends Component {
 					title="Mineral ID"
 				/>
 
-				
+				<QuestionContainer/>
 
 			</div>
 		);
