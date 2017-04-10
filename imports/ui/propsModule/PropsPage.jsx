@@ -4,10 +4,11 @@ import React, {Component, PropTypes} from 'react';
 import QuestionContainer from './QuestionContainer';
 import MinBanner from '../MinBanner';
 
-
+//MUI
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-export default class IdPage extends Component {
+
+export default class PropsPage extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -28,10 +29,10 @@ export default class IdPage extends Component {
 	}
 }
 
-IdPage.propTypes ={
+PropsPage.propTypes ={
 
 };
 
-IdPage.childContextTypes = {
+PropsPage.childContextTypes = {
 	muiTheme: React.PropTypes.object.isRequired,
 };

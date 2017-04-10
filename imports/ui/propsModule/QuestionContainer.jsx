@@ -1,13 +1,11 @@
 //React
 import React, {Component, PropTypes} from 'react';
-
-import QuestionContainer from './QuestionContainer';
-import MinBanner from '../MinBanner';
-
+import {Link} from 'react-router';
 
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-export default class IdPage extends Component {
+
+export default class QuestionContainer extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -19,19 +17,16 @@ export default class IdPage extends Component {
 	render() {
 		return (
 			<div>
-				<MinBanner/>
-
-				<QuestionContainer/>
 
 			</div>
 		);
 	}
 }
 
-IdPage.propTypes ={
+QuestionContainer.propTypes ={
 
 };
 
-IdPage.childContextTypes = {
+QuestionContainer.childContextTypes = {
 	muiTheme: React.PropTypes.object.isRequired,
 };

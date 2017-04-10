@@ -8,6 +8,22 @@ import AppBar from 'material-ui/AppBar';
 
 import List from 'material-ui/svg-icons/action/list';
 import Page from 'material-ui/svg-icons/action/pageview';
+import Board from 'material-ui/svg-icons/hardware/developer-board';
+
+const iconStyles ={
+	alignContent:'center',
+	width:'75%',
+	height:'75%',
+	padding:'0px'
+};
+
+const buttonStyles ={
+	width:'40%',
+	height:'40%',
+	textAlign:'center',
+	padding:'0px',
+	marginTop:'10px'
+};
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -30,20 +46,27 @@ export default class App extends Component {
 						showMenuIconButton={false}
 						title="Mineral ID"
 					/>
-					<div style={{display:'flex', justifyContent:'space-around', marginTop:'10px'}}>
+					<div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-around', alignItems:'center'}}>
 						<Link
 							to="/id"
 							className="waves-effect waves-light btn light-blue darken-3"
-							style={{width:'40%', height:'40%'}}>
-							<div style={{fontSize:'20px'}}>Mineral I.D.</div>
-								<Page style={{alignContent:'center', width:'100%', height:'100%'}}/>
-							</Link>
+							style={buttonStyles}>
+							<div style={{fontSize:'20px'}}>Mineral <br/> I.D.</div>
+								<Page style={iconStyles}/>
+						</Link>
 						<Link
 							to="/list"
 							className="waves-effect waves-light btn light-blue darken-3"
-							style={{width:'40%', height:'40%'}}>
-							<div style={{fontSize:'20px'}}>Mineral DB</div>
-								<List style={{alignContent:'center', width:'100%', height:'100%'}}/>
+							style={buttonStyles}>
+							<div style={{fontSize:'20px'}}>Mineral <br/> DB</div>
+								<List style={iconStyles}/>
+						</Link>
+						<Link
+							to="/props"
+							className="waves-effect waves-light btn light-blue darken-3"
+							style={buttonStyles}>
+							<div style={{fontSize:'20px'}}>Physical Properties</div>
+								<Board style={iconStyles}/>
 						</Link>
 					</div>
 				</div>

@@ -1,6 +1,5 @@
 //React, React Router
 import React, { Component, PropTypes } from 'react';
-import {Link} from 'react-router';
 import ReactMixin from 'react-mixin';
 
 //Meteor
@@ -17,10 +16,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {List} from 'material-ui/List';
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
-
+import MinBanner from '../MinBanner';
 export default class ListPage extends Component {
 
 
@@ -141,10 +137,7 @@ export default class ListPage extends Component {
 		if(!this.data.ready){
 			return (
 				<div className="container-fluid">
-					<AppBar
-						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
-						title="Mineral ID"
-					/>
+					<MinBanner/>
 					<div style={{textAlign: 'center'}}>
 						<CircularProgress
 							size={300}
@@ -157,11 +150,7 @@ export default class ListPage extends Component {
 
 			return (
 				<div className="container-fluid">
-					<AppBar
-						style={{position:'fixed'}}
-						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
-						title="Mineral ID"
-					/>
+					<MinBanner/>
 					<div style={{height:'50px'}} />
 						<Filter
 							currChar={this.state.currChar}
