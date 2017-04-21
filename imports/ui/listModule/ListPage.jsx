@@ -151,7 +151,6 @@ export default class ListPage extends Component {
 			return (
 				<div className="container-fluid">
 					<MinBanner/>
-					<div style={{height:'50px'}} />
 						<Filter
 							currChar={this.state.currChar}
 							mohMin={this.state.mohMin}
