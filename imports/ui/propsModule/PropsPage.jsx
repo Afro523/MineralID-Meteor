@@ -1,7 +1,7 @@
 //React
 import React, {Component, PropTypes} from 'react';
 
-import QuestionContainer from './QuestionContainer';
+import MinInfo from './MinInfo';
 import MinBanner from '../MinBanner';
 
 //MUI
@@ -21,8 +21,7 @@ export default class PropsPage extends Component {
 		return (
 			<div>
 				<MinBanner/>
-
-				<QuestionContainer/>
+				<MinInfo/>
 
 			</div>
 		);
