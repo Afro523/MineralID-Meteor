@@ -28,20 +28,22 @@ export default class HardnessInfo extends Component {
 					<b> Summary: </b>
 					<Divider/>
 					<p>
-						The hardness of a mineral is based on the Mohs Scale. The Mohs scale of mineral hardness is based on the ability of one natural sample of mineral to scratch another mineral visibly.
+						The hardness of a mineral is determined using the Mohs Scale. The Mohs scale of mineral hardness is based on the ability of one natural sample of mineral to scratch another mineral visibly.
 					</p>
 					<b> Mohs Scale </b>
 					<Divider/>
 					<Table selectable={false}>
             <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
-              <TableHeaderColumn>
-                Hardness
-              </TableHeaderColumn>
-              <TableHeaderColumn>
-                Example Mineral
-              </TableHeaderColumn>
+							<TableRow>
+								<TableHeaderColumn>
+									Hardness
+								</TableHeaderColumn>
+								<TableHeaderColumn>
+									Example Mineral
+								</TableHeaderColumn>
+							</TableRow>
             </TableHeader>
-						<TableBody style={{textAlign:'center'}} displayRowCheckbox={false}>
+						<TableBody displayRowCheckbox={false}>
 							<TableRow>
 								<TableRowColumn>1</TableRowColumn>
 								<TableRowColumn>Talc</TableRowColumn>
@@ -102,7 +104,7 @@ export default class HardnessInfo extends Component {
             </TableHeader>
 						<TableBody style={{textAlign:'center'}} displayRowCheckbox={false}>
 							<TableRow >
-								<TableRowColumn>2-2.5</TableRowColumn>
+								<TableRowColumn>2 - 2.5</TableRowColumn>
 								<TableRowColumn>Fingernail</TableRowColumn>
 							</TableRow>
 							<TableRow>
@@ -131,6 +133,11 @@ export default class HardnessInfo extends Component {
 							</TableRow>
 						</TableBody>
 					</Table>
+					<b> How It Works: </b>
+					<Divider/>
+					<p>
+						Using the Mohs Scale is simple. You take the mineral in question and do one of two things. 1) You can scratch it with something of a known hardness such as your fingernail 2) Use it to scratch another object of known hardness such as a glass plate.
+					</p>
 				</div>
 			</div>
 		);

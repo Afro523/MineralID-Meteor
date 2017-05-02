@@ -21,17 +21,15 @@ export default class MinBanner extends Component {
 		return { muiTheme: getMuiTheme(baseTheme) };
 	}
 
-
 	render() {
 
 		return (
-				<div className="container-fluid">
-					<AppBar
-						style={{position:'fixed'}}
-						iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
-						title="Mineral ID"
-					/>
-					<div style={{height:'64px', backgroundColor:'black'}}/>
+				<div className={'navbar-fixed'}>
+							<AppBar
+								iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
+								title="Mineral ID"
+							/>
+					<div style={{height:'64px'}}/>
 				</div>
 
 		);
