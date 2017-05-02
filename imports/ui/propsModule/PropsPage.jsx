@@ -1,7 +1,7 @@
 //React
 import React, {Component, PropTypes} from 'react';
-
-import MinInfo from './MinInfo';
+import {Link} from 'react-router';
+import LusterInfo from './LusterInfo';
 import MinBanner from '../MinBanner';
 
 //MUI
@@ -21,8 +21,18 @@ export default class PropsPage extends Component {
 		return (
 			<div>
 				<MinBanner/>
-				<MinInfo/>
-
+				<Link
+					to="/props/luster"
+					className="waves-effect waves-light btn light-blue darken-3"
+					>
+					<div style={{fontSize:'20px'}}>Luster</div>
+				</Link>
+				<Link
+					to="/props/hardness"
+					className="waves-effect waves-light btn light-blue darken-3"
+					>
+					<div style={{fontSize:'20px'}}>Hardness</div>
+				</Link>
 			</div>
 		);
 	}

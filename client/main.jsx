@@ -8,6 +8,8 @@ import App from '../imports/ui/App';
 import ListPage from '../imports/ui/listModule/ListPage';
 import IdPage from '../imports/ui/idModule/IdPage';
 import PropsPage from '../imports/ui/propsModule/PropsPage';
+import LusterInfo from '../imports/ui/propsModule/LusterInfo';
+import HardnessInfo from '../imports/ui/propsModule/HardnessInfo';
 
 injectTapEventPlugin();
 
@@ -18,6 +20,8 @@ Meteor.startup(() => {
 			<Route path="/list" component={ListPage}/>
 			<Route path="/id" component={IdPage}/>
 			<Route path="/props" component={PropsPage}/>
+			<Route path="/props/luster" component={LusterInfo}/>
+			<Route path="/props/hardness" component={HardnessInfo}/>
 		</Router>
 	), document.getElementById('render-target'));
 });

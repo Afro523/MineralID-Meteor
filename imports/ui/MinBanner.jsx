@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router';
+import {Link, browserHistory} from 'react-router';
+
+
 
 //MUi stuff
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -26,7 +28,7 @@ export default class MinBanner extends Component {
 				<div className="container-fluid">
 					<AppBar
 						style={{position:'fixed'}}
-						iconElementLeft={<IconButton><Link to="/"><NavigationClose/></Link></IconButton>}
+						iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
 						title="Mineral ID"
 					/>
 					<div style={{height:'64px', backgroundColor:'black'}}/>

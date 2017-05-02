@@ -2,12 +2,14 @@
 import React, {Component, PropTypes} from 'react';
 import Divider from 'material-ui/Divider';
 
+import MinBanner from '../MinBanner';
+
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn,} from 'material-ui/Table';
+import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 
 
-export default class QuestionContainer extends Component {
+export default class LusterInfo extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -18,13 +20,23 @@ export default class QuestionContainer extends Component {
 
 	render() {
 		return (
-			<div className='container'>
-				<h3>Luster</h3>
-				<Divider/>
-				<b> Definition: </b>
-				<p>
-					Luster is a description oh mow light reflects from the surface of an object, such as a mineral.  Luster is of two main types- metallic and non-metallic - that cary in intensity from bright (very reflective and shiny, polished) to dull (not very reflective, not very shiny, not polished).
-					<br/>
+			<div>
+				<MinBanner/>
+				<div className='container'>
+
+					<h3 style={{textAlign:'center'}}>Luster</h3>
+					<b> Summary: </b>
+					<Divider/>
+					<p>
+						Luster  is the way light interacts with the surface of a crystal, rock, or mineral. The word traces its origins back to the latin lux, meaning "light", and generally implies radiance, gloss, or brilliance.
+						<br/>
+						A range of terms are used to describe luster, such as earthy, metallic, greasy, and silky. Similarly, the term vitreous (derived from the Latin for glass, vitrum) refers to a glassy luster. A list of these terms is given below.
+						<br/>
+						Luster varies over a wide continuum, and so there are no rigid boundaries between the different types of luster. (For this reason, different sources can often describe the same mineral differently. This ambiguity is further complicated by luster's ability to vary widely within a particular mineral species.) The terms are frequently combined to describe intermediate types of luster (for example, a "vitreous greasy" luster).
+						<br/>
+					</p>
+					<b> Common Terms </b>
+					<Divider/>
 					<Table selectable={false}>
 						<TableBody displayRowCheckbox={false}>
 							<TableRow>
@@ -57,21 +69,21 @@ export default class QuestionContainer extends Component {
 							</TableRow>
 						</TableBody>
 					</Table>
-				</p>
-				<Divider/>
-				<b>Common Examples: </b>
-				<p>
+					<b>Everyday Examples: </b>
+					<Divider/>
+					<p>
 
-				</p>
+					</p>
+				</div>
 			</div>
 		);
 	}
 }
 
-QuestionContainer.propTypes ={
+LusterInfo.propTypes ={
 
 };
 
-QuestionContainer.childContextTypes = {
+LusterInfo.childContextTypes = {
 	muiTheme: React.PropTypes.object.isRequired,
 };
