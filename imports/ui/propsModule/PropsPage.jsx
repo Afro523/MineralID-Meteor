@@ -28,8 +28,8 @@ export default class PropsPage extends Component {
 				<p>
 					These are a list of the main physial properties which minerals are defined by.
 				</p>
-				<div style={{display:'flex', justifyContent:'space-around', flexDirection:'column'}}>
-					<FlatButton>
+				<div style={{display:'flex', flexDirection:'column'}}>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/cleavage"
@@ -38,7 +38,7 @@ export default class PropsPage extends Component {
 							<div>Cleavage</div>
 						</Link>
 					</FlatButton>
-					<FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/crystalhabit"
@@ -47,7 +47,7 @@ export default class PropsPage extends Component {
 							<div>Crystal Habit</div>
 						</Link>
 					</FlatButton>
-					<FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/crystalsystem"
@@ -56,7 +56,7 @@ export default class PropsPage extends Component {
 							<div>Crystal System</div>
 						</Link>
 					</FlatButton>
-					<FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/fracture"
@@ -65,7 +65,7 @@ export default class PropsPage extends Component {
 							<div>Fracture</div>
 						</Link>
 					</FlatButton>
-					<FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/hardness"
@@ -74,7 +74,7 @@ export default class PropsPage extends Component {
 							<div>Hardness</div>
 						</Link>
 					</FlatButton>
-					<FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/luster"
@@ -83,7 +83,7 @@ export default class PropsPage extends Component {
 							<div>Luster</div>
 						</Link>
 					</FlatButton>
-					<FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/streak"
