@@ -7,9 +7,16 @@ import MinBanner from '../MinBanner';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 
+const columnStyle = {
+	whiteSpace: 'pre-wrap',
+	wordWrap: 'break-word'
+};
 
+const exampleStyle = {
+	marginTop:'10px'
+};
 
 export default class LusterInfo extends Component {
 	constructor(props) {
@@ -25,8 +32,8 @@ export default class LusterInfo extends Component {
 			<div>
 				<MinBanner/>
 				<div className='container'>
-
-					<h3 style={{textAlign:'center'}}>Luster</h3>
+					<h3 style={{textAlign:'center', marginBottom:'0px'}}>Luster</h3>
+					<p style={{textAlign:'center'}}><i>The reflectivity of a mineral</i></p>
 					<b> Summary: </b>
 					<Divider/>
 					<p>
@@ -37,92 +44,90 @@ export default class LusterInfo extends Component {
 						<br/>
 						<br/>
 						Luster varies over a wide continuum, and so there are no rigid boundaries between the different types of luster. (For this reason, different sources can often describe the same mineral differently. This ambiguity is further complicated by luster's ability to vary widely within a particular mineral species.) The terms are frequently combined to describe intermediate types of luster (for example, a "vitreous greasy" luster).
-
-
 					</p>
 					<b> Common Terms </b>
 					<Divider/>
-					<p style={{textAlign:'center'}}><i>Non-Metallic Luster Terms</i></p>
+					<p style={{marginBottom:'0px', textAlign:'center'}}><i>Non-Metallic Luster Terms</i></p>
 					<Table selectable={false}>
 						<TableBody displayRowCheckbox={false}>
 							<TableRow>
 								<TableRowColumn>Vitreous</TableRowColumn>
-								<TableRowColumn style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>Resembling the luster of a glossy photograph</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Resembling the luster of a glossy photograph</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Waxy</TableRowColumn>
-								<TableRowColumn style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>Resembling the luster of a candle</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Resembling the luster of a candle</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Pearly</TableRowColumn>
-								<TableRowColumn style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>Resembling the luster of a pearl</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Resembling the luster of a pearl</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Satiny</TableRowColumn>
-								<TableRowColumn style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>Resembling the luster of a satin or silk cloth</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Resembling the luster of a satin or silk cloth</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Earthy</TableRowColumn>
-								<TableRowColumn style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>Lacking reflection, completely dull</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Lacking reflection, completely dull</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Greasy</TableRowColumn>
-								<TableRowColumn style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>Resembling the luster of grease or oil</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Resembling the luster of grease or oil</TableRowColumn>
 							</TableRow>
 						</TableBody>
 					</Table>
 					<b>Examples: </b>
-					<Divider/>
-					<Card>
+					<Divider style={{marginBottom:'10px'}}/>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Pyrite" subtitle="Metallic Luster" />}
 							>
 								<img src='/img/Pyrite.jpg' />
 						</CardMedia>
 					</Card>
-					<Card>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Quartz" subtitle="Vitreous Luster" />}
 							>
 								<img src='/img/Quartz.jpg' />
 						</CardMedia>
 					</Card>
-					<Card>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Chalcedony" subtitle="Waxy Luster" />}
 							>
 								<img src='/img/Chalcedony.jpg' />
 						</CardMedia>
 					</Card>
-					<Card>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Muscovite" subtitle="Pearly Luster" />}
 							>
 								<img src='/img/Muscovite.jpg' />
 						</CardMedia>
 					</Card>
-					<Card>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Gypsum" subtitle="Satiny Luster" />}
 							>
 								<img src='/img/Talc.jpg' />
 						</CardMedia>
 					</Card>
-					<Card>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Kankite" subtitle="Earthy Luster" />}
 							>
 								<img src='/img/Kankite.jpg' />
 						</CardMedia>
 					</Card>
-					<Card>
+					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Metasideronatrite" subtitle="Greasy Luster" />}
 							>
 								<img src='/img/Metasideronatrite.jpg' />
 						</CardMedia>
 					</Card>
-				</div>
+					</div>
 			</div>
 		);
 	}

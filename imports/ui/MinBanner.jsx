@@ -24,14 +24,15 @@ export default class MinBanner extends Component {
 	render() {
 
 		return (
-				<div className={'navbar-fixed'}>
-							<AppBar
-								iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
-								title="Mineral ID"
-							/>
-					<div style={{height:'64px'}}/>
+			<div>
+				<div className='navbar-fixed'>
+					<AppBar
+						style={{position:'fixed'}}
+						iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
+						title="Mineral ID"
+					/>
 				</div>
-
+			</div>
 		);
 	}
 }

@@ -1,4 +1,18 @@
 [{
+    "minName": "Gypsum",
+    "summary": "Gypsum is an evaporite mineral most commonly found in layered sedimentary deposits in association with halite, anhydrite, sulfur, calcite, and dolomite.",
+    "formula": "CaSO4·2H2O",
+    "crystalSystem": "Monoclinic",
+    "crystalHabit": "Massive, flat. Elongated and generally prismatic crystals",
+    "cleavage": "Good, Distinct, None",
+    "luster": "Silky",
+    "color": "colorless, white",
+    "streak": "white",
+    "classType": "Prismatic",
+    "fracture": "Conchoidal",
+    "hardness": [2],
+    "category": "Sulfate"
+},{
     "minName": "Morenosite",
     "summary": "Named after Antonio Moreno Ruiz who was a Spanish pharmacist and chemist at the Academy of Natural Sciences in Madrid, Spain. Morenosite is an uncommon mineral that can be found in Spain, the Czech Republic, Switzerland, Italy, Germany, Ireland, Australia, Peru, Canada, and the United States. It occurs as a secondary mineral in oxidized nickel-rich hydrothermal deposits from water solutions of less than 31.5 degrees Celsius. Morenosite is soluble in water and has an astringent taste. It dehydrated rapidly to retgersite and is also weakly paramagnetic and is attracted with the presence of an outside magnetic field.",
     "formula": "NiSO4·7H2O",

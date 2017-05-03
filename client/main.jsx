@@ -10,6 +10,11 @@ import IdPage from '../imports/ui/idModule/IdPage';
 import PropsPage from '../imports/ui/propsModule/PropsPage';
 import LusterInfo from '../imports/ui/propsModule/LusterInfo';
 import HardnessInfo from '../imports/ui/propsModule/HardnessInfo';
+import CrystalSystemInfo from '../imports/ui/propsModule/CrystalSystemInfo';
+import CrystalHabitInfo from '../imports/ui/propsModule/CrystalHabitInfo';
+import CleavageInfo from '../imports/ui/propsModule/CleavageInfo';
+import StreakInfo from '../imports/ui/propsModule/StreakInfo';
+import FractureInfo from '../imports/ui/propsModule/FractureInfo';
 
 injectTapEventPlugin();
 
@@ -22,6 +27,11 @@ Meteor.startup(() => {
 			<Route path="/props" component={PropsPage}/>
 			<Route path="/props/luster" component={LusterInfo}/>
 			<Route path="/props/hardness" component={HardnessInfo}/>
+			<Route path="/props/crystalsystem" component={CrystalSystemInfo}/>
+			<Route path="/props/crystalhabit" component={CrystalHabitInfo}/>
+			<Route path="/props/cleavage" component={CleavageInfo}/>
+			<Route path="/props/streak" component={StreakInfo}/>
+			<Route path="/props/fracture" component={FractureInfo}/>
 		</Router>
 	), document.getElementById('render-target'));
 });
