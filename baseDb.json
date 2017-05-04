@@ -13,6 +13,20 @@
     "hardness": [2],
     "category": "Sulfate"
 },{
+    "minName": "Garnet",
+    "summary": "Garnets are a group of silicate minerals that have been used since the Bronze Age as gemstones and abrasives. All species of garnets possess similar physical properties and crystal forms, but differ in chemical composition.",
+    "formula": "X3Y2(SiO4)3.",
+    "crystalSystem": "Isometric",
+    "crystalHabit": "Rhombic dodecahedron or cubic",
+    "cleavage": "Indistinct",
+    "luster": "Vitreous",
+    "color": "All colors common",
+    "streak": "white",
+    "classType": "",
+    "fracture": "Conchoidal",
+    "hardness": [6.5, 7.5],
+    "category": "Nesosilicates"
+},{
     "minName": "Morenosite",
     "summary": "Named after Antonio Moreno Ruiz who was a Spanish pharmacist and chemist at the Academy of Natural Sciences in Madrid, Spain. Morenosite is an uncommon mineral that can be found in Spain, the Czech Republic, Switzerland, Italy, Germany, Ireland, Australia, Peru, Canada, and the United States. It occurs as a secondary mineral in oxidized nickel-rich hydrothermal deposits from water solutions of less than 31.5 degrees Celsius. Morenosite is soluble in water and has an astringent taste. It dehydrated rapidly to retgersite and is also weakly paramagnetic and is attracted with the presence of an outside magnetic field.",
     "formula": "NiSO4·7H2O",
@@ -3964,7 +3978,7 @@
     "summary": "Still commonly spelled barite, although officially spelled Baryte, this mineral is named for the Greek words barys or baros, meaning “heavy” or “weight,” respectively, in reference to the mineral’s high specific gravity. Baryte is the most common barium mineral and can be found as a gangue mineral in hydrothermal veins, in residual weathered barite-bearing limestone deposits, as an accessory in igneous rocks, in carbonatites, and as a primary constituent of submarine volcanogenic massive sulfide deposits and sea-floor chimneys. There are thousands of localities for Baryte worldwide. Can be thermoluminescent, and may fluoresce and phosphoresce a cream color to various spectral colors under ultraviolet light.",
     "formula": "BaSO4",
     "crystalSystem": "Orthorhombic",
-    "crystalHabit": "Tabular, Prismatic, Massive - Fibrous",
+    "crystalHabit": "Tabular, Prismatic",
     "cleavage": "Perfect, Perfect, Imperfect",
     "luster": "Vitreous (Glassy)",
     "color": "white, yellowish white, grayish white, brownish white, dark brown",

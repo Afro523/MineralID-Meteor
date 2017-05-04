@@ -26,11 +26,13 @@ export default class MinBanner extends Component {
 		return (
 			<div>
 				<div className='navbar-fixed'>
+					<nav>
 					<AppBar
 						style={{position:'fixed'}}
 						iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
 						title="Mineral ID"
 					/>
+					</nav>
 				</div>
 			</div>
 		);

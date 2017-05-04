@@ -28,10 +28,10 @@ export default class FractureInfo extends Component {
 					<b> Summary: </b>
 					<Divider/>
 					<p>
-						Info Goes Here
+						Fracture is the texture and shape of a rock's surface formed when a mineral is fractured. Minerals often have a highly distinctive fracture, making it a principal feature used in their identification.
+						<br/>
+						Fracture differs from cleavage in that the latter involves clean splitting along the cleavage planes of the mineral's crystal structure, as opposed to more general breakage. All minerals exhibit fracture, but when very strong cleavage is present, it can be difficult to see.
 					</p>
-					<b> Mohs Scale </b>
-					<Divider/>
 
 					<b>Everyday Examples: </b>
 					<Divider/>
@@ -42,7 +42,7 @@ export default class FractureInfo extends Component {
 					<b> How It Works: </b>
 					<Divider/>
 					<p>
-						Using the Mohs Scale is simple. You take the mineral in question and do one of two things. 1) You can scratch it with something of a known hardness such as your fingernail 2) Use it to scratch another object of known hardness such as a glass plate.
+
 					</p>
 				</div>
 			</div>

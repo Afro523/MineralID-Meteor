@@ -13,6 +13,11 @@ const exampleStyle = {
 	marginTop:'10px'
 };
 
+const columnStyle = {
+	whiteSpace: 'pre-wrap',
+	wordWrap: 'break-word'
+};
+
 export default class CrystalHabitInfo extends Component {
 	constructor(props) {
 		super(props);
@@ -32,13 +37,11 @@ export default class CrystalHabitInfo extends Component {
 					<b> Summary: </b>
 					<Divider/>
 					<p>
-						Info Goes Here
+						Crystal Habit is a description of the shapes and aggregates that a certain mineral is likely to form. Often this is the most important characteristic to examine when identifying a mineral. Although most minerals do have different forms, they are sometimes quite distinct and common only to one or even just a few minerals.
 					</p>
-					<b> Mohs Scale </b>
-					<Divider/>
 
-					<b>Examples: </b>
-					<Divider/>
+					<b>Common Crystal Habits: </b>
+					<Divider style={{marginBottom:'10px'}}/>
 					<Table selectable={false}>
             <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
 							<TableRow>
@@ -53,7 +56,7 @@ export default class CrystalHabitInfo extends Component {
 						<TableBody displayRowCheckbox={false}>
 							<TableRow>
 								<TableRowColumn>Acicular</TableRowColumn>
-								<TableRowColumn>Needle-like, slender and/or tapered</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Needle-like, slender and/or tapered</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Amygdaloidal</TableRowColumn>
@@ -61,52 +64,54 @@ export default class CrystalHabitInfo extends Component {
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Bladed</TableRowColumn>
-								<TableRowColumn>Blade-like, slender and flattened</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Blade-like, slender and flattened</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Botryoidal</TableRowColumn>
-								<TableRowColumn>Grape-like, hemispherical masses</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Grape-like, hemispherical masses</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Cubic</TableRowColumn>
-								<TableRowColumn>Cube shaped</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Cube shaped</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Dendritic</TableRowColumn>
-								<TableRowColumn>Tree-like, branching in one or more direction from central point</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Tree-like, branching in one or more direction from central point</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Dodecahedral</TableRowColumn>
-								<TableRowColumn>Rhombic dodecahedron, 12-sided</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Rhombic dodecahedron, 12-sided</TableRowColumn>
 							</TableRow>
               <TableRow>
 								<TableRowColumn>Fibrous</TableRowColumn>
-								<TableRowColumn>Extremely slender prisms</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Extremely slender prisms</TableRowColumn>
 							</TableRow>
               <TableRow>
 								<TableRowColumn>Hexagonal</TableRowColumn>
-								<TableRowColumn>Hexagon shape, six-sided</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Hexagon shape, six-sided</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Micaceous</TableRowColumn>
-								<TableRowColumn>Layered structure, parting into thin sheets</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Layered structure, parting into thin sheets</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Octahedral</TableRowColumn>
-								<TableRowColumn>Octahedron, eight-sided (two pyramids base to base)</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Octahedron, eight-sided (two pyramids base to base)</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Prismatic</TableRowColumn>
-								<TableRowColumn>Elongated, prism-like</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Elongated, prism-like</TableRowColumn>
 							</TableRow>
 							<TableRow>
 								<TableRowColumn>Tetrahedral</TableRowColumn>
-								<TableRowColumn>Tetrahedra-shaped crystals</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Tetrahedra-shaped crystals</TableRowColumn>
 							</TableRow>
 						</TableBody>
 					</Table>
-
 					<b> How It Works: </b>
+					<p>The habit of a crystal is usually determined through observation.</p>
+					<Divider/>
+					<b> Examples: </b>
 					<Divider/>
 					<Card style={exampleStyle}>
 						<CardMedia
@@ -141,6 +146,62 @@ export default class CrystalHabitInfo extends Component {
 							overlay={<CardTitle title="Perovskite" subtitle="Cubic Habit" />}
 							>
 								<img src='/img/Perovskite.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Gold" subtitle="Dendritic Habit" />}
+							>
+								<img src='/img/Gold.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Garnet" subtitle="Dodecahedral Habit" />}
+							>
+								<img src='/img/Garnet.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Biehlite" subtitle="Fibrous Habit" />}
+							>
+								<img src='/img/Biehlite.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Shigaite" subtitle="Hexagonal Habit" />}
+							>
+								<img src='/img/Shigaite.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Masutomilite" subtitle="Micaceous Habit" />}
+							>
+								<img src='/img/Masutomilite.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Hydropyrochlore" subtitle="Octahedral Habit" />}
+							>
+								<img src='/img/Hydropyrochlore.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Tourmaline" subtitle="Prismatic Habit" />}
+							>
+								<img src='/img/Tourmaline.jpg' />
+						</CardMedia>
+					</Card>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Tetrahedrite" subtitle="Tetrahedral Habit" />}
+							>
+								<img src='/img/Tetrahedrite.jpg' />
 						</CardMedia>
 					</Card>
 				</div>
