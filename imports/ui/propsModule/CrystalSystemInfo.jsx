@@ -24,7 +24,7 @@ export default class CrystalSystemInfo extends Component {
 				<MinBanner/>
 				<div className='container'>
 
-					<h3 style={{textAlign:'center'}}>Crystal System</h3>
+					<h3 style={{textAlign:'center', paddingTop:'20px'}}>Crystal System</h3>
 					<b> Summary: </b>
 					<Divider/>
 					<p>

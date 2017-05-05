@@ -19,10 +19,9 @@ const iconStyles ={
 
 const buttonStyles ={
 	width:'40%',
-	height:'40%',
+	height:'35%',
 	textAlign:'center',
 	padding:'0px',
-	marginTop:'10px'
 };
 
 // App component - represents the whole app
@@ -46,7 +45,7 @@ export default class App extends Component {
 						showMenuIconButton={false}
 						title="Mineral ID"
 					/>
-					<div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-around', alignItems:'center'}}>
+					<div style={{height:'90vh', display:'flex', flexWrap:'wrap', justifyContent:'space-around', alignItems:'center'}}>
 						<Link
 							to="/id"
 							className="waves-effect waves-light btn light-blue darken-3"

@@ -24,14 +24,13 @@ export default class CleavageInfo extends Component {
 				<MinBanner/>
 				<div className='container'>
 
-					<h3 style={{textAlign:'center'}}>Cleavage</h3>
+					<h3 style={{textAlign:'center', paddingTop:'20px'}}>Cleavage</h3>
+					<p style={{textAlign:'center'}}><i>The distinct angles of a mineral</i></p>
 					<b> Summary: </b>
 					<Divider/>
 					<p>
-						Info Goes Here
+						Cleavage refers to the way some minerals break along certain lines of weakness in their structure. They are described in terms of their quality how smoothly the mineral breaks and their difficulty how easy, or how hard, it is to produce the cleavage.  The quality of cleavages are perfect, imperfect, distinct, good, fair, and poor.  The difficulty is described as easy, hard, and difficult to produce.  For instance, the micas have a perfect cleavage in one direction that is easy to produce. Calcite has a perfect cleavage in three directions that is also easy to produce; the feldspars have a perfect cleavage in one direction that is easy to produce and a good cleavage in another direction that is hard to produce;
 					</p>
-					<b> Mohs Scale </b>
-					<Divider/>
 
 					<b>Everyday Examples: </b>
 					<Divider/>
@@ -42,7 +41,7 @@ export default class CleavageInfo extends Component {
 					<b> How It Works: </b>
 					<Divider/>
 					<p>
-						Using the Mohs Scale is simple. You take the mineral in question and do one of two things. 1) You can scratch it with something of a known hardness such as your fingernail 2) Use it to scratch another object of known hardness such as a glass plate.
+						
 					</p>
 				</div>
 			</div>

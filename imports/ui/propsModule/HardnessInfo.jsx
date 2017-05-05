@@ -24,7 +24,8 @@ export default class HardnessInfo extends Component {
 				<MinBanner/>
 				<div className='container'>
 
-					<h3 style={{textAlign:'center'}}>Hardness</h3>
+					<h3 style={{textAlign:'center', paddingTop:'20px'}}>Hardness</h3>
+					<p style={{textAlign:'center'}}><i>The toughness of a mineral</i></p>
 					<b> Summary: </b>
 					<Divider/>
 					<p>

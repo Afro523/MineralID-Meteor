@@ -25,7 +25,7 @@ export default class StreakInfo extends Component {
 		return (
 			<div>
 				<MinBanner/>
-				<div className='container'>
+				<div className='container' style={{marginBottom:'10px'}}>
 					<h3 style={{paddingTop:'20px', textAlign:'center'}}>Streak</h3>
 					<p style={{textAlign:'center'}}><i>The powder of a mineral</i></p>
 					<b> Summary: </b>
@@ -49,12 +49,21 @@ export default class StreakInfo extends Component {
 
 					<Card style={exampleStyle}>
 						<CardMedia
-							overlay={<CardTitle title="Metasideronatrite" subtitle="Greasy Luster" />}
+							overlayContentStyle={{paddingTop:'0px'}}
+							overlayStyle={{paddingTop:'0px'}}
+							overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title="Sulfer" subtitle="Yellow Streak" />}
 							>
-								<img src='/img/Metasideronatrite.jpg' />
+								<img src='/exampleImg/sulfurStreak.jpg' />
 						</CardMedia>
 					</Card>
-
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlayContentStyle={{paddingTop:'0px'}}
+							overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title="Azurite" subtitle="Blue Streak" />}
+							>
+								<img src='/exampleImg/azuriteStreak.jpg' />
+						</CardMedia>
+					</Card>
 				</div>
 			</div>
 		);
