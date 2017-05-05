@@ -23,7 +23,7 @@ export default class PropsPage extends Component {
 			<div>
 				<MinBanner/>
 				<div className='container'>
-				<h4 style={{paddingTop:'10px', textAlign:'center'}}>Physical Properties</h4>
+				<h4 style={{paddingTop:'30px', textAlign:'center'}}>Physical Properties</h4>
 				<Divider/>
 				<p>
 					These are a list of the main physial properties which minerals are defined by.

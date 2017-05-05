@@ -32,7 +32,7 @@ export default class LusterInfo extends Component {
 			<div>
 				<MinBanner/>
 				<div className='container'>
-					<h3 style={{textAlign:'center', marginBottom:'0px'}}>Luster</h3>
+					<h3 style={{paddingTop:'30px', textAlign:'center'}}>Luster</h3>
 					<p style={{textAlign:'center'}}><i>The reflectivity of a mineral</i></p>
 					<b> Summary: </b>
 					<Divider/>

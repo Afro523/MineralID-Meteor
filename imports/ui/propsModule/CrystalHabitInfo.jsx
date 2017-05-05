@@ -34,6 +34,7 @@ export default class CrystalHabitInfo extends Component {
 				<div className='container'>
 
 					<h3 style={{textAlign:'center'}}>Crystal Habit</h3>
+					<p style={{textAlign:'center'}}><i>The way a mineral repeats itself</i></p>
 					<b> Summary: </b>
 					<Divider/>
 					<p>
