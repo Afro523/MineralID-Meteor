@@ -1,6 +1,9 @@
 //React
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+
 import RaisedButton from 'material-ui/RaisedButton';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import Help from 'material-ui/svg-icons/action/help';
 
 export default class Question extends Component {
 	constructor(props) {
@@ -74,23 +77,22 @@ export default class Question extends Component {
 		default:
 			return(
 					<div>
-					<h3 style={{textAlign:'center'}}>What is the luster of the mineral?</h3>
-					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
-						style={{width:'100%', height:'20vh', marginTop:'20px'}}
-						onClick={()=>this.setState({current:'m'})}
-						>
-						<h4>Metallic</h4>
-					</RaisedButton>
-
-					<RaisedButton
-						style={{width:'100%', height:'20vh', marginTop:'30px'}}
-						onClick={()=>this.setState({current:'nm'})}
-						>
-						<h4>Non-Metallic</h4>
-					</RaisedButton>
-				</div>
-			</div>
+						<h3 style={{textAlign:'center'}}>What is the luster of the mineral?</h3>
+						<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
+							<RaisedButton
+								style={{width:'100%', height:'20vh', marginTop:'20px'}}
+								onClick={()=>this.setState({current:'m'})}
+							>
+								<h4>Metallic</h4>
+							</RaisedButton>
+							<RaisedButton
+								style={{width:'100%', height:'20vh', marginTop:'30px'}}
+								onClick={()=>this.setState({current:'nm'})}
+							>
+								<h4>Non-Metallic</h4>
+							</RaisedButton>
+						</div>
+					</div>
 			);
 		}
 	}
@@ -99,6 +101,11 @@ export default class Question extends Component {
 		return (
 			<div>
 				{this.renderQuestion(this.state.current)}
+					<FloatingActionButton
+						style={{float:'right', marginTop:'20px'}}
+						>
+						<Help/>
+					</FloatingActionButton>
 			</div>
 		);
 	}

@@ -29,7 +29,11 @@ export default class HardnessInfo extends Component {
 					<b> Summary: </b>
 					<Divider/>
 					<p>
-						The hardness of a mineral is determined using the Mohs Scale. The Mohs scale of mineral hardness is based on the ability of one natural sample of mineral to scratch another mineral visibly.
+						The hardness of a mineral is determined using the Mohs Scale.
+						Friedrich Mohs, a German mineralogist, developed the scale over 100 years ago.
+						The Mohs scale is based on the ability of one natural sample
+						of mineral to scratch another mineral visibly.  It is a 1-10 system with Diamond
+						being the hardest mineral at 10 and Talc being the softest at 1.
 					</p>
 					<b> Mohs Scale </b>
 					<Divider/>
@@ -125,8 +129,8 @@ export default class HardnessInfo extends Component {
 								<TableRowColumn>Steel File</TableRowColumn>
 							</TableRow>
 							<TableRow>
-								<TableRowColumn>6</TableRowColumn>
-								<TableRowColumn>Feldspar</TableRowColumn>
+								<TableRowColumn>7</TableRowColumn>
+								<TableRowColumn>Streak Plate</TableRowColumn>
 							</TableRow>
               <TableRow>
 								<TableRowColumn>8.5</TableRowColumn>
@@ -137,7 +141,11 @@ export default class HardnessInfo extends Component {
 					<b> How It Works: </b>
 					<Divider/>
 					<p>
-						Using the Mohs Scale is simple. You take the mineral in question and do one of two things. 1) You can scratch it with something of a known hardness such as your fingernail 2) Use it to scratch another object of known hardness such as a glass plate.
+						Using the Mohs Scale is simple. You take the mineral in question and do one of two things.
+						<ol>
+							<li>You can scratch it with something of a known hardness such as your fingernail(~2), a penny(3) or a steel file(6.5)</li>
+							<li>Use it to scratch another object of known hardness such as a glass plate.</li>
+						</ol>
 					</p>
 				</div>
 			</div>
