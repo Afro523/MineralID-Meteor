@@ -21,7 +21,6 @@ export default class CrystalSystemInfo extends Component {
 			<div>
 				<MinBanner/>
 				<div className='container'>
-
 					<h3 style={{textAlign:'center', paddingTop:'20px'}}>Crystal System</h3>
 					<p style={{textAlign:'center'}}><i>The internal structure of a mineral</i></p>
 					<b> Summary: </b>
