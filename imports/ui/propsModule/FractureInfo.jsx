@@ -12,7 +12,7 @@ import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 const columnStyle = {
 	whiteSpace: 'pre-wrap',
 	wordWrap: 'break-word',
-	width:'60%',
+	width:'65%',
 	paddingRight:'0px'
 };
 
@@ -53,7 +53,7 @@ export default class FractureInfo extends Component {
 								<TableHeaderColumn>
 									Fracture Type
 								</TableHeaderColumn>
-								<TableHeaderColumn style={{width:'60%'}}>
+								<TableHeaderColumn style={{width:'65%'}}>
 									Description
 								</TableHeaderColumn>
 							</TableRow>

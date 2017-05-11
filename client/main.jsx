@@ -16,6 +16,7 @@ import CrystalHabitInfo from '../imports/ui/propsModule/CrystalHabitInfo';
 import CleavageInfo from '../imports/ui/propsModule/CleavageInfo';
 import StreakInfo from '../imports/ui/propsModule/StreakInfo';
 import FractureInfo from '../imports/ui/propsModule/FractureInfo';
+import FluorInfo from '../imports/ui/propsModule/FluorInfo';
 
 injectTapEventPlugin();
 
@@ -34,6 +35,7 @@ Meteor.startup(() => {
 			<Route path="/props/cleavage" component={CleavageInfo}/>
 			<Route path="/props/streak" component={StreakInfo}/>
 			<Route path="/props/fracture" component={FractureInfo}/>
+			<Route path="/props/fluorescence" component={FluorInfo}/>
 		</Router>
 	), document.getElementById('render-target'));
 });

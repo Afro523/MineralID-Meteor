@@ -59,6 +59,15 @@ export default class PropsPage extends Component {
 					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
+							to="/props/fluorescence"
+							className="waves-effect waves-light btn light-blue darken-3"
+						>
+							<div>Fluorescence</div>
+						</Link>
+					</FlatButton>
+					<FlatButton style={{marginTop:'15px'}}>
+						<Link
+							style={{width:'65%'}}
 							to="/props/fracture"
 							className="waves-effect waves-light btn light-blue darken-3"
 						>
