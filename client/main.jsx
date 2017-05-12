@@ -21,6 +21,7 @@ import FluorInfo from '../imports/ui/propsModule/FluorInfo';
 injectTapEventPlugin();
 
 Meteor.startup(() => {
+	
 	render((
 		<Router history={browserHistory}>
 			<Route path="/" component={App}/>
