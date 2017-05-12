@@ -1,5 +1,10 @@
 //React, React Router
 import React, { Component, PropTypes } from 'react';
+import ReactMixin from 'react-mixin';
+
+//Meteor
+import {ReactMeteorData} from 'meteor/react-meteor-data';
+import {Meteor} from 'meteor/meteor';
 
 //Components and API
 import {Minerals} from '../../api/minerals';
@@ -24,6 +29,7 @@ export default class ListPage2 extends Component {
 			mohMax: 10,
 			currCat:'None'
 		};
+		this.getMinFromDb = this.getMinFromDb.bind(this);
 	}
 
 	applyCatFilter(data){
@@ -78,8 +84,42 @@ export default class ListPage2 extends Component {
 	getChildContext() {
 		return { muiTheme: getMuiTheme(baseTheme) };
 	}
-	checkLetter(){
 
+	getMeteorData(){
+		const handle = Meteor.subscribe('minerals');
+		const minData = this.getMinFromDb();
+		return {
+			ready: handle.ready(),
+			minerals: minData,
+		};
+	}
+
+	//Uses the subscription to find minerals
+	getMinFromDb(){
+		const minLetter = this.state.currChar;
+		var minData;
+		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+
+		if(this.state.currChar == '-'){
+			minData = Minerals.find({}, {sort:{minName:1}}).fetch();
+		} else {
+			minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+		}
+
+		//minData is loaded
+		if(minData.length > 0){
+
+			//Apply category filter through this.state.currCat
+			if(this.state.currCat != 'None'){
+				minData = this.applyCatFilter(minData);
+			}
+
+			//Filter by Hardness
+			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
+				minData = this.applyMohFilter(minData);
+			}
+		}
+		return minData;
 	}
 
 	handleSelect(event){
@@ -88,35 +128,28 @@ export default class ListPage2 extends Component {
 	}
 
 	renderMinerals () {
-		var minData = MinData.sort((a,b)=>{
-			var nameA = a.minName.toUpperCase();
-			var nameB = b.minName.toUpperCase();
-			if (nameA < nameB) {
-				return -1;
-			}
-			if (nameA > nameB) {
-				return 1;
-			}
-		});
+		return  this.data.minerals.map((mineral) => (
 
-		//Apply category filter through this.state.currCat
-		if(this.state.currCat != 'None'){
-			minData = this.applyCatFilter(minData);
-		}
-
-		//Filter by Hardness
-		if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
-			minData = this.applyMohFilter(minData);
-		}
-
-		return  minData.map((mineral, index)  => (
-
-			<MinList key={index} mineral={mineral}/>
+			<MinList key={mineral._id} mineral={mineral}/>
 		));
 	}
 
 	render() {
-		return (
+		if(!this.data.ready){
+			return (
+				<div className="container-fluid">
+					<MinBanner/>
+					<div style={{textAlign: 'center'}}>
+						<CircularProgress
+							size={300}
+							thickness={10}
+						/>
+					</div>
+			</div>
+			);
+		} else {
+
+			return (
 				<div className="container-fluid">
 					<MinBanner/>
 						<Filter
@@ -134,9 +167,20 @@ export default class ListPage2 extends Component {
 					</List>
 
 				</div>
-		);
+			);
+		}
 	}
 }
+
+ReactMixin(ListPage2.prototype, ReactMeteorData);
+
+ListPage2.propTypes = {
+	minerals: PropTypes.array.isRequired,
+};
+
+ListPage2.defaultProps ={
+	minerals:[],
+};
 
 ListPage2.childContextTypes = {
 	muiTheme: React.PropTypes.object.isRequired,

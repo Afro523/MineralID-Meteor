@@ -1,6 +1,6 @@
-import {Mongo} from 'meteor/mongo';
+import {Ground} from 'meteor/ground:db';
 
-export const Minerals = new Mongo.Collection('minerals');
+export const Minerals = new Ground.Collection('minerals');
 
 const MineralSchema = new SimpleSchema ({
 	minName: {type: String},
