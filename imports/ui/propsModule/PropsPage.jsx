@@ -22,7 +22,7 @@ export default class PropsPage extends Component {
 		return (
 			<div>
 				<MinBanner/>
-				<div className='container'>
+				<div className='container' style={{marginBottom:'10px'}}>
 				<h4 style={{paddingTop:'30px', textAlign:'center'}}>Physical Properties</h4>
 				<Divider/>
 				<p>

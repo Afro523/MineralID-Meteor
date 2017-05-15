@@ -54,11 +54,25 @@ export default class FluorInfo extends Component {
 					<b> Examples: </b>
 					<Divider style={{marginBottom:'10px'}}/>
 					<div className='container'>
-						<UvCard/>
+						<UvCard
+							plainPicture={'willPlain.jpg'}
+							plainDescription={'Calcite and Willemite Plain / Normal Light'}
+							uvPicture={'willShort.jpg'}
+							uvDescription={'Red/orange Calcite, green Willemite and blue/white Hydrozincite'}
+						/>
+						<UvCard
+							plainPicture={'norPlain.jpg'}
+							plainDescription={'Norbergite Plain / Normal Light'}
+							uvPicture={'norShort.jpg'}
+							uvDescription={'Yellow Norbergite accented with intensely blue Diopside'}
+						/>
+						<UvCard
+							plainPicture={'fapPlain.jpg'}
+							plainDescription={'Fluorapatite Plain / Normal Light'}
+							uvPicture={'fapShort.jpg'}
+							uvDescription={'Lemon yellow Fluorapatite'}
+						/>
 					</div>
-
-
-
 				</div>
 			</div>
 		);
