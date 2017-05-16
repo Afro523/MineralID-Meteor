@@ -17,16 +17,18 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {List} from 'material-ui/List';
 import MinBanner from '../MinBanner';
+
 export default class ListPage extends Component {
 
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			currChar: '-',
+			currChar: 'A',
 			mohMin: 0,
 			mohMax: 10,
-			currCat:'None'
+			currCat:'None',
+			currLust:'None'
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
 	}
@@ -36,6 +38,17 @@ export default class ListPage extends Component {
 		for(var i=0; i < data.length; i++){
 			//Matches the categories and pushes the matching objects
 			if(data[i].category == this.state.currCat ){
+				tempData.push(data[i]);
+			}
+		}
+		return tempData;
+	}
+
+	applyLustFilter(data){
+		var tempData = [];
+		for(var i=0; i < data.length; i++){
+			//Matches the categories and pushes the matching objects
+			if(data[i].luster == this.state.currLust ){
 				tempData.push(data[i]);
 			}
 		}
@@ -80,6 +93,10 @@ export default class ListPage extends Component {
 		this.setState( {currCat:event.target.textContent});
 	}
 
+	setLust(event){
+		this.setState( {currLust:event.target.textContent});
+	}
+
 	getChildContext() {
 		return { muiTheme: getMuiTheme(baseTheme) };
 	}
@@ -111,6 +128,11 @@ export default class ListPage extends Component {
 			//Apply category filter through this.state.currCat
 			if(this.state.currCat != 'None'){
 				minData = this.applyCatFilter(minData);
+			}
+
+			//Apply Luster filter through this.state.currCat
+			if(this.state.currLust != 'None'){
+				minData = this.applyLustFilter(minData);
 			}
 
 			//Filter by Hardness
@@ -157,10 +179,12 @@ export default class ListPage extends Component {
 							mohMin={this.state.mohMin}
 							mohMax={this.state.mohMax}
 							currCat={this.state.currCat}
+							currLust={this.state.currLust}
 							handleChar={this.setChar.bind(this)}
 							handleCat={this.setCat.bind(this)}
 							handleMohMin={this.setMohMin.bind(this)}
 							handleMohMax={this.setMohMax.bind(this)}
+							handleLust={this.setLust.bind(this)}
 						/>
 					<List>
 						{	this.renderMinerals()	}

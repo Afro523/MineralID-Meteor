@@ -8,7 +8,6 @@ import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
 import FilterList from 'material-ui/svg-icons/content/filter-list';
 
 import Clear from 'material-ui/svg-icons/content/clear';
@@ -64,6 +63,19 @@ export default class Filter extends React.Component {
 		//Throws a 'None' option to the top
 		catMenuItem.unshift(<MenuItem value={'None'} key={catMenuItem.length + 1} primaryText={'None'}/>);
 
+		//Creates Luster list for drop down
+		var lustList = [
+			'Vitreous', 'Waxy','Pearly','Silky','Earthy/Dull'];
+		const lustMenuItem = [];
+		lustList = lustList.sort();
+
+		for (let i = 0; i< lustList.length; i++){
+			lustMenuItem.push(<MenuItem value={lustList[i]} key={i} primaryText={lustList[i]}/>);
+		}
+
+		//Throws a 'None' option to the top
+		lustMenuItem.unshift(<MenuItem value={'None'} key={lustMenuItem.length + 1} primaryText={'None'}/>);
+
 		return (
 			<div>
 				<FloatingActionButton
@@ -81,10 +93,10 @@ export default class Filter extends React.Component {
 					<FilterList />
 				</FloatingActionButton>
         <Drawer docked={false} modal={false} open={this.state.open}>
-					<h4>Sort By:</h4>
+					<h4 style={{textAlign:'center'}}>Sort By:</h4>
 					<Divider />
 					<MenuItem>
-					Letter
+					Starting Letter
 					</MenuItem>
 
 					<DropDownMenu
@@ -117,7 +129,7 @@ export default class Filter extends React.Component {
 					<Divider />
 
 					<MenuItem>
-					Category
+						Mineral Category
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
@@ -125,6 +137,18 @@ export default class Filter extends React.Component {
 						onChange={this.props.handleCat}
 						>
 							{catMenuItem}
+					</DropDownMenu>
+					<Divider />
+
+					<MenuItem>
+					Mineral Luster
+					</MenuItem>
+					<DropDownMenu
+						maxHeight={300}
+						value={this.props.currLust}
+						onChange={this.props.handleLust}
+						>
+							{lustMenuItem}
 					</DropDownMenu>
 					<Divider />
 					<div className='container'>
@@ -146,6 +170,7 @@ export default class Filter extends React.Component {
 Filter.defaultProps ={
 	currCat: 'None',
 	currChar: '-',
+	currLust:'None',
 	mohMin: 0,
 	mohMax: 10,
 };
@@ -155,7 +180,9 @@ Filter.propTypes = {
 	handleChar: PropTypes.func.isRequired,
 	handleMohMin: PropTypes.func.isRequired,
 	handleMohMax: PropTypes.func.isRequired,
+	handleLust: PropTypes.func.isRequired,
 	currCat: PropTypes.string.isRequired,
+	currLust: PropTypes.string.isRequired,
 	currChar: PropTypes.string.isRequired,
 	mohMin: PropTypes.number.isRequired,
 	mohMax: PropTypes.number.isRequired,

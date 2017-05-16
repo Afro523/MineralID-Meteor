@@ -24,7 +24,7 @@ export default class CleavageInfo extends Component {
 				<div className='container'>
 
 					<h3 style={{textAlign:'center', paddingTop:'20px'}}>Cleavage</h3>
-					<p style={{textAlign:'center'}}><i>The distinct angles of a mineral</i></p>
+					<p style={{textAlign:'center'}}><i>The distinct breaking angles of a mineral</i></p>
 					<b> Summary: </b>
 					<Divider/>
 					<p>
@@ -42,15 +42,36 @@ export default class CleavageInfo extends Component {
 						<br/>
 						Poor - Less regular.
 						<br/>
-						Non-existent.
+						Non-existent - Amorphus
 					</p>
 					<b>Examples: </b>
 					<Divider/>
-						<Card>
+						<Card style={{marginTop:'15px'}}>
 							<CardMedia
 								overlay={<CardTitle title="Kulanite" subtitle="Perfect Clevage" />}
 							>
 								<img src='/img/Kulanite.jpg' />
+							</CardMedia>
+						</Card>
+						<Card style={{marginTop:'15px'}}>
+							<CardMedia
+								overlay={<CardTitle title="Chondrodite" subtitle="Good Clevage" />}
+							>
+								<img src='/img/Chondrodite.jpg' />
+							</CardMedia>
+						</Card>
+						<Card style={{marginTop:'15px'}}>
+							<CardMedia
+								overlay={<CardTitle title="Weberite" subtitle="Poor Clevage" />}
+							>
+								<img src='/img/Weberite.jpg' />
+							</CardMedia>
+						</Card>
+						<Card style={{marginTop:'15px', marginBottom:'15px'}}>
+							<CardMedia
+								overlay={<CardTitle title="Hidalgoite" subtitle="Non-Existent Clevage" />}
+							>
+								<img src='/img/Hidalgoite.jpg' />
 							</CardMedia>
 						</Card>
 				</div>
