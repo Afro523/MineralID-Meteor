@@ -1,12 +1,16 @@
 //React
-import React, {Component, PropTypes} from 'react';
-
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 //MUI
+import Paper from 'material-ui/Paper';
 import {Card, CardMedia, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import Divider from 'material-ui/Divider';
 
 const tableStyle={
-	fontSize: '15px',
+	whiteSpace: 'pre-wrap',
+	wordWrap: 'break-word',
+	textAlign: 'center'
 };
 
 
@@ -29,13 +33,15 @@ export default class MinCard extends Component {
 		const mineral = this.props.mineral;
 		return (
       <Card>
-				<CardMedia mediaStyle={{height: '75%', width: '75%', margin: 'auto'}}>
-				<img src={'./img/'+mineral.minName+'.jpg'}/>
+				<CardMedia mediaStyle={{width:'98%', marginLeft:'1%', marginTop:'15px'}}>
+					<img className='responsive-img' src={'./img/'+mineral.minName+'.jpg'}/>
 				</CardMedia>
 				<CardText>
-					<h5>Summary</h5>
-          {mineral.summary}
-        </CardText>
+					<b>Summary</b>
+					<Divider/>
+					<p>{mineral.summary}</p>
+				<b>{mineral.minName} Properties Chart</b>
+				<Divider/>
 				<Table>
 					<TableBody
 						displayRowCheckbox={false}
@@ -152,6 +158,7 @@ export default class MinCard extends Component {
 						</TableRow>
 					</TableBody>
 				</Table>
+				</CardText>
       </Card>
 		);
 	}

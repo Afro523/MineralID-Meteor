@@ -1,5 +1,6 @@
 //React
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Divider from 'material-ui/Divider';
 
 import MinBanner from '../MinBanner';
@@ -110,8 +111,8 @@ export default class CrystalHabitInfo extends Component {
 						</TableBody>
 					</Table>
 					<b> How It Works: </b>
-					<p>The habit of a crystal is usually determined through observation.</p>
 					<Divider/>
+					<p>The habit of a crystal is usually determined through observation.</p>
 					<b> Examples: </b>
 					<Divider/>
 					<Card style={exampleStyle}>
@@ -216,5 +217,5 @@ CrystalHabitInfo.propTypes ={
 };
 
 CrystalHabitInfo.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

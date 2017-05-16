@@ -1,6 +1,6 @@
 //React
-import React, {Component, PropTypes} from 'react';
-import Divider from 'material-ui/Divider';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import MinBanner from '../MinBanner';
 
@@ -8,6 +8,7 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Table, TableBody, TableRow, TableRowColumn, TableHeader, TableHeaderColumn} from 'material-ui/Table';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
+import Divider from 'material-ui/Divider';
 
 const columnStyle = {
 	whiteSpace: 'pre-wrap',
@@ -135,5 +136,5 @@ FractureInfo.propTypes ={
 };
 
 FractureInfo.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

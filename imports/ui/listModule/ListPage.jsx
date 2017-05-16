@@ -1,7 +1,7 @@
 //React, React Router
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactMixin from 'react-mixin';
-
+import PropTypes from 'prop-types';
 //Meteor
 import {ReactMeteorData} from 'meteor/react-meteor-data';
 import {Meteor} from 'meteor/meteor';
@@ -140,6 +140,7 @@ export default class ListPage extends Component {
 					<MinBanner/>
 					<div style={{textAlign: 'center'}}>
 						<CircularProgress
+							style={{marginTop:'30px'}}
 							size={300}
 							thickness={10}
 						/>
@@ -182,5 +183,5 @@ ListPage.defaultProps ={
 };
 
 ListPage.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

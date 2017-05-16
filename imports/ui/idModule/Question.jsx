@@ -1,6 +1,6 @@
 //React
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Help from 'material-ui/svg-icons/action/help';
@@ -116,5 +116,5 @@ Question.propTypes ={
 };
 
 Question.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

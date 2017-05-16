@@ -1,6 +1,6 @@
 //React
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -64,25 +64,26 @@ export default class UvCard extends Component {
 
 
 		return (
-
+			<div style={{marginTop:'15px'}}>
 				<CSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
+					transitionLeave={false}>
 					{component}
 				</CSSTransitionGroup>
+			</div>
 
 		);
 	}
 }
 
 UvCard.propTypes ={
-	plainPicture: React.PropTypes.string,
-	plainDescription: React.PropTypes.string,
-	uvPicture: React.PropTypes.string,
-	uvDescription: React.PropTypes.string
+	plainPicture: PropTypes.string,
+	plainDescription: PropTypes.string,
+	uvPicture: PropTypes.string,
+	uvDescription: PropTypes.string
 };
 
 UvCard.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

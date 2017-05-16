@@ -1,5 +1,6 @@
 //React
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 import MinBanner from '../MinBanner';
 
@@ -113,5 +114,5 @@ PropsPage.propTypes ={
 };
 
 PropsPage.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

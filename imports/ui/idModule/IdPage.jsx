@@ -1,5 +1,6 @@
 //React
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import QuestionContainer from './QuestionContainer';
 import MinBanner from '../MinBanner';
@@ -33,5 +34,5 @@ IdPage.propTypes ={
 };
 
 IdPage.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

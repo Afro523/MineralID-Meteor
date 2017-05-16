@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 //MUi stuff
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -90,5 +91,5 @@ export default class App extends Component {
 }
 
 App.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

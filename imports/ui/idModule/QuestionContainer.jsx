@@ -1,5 +1,6 @@
 //React
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -29,5 +30,5 @@ QuestionContainer.propTypes ={
 };
 
 QuestionContainer.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

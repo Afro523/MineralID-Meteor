@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Link, browserHistory} from 'react-router';
+import PropTypes from 'prop-types';
+import {browserHistory} from 'react-router';
 
 
 
@@ -40,5 +41,5 @@ export default class MinBanner extends Component {
 }
 
 MinBanner.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

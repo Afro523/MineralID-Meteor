@@ -1,6 +1,6 @@
 //React
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 import Divider from 'material-ui/Divider';
 
 import MinBanner from '../MinBanner';
@@ -53,7 +53,7 @@ export default class FluorInfo extends Component {
 
 					<b> Examples: </b>
 					<Divider style={{marginBottom:'10px'}}/>
-					<div className='container'>
+					<div>
 						<UvCard
 							plainPicture={'willPlain.jpg'}
 							plainDescription={'Calcite and Willemite Plain / Normal Light'}
@@ -84,5 +84,5 @@ FluorInfo.propTypes ={
 };
 
 FluorInfo.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

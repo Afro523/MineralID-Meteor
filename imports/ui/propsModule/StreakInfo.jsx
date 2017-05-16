@@ -1,5 +1,6 @@
 //React
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Divider from 'material-ui/Divider';
 
 import MinBanner from '../MinBanner';
@@ -75,5 +76,5 @@ StreakInfo.propTypes ={
 };
 
 StreakInfo.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

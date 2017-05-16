@@ -1,5 +1,6 @@
 //React
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Divider from 'material-ui/Divider';
 
 import MinBanner from '../MinBanner';
@@ -45,7 +46,6 @@ export default class CleavageInfo extends Component {
 					</p>
 					<b>Examples: </b>
 					<Divider/>
-					<p>
 						<Card>
 							<CardMedia
 								overlay={<CardTitle title="Kulanite" subtitle="Perfect Clevage" />}
@@ -53,7 +53,6 @@ export default class CleavageInfo extends Component {
 								<img src='/img/Kulanite.jpg' />
 							</CardMedia>
 						</Card>
-					</p>
 				</div>
 			</div>
 		);
@@ -65,5 +64,5 @@ CleavageInfo.propTypes ={
 };
 
 CleavageInfo.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };

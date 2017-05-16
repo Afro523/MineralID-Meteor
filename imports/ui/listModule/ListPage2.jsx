@@ -1,5 +1,6 @@
 //React, React Router
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactMixin from 'react-mixin';
 
 //Meteor
@@ -183,5 +184,5 @@ ListPage2.defaultProps ={
 };
 
 ListPage2.childContextTypes = {
-	muiTheme: React.PropTypes.object.isRequired,
+	muiTheme: PropTypes.object.isRequired,
 };
