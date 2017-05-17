@@ -12,7 +12,8 @@ import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 
 const columnStyle = {
 	whiteSpace: 'pre-wrap',
-	wordWrap: 'break-word'
+	wordWrap: 'break-word',
+	width:'60%'
 };
 
 const exampleStyle = {
@@ -52,6 +53,10 @@ export default class LusterInfo extends Component {
 					<Table selectable={false}>
 						<TableBody displayRowCheckbox={false}>
 							<TableRow>
+								<TableRowColumn>Adamantine</TableRowColumn>
+								<TableRowColumn style={columnStyle}>Transparent to translucent minerals that display brilliance and shine.</TableRowColumn>
+							</TableRow>
+							<TableRow>
 								<TableRowColumn>Vitreous</TableRowColumn>
 								<TableRowColumn style={columnStyle}>Resembling the luster of a glossy photograph</TableRowColumn>
 							</TableRow>
@@ -79,6 +84,13 @@ export default class LusterInfo extends Component {
 					</Table>
 					<b>Examples: </b>
 					<Divider style={{marginBottom:'10px'}}/>
+					<Card style={exampleStyle}>
+						<CardMedia
+							overlay={<CardTitle title="Boracite" subtitle="Adamantine Luster" />}
+							>
+								<img src='/img/Boracite.jpg' />
+						</CardMedia>
+					</Card>
 					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Pyrite" subtitle="Metallic Luster" />}

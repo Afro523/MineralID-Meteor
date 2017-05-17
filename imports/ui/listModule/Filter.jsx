@@ -65,7 +65,7 @@ export default class Filter extends React.Component {
 
 		//Creates Luster list for drop down
 		var lustList = [
-			'Vitreous', 'Waxy','Pearly','Silky','Earthy/Dull'];
+			'Adamantine', 'Vitreous', 'Waxy','Pearly','Silky','Earthy/Dull'];
 		const lustMenuItem = [];
 		lustList = lustList.sort();
 
