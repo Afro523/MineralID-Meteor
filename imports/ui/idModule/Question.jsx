@@ -5,6 +5,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Help from 'material-ui/svg-icons/action/help';
 
+const btnStyle={
+
+	marginTop:'30px'
+};
+
 export default class Question extends Component {
 	constructor(props) {
 		super(props);
@@ -23,15 +28,17 @@ export default class Question extends Component {
 						<h3 style={{textAlign:'center'}}>What is the hardness of the mineral?</h3>
 						<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 							<RaisedButton
-								style={{width:'100%', height:'20vh', marginTop:'20px'}}
+								labelPosition={'before'}
+								label={'Hard'}
+								children={'Hardness > 5.5'}
+								fullWidth={true}
+								style={btnStyle}
 								onClick={()=>this.setState({current:'mhard'})}
-								>
-									<h4>Hard</h4>
-									<h5>Hardness {'>'} 5.5 </h5>
-							</RaisedButton>
+							/>
 
 							<RaisedButton
-								style={{width:'100%', height:'20vh', marginTop:'30px'}}
+								fullWidth={true}
+								style={btnStyle}
 								onClick={()=>this.setState({current:'msoft'})}
 								>
 									<h4>Soft</h4>
@@ -47,7 +54,7 @@ export default class Question extends Component {
 					<h3 style={{textAlign:'center'}}>What is the streak of the mineral?</h3>
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 						<RaisedButton
-							style={{width:'100%', height:'20vh', marginTop:'20px'}}
+							style={btnStyle}
 							onClick={()=>this.setState({current:'mhard'})}
 							>
 								<h4>Hard</h4>
@@ -55,7 +62,7 @@ export default class Question extends Component {
 						</RaisedButton>
 
 						<RaisedButton
-							style={{width:'100%', height:'20vh', marginTop:'30px'}}
+							style={btnStyle}
 							onClick={()=>this.setState({current:'msoft'})}
 							>
 								<h4>Soft</h4>
@@ -66,7 +73,50 @@ export default class Question extends Component {
 			);
 
 		case 'mhard':
-			break;
+			return(
+			<div>
+				<h3 style={{textAlign:'center'}}>What is the color of the mineral?</h3>
+				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
+					<RaisedButton
+						style={btnStyle}
+						onClick={()=>this.setState({current:'mharddg'})}
+						>
+							<h4>Grey - Dark Grey</h4>
+					</RaisedButton>
+
+					<RaisedButton
+						style={btnStyle}
+						onClick={()=>this.setState({current:'msoft'})}
+						>
+							<h4>Other</h4>
+					</RaisedButton>
+				</div>
+			</div>
+			);
+
+		case 'mharddg':
+			return(
+				<div>
+					<h3 style={{textAlign:'center'}}>Other Distinctive Factors</h3>
+					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
+						<RaisedButton
+							style={btnStyle}
+							onClick={()=>this.setState({current:'mhard'})}
+						>
+							<h4>Magnetic</h4>
+							<h5>Strongly attracted to magnets</h5>
+						</RaisedButton>
+
+						<RaisedButton
+							style={btnStyle}
+							onClick={()=>this.setState({current:'msoft'})}
+						>
+							<h4>Cubic Habit</h4>
+							<h5>Shows cubic crystals</h5>
+						</RaisedButton>
+					</div>
+				</div>
+			);
 
 		case 'msoft':
 			break;
@@ -78,19 +128,19 @@ export default class Question extends Component {
 			return(
 					<div>
 						<h3 style={{textAlign:'center'}}>What is the luster of the mineral?</h3>
-						<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
+						<div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-around', alignContent:'center'}}>
 							<RaisedButton
-								style={{width:'100%', height:'20vh', marginTop:'20px'}}
+								label={'Metallic'}
+								fullWidth={true}
+								style={btnStyle}
 								onClick={()=>this.setState({current:'m'})}
-							>
-								<h4>Metallic</h4>
-							</RaisedButton>
+							/>
 							<RaisedButton
-								style={{width:'100%', height:'20vh', marginTop:'30px'}}
+								label={'Non-Metallic'}
+								fullWidth={true}
+								style={btnStyle}
 								onClick={()=>this.setState({current:'nm'})}
-							>
-								<h4>Non-Metallic</h4>
-							</RaisedButton>
+							/>
 						</div>
 					</div>
 			);
@@ -102,7 +152,7 @@ export default class Question extends Component {
 			<div>
 				{this.renderQuestion(this.state.current)}
 					<FloatingActionButton
-						style={{float:'right', marginTop:'20px'}}
+						style={{marginTop:'20px', position:'absolute', bottom:10, right:10}}
 						>
 						<Help/>
 					</FloatingActionButton>
