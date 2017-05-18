@@ -6,6 +6,7 @@ import ReactMixin from 'react-mixin';
 //Meteor
 import {ReactMeteorData} from 'meteor/react-meteor-data';
 import {Meteor} from 'meteor/meteor';
+import {Ground} from 'meteor/ground:db';
 
 //Components and API
 import {Minerals} from '../../api/minerals';
@@ -87,7 +88,10 @@ export default class ListPage2 extends Component {
 	}
 
 	getMeteorData(){
-		const handle = Meteor.subscribe('minerals');
+
+		var groundList = new Ground.Collection(Minerals, null);
+		console.log(groundList.find().fetch());
+		//const handle = Meteor.subscribe('minerals');
 		const minData = this.getMinFromDb();
 		return {
 			ready: handle.ready(),
