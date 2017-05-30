@@ -9,7 +9,7 @@ import {Meteor} from 'meteor/meteor';
 import {Ground} from 'meteor/ground:db';
 
 //Components and API
-import {Minerals} from '../../api/minerals';
+import {Minerals, Min2} from '../../api/minerals';
 import MinList from './MinList';
 import Filter from './Filter';
 
@@ -89,9 +89,7 @@ export default class ListPage2 extends Component {
 
 	getMeteorData(){
 
-		var groundList = new Ground.Collection(Minerals, null);
-		console.log(groundList.find().fetch());
-		//const handle = Meteor.subscribe('minerals');
+		const handle = Meteor.subscribe('minerals');
 		const minData = this.getMinFromDb();
 		return {
 			ready: handle.ready(),
@@ -106,9 +104,9 @@ export default class ListPage2 extends Component {
 		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 
 		if(this.state.currChar == '-'){
-			minData = Minerals.find({}, {sort:{minName:1}}).fetch();
+			minData = Min2.find({}, {sort:{minName:1}}).fetch();
 		} else {
-			minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+			minData = Min2.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 		}
 
 		//minData is loaded

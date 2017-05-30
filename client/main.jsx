@@ -21,7 +21,7 @@ import FluorInfo from '../imports/ui/propsModule/FluorInfo';
 injectTapEventPlugin();
 
 Meteor.startup(() => {
-	
+	if (Meteor.isCordova) Meteor.subscribe('minerals');
 	render((
 		<Router history={browserHistory}>
 			<Route path="/" component={App}/>
