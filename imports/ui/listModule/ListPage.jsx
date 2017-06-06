@@ -2,11 +2,14 @@
 import React, { Component } from 'react';
 import ReactMixin from 'react-mixin';
 import PropTypes from 'prop-types';
+
 //Meteor
 import {ReactMeteorData} from 'meteor/react-meteor-data';
 import {Meteor} from 'meteor/meteor';
+import {Ground} from 'meteor/ground:db';
 
 //Components and API
+import {groundDb} from '../../../client/main';
 import {Minerals} from '../../api/minerals';
 import MinList from './MinList';
 import Filter from './Filter';
@@ -102,11 +105,13 @@ export default class ListPage extends Component {
 	}
 
 	getMeteorData(){
-		const handle = Meteor.subscribe('minerals');
+
+		const handle = Meteor.subscribe('wooooo');
 		const minData = this.getMinFromDb();
 		return {
 			ready: handle.ready(),
-			minerals: minData,
+			minerals: minData
+			//minerals:minData
 		};
 	}
 
@@ -117,9 +122,9 @@ export default class ListPage extends Component {
 		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 
 		if(this.state.currChar == '-'){
-			minData = Minerals.find({}, {sort:{minName:1}}).fetch();
+			minData = groundDb.find({}, {sort:{minName:1}}).fetch();
 		} else {
-			minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+			minData = groundDb.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 		}
 
 		//minData is loaded
@@ -149,6 +154,7 @@ export default class ListPage extends Component {
 	}
 
 	renderMinerals () {
+		console.log(this.data);
 		return  this.data.minerals.map((mineral) => (
 
 			<MinList key={mineral._id} mineral={mineral}/>
@@ -156,7 +162,7 @@ export default class ListPage extends Component {
 	}
 
 	render() {
-		if(!this.data.ready){
+/*		if(!this.data.ready){
 			return (
 				<div className="container-fluid">
 					<MinBanner/>
@@ -169,7 +175,7 @@ export default class ListPage extends Component {
 					</div>
 			</div>
 			);
-		} else {
+		} else { */
 
 			return (
 				<div className="container-fluid">
@@ -194,7 +200,7 @@ export default class ListPage extends Component {
 			);
 		}
 	}
-}
+//}
 
 ReactMixin(ListPage.prototype, ReactMeteorData);
 

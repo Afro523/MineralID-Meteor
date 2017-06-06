@@ -2,8 +2,11 @@ import {Meteor} from 'meteor/meteor';
 import {Ground} from 'meteor/ground:db';
 import SimpleSchema from 'simpl-schema';
 
-export const Minerals = new Ground.Collection('minerals');
+//export const Minerals = new Meteor.Collection('minerals');
 
+export var Minerals = new Meteor.Collection('minerals', { connection: null });
+
+//export const Min2 = new Ground.Collection(Minerals, 'min2')
 const MineralSchema = new SimpleSchema ({
 	_id: {type: String},
 	minName: {type: String},

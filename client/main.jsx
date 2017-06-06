@@ -1,5 +1,6 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
+import {Ground} from 'meteor/ground:db';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {Router, Route, browserHistory} from 'react-router';
@@ -20,8 +21,14 @@ import FluorInfo from '../imports/ui/propsModule/FluorInfo';
 
 injectTapEventPlugin();
 
+export var groundDb = new Ground.Collection('wooooo', { connection: null });
 Meteor.startup(() => {
-	if (Meteor.isCordova) Meteor.subscribe('minerals');
+	groundDb.clear();
+	//groundDb = new Ground.Collection('wooooo', { connection: null });
+		console.log(groundDb);
+		allMin.map(function(value, index, array){
+			groundDb.insert(value);
+		});
 	render((
 		<Router history={browserHistory}>
 			<Route path="/" component={App}/>
