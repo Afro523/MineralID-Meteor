@@ -70,13 +70,6 @@ export default class App extends Component {
 								<List style={iconStyles}/>
 						</Link>
 						<Link
-							to="/list2"
-							className="waves-effect waves-light btn light-blue darken-3"
-							style={buttonStyles}>
-							<div style={{fontSize:'20px'}}>Mineral <br/> DB 2</div>
-								<List style={iconStyles}/>
-						</Link>
-						<Link
 							to="/props"
 							className="waves-effect waves-light btn light-blue darken-3"
 							style={buttonStyles}>

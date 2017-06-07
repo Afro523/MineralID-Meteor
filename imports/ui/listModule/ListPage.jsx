@@ -105,13 +105,11 @@ export default class ListPage extends Component {
 	}
 
 	getMeteorData(){
-
-		const handle = Meteor.subscribe('wooooo');
 		const minData = this.getMinFromDb();
 		return {
-			ready: handle.ready(),
+			ready: minData.ready,
 			minerals: minData
-			//minerals:minData
+
 		};
 	}
 
@@ -120,13 +118,11 @@ export default class ListPage extends Component {
 		const minLetter = this.state.currChar;
 		var minData;
 		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
-
 		if(this.state.currChar == '-'){
 			minData = groundDb.find({}, {sort:{minName:1}}).fetch();
 		} else {
 			minData = groundDb.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 		}
-
 		//minData is loaded
 		if(minData.length > 0){
 
@@ -145,6 +141,7 @@ export default class ListPage extends Component {
 				minData = this.applyMohFilter(minData);
 			}
 		}
+		minData.ready = true;
 		return minData;
 	}
 
@@ -154,15 +151,13 @@ export default class ListPage extends Component {
 	}
 
 	renderMinerals () {
-		console.log(this.data);
 		return  this.data.minerals.map((mineral) => (
-
 			<MinList key={mineral._id} mineral={mineral}/>
 		));
 	}
 
 	render() {
-/*		if(!this.data.ready){
+		if(!this.data.ready){
 			return (
 				<div className="container-fluid">
 					<MinBanner/>
@@ -175,7 +170,7 @@ export default class ListPage extends Component {
 					</div>
 			</div>
 			);
-		} else { */
+		} else {
 
 			return (
 				<div className="container-fluid">
@@ -200,7 +195,7 @@ export default class ListPage extends Component {
 			);
 		}
 	}
-//}
+}
 
 ReactMixin(ListPage.prototype, ReactMeteorData);
 

@@ -7,7 +7,6 @@ import {Router, Route, browserHistory} from 'react-router';
 
 import App from '../imports/ui/App';
 import ListPage from '../imports/ui/listModule/ListPage';
-import ListPage2 from '../imports/ui/listModule/ListPage2';
 import IdPage from '../imports/ui/idModule/IdPage';
 import PropsPage from '../imports/ui/propsModule/PropsPage';
 import LusterInfo from '../imports/ui/propsModule/LusterInfo';
@@ -23,17 +22,15 @@ injectTapEventPlugin();
 
 export var groundDb = new Ground.Collection('wooooo', { connection: null });
 Meteor.startup(() => {
-	groundDb.clear();
+	//Meteor.disconnect();
 	//groundDb = new Ground.Collection('wooooo', { connection: null });
-		console.log(groundDb);
-		allMin.map(function(value, index, array){
-			groundDb.insert(value);
-		});
+	allMin.map(function(value, index, array){
+		groundDb.insert(value);
+	});
 	render((
 		<Router history={browserHistory}>
 			<Route path="/" component={App}/>
 			<Route path="/list" component={ListPage}/>
-			<Route path="/list2" component={ListPage2}/>
 			<Route path="/id" component={IdPage}/>
 			<Route path="/props" component={PropsPage}/>
 			<Route path="/props/luster" component={LusterInfo}/>
