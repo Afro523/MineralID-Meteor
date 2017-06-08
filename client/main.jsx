@@ -20,13 +20,7 @@ import FluorInfo from '../imports/ui/propsModule/FluorInfo';
 
 injectTapEventPlugin();
 
-export var groundDb = new Ground.Collection('wooooo', { connection: null });
 Meteor.startup(() => {
-	//Meteor.disconnect();
-	//groundDb = new Ground.Collection('wooooo', { connection: null });
-	allMin.map(function(value, index, array){
-		groundDb.insert(value);
-	});
 	render((
 		<Router history={browserHistory}>
 			<Route path="/" component={App}/>

@@ -9,7 +9,7 @@ import {Meteor} from 'meteor/meteor';
 import {Ground} from 'meteor/ground:db';
 
 //Components and API
-import {groundDb} from '../../../client/main';
+import {groundDb} from '../../../client/init';
 import {Minerals} from '../../api/minerals';
 import MinList from './MinList';
 import Filter from './Filter';
@@ -107,9 +107,8 @@ export default class ListPage extends Component {
 	getMeteorData(){
 		const minData = this.getMinFromDb();
 		return {
-			ready: minData.ready,
+			ready: this.data.ready,
 			minerals: minData
-
 		};
 	}
 
@@ -141,7 +140,7 @@ export default class ListPage extends Component {
 				minData = this.applyMohFilter(minData);
 			}
 		}
-		minData.ready = true;
+		this.data.ready = true;
 		return minData;
 	}
 
@@ -152,7 +151,7 @@ export default class ListPage extends Component {
 
 	renderMinerals () {
 		return  this.data.minerals.map((mineral) => (
-			<MinList key={mineral._id} mineral={mineral}/>
+			<MinList key={mineral.minName} mineral={mineral}/>
 		));
 	}
 
