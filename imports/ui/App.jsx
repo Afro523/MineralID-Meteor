@@ -50,10 +50,8 @@ export default class App extends Component {
 						height:'90vh',
 						display:'flex',
 						flexWrap:'wrap',
-						justifyContent:'space-between',
+						justifyContent:'space-around',
 						alignItems:'center',
-						marginLeft:'20px',
-						marginRight:'20px'
 					}}>
 						<Link
 							to="/id"

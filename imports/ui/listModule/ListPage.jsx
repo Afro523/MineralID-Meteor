@@ -11,7 +11,7 @@ import {Ground} from 'meteor/ground:db';
 //Components and API
 import {groundDb} from '../../../client/init';
 import {Minerals} from '../../api/minerals';
-import MinList from './MinList';
+import MinItem from './MinItem';
 import Filter from './Filter';
 
 //MUI
@@ -34,6 +34,31 @@ export default class ListPage extends Component {
 			currLust:'None'
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
+	}
+
+	compare(a, b) {
+	// Use toUpperCase() to ignore character casing
+		const minA = a.minName.toUpperCase();
+		const minB = b.minName.toUpperCase();
+
+		let comparison = 0;
+		if (minA > minB) {
+			comparison = 1;
+		} else if (minA < minB) {
+			comparison = -1;
+		}
+		return comparison;
+	}
+
+	applyLetterFilter(char){
+		var minData = allMin;
+		var tempData = [];
+		minData.forEach((value)=>{
+			if(value.minName.charAt(0) == char){
+				tempData.push(value);
+			}
+		});
+		return tempData.sort(this.compare);
 	}
 
 	applyCatFilter(data){
@@ -106,21 +131,22 @@ export default class ListPage extends Component {
 
 	getMeteorData(){
 		const minData = this.getMinFromDb();
+		this.data.ready = true;
 		return {
 			ready: this.data.ready,
 			minerals: minData
 		};
 	}
 
-	//Uses the subscription to find minerals
 	getMinFromDb(){
 		const minLetter = this.state.currChar;
 		var minData;
 		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
 		if(this.state.currChar == '-'){
-			minData = groundDb.find({}, {sort:{minName:1}}).fetch();
+			minData = allMin.sort(this.compare);
 		} else {
-			minData = groundDb.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
+			//returns sorted
+			minData = this.applyLetterFilter(this.state.currChar);
 		}
 		//minData is loaded
 		if(minData.length > 0){
@@ -140,7 +166,6 @@ export default class ListPage extends Component {
 				minData = this.applyMohFilter(minData);
 			}
 		}
-		this.data.ready = true;
 		return minData;
 	}
 
@@ -150,8 +175,8 @@ export default class ListPage extends Component {
 	}
 
 	renderMinerals () {
-		return  this.data.minerals.map((mineral) => (
-			<MinList key={mineral.minName} mineral={mineral}/>
+		return this.data.minerals.map((mineral) => (
+			<MinItem key={mineral.minName} mineral={mineral}/>
 		));
 	}
 

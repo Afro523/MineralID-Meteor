@@ -15,7 +15,7 @@ const customContentStyle = {
 	maxWidth: 'none'
 };
 
-export default class MinList extends Component {
+export default class MinItem extends Component {
 	constructor(props) {
 		super(props);
 		//Setting up state for dialog
@@ -67,6 +67,6 @@ export default class MinList extends Component {
 	}
 }
 
-MinList.propTypes ={
+MinItem.propTypes ={
 	mineral : PropTypes.object.isRequired,
 };
