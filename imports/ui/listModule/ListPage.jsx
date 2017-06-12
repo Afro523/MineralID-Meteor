@@ -5,12 +5,9 @@ import PropTypes from 'prop-types';
 
 //Meteor
 import {ReactMeteorData} from 'meteor/react-meteor-data';
-import {Meteor} from 'meteor/meteor';
-import {Ground} from 'meteor/ground:db';
 
 //Components and API
-import {groundDb} from '../../../client/init';
-import {Minerals} from '../../api/minerals';
+import SearchBar from './SearchBar';
 import MinItem from './MinItem';
 import Filter from './Filter';
 
@@ -199,6 +196,7 @@ export default class ListPage extends Component {
 			return (
 				<div className="container-fluid">
 					<MinBanner/>
+						<SearchBar/>
 						<Filter
 							currChar={this.state.currChar}
 							mohMin={this.state.mohMin}
@@ -211,7 +209,10 @@ export default class ListPage extends Component {
 							handleMohMax={this.setMohMax.bind(this)}
 							handleLust={this.setLust.bind(this)}
 						/>
-					<List>
+
+					<List
+
+						>
 						{	this.renderMinerals()	}
 					</List>
 
