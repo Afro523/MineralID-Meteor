@@ -152,33 +152,30 @@ export default class ListPage extends Component {
 
 		var minData = this.applySearchFilter(this.state.currSearch);
 
-
-
-		/*if(this.state.currSearch == '-'){
-			minData = allMin.sort(this.compare);
-		} else {
-			//returns sorted
-			minData = this.applyLetterFilter(this.state.currChar);
-		} */
-		//minData is loaded
-		if(minData.length > 0){
-
-			//Apply category filter through this.state.currCat
-			if(this.state.currCat != 'None'){
-				minData = this.applyCatFilter(minData);
+		//Apply category filter through this.state.currCat
+		if(this.state.currCat != 'None'){
+			if(this.state.currSearch == ''){
+				minData = allMin;
 			}
-
+			minData = this.applyCatFilter(minData);
+		}
 			//Apply Luster filter through this.state.currCat
-			if(this.state.currLust != 'None'){
-				minData = this.applyLustFilter(minData);
+		if(this.state.currLust != 'None'){
+			if(this.state.currSearch == ''){
+				minData = allMin;
 			}
+			minData = this.applyLustFilter(minData);
+		}
 
 			//Filter by Hardness
-			if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
-				minData = this.applyMohFilter(minData);
+		if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
+			if(this.state.currSearch == '-'){
+				minData = allMin;
 			}
+			minData = this.applyMohFilter(minData);
 		}
-		return minData;
+
+		return minData.sort(this.compare);
 	}
 
 	handleSelect(event){

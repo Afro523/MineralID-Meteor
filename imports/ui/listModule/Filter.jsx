@@ -28,16 +28,15 @@ export default class Filter extends React.Component {
 	}
 
 	render() {
-		//Creates Character list for drop down
-		const abc = [
-			'-', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
-			'H', 'I', 'J', 'K', 'L', 'M', 'N',
-			'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-			'V', 'W', 'X', 'Y', 'Z'
-		];
-		const charMenuItem = [];
-		for (let i = 0; i< abc.length; i++){
-			charMenuItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
+
+		var colors = allMin.map((item) => {
+			return item.color;
+		});
+		var strings = colors.map((item) => {
+			return item.split(',');
+		});
+		for (var i = 0; i < strings.length; i++) {
+			console.log(strings[i]);
 		}
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -92,25 +91,21 @@ export default class Filter extends React.Component {
 				>
 					<FilterList />
 				</FloatingActionButton>
-        <Drawer docked={false} modal={false} open={this.state.open}>
+        <Drawer
+					docked={false}
+					modal={false}
+					open={this.state.open}
+					disableSwipeToOpen = {true}
+					containerStyle={{textAlign:'center'}}
+					>
 					<h4 style={{textAlign:'center'}}>Sort By:</h4>
 					<Divider />
-					<MenuItem>
-					Starting Letter
-					</MenuItem>
-
-					<DropDownMenu
-						id='CharMenu'
-						maxHeight={300}
-						value={this.props.currChar}
-						onChange={this.props.handleChar}
-						>
-							{charMenuItem}
-					</DropDownMenu>
-					<Divider />
 
 					<MenuItem>
-					Hardness: Low - High
+						<p style={{margin:'0px', lineHeight:'30px'}}>
+							Moh's Scale of Hardness: <br/> Low - High
+						</p>
+
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
@@ -153,7 +148,7 @@ export default class Filter extends React.Component {
 					<Divider />
 					<div className='container'>
 						<RaisedButton
-							style={{display:'inline'}}
+							style={{display:'inline', paddingBottom:'10px'}}
 							label="Close"
 							labelPosition="before"
 							icon={<Clear />}
