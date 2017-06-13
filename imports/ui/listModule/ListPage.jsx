@@ -24,11 +24,11 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currChar: 'A',
 			mohMin: 0,
 			mohMax: 10,
 			currCat:'None',
-			currLust:'None'
+			currLust:'None',
+			currSearch:''
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
 	}
@@ -47,15 +47,21 @@ export default class ListPage extends Component {
 		return comparison;
 	}
 
-	applyLetterFilter(char){
+	applySearchFilter(chars){
 		var minData = allMin;
 		var tempData = [];
-		minData.forEach((value)=>{
-			if(value.minName.charAt(0) == char){
-				tempData.push(value);
-			}
-		});
-		return tempData.sort(this.compare);
+		var charLen = chars.length;
+		if (this.state.currSearch === '') {
+			return tempData;
+		} else {
+			minData.forEach((value)=>{
+				var minNamePartial = value.minName.substring(0, charLen);
+				if(chars.toUpperCase() === minNamePartial.toUpperCase()){
+					tempData.push(value);
+				}
+			});
+			return tempData.sort(this.compare);
+		}
 	}
 
 	applyCatFilter(data){
@@ -122,6 +128,11 @@ export default class ListPage extends Component {
 		this.setState( {currLust:event.target.textContent});
 	}
 
+	setChars(value){
+		console.log(value);
+		this.setState({currSearch: value});
+	}
+
 	getChildContext() {
 		return { muiTheme: getMuiTheme(baseTheme) };
 	}
@@ -136,15 +147,19 @@ export default class ListPage extends Component {
 	}
 
 	getMinFromDb(){
-		const minLetter = this.state.currChar;
-		var minData;
-		//const minData = Minerals.find({minName:{$regex: '^'+minLetter+''}}, {sort:{minName:1}}).fetch();
-		if(this.state.currChar == '-'){
+		this.data.ready = false;
+		const searchTerm = this.state.currSearch;
+
+		var minData = this.applySearchFilter(this.state.currSearch);
+
+
+
+		/*if(this.state.currSearch == '-'){
 			minData = allMin.sort(this.compare);
 		} else {
 			//returns sorted
 			minData = this.applyLetterFilter(this.state.currChar);
-		}
+		} */
 		//minData is loaded
 		if(minData.length > 0){
 
@@ -196,7 +211,9 @@ export default class ListPage extends Component {
 			return (
 				<div className="container-fluid">
 					<MinBanner/>
-						<SearchBar/>
+						<SearchBar
+							handleSearch={this.setChars.bind(this)}
+						/>
 						<Filter
 							currChar={this.state.currChar}
 							mohMin={this.state.mohMin}

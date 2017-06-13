@@ -1,6 +1,6 @@
 //React
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 //Material UI
 import TextField from 'material-ui/TextField';
 import FontIcon from 'material-ui/FontIcon';
@@ -30,14 +30,17 @@ export default class SearchBar extends Component {
 						backgroundColor:grey400}}>
 					<FontIcon style={{fontSize:'32px'}} className="material-icons">search</FontIcon>
 					<TextField
-						underlineFocusStyle={{border:'0px'}}
 						hintText="Search"
 						fullWidth={true}
 						style={{marginBottom:'0px'}}
-						underlineStyle={{display: 'none'}}
+						onChange={ (event, newValue) => this.props.handleSearch(newValue)}
 					/>
 				</div>
 			</div>
 		);
 	}
 }
+
+SearchBar.propTypes = {
+	handleSearch: PropTypes.func.isRequired,
+};
