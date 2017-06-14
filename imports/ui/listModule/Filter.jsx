@@ -28,16 +28,45 @@ export default class Filter extends React.Component {
 	}
 
 	render() {
-
+/*
 		var colors = allMin.map((item) => {
 			return item.color;
 		});
 		var strings = colors.map((item) => {
 			return item.split(',');
 		});
+		var stringConcat;
 		for (var i = 0; i < strings.length; i++) {
-			console.log(strings[i]);
+			stringConcat += ', ' + strings[i];
 		}
+		var arr = stringConcat.split(',');
+		var finalArr = [''];
+		for (var i = 0; i < arr.length; i++) {
+			var tempString = arr[i];
+				if(finalArr.indexOf(tempString) == -1){
+						finalArr.push(arr[i]);
+			}
+		}
+		var last = '';
+		for(var i = 0; i < finalArr.length; i++){
+			last += ',' + finalArr[i];
+		}
+		console.log(last); */
+		//Creates colors list for drop down
+		var colorList = [
+			'Blue', 'Green', 'Yellow', 'Red', 'Purple', 'Gray', 'Brown', 'Pink', 'Orange'];
+		const colorMenuItem = [];
+		colorList = colorList.sort();
+
+		for (let i = 0; i< colorList.length; i++){
+			colorMenuItem.push(<MenuItem value={colorList[i]} key={i} primaryText={colorList[i]}/>);
+		}
+
+		//Throws a 'None' option to the top
+		colorMenuItem.unshift(<MenuItem value={'None'} key={colorMenuItem.length + 1} primaryText={'None'}/>);
+
+
+
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 		const minMenuItem = [];
@@ -99,6 +128,18 @@ export default class Filter extends React.Component {
 					containerStyle={{textAlign:'center'}}
 					>
 					<h4 style={{textAlign:'center'}}>Sort By:</h4>
+					<Divider />
+
+					<MenuItem>
+						Mineral Color
+					</MenuItem>
+					<DropDownMenu
+						maxHeight={300}
+						value={this.props.currColor}
+						onChange={(event,index, value) => this.props.handleColor(value)}
+						>
+							{colorMenuItem}
+					</DropDownMenu>
 					<Divider />
 
 					<MenuItem>

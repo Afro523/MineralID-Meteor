@@ -28,7 +28,8 @@ export default class ListPage extends Component {
 			mohMax: 10,
 			currCat:'None',
 			currLust:'None',
-			currSearch:''
+			currSearch:'',
+			currColor:'None'
 		};
 		this.getMinFromDb = this.getMinFromDb.bind(this);
 	}
@@ -66,7 +67,8 @@ export default class ListPage extends Component {
 
 	applyCatFilter(data){
 		var tempData = [];
-		for(var i=0; i < data.length; i++){
+		var len = data.length;
+		for(var i=0; i < len; i++){
 			//Matches the categories and pushes the matching objects
 			if(data[i].category == this.state.currCat ){
 				tempData.push(data[i]);
@@ -75,9 +77,25 @@ export default class ListPage extends Component {
 		return tempData;
 	}
 
+	applyColorFilter(data){
+		var tempData = [];
+		var len = data.length;
+		for(var i=0; i < len; i++){
+			//Searches for color string based on this.state.currColor
+			// and pushes the matching objects
+			var incomingString = data[i].color.toUpperCase();
+			var currentColor = this.state.currColor.toUpperCase();
+			if(incomingString.includes(currentColor) == true ){
+				tempData.push(data[i]);
+			}
+		}
+		return tempData;
+	}
+
 	applyLustFilter(data){
 		var tempData = [];
-		for(var i=0; i < data.length; i++){
+		var len = data.length;
+		for(var i=0; i < len; i++){
 			//Matches the categories and pushes the matching objects
 			if(data[i].luster == this.state.currLust ){
 				tempData.push(data[i]);
@@ -88,7 +106,8 @@ export default class ListPage extends Component {
 
 	applyMohFilter(data){
 		var tempData = [];
-		for(var i=0; data.length>i; i++){
+		var len = data.length;
+		for(var i=0; len >i; i++){
 			//one hardness value
 			if(data[i].hardness.length == 1){
 				var moh = parseFloat(data[i].hardness[0]);
@@ -109,8 +128,16 @@ export default class ListPage extends Component {
 		return tempData;
 	}
 
+	setCat(event){
+		this.setState( {currCat:event.target.textContent});
+	}
+
 	setChar(event){
 		this.setState( {currChar:event.target.textContent});
+	}
+
+	setColor(value){
+		this.setState( {currColor:value});
 	}
 
 	setMohMin(event){
@@ -120,16 +147,13 @@ export default class ListPage extends Component {
 	setMohMax(event){
 		this.setState( {mohMax:parseFloat(event.target.textContent)});
 	}
-	setCat(event){
-		this.setState( {currCat:event.target.textContent});
-	}
+
 
 	setLust(event){
 		this.setState( {currLust:event.target.textContent});
 	}
 
 	setChars(value){
-		console.log(value);
 		this.setState({currSearch: value});
 	}
 
@@ -153,6 +177,14 @@ export default class ListPage extends Component {
 		var minData = this.applySearchFilter(this.state.currSearch);
 
 		//Apply category filter through this.state.currCat
+		if(this.state.currColor != 'None'){
+			if(this.state.currSearch == ''){
+				minData = allMin;
+			}
+			minData = this.applyColorFilter(minData);
+		}
+
+		//Apply category filter through this.state.currCat
 		if(this.state.currCat != 'None'){
 			if(this.state.currSearch == ''){
 				minData = allMin;
@@ -169,7 +201,7 @@ export default class ListPage extends Component {
 
 			//Filter by Hardness
 		if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
-			if(this.state.currSearch == '-'){
+			if(this.state.currSearch == ''){
 				minData = allMin;
 			}
 			minData = this.applyMohFilter(minData);
@@ -184,6 +216,7 @@ export default class ListPage extends Component {
 	}
 
 	renderMinerals () {
+		//react-infinit-scroll
 		return this.data.minerals.map((mineral) => (
 			<MinItem key={mineral.minName} mineral={mineral}/>
 		));
@@ -212,12 +245,13 @@ export default class ListPage extends Component {
 							handleSearch={this.setChars.bind(this)}
 						/>
 						<Filter
-							currChar={this.state.currChar}
 							mohMin={this.state.mohMin}
 							mohMax={this.state.mohMax}
 							currCat={this.state.currCat}
 							currLust={this.state.currLust}
+							currColor={this.state.currColor}
 							handleChar={this.setChar.bind(this)}
+							handleColor={this.setColor.bind(this)}
 							handleCat={this.setCat.bind(this)}
 							handleMohMin={this.setMohMin.bind(this)}
 							handleMohMax={this.setMohMax.bind(this)}
