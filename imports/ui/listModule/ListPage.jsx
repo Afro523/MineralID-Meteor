@@ -78,17 +78,35 @@ export default class ListPage extends Component {
 	}
 
 	applyColorFilter(data){
+		//need to address beige
+		const colorAlts =
+		{	Purple:['lavander', 'violet', 'purpl', 'lilac', 'magenta'],
+			Blue:['azure', 'turquoise', 'blu'],
+			Beiege:['cream'],
+			Red:['vermilion', 'cherry'],
+			Green:['olive', 'emerald'],
+			Pink:['salmon'],
+			Bronze:['copper'],
+			Yellow:['lemon']
+		};
 		var tempData = [];
-		var len = data.length;
-		for(var i=0; i < len; i++){
-			//Searches for color string based on this.state.currColor
-			// and pushes the matching objects
-			var incomingString = data[i].color.toUpperCase();
-			var currentColor = this.state.currColor.toUpperCase();
-			if(incomingString.includes(currentColor) == true ){
-				tempData.push(data[i]);
-			}
+		var currentColors = [this.state.currColor];
+		if(colorAlts[this.state.currColor] !== undefined){
+			currentColors = currentColor.concat(colorAlts[this.state.currColor]);
 		}
+		data.map((value)=>{
+			//Searches for color string based on currentColors array
+			var incomingString = value.color.toUpperCase();
+			//for each alt color
+			for(var j = 0; j < currentColors.length; j++){
+				if(incomingString.includes(currentColors[j].toUpperCase()) == true ){
+					tempData.push(value);
+					break;
+				}
+			}
+		});
+
+
 		return tempData;
 	}
 
@@ -175,10 +193,9 @@ export default class ListPage extends Component {
 		const searchTerm = this.state.currSearch;
 
 		var minData = this.applySearchFilter(this.state.currSearch);
-
 		//Apply category filter through this.state.currCat
 		if(this.state.currColor != 'None'){
-			if(this.state.currSearch == ''){
+			if(minData.length <= 0){
 				minData = allMin;
 			}
 			minData = this.applyColorFilter(minData);
@@ -186,14 +203,14 @@ export default class ListPage extends Component {
 
 		//Apply category filter through this.state.currCat
 		if(this.state.currCat != 'None'){
-			if(this.state.currSearch == ''){
+			if(minData.length <= 0){
 				minData = allMin;
 			}
 			minData = this.applyCatFilter(minData);
 		}
 			//Apply Luster filter through this.state.currCat
 		if(this.state.currLust != 'None'){
-			if(this.state.currSearch == ''){
+			if(minData.length <= 0){
 				minData = allMin;
 			}
 			minData = this.applyLustFilter(minData);
@@ -201,7 +218,7 @@ export default class ListPage extends Component {
 
 			//Filter by Hardness
 		if(parseInt(this.state.mohMin) > 0 || parseInt(this.state.mohMax) < 10 ){
-			if(this.state.currSearch == ''){
+			if(minData.length <= 0){
 				minData = allMin;
 			}
 			minData = this.applyMohFilter(minData);
