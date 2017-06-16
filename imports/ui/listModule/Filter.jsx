@@ -54,7 +54,9 @@ export default class Filter extends React.Component {
 		console.log(last); */
 		//Creates colors list for drop down
 		var colorList = [
-			'Black', 'Beige', 'Blue', 'Bronze', 'Green', 'Yellow', 'Red', 'Purple', 'Gray', 'Brown', 'Pink', 'Orange'];
+			'Black', 'Beige', 'Blue', 'Bronze',
+			'Green', 'Yellow', 'Red', 'Purple',
+			'Gray', 'Brown', 'Pink', 'Orange'];
 		const colorMenuItem = [];
 		colorList = colorList.sort();
 

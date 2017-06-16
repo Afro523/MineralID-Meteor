@@ -49,14 +49,14 @@ export default class ListPage extends Component {
 	}
 
 	applySearchFilter(chars){
-		var minData = allMin;
-		var tempData = [];
-		var charLen = chars.length;
+		let minData = allMin;
+		let tempData = [];
+		let charLen = chars.length;
 		if (this.state.currSearch === '') {
 			return tempData;
 		} else {
 			minData.forEach((value)=>{
-				var minNamePartial = value.minName.substring(0, charLen);
+				let minNamePartial = value.minName.substring(0, charLen);
 				if(chars.toUpperCase() === minNamePartial.toUpperCase()){
 					tempData.push(value);
 				}
@@ -66,8 +66,8 @@ export default class ListPage extends Component {
 	}
 
 	applyCatFilter(data){
-		var tempData = [];
-		var len = data.length;
+		let tempData = [];
+		let len = data.length;
 		for(var i=0; i < len; i++){
 			//Matches the categories and pushes the matching objects
 			if(data[i].category == this.state.currCat ){
@@ -82,24 +82,24 @@ export default class ListPage extends Component {
 		const colorAlts =
 		{	Purple:['lavander', 'violet', 'purpl', 'lilac', 'magenta'],
 			Blue:['azure', 'turquoise', 'blu'],
-			Beiege:['cream'],
+			Beige:['cream'],
 			Red:['vermilion', 'cherry'],
 			Green:['olive', 'emerald'],
 			Pink:['salmon'],
 			Bronze:['copper'],
 			Yellow:['lemon']
 		};
-		var tempData = [];
-		var currentColors = [this.state.currColor];
+		let tempData = [];
+		let currentColors = [this.state.currColor];
 		if(colorAlts[this.state.currColor] !== undefined){
-			currentColors = currentColor.concat(colorAlts[this.state.currColor]);
+			currentColors = currentColors.concat(colorAlts[this.state.currColor]);
 		}
 		data.map((value)=>{
 			//Searches for color string based on currentColors array
-			var incomingString = value.color.toUpperCase();
+			let incomingString = value.color.toUpperCase();
 			//for each alt color
-			for(var j = 0; j < currentColors.length; j++){
-				if(incomingString.includes(currentColors[j].toUpperCase()) == true ){
+			for(let j = 0; j < currentColors.length; j++){
+				if(incomingString.includes(currentColors[j].toUpperCase()) && !incomingString.includes('ISH')){
 					tempData.push(value);
 					break;
 				}
@@ -111,9 +111,9 @@ export default class ListPage extends Component {
 	}
 
 	applyLustFilter(data){
-		var tempData = [];
-		var len = data.length;
-		for(var i=0; i < len; i++){
+		let tempData = [];
+		let len = data.length;
+		for(let i=0; i < len; i++){
 			//Matches the categories and pushes the matching objects
 			if(data[i].luster == this.state.currLust ){
 				tempData.push(data[i]);
@@ -123,19 +123,19 @@ export default class ListPage extends Component {
 	}
 
 	applyMohFilter(data){
-		var tempData = [];
-		var len = data.length;
-		for(var i=0; len >i; i++){
+		let tempData = [];
+		let len = data.length;
+		for(let i=0; len >i; i++){
 			//one hardness value
 			if(data[i].hardness.length == 1){
-				var moh = parseFloat(data[i].hardness[0]);
+				let moh = parseFloat(data[i].hardness[0]);
 				//Remove all minerals where mohMin <= hardness >= mohMax
 				if (moh >= this.state.mohMin && moh <= this.state.mohMax){
 					tempData.push(data[i]);
 				}
 			}else if (data[i].hardness.length == 2){
-				var mohMin = parseFloat(data[i].hardness[0]);
-				var mohMax = parseFloat(data[i].hardness[1]);
+				let mohMin = parseFloat(data[i].hardness[0]);
+				let mohMax = parseFloat(data[i].hardness[1]);
 				if (mohMin >= this.state.mohMin && mohMax <= this.state.mohMax){
 					tempData.push(data[i]);
 				}
