@@ -7,9 +7,11 @@ import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FilterList from 'material-ui/svg-icons/content/filter-list';
-
+import {deepPurple500} from 'material-ui/styles/colors';
 import Clear from 'material-ui/svg-icons/content/clear';
 
 export default class Filter extends React.Component {
@@ -19,6 +21,11 @@ export default class Filter extends React.Component {
 			open: false,
 		};
 	}
+
+	getChildContext() {
+		return { muiTheme: getMuiTheme(myBaseTheme) };
+	}
+
 	cancelFilter(){
 		this.setState({open: false});
 	}
@@ -66,8 +73,6 @@ export default class Filter extends React.Component {
 
 		//Throws a 'None' option to the top
 		colorMenuItem.unshift(<MenuItem value={'None'} key={colorMenuItem.length + 1} primaryText={'None'}/>);
-
-
 
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -127,7 +132,7 @@ export default class Filter extends React.Component {
 					modal={false}
 					open={this.state.open}
 					disableSwipeToOpen = {true}
-					containerStyle={{textAlign:'center'}}
+					containerStyle={{textAlign:'center', backgroundColor:deepPurple500}}
 					>
 					<h4 style={{textAlign:'center'}}>Sort By:</h4>
 					<Divider />
@@ -204,6 +209,9 @@ export default class Filter extends React.Component {
 		);
 	}
 }
+Filter.childContextTypes = {
+	muiTheme: PropTypes.object.isRequired,
+};
 
 Filter.defaultProps ={
 	currCat: 'None',

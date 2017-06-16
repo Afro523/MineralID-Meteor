@@ -106,20 +106,20 @@ export default class Question extends Component {
 					<h3 style={{textAlign:'center'}}>Other Distinctive Factors</h3>
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 						<RaisedButton
+							labelPosition={'before'}
+							label={'Magnetic - Attracted to magnets'}
+							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'mhard'})}
-						>
-							<h4>Magnetic</h4>
-							<h5>Strongly attracted to magnets</h5>
-						</RaisedButton>
+							onClick={()=>this.setState({current:'msoftgrey'})}
+						/>
 
 						<RaisedButton
+							labelPosition={'before'}
+							label={'Cubic Habit - Shows cubic crystals'}
+							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoft'})}
-						>
-							<h4>Cubic Habit</h4>
-							<h5>Shows cubic crystals</h5>
-						</RaisedButton>
+							onClick={()=>this.setState({current:'msoftgrey'})}
+						/>
 					</div>
 				</div>
 			);
@@ -183,7 +183,7 @@ export default class Question extends Component {
 						children={'Hardness > 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlighthard'})}
+						onClick={()=>this.setState({current:'nmlighthard',  currentQuestion:'cleavage'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
@@ -191,7 +191,7 @@ export default class Question extends Component {
 						children={'Hardness < 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlightsoft'})}
+						onClick={()=>this.setState({current:'nmlightsoft',  currentQuestion:'cleavage'})}
 					/>
 				</div>
 			</div>
@@ -209,7 +209,7 @@ export default class Question extends Component {
 						children={'Hardness > 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarkhard'})}
+						onClick={()=>this.setState({current:'nmdarkhard',  currentQuestion:'cleavage'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
@@ -217,7 +217,7 @@ export default class Question extends Component {
 						children={'Hardness < 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarksoft'})}
+						onClick={()=>this.setState({current:'nmdarksoft',  currentQuestion:'cleavage'})}
 					/>
 				</div>
 			</div>
@@ -234,17 +234,41 @@ export default class Question extends Component {
 						label={'Excellent - Good'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlighthardgood'})}
+						onClick={()=>this.setState({current:''})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
 						label={'Poor - Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlighthardpoor'})}
+						onClick={()=>this.setState({current:''})}
 					/>
 				</div>
 			</div>
+			);
+
+			//Non-Metallic - Light - Soft
+		case 'nmlightsoft':
+			return(
+				<div>
+					<h3 style={{textAlign:'center'}}>What is the Cleavage of the mineral?</h3>
+					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
+						<RaisedButton
+							labelPosition={'before'}
+							label={'Excellent - Good'}
+							fullWidth={true}
+							style={btnStyle}
+							onClick={()=>this.setState({current:''})}
+						/>
+						<RaisedButton
+							labelPosition={'before'}
+							label={'Poor - Indistinct'}
+							fullWidth={true}
+							style={btnStyle}
+							onClick={()=>this.setState({current:''})}
+						/>
+					</div>
+				</div>
 			);
 
 			//Non-Metallic - Dark - Hard

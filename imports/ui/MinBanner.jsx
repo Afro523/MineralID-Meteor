@@ -5,7 +5,7 @@ import {browserHistory} from 'react-router';
 
 
 //MUi stuff
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import IconButton from 'material-ui/IconButton';
 import AppBar from 'material-ui/AppBar';
@@ -19,7 +19,7 @@ export default class MinBanner extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	render() {

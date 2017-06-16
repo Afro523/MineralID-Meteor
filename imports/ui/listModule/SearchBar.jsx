@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 //Material UI
 import TextField from 'material-ui/TextField';
 import FontIcon from 'material-ui/FontIcon';
-import {grey400} from 'material-ui/styles/colors';
+import {deepPurple200} from 'material-ui/styles/colors';
 
 export default class SearchBar extends Component {
 	constructor(props) {
@@ -27,7 +27,7 @@ export default class SearchBar extends Component {
 						display:'flex',
 						alignItems:'center',
 						zIndex:5,
-						backgroundColor:grey400}}>
+						backgroundColor:deepPurple200}}>
 					<FontIcon style={{fontSize:'32px'}} className="material-icons">search</FontIcon>
 					<TextField
 						hintText="Search"

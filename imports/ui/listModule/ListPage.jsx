@@ -13,7 +13,7 @@ import Filter from './Filter';
 
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {List} from 'material-ui/List';
 import MinBanner from '../MinBanner';
@@ -176,7 +176,7 @@ export default class ListPage extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	getMeteorData(){

@@ -7,7 +7,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Help from 'material-ui/svg-icons/action/help';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export default class WhatIsBtn extends Component {
@@ -19,7 +19,7 @@ export default class WhatIsBtn extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	handleOpen() {
@@ -54,7 +54,20 @@ export default class WhatIsBtn extends Component {
 					being the hardest mineral at 10 and Talc being the softest at 1.
 				</p>
 			);
+		case 'color':
+			return(
+				<p>
+					This is color
+				</p>
+			);
+		case 'cleavage':
+			return(
+				<p>
+					This is cleavage
+				</p>
+			);
 		default:
+		console.log('error in WhatIsBtn(switch)')
 
 		}
 	}
@@ -71,7 +84,7 @@ export default class WhatIsBtn extends Component {
 		return (
 			<div>
 				<FloatingActionButton
-					style={{marginTop:'20px', position:'absolute', bottom:10, right:10}}
+					style={{marginTop:'20px', position:'absolute', bottom:20, right:10}}
 					onClick={this.handleOpen.bind(this)}
 					>
 					<Help/>

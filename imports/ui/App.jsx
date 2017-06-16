@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 //MUi stuff
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
@@ -33,14 +33,14 @@ export default class App extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 
 	render() {
 
 		return (
-      <MuiThemeProvider muiTheme={getMuiTheme(baseTheme)}>
+      <MuiThemeProvider muiTheme={getMuiTheme(myBaseTheme)}>
 				<div className="container-fluid">
 					<AppBar
 						showMenuIconButton={false}
@@ -55,21 +55,21 @@ export default class App extends Component {
 					}}>
 						<Link
 							to="/id"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 							style={buttonStyles}>
 							<div style={{fontSize:'20px'}}>Mineral <br/> I.D.</div>
 								<Page style={iconStyles}/>
 						</Link>
 						<Link
 							to="/list"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 							style={buttonStyles}>
 							<div style={{fontSize:'20px'}}>Mineral <br/> DB</div>
 								<List style={iconStyles}/>
 						</Link>
 						<Link
 							to="/props"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 							style={buttonStyles}>
 							<div style={{fontSize:'20px'}}>Physical Properties</div>
 								<Board style={iconStyles}/>
