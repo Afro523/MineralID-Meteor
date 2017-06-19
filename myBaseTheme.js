@@ -15,11 +15,11 @@ var _spacing2 = _interopRequireDefault(_spacing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- *  Light Theme is the default theme used in material-ui. It is guaranteed to
- *  have all theme variables needed for every component. Variables not defined
- *  in a custom theme will default to these values.
- 
+
+//  Light Theme is the default theme used in material-ui. It is guaranteed to
+//  have all theme variables needed for every component. Variables not defined
+//  in a custom theme will default to these values.
+
 exports.default = {
   spacing: _spacing2.default,
   fontFamily: 'Roboto, sans-serif',

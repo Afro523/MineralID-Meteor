@@ -11,7 +11,7 @@ import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FilterList from 'material-ui/svg-icons/content/filter-list';
-import {deepPurple200, deepPurple300, deepPurple900, grey900} from 'material-ui/styles/colors';
+import {deepPurple200, deepPurple300, deepPurple900, grey500} from 'material-ui/styles/colors';
 import Clear from 'material-ui/svg-icons/content/clear';
 
 export default class Filter extends React.Component {
@@ -135,7 +135,7 @@ export default class Filter extends React.Component {
 					containerStyle={{textAlign:'center'}}
 					>
 					<h4 style={{textAlign:'center'}}>Sort By:</h4>
-					<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
 						Mineral Color
@@ -144,16 +144,17 @@ export default class Filter extends React.Component {
 						maxHeight={300}
 						value={this.props.currColor}
 						onChange={(event,index, value) => this.props.handleColor(value)}
+						labelStyle={{border:'2px solid black'}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px'}}
 						>
 							{colorMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
 						<p style={{margin:'0px', lineHeight:'30px'}}>
 							Moh's Scale of Hardness: <br/> Low - High
 						</p>
-
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
@@ -169,7 +170,7 @@ export default class Filter extends React.Component {
 						>
 							{minMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
 						Mineral Category
@@ -181,7 +182,7 @@ export default class Filter extends React.Component {
 						>
 							{catMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
 					Mineral Luster
@@ -193,7 +194,7 @@ export default class Filter extends React.Component {
 						>
 							{lustMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{backgroundColor:grey500}} />
 
 						<RaisedButton
 							style={{ width:'90%', position:'absolute', bottom:10, left:'5%'}}

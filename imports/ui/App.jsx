@@ -74,6 +74,8 @@ export default class App extends Component {
 							<div style={{fontSize:'20px'}}>Physical Properties</div>
 								<Board style={iconStyles}/>
 						</Link>
+						<p style={{fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
+
 					</div>
 				</div>
       </MuiThemeProvider>
