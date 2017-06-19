@@ -7,8 +7,8 @@ import MinCard from './MinCard';
 import {ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-
+import RaisedButton from 'material-ui/RaisedButton';
+import {deepPurple200, grey300, deepPurple900} from 'material-ui/styles/colors';
 
 const customContentStyle = {
 	width: '97%',
@@ -35,7 +35,7 @@ export default class MinItem extends Component {
 	render() {
 		const mineral =  this.props.mineral;
 		const actions = [
-			<FlatButton
+			<RaisedButton
         label="Close"
         primary={true}
         onTouchTap={this.handleClose.bind(this)}
@@ -51,6 +51,7 @@ export default class MinItem extends Component {
 				/>
 				<Dialog
 					title={mineral.minName}
+					titleStyle={{borderBottom:'none'}}
 					leftAvatar={<Avatar src="minImage.jpg"/>}
 					actions={actions}
 					modal={false}
@@ -58,7 +59,7 @@ export default class MinItem extends Component {
 					onRequestClose={this.handleClose.bind(this)}
 					autoScrollBodyContent={true}
 					contentStyle={customContentStyle}
-					bodyStyle={{padding:'0px'}}
+					bodyStyle={{padding:'0px', borderTop:'2px solid', borderBottom:'2px solid', borderColor:grey300}}
 				>
 				<MinCard mineral={mineral}/>
 				</Dialog>

@@ -11,7 +11,7 @@ import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FilterList from 'material-ui/svg-icons/content/filter-list';
-import {deepPurple500} from 'material-ui/styles/colors';
+import {deepPurple200, deepPurple300, deepPurple900, grey900} from 'material-ui/styles/colors';
 import Clear from 'material-ui/svg-icons/content/clear';
 
 export default class Filter extends React.Component {
@@ -132,10 +132,10 @@ export default class Filter extends React.Component {
 					modal={false}
 					open={this.state.open}
 					disableSwipeToOpen = {true}
-					containerStyle={{textAlign:'center', backgroundColor:deepPurple500}}
+					containerStyle={{textAlign:'center'}}
 					>
 					<h4 style={{textAlign:'center'}}>Sort By:</h4>
-					<Divider />
+					<Divider style={{backgroundColor:grey900}} />
 
 					<MenuItem>
 						Mineral Color
@@ -147,7 +147,7 @@ export default class Filter extends React.Component {
 						>
 							{colorMenuItem}
 					</DropDownMenu>
-					<Divider />
+					<Divider style={{backgroundColor:grey900}} />
 
 					<MenuItem>
 						<p style={{margin:'0px', lineHeight:'30px'}}>
@@ -169,7 +169,7 @@ export default class Filter extends React.Component {
 						>
 							{minMenuItem}
 					</DropDownMenu>
-					<Divider />
+					<Divider style={{backgroundColor:grey900}} />
 
 					<MenuItem>
 						Mineral Category
@@ -181,7 +181,7 @@ export default class Filter extends React.Component {
 						>
 							{catMenuItem}
 					</DropDownMenu>
-					<Divider />
+					<Divider style={{backgroundColor:grey900}} />
 
 					<MenuItem>
 					Mineral Luster
@@ -193,17 +193,18 @@ export default class Filter extends React.Component {
 						>
 							{lustMenuItem}
 					</DropDownMenu>
-					<Divider />
-					<div className='container'>
+					<Divider style={{backgroundColor:grey900}} />
+
 						<RaisedButton
-							style={{display:'inline', paddingBottom:'10px'}}
+							style={{ width:'90%', position:'absolute', bottom:10, left:'5%'}}
+							labelColor={deepPurple900}
 							label="Close"
+							primary={true}
 							labelPosition="before"
 							icon={<Clear />}
 							onTouchTap={this.cancelFilter.bind(this)}
-
 						/>
-					</div>
+
         </Drawer>
       </div>
 		);
