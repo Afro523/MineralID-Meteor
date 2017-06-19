@@ -1,4 +1,4 @@
-//node_modules/material-ui/styles/baseThemes/myBaseTheme.js
+/*//node_modules/material-ui/styles/baseThemes/myBaseTheme.js
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *  Light Theme is the default theme used in material-ui. It is guaranteed to
  *  have all theme variables needed for every component. Variables not defined
  *  in a custom theme will default to these values.
- */
+ 
 exports.default = {
   spacing: _spacing2.default,
   fontFamily: 'Roboto, sans-serif',
