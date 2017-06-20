@@ -10,6 +10,8 @@ import {ReactMeteorData} from 'meteor/react-meteor-data';
 import SearchBar from './SearchBar';
 import MinItem from './MinItem';
 import Filter from './Filter';
+import Infinite from 'react-infinite';
+
 
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
@@ -275,11 +277,13 @@ export default class ListPage extends Component {
 							handleLust={this.setLust.bind(this)}
 						/>
 
-					<List
-
-						>
+					<Infinite
+						useWindowAsScrollContainer={true}
+						elementHeight={40}
+						infiniteLoadBeginEdgeOffset={100}
+					>
 						{	this.renderMinerals()	}
-					</List>
+					</Infinite>
 
 				</div>
 			);
