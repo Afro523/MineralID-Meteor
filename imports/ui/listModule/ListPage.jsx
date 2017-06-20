@@ -26,8 +26,8 @@ export default class ListPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			mohMin: 0,
-			mohMax: 10,
+			mohMin: '0',
+			mohMax: '10',
 			currCat:'None',
 			currLust:'None',
 			currSearch:'',
@@ -132,13 +132,13 @@ export default class ListPage extends Component {
 			if(data[i].hardness.length == 1){
 				let moh = parseFloat(data[i].hardness[0]);
 				//Remove all minerals where mohMin <= hardness >= mohMax
-				if (moh >= this.state.mohMin && moh <= this.state.mohMax){
+				if (moh >= parseInt(this.state.mohMin, 10) && moh <= parseInt(this.state.mohMax, 10)){
 					tempData.push(data[i]);
 				}
 			}else if (data[i].hardness.length == 2){
 				let mohMin = parseFloat(data[i].hardness[0]);
 				let mohMax = parseFloat(data[i].hardness[1]);
-				if (mohMin >= this.state.mohMin && mohMax <= this.state.mohMax){
+				if (mohMin >= parseInt(this.state.mohMin, 10) && mohMax <= parseInt(this.state.mohMax, 10) ){
 					tempData.push(data[i]);
 				}
 			} else{
@@ -161,11 +161,11 @@ export default class ListPage extends Component {
 	}
 
 	setMohMin(event){
-		this.setState( {mohMin: parseFloat(event.target.textContent)});
+		this.setState( {mohMin: event.target.textContent});
 	}
 
 	setMohMax(event){
-		this.setState( {mohMax:parseFloat(event.target.textContent)});
+		this.setState( {mohMax: event.target.textContent});
 	}
 
 

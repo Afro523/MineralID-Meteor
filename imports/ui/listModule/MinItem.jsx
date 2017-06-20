@@ -8,7 +8,7 @@ import {ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
-import {deepPurple200, grey300, deepPurple900} from 'material-ui/styles/colors';
+import {deepPurple200, grey300, grey500} from 'material-ui/styles/colors';
 
 const customContentStyle = {
 	width: '97%',
@@ -59,7 +59,7 @@ export default class MinItem extends Component {
 					onRequestClose={this.handleClose.bind(this)}
 					autoScrollBodyContent={true}
 					contentStyle={customContentStyle}
-					bodyStyle={{padding:'0px', borderTop:'2px solid', borderBottom:'2px solid', borderColor:grey300}}
+					bodyStyle={{padding:'0px', borderTop:'2px solid', borderBottom:'2px solid', borderColor:grey500}}
 				>
 				<MinCard mineral={mineral}/>
 				</Dialog>

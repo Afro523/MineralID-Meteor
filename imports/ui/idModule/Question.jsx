@@ -31,7 +31,7 @@ export default class Question extends Component {
 						<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 							<RaisedButton
 								labelPosition={'before'}
-								label={'Hard'}
+								label={'Hard:'}
 								children={'Hardness > 5.5'}
 								fullWidth={true}
 								style={btnStyle}
@@ -40,7 +40,7 @@ export default class Question extends Component {
 
 							<RaisedButton
 								labelPosition={'before'}
-								label={'Soft'}
+								label={'Soft:'}
 								children={'Hardness < 5.5'}
 								fullWidth={true}
 								style={btnStyle}
@@ -99,7 +99,7 @@ export default class Question extends Component {
 				</div>
 			</div>
 			);
-			//Metallic - Hard - Dark Grey
+			//Metallic - Hard - Grey
 		case 'mharddg':
 			return(
 				<div>
@@ -107,18 +107,20 @@ export default class Question extends Component {
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 						<RaisedButton
 							labelPosition={'before'}
-							label={'Magnetic - Attracted to magnets'}
+							label={'Magnetic:'}
+							children={'Attracted to magnets'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftgrey'})}
+							onClick={()=>this.setState({current:'msoftgreymag'})}
 						/>
 
 						<RaisedButton
 							labelPosition={'before'}
-							label={'Cubic Habit - Shows cubic crystals'}
+							label={'Cubic Habit:'}
+							children={'Shows cubic crystals'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftgrey'})}
+							onClick={()=>this.setState({current:'msoftgreycube'})}
 						/>
 					</div>
 				</div>
@@ -131,14 +133,14 @@ export default class Question extends Component {
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 						<RaisedButton
 							labelPosition={'before'}
-							label={'Grey - Dark Grey'}
+							label={'Grey to Dark Grey'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({current:'msoftgrey'})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
-							label={'Yellow - Brownish Yellow'}
+							label={'Yellow to Brownish Yellow'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({current:'msoftyellow'})}
@@ -168,9 +170,6 @@ export default class Question extends Component {
 				</div>
 			);
 
-		case 'minde':
-			break;
-
 			//Non-Metallic - Light
 		case 'nmlight':
 			return(
@@ -179,7 +178,7 @@ export default class Question extends Component {
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Hard'}
+						label={'Hard:'}
 						children={'Hardness > 5.5'}
 						fullWidth={true}
 						style={btnStyle}
@@ -187,7 +186,7 @@ export default class Question extends Component {
 					/>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Soft'}
+						label={'Soft:'}
 						children={'Hardness < 5.5'}
 						fullWidth={true}
 						style={btnStyle}
@@ -205,7 +204,7 @@ export default class Question extends Component {
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Hard'}
+						label={'Hard:'}
 						children={'Hardness > 5.5'}
 						fullWidth={true}
 						style={btnStyle}
@@ -213,7 +212,7 @@ export default class Question extends Component {
 					/>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Soft'}
+						label={'Soft:'}
 						children={'Hardness < 5.5'}
 						fullWidth={true}
 						style={btnStyle}
@@ -231,17 +230,17 @@ export default class Question extends Component {
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Excellent - Good'}
+						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:''})}
+						onClick={()=>this.setState({current:'nmlighthardgood'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Poor - Indistinct'}
+						label={'Poor to Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:''})}
+						onClick={()=>this.setState({current:'nmlighthardpoor'})}
 					/>
 				</div>
 			</div>
@@ -255,17 +254,17 @@ export default class Question extends Component {
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 						<RaisedButton
 							labelPosition={'before'}
-							label={'Excellent - Good'}
+							label={'Excellent to Good'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:''})}
+							onClick={()=>this.setState({current:'nmlightsoftgood'})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
-							label={'Poor - Indistinct'}
+							label={'Poor to Indistinct'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:''})}
+							onClick={()=>this.setState({current:'nmlightsoftpoor'})}
 						/>
 					</div>
 				</div>
@@ -279,14 +278,14 @@ export default class Question extends Component {
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Excellent - Good'}
+						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({current:'nmdarkhardgood'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Poor - Indistinct'}
+						label={'Poor to Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({current:'nmdarkhardpoor'})}
@@ -303,14 +302,14 @@ export default class Question extends Component {
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Excellent - Good'}
+						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({current:'nmdarksoftgood'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
-						label={'Poor - Indistinct'}
+						label={'Poor to Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({current:'nmdarksoftpoor'})}
@@ -338,6 +337,44 @@ export default class Question extends Component {
 						</div>
 					</div>
 			);
+		}
+	}
+
+	finalAnswer(endState){
+		switch (endState) {
+			case'msoftgrey':
+				break;
+			case'msoftyellow':
+				break;
+			case'msoftwhite':
+				break;
+			case'msoftcopper':
+				break;
+			case'mhardother':
+				break;
+			case'msoftgreymag':
+				break;
+			case'msoftgreycube':
+				break;
+			case'nmlighthardgood':
+				break;
+			case'nmlighthardpoor':
+				break;
+			case'nmlightsoftgood':
+				break;
+			case'nmlightsoftpoor':
+				break;
+			case'nmdarkhardgood':
+				break;
+			case'nmdarkhardpoor':
+				break;
+			case'nmdarksoftgood':
+				break;
+			case'nmdarksoftpoor':
+				break;
+			default:
+				break;
+
 		}
 	}
 

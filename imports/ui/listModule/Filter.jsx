@@ -11,7 +11,7 @@ import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FilterList from 'material-ui/svg-icons/content/filter-list';
-import {deepPurple200, deepPurple300, deepPurple900, grey500} from 'material-ui/styles/colors';
+import {deepPurple200, deepPurple300, deepPurple900, grey900, grey300, indigo100, indigo200, purpleA400} from 'material-ui/styles/colors';
 import Clear from 'material-ui/svg-icons/content/clear';
 
 export default class Filter extends React.Component {
@@ -75,7 +75,7 @@ export default class Filter extends React.Component {
 		colorMenuItem.unshift(<MenuItem value={'None'} key={colorMenuItem.length + 1} primaryText={'None'}/>);
 
 		//Creates Mohs Scale list for drop down
-		const mohsScale = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+		const mohsScale = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
 			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
@@ -132,25 +132,28 @@ export default class Filter extends React.Component {
 					modal={false}
 					open={this.state.open}
 					disableSwipeToOpen = {true}
-					containerStyle={{textAlign:'center'}}
+					containerStyle={{textAlign:'center', backgroundColor:'white'}}
 					>
-					<h4 style={{textAlign:'center'}}>Sort By:</h4>
-					<Divider style={{backgroundColor:grey500}} />
+						<div style={{backgroundColor:deepPurple900, height:'64px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Sort By:</h4>
+						</div>
 
-					<MenuItem>
-						Mineral Color
-					</MenuItem>
-					<DropDownMenu
-						maxHeight={300}
-						value={this.props.currColor}
-						onChange={(event,index, value) => this.props.handleColor(value)}
-						labelStyle={{border:'2px solid black'}}
-						iconStyle={{paddingRight:'0px', paddingLeft:'0px'}}
-						>
-							{colorMenuItem}
-					</DropDownMenu>
-					<Divider style={{backgroundColor:grey500}} />
+					<Divider style={{backgroundColor:grey900}} />
+						<MenuItem>
+							Mineral Color
+						</MenuItem>
+						<DropDownMenu
+							maxHeight={300}
+							value={this.props.currColor}
+							underlineStyle={{borderColor:deepPurple900}}
+							iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
+							onChange={(event,index, value) => this.props.handleColor(value)}
+							selectedMenuItemStyle={{color:purpleA400}}
+							>
+								{colorMenuItem}
+						</DropDownMenu>
 
+					<Divider style={{backgroundColor:grey900}} />
 					<MenuItem>
 						<p style={{margin:'0px', lineHeight:'30px'}}>
 							Moh's Scale of Hardness: <br/> Low - High
@@ -159,18 +162,24 @@ export default class Filter extends React.Component {
 					<DropDownMenu
 						maxHeight={300}
 						value={this.props.mohMin}
+						underlineStyle={{borderColor:deepPurple900}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
 						onChange={this.props.handleMohMin}
+						selectedMenuItemStyle={{color:purpleA400}}
 						>
 							{minMenuItem}
 					</DropDownMenu>
 					<DropDownMenu
 						maxHeight={300}
 						value={this.props.mohMax}
+						underlineStyle={{borderColor:deepPurple900}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
 						onChange={this.props.handleMohMax}
+						selectedMenuItemStyle={{color:purpleA400}}
 						>
 							{minMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey500}} />
+					<Divider style={{backgroundColor:grey900}} />
 
 					<MenuItem>
 						Mineral Category
@@ -178,11 +187,14 @@ export default class Filter extends React.Component {
 					<DropDownMenu
 						maxHeight={300}
 						value={this.props.currCat}
+						underlineStyle={{borderColor:deepPurple900}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
 						onChange={this.props.handleCat}
+						selectedMenuItemStyle={{color:purpleA400}}
 						>
 							{catMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey500}} />
+					<Divider style={{backgroundColor:grey900}} />
 
 					<MenuItem>
 					Mineral Luster
@@ -190,11 +202,14 @@ export default class Filter extends React.Component {
 					<DropDownMenu
 						maxHeight={300}
 						value={this.props.currLust}
+						underlineStyle={{borderColor:deepPurple900}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
 						onChange={this.props.handleLust}
+						selectedMenuItemStyle={{color:purpleA400}}
 						>
 							{lustMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey500}} />
+					<Divider style={{backgroundColor:grey900}} />
 
 						<RaisedButton
 							style={{ width:'90%', position:'absolute', bottom:10, left:'5%'}}
@@ -219,8 +234,8 @@ Filter.defaultProps ={
 	currCat: 'None',
 	currChar: '-',
 	currLust:'None',
-	mohMin: 0,
-	mohMax: 10,
+	mohMin: '0',
+	mohMax: '10',
 };
 
 Filter.propTypes = {
@@ -232,6 +247,6 @@ Filter.propTypes = {
 	currCat: PropTypes.string.isRequired,
 	currLust: PropTypes.string.isRequired,
 	currChar: PropTypes.string.isRequired,
-	mohMin: PropTypes.number.isRequired,
-	mohMax: PropTypes.number.isRequired,
+	mohMin: PropTypes.string.isRequired,
+	mohMax: PropTypes.string.isRequired,
 };
