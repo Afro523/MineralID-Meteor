@@ -7,9 +7,11 @@ import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FilterList from 'material-ui/svg-icons/content/filter-list';
-
+import {deepPurple200, deepPurple300, deepPurple900, grey500} from 'material-ui/styles/colors';
 import Clear from 'material-ui/svg-icons/content/clear';
 
 export default class Filter extends React.Component {
@@ -19,6 +21,11 @@ export default class Filter extends React.Component {
 			open: false,
 		};
 	}
+
+	getChildContext() {
+		return { muiTheme: getMuiTheme(myBaseTheme) };
+	}
+
 	cancelFilter(){
 		this.setState({open: false});
 	}
@@ -28,17 +35,45 @@ export default class Filter extends React.Component {
 	}
 
 	render() {
-		//Creates Character list for drop down
-		const abc = [
-			'-', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
-			'H', 'I', 'J', 'K', 'L', 'M', 'N',
-			'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-			'V', 'W', 'X', 'Y', 'Z'
-		];
-		const charMenuItem = [];
-		for (let i = 0; i< abc.length; i++){
-			charMenuItem.push(<MenuItem value={abc[i]} key={i} primaryText={abc[i]}/>);
+/*
+		var colors = allMin.map((item) => {
+			return item.color;
+		});
+		var strings = colors.map((item) => {
+			return item.split(',');
+		});
+		var stringConcat;
+		for (var i = 0; i < strings.length; i++) {
+			stringConcat += ', ' + strings[i];
 		}
+		var arr = stringConcat.split(',');
+		var finalArr = [''];
+		for (var i = 0; i < arr.length; i++) {
+			var tempString = arr[i];
+				if(finalArr.indexOf(tempString) == -1){
+						finalArr.push(arr[i]);
+			}
+		}
+		var last = '';
+		for(var i = 0; i < finalArr.length; i++){
+			last += ',' + finalArr[i];
+		}
+		console.log(last); */
+		//Creates colors list for drop down
+		var colorList = [
+			'Black', 'Beige', 'Blue', 'Bronze',
+			'Green', 'Yellow', 'Red', 'Purple',
+			'Gray', 'Brown', 'Pink', 'Orange'];
+		const colorMenuItem = [];
+		colorList = colorList.sort();
+
+		for (let i = 0; i< colorList.length; i++){
+			colorMenuItem.push(<MenuItem value={colorList[i]} key={i} primaryText={colorList[i]}/>);
+		}
+
+		//Throws a 'None' option to the top
+		colorMenuItem.unshift(<MenuItem value={'None'} key={colorMenuItem.length + 1} primaryText={'None'}/>);
+
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 		const minMenuItem = [];
@@ -92,25 +127,34 @@ export default class Filter extends React.Component {
 				>
 					<FilterList />
 				</FloatingActionButton>
-        <Drawer docked={false} modal={false} open={this.state.open}>
+        <Drawer
+					docked={false}
+					modal={false}
+					open={this.state.open}
+					disableSwipeToOpen = {true}
+					containerStyle={{textAlign:'center'}}
+					>
 					<h4 style={{textAlign:'center'}}>Sort By:</h4>
-					<Divider />
+					<Divider style={{backgroundColor:grey500}} />
+
 					<MenuItem>
-					Starting Letter
+						Mineral Color
 					</MenuItem>
-
 					<DropDownMenu
-						id='CharMenu'
 						maxHeight={300}
-						value={this.props.currChar}
-						onChange={this.props.handleChar}
+						value={this.props.currColor}
+						onChange={(event,index, value) => this.props.handleColor(value)}
+						labelStyle={{border:'2px solid black'}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px'}}
 						>
-							{charMenuItem}
+							{colorMenuItem}
 					</DropDownMenu>
-					<Divider />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
-					Hardness: Low - High
+						<p style={{margin:'0px', lineHeight:'30px'}}>
+							Moh's Scale of Hardness: <br/> Low - High
+						</p>
 					</MenuItem>
 					<DropDownMenu
 						maxHeight={300}
@@ -126,7 +170,7 @@ export default class Filter extends React.Component {
 						>
 							{minMenuItem}
 					</DropDownMenu>
-					<Divider />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
 						Mineral Category
@@ -138,7 +182,7 @@ export default class Filter extends React.Component {
 						>
 							{catMenuItem}
 					</DropDownMenu>
-					<Divider />
+					<Divider style={{backgroundColor:grey500}} />
 
 					<MenuItem>
 					Mineral Luster
@@ -150,22 +194,26 @@ export default class Filter extends React.Component {
 						>
 							{lustMenuItem}
 					</DropDownMenu>
-					<Divider />
-					<div className='container'>
+					<Divider style={{backgroundColor:grey500}} />
+
 						<RaisedButton
-							style={{display:'inline'}}
+							style={{ width:'90%', position:'absolute', bottom:10, left:'5%'}}
+							labelColor={deepPurple900}
 							label="Close"
+							primary={true}
 							labelPosition="before"
 							icon={<Clear />}
 							onTouchTap={this.cancelFilter.bind(this)}
-
 						/>
-					</div>
+
         </Drawer>
       </div>
 		);
 	}
 }
+Filter.childContextTypes = {
+	muiTheme: PropTypes.object.isRequired,
+};
 
 Filter.defaultProps ={
 	currCat: 'None',

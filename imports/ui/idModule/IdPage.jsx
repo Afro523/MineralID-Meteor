@@ -6,7 +6,7 @@ import QuestionContainer from './QuestionContainer';
 import MinBanner from '../MinBanner';
 
 
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 export default class IdPage extends Component {
 	constructor(props) {
@@ -14,7 +14,7 @@ export default class IdPage extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	render() {

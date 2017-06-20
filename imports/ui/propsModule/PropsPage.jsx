@@ -5,7 +5,7 @@ import {Link} from 'react-router';
 import MinBanner from '../MinBanner';
 
 //MUI
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
@@ -16,7 +16,7 @@ export default class PropsPage extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	render() {
@@ -27,14 +27,14 @@ export default class PropsPage extends Component {
 				<h4 style={{paddingTop:'30px', textAlign:'center'}}>Physical Properties</h4>
 				<Divider/>
 				<p>
-					These are a list of the main physial properties which minerals are defined by.
+					These are a list of the main physial properties which minerals are commonly defined by.
 				</p>
 				<div style={{display:'flex', flexDirection:'column'}}>
 					<FlatButton style={{marginTop:'15px'}}>
 						<Link
 							style={{width:'65%'}}
 							to="/props/cleavage"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Cleavage</div>
 						</Link>
@@ -43,7 +43,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/crystalhabit"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Crystal Habit</div>
 						</Link>
@@ -52,7 +52,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/crystalsystem"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Crystal System</div>
 						</Link>
@@ -61,7 +61,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/fluorescence"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Fluorescence</div>
 						</Link>
@@ -70,7 +70,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/fracture"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Fracture</div>
 						</Link>
@@ -79,7 +79,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/hardness"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Hardness</div>
 						</Link>
@@ -88,7 +88,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/luster"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Luster</div>
 						</Link>
@@ -97,7 +97,7 @@ export default class PropsPage extends Component {
 						<Link
 							style={{width:'65%'}}
 							to="/props/streak"
-							className="waves-effect waves-light btn light-blue darken-3"
+							className="waves-effect waves-light btn"
 						>
 							<div>Streak</div>
 						</Link>

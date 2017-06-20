@@ -1,12 +1,12 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
+import {Ground} from 'meteor/ground:db';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {Router, Route, browserHistory} from 'react-router';
 
 import App from '../imports/ui/App';
 import ListPage from '../imports/ui/listModule/ListPage';
-import ListPage2 from '../imports/ui/listModule/ListPage2';
 import IdPage from '../imports/ui/idModule/IdPage';
 import PropsPage from '../imports/ui/propsModule/PropsPage';
 import LusterInfo from '../imports/ui/propsModule/LusterInfo';
@@ -21,12 +21,10 @@ import FluorInfo from '../imports/ui/propsModule/FluorInfo';
 injectTapEventPlugin();
 
 Meteor.startup(() => {
-	
 	render((
 		<Router history={browserHistory}>
 			<Route path="/" component={App}/>
 			<Route path="/list" component={ListPage}/>
-			<Route path="/list2" component={ListPage2}/>
 			<Route path="/id" component={IdPage}/>
 			<Route path="/props" component={PropsPage}/>
 			<Route path="/props/luster" component={LusterInfo}/>
@@ -38,5 +36,6 @@ Meteor.startup(() => {
 			<Route path="/props/fracture" component={FractureInfo}/>
 			<Route path="/props/fluorescence" component={FluorInfo}/>
 		</Router>
+
 	), document.getElementById('render-target'));
 });

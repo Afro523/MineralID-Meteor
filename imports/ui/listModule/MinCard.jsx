@@ -6,6 +6,8 @@ import Paper from 'material-ui/Paper';
 import {Card, CardMedia, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import Divider from 'material-ui/Divider';
+import {deepPurple200, deepPurple300, deepPurple900, grey900} from 'material-ui/styles/colors';
+
 
 const tableStyle={
 	whiteSpace: 'pre-wrap',
@@ -40,7 +42,7 @@ export default class MinCard extends Component {
 					<b>Summary</b>
 					<Divider/>
 					<p>{mineral.summary}</p>
-				<b>{mineral.minName} Properties Chart</b>
+				<b>{mineral.minName}'s Properties Chart</b>
 				<Divider/>
 				<Table>
 					<TableBody
