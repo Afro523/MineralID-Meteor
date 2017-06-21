@@ -112,7 +112,7 @@ export default class Question extends Component {
 							children={'Attracted to magnets'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({currentQuestion:'msoftgreymag', isAnswer:true })}
+							onClick={()=>this.setState({currentQuestion:'mharddgmag', isAnswer:true })}
 						/>
 
 						<RaisedButton
@@ -121,7 +121,7 @@ export default class Question extends Component {
 							children={'Shows cubic crystals'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({currentQuestion:'msoftgreycube', isAnswer:true})}
+							onClick={()=>this.setState({currentQuestion:'mharddgcube', isAnswer:true})}
 						/>
 					</div>
 				</div>
@@ -344,53 +344,148 @@ export default class Question extends Component {
 	renderAnswer(endState){
 		switch (endState) {
 			case'msoftgrey':
-				return(<div>msoftgrey</div>);
+				return(
+					<div>
+						<Answer
+							commonMin={['Chalcopyrite', 'Bornite', 'Galena', 'Graphite']}
+						/>
+					</div>
+
+				);
 				break;
 			case'msoftyellow':
-				return(<div>msoftyellow</div>);
+				return(
+					<div>
+						msoftyellow
+						Most Common: Goethite
+					</div>
+				);
 				break;
 			case'msoftwhite':
-				return(<div>msoftwhite</div>);
+				return(
+					<div>
+						msoftwhite
+						Most Common: Sphalerite
+					</div>
+				);
 				break;
 			case'msoftcopper':
-				return(<div>msoftcopper</div>);
+				return(
+					<div>
+						msoftcopper
+						Most Common: Copper
+					</div>
+				);
+				break;
+			case'msoftgold':
+				return(
+					<div>
+						msoftcopper
+						Most Common: Gold
+					</div>
+				);
 				break;
 			case'mhardother':
-				return(<div>mhardother</div>);
+				return(
+					<div>
+						mhardother
+						Most Common: Limonite, Chromite, Hematite
+					</div>
+				);
 				break;
-			case'msoftgreymag':
-				return(<div>msoftgreymag</div>);
+			case'mharddgmag':
+				return(
+					<div>
+						mharddgmag
+						Most Common: Magnetite
+					</div>
+				);
 				break;
-			case'msoftgreycube':
-				return(<div>msoftgreycube</div>);
+			case'mharddgcube':
+				return(
+					<div>
+						mharddgcube
+						Most Common: Pyrite
+					</div>
+				);
 				break;
 			case'nmlighthardgood':
-				return(<div>nmlighthardgood</div>);
+				return(
+					<div>
+						nmlighthardgood
+						Most Common: Sillimanite, Kyanite
+					</div>
+				);
 				break;
 			case'nmlighthardpoor':
-				return(<div>nmlighthardpoor</div>);
+				return(
+					<div>
+						nmlighthardpoor
+						Most Common: Corundum, Quartz, Olivine
+					</div>
+				);
 				break;
 			case'nmlightsoftgood':
-				return(<div>nmlightsoftgood</div>);
+				return(
+					<div>
+						nmlightsoftgood
+						Most Common: Calcite, Dolomite, Barite, Gypsum, Natrolite, Halite, Fluorite, Muscovite
+					</div>
+				);
 				break;
 			case'nmlightsoftpoor':
-				return(<div>nmlightsoftpoor</div>);
+				return(
+					<div>
+						nmlightsoftpoor
+						Most Common: Sulfur, Chrysocolla, Serpentine, Talc, Kaolinite, Opal, Apatite
+					</div>
+				);
 				break;
 			case'nmdarkhardgood':
-				return(<div>nmdarkhardgood</div>);
+				return(
+					<div>
+						nmdarkhardgood
+						Most Common: Actinolite, Hornblende, Augite
+					</div>
+				);
 				break;
 			case'nmdarkhardpoor':
-				return(<div>nmdarkhardpoor</div>);
+				return(
+					<div>
+						nmdarkhardpoor
+						Most Common: Staurolite, Tourmaline, Garnet, Jasper, Chert
+					</div>
+				);
 				break;
 			case'nmdarksoftgood':
-				return(<div>nmdarksoftgood</div>);
+				return(
+					<div>
+						nmdarksoftgood
+						Most Common: Sphalerite, Fluorite, Biotite, Chlorite
+					</div>
+				);
 				break;
 			case'nmdarksoftpoor':
-				return(<div>nmdarksoftpoor</div>);
+				return(
+					<div>
+						nmdarksoftpoor
+						Most Common: Limonite, Bauxite, Azurite, Serpentine, Malachite, Talc, Apatite, Hematite
+					</div>
+				);
 				break;
 			default:
 				break;
 
+		}
+	}
+
+	renderQuestionBtn(isAnswer){
+		if(isAnswer != true){
+			return (
+				<WhatIsBtn
+					currentQuestion={this.state.currentQuestionType}
+				/>
+			)
 		}
 	}
 
@@ -406,9 +501,8 @@ export default class Question extends Component {
 		return (
 			<div>
 				{this.renderQuestionOrAnswer(this.state.isAnswer)}
-					<WhatIsBtn
-						currentQuestion={this.state.currentQuestionType}
-					/>
+				{this.renderQuestionBtn(this.state.isAnswer)}
+
 			</div>
 		);
 	}
