@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 //My Components
 import WhatIsBtn from './WhatIsBtn';
-
+import Answer from './Answer';
 const btnStyle={
 
 	marginTop:'30px'
@@ -15,8 +15,9 @@ export default class Question extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currentQuestion: 'luster',
-			current:'default'
+			currentQuestionType: 'luster',
+			currentQuestion:'default',
+			isAnswer:false
 		};
 	}
 
@@ -35,7 +36,7 @@ export default class Question extends Component {
 								children={'Hardness > 5.5'}
 								fullWidth={true}
 								style={btnStyle}
-								onClick={()=>this.setState({current:'mhard', currentQuestion:'color'})}
+								onClick={()=>this.setState({currentQuestion:'mhard', currentQuestionType:'color'})}
 							/>
 
 							<RaisedButton
@@ -44,7 +45,7 @@ export default class Question extends Component {
 								children={'Hardness < 5.5'}
 								fullWidth={true}
 								style={btnStyle}
-								onClick={()=>this.setState({current:'msoft', currentQuestion:'color'})}
+								onClick={()=>this.setState({currentQuestion:'msoft', currentQuestionType:'color'})}
 							/>
 						</div>
 					</div>
@@ -60,7 +61,7 @@ export default class Question extends Component {
 							label={'Light'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'nmlight', currentQuestion:'hardness'})}
+							onClick={()=>this.setState({currentQuestion:'nmlight', currentQuestionType:'hardness'})}
 						/>
 
 						<RaisedButton
@@ -68,7 +69,7 @@ export default class Question extends Component {
 							label={'Dark'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'nmdark',  currentQuestion:'hardness'})}
+							onClick={()=>this.setState({currentQuestion:'nmdark',  currentQuestionType:'hardness'})}
 						/>
 					</div>
 				</div>
@@ -85,7 +86,7 @@ export default class Question extends Component {
 						children={'Grey - Dark Grey'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'mharddg'})}
+						onClick={()=>this.setState({currentQuestion:'mharddg'})}
 					/>
 
 					<RaisedButton
@@ -94,7 +95,7 @@ export default class Question extends Component {
 						children={'other'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'mhardother'})}
+						onClick={()=>this.setState({currentQuestion:'mhardother'})}
 					/>
 				</div>
 			</div>
@@ -111,7 +112,7 @@ export default class Question extends Component {
 							children={'Attracted to magnets'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftgreymag'})}
+							onClick={()=>this.setState({currentQuestion:'msoftgreymag', isAnswer:true })}
 						/>
 
 						<RaisedButton
@@ -120,7 +121,7 @@ export default class Question extends Component {
 							children={'Shows cubic crystals'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftgreycube'})}
+							onClick={()=>this.setState({currentQuestion:'msoftgreycube', isAnswer:true})}
 						/>
 					</div>
 				</div>
@@ -136,35 +137,35 @@ export default class Question extends Component {
 							label={'Grey to Dark Grey'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftgrey'})}
+							onClick={()=>this.setState({currentQuestion:'msoftgrey', isAnswer:true})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
 							label={'Yellow to Brownish Yellow'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftyellow'})}
+							onClick={()=>this.setState({currentQuestion:'msoftyellow', isAnswer:true})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
 							label={'White / Whiteish'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftwhite'})}
+							onClick={()=>this.setState({currentQuestion:'msoftwhite', isAnswer:true})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
 							label={'Copper'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftcopper'})}
+							onClick={()=>this.setState({currentQuestion:'msoftcopper', isAnswer:true})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
 							label={'Gold'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'msoftgold'})}
+							onClick={()=>this.setState({currentQuestion:'msoftgold', isAnswer:true})}
 						/>
 					</div>
 				</div>
@@ -182,7 +183,7 @@ export default class Question extends Component {
 						children={'Hardness > 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlighthard',  currentQuestion:'cleavage'})}
+						onClick={()=>this.setState({currentQuestion:'nmlighthard',  currentQuestionType:'cleavage'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
@@ -190,7 +191,7 @@ export default class Question extends Component {
 						children={'Hardness < 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlightsoft',  currentQuestion:'cleavage'})}
+						onClick={()=>this.setState({currentQuestion:'nmlightsoft',  currentQuestionType:'cleavage'})}
 					/>
 				</div>
 			</div>
@@ -208,7 +209,7 @@ export default class Question extends Component {
 						children={'Hardness > 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarkhard',  currentQuestion:'cleavage'})}
+						onClick={()=>this.setState({currentQuestion:'nmdarkhard',  currentQuestionType:'cleavage'})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
@@ -216,7 +217,7 @@ export default class Question extends Component {
 						children={'Hardness < 5.5'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarksoft',  currentQuestion:'cleavage'})}
+						onClick={()=>this.setState({currentQuestion:'nmdarksoft',  currentQuestionType:'cleavage'})}
 					/>
 				</div>
 			</div>
@@ -233,14 +234,14 @@ export default class Question extends Component {
 						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlighthardgood'})}
+						onClick={()=>this.setState({currentQuestion:'nmlighthardgood', isAnswer:true})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
 						label={'Poor to Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmlighthardpoor'})}
+						onClick={()=>this.setState({currentQuestion:'nmlighthardpoor', isAnswer:true})}
 					/>
 				</div>
 			</div>
@@ -257,14 +258,14 @@ export default class Question extends Component {
 							label={'Excellent to Good'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'nmlightsoftgood'})}
+							onClick={()=>this.setState({currentQuestion:'nmlightsoftgood', isAnswer:true})}
 						/>
 						<RaisedButton
 							labelPosition={'before'}
 							label={'Poor to Indistinct'}
 							fullWidth={true}
 							style={btnStyle}
-							onClick={()=>this.setState({current:'nmlightsoftpoor'})}
+							onClick={()=>this.setState({currentQuestion:'nmlightsoftpoor', isAnswer:true})}
 						/>
 					</div>
 				</div>
@@ -281,14 +282,14 @@ export default class Question extends Component {
 						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarkhardgood'})}
+						onClick={()=>this.setState({currentQuestion:'nmdarkhardgood', isAnswer:true})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
 						label={'Poor to Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarkhardpoor'})}
+						onClick={()=>this.setState({currentQuestion:'nmdarkhardpoor', isAnswer:true})}
 					/>
 				</div>
 			</div>
@@ -305,14 +306,14 @@ export default class Question extends Component {
 						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarksoftgood'})}
+						onClick={()=>this.setState({currentQuestion:'nmdarksoftgood', isAnswer:true})}
 					/>
 					<RaisedButton
 						labelPosition={'before'}
 						label={'Poor to Indistinct'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({current:'nmdarksoftpoor'})}
+						onClick={()=>this.setState({currentQuestion:'nmdarksoftpoor', isAnswer:true})}
 					/>
 				</div>
 			</div>
@@ -326,13 +327,13 @@ export default class Question extends Component {
 								label={'Metallic'}
 								fullWidth={true}
 								style={btnStyle}
-								onClick={()=>this.setState({current:'m', currentQuestion:'hardness'})}
+								onClick={()=>this.setState({currentQuestion:'m', currentQuestionType:'hardness'})}
 							/>
 							<RaisedButton
 								label={'Non-Metallic'}
 								fullWidth={true}
 								style={btnStyle}
-								onClick={()=>this.setState({current:'nm', currentQuestion:'color'})}
+								onClick={()=>this.setState({currentQuestion:'nm', currentQuestionType:'color'})}
 							/>
 						</div>
 					</div>
@@ -340,37 +341,52 @@ export default class Question extends Component {
 		}
 	}
 
-	finalAnswer(endState){
+	renderAnswer(endState){
 		switch (endState) {
 			case'msoftgrey':
+				return(<div>msoftgrey</div>);
 				break;
 			case'msoftyellow':
+				return(<div>msoftyellow</div>);
 				break;
 			case'msoftwhite':
+				return(<div>msoftwhite</div>);
 				break;
 			case'msoftcopper':
+				return(<div>msoftcopper</div>);
 				break;
 			case'mhardother':
+				return(<div>mhardother</div>);
 				break;
 			case'msoftgreymag':
+				return(<div>msoftgreymag</div>);
 				break;
 			case'msoftgreycube':
+				return(<div>msoftgreycube</div>);
 				break;
 			case'nmlighthardgood':
+				return(<div>nmlighthardgood</div>);
 				break;
 			case'nmlighthardpoor':
+				return(<div>nmlighthardpoor</div>);
 				break;
 			case'nmlightsoftgood':
+				return(<div>nmlightsoftgood</div>);
 				break;
 			case'nmlightsoftpoor':
+				return(<div>nmlightsoftpoor</div>);
 				break;
 			case'nmdarkhardgood':
+				return(<div>nmdarkhardgood</div>);
 				break;
 			case'nmdarkhardpoor':
+				return(<div>nmdarkhardpoor</div>);
 				break;
 			case'nmdarksoftgood':
+				return(<div>nmdarksoftgood</div>);
 				break;
 			case'nmdarksoftpoor':
+				return(<div>nmdarksoftpoor</div>);
 				break;
 			default:
 				break;
@@ -378,12 +394,20 @@ export default class Question extends Component {
 		}
 	}
 
+	renderQuestionOrAnswer(isAnswer){
+		if(isAnswer != true){
+			return (this.renderQuestion(this.state.currentQuestion));
+		} else {
+			return(this.renderAnswer(this.state.currentQuestion));
+		}
+	}
+
 	render() {
 		return (
 			<div>
-				{this.renderQuestion(this.state.current)}
+				{this.renderQuestionOrAnswer(this.state.isAnswer)}
 					<WhatIsBtn
-						currentQuestion={this.state.currentQuestion}
+						currentQuestion={this.state.currentQuestionType}
 					/>
 			</div>
 		);
