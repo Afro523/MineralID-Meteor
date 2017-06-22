@@ -95,7 +95,7 @@ export default class Question extends Component {
 						children={'other'}
 						fullWidth={true}
 						style={btnStyle}
-						onClick={()=>this.setState({currentQuestion:'mhardother'})}
+						onClick={()=>this.setState({currentQuestion:'mhardother', isAnswer:true})}
 					/>
 				</div>
 			</div>
@@ -447,7 +447,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Sulfur', 'Chrysocolla', 'Serpentine', 'Talc', 'Kaolinite', 'Opal', 'Apatite']}
+							commonMin={['Sulfur', 'Chrysocolla', 'Talc', 'Kaolinite', 'Opal']}
 						/>
 					</div>
 				);
@@ -483,7 +483,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Limonite', 'Bauxite', 'Azurite', 'Serpentine', 'Malachite', 'Talc', 'Apatite', 'Hematite']}
+							commonMin={['Limonite', 'Bauxite', 'Azurite', 'Malachite', 'Talc', 'Hematite']}
 						/>
 					</div>
 				);
