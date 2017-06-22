@@ -356,120 +356,135 @@ export default class Question extends Component {
 			case'msoftyellow':
 				return(
 					<div>
-						msoftyellow
-						Most Common: Goethite
+						<Answer
+							commonMin={['Goethite']}
+						/>
 					</div>
 				);
 				break;
 			case'msoftwhite':
 				return(
 					<div>
-						msoftwhite
-						Most Common: Sphalerite
+						<Answer
+							commonMin={['Sphalerite']}
+						/>
 					</div>
 				);
 				break;
 			case'msoftcopper':
 				return(
 					<div>
-						msoftcopper
-						Most Common: Copper
+						<Answer
+							commonMin={['Copper']}
+						/>
 					</div>
 				);
 				break;
 			case'msoftgold':
 				return(
 					<div>
-						msoftcopper
-						Most Common: Gold
+						<Answer
+							commonMin={['Gold']}
+						/>
 					</div>
 				);
 				break;
 			case'mhardother':
 				return(
 					<div>
-						mhardother
-						Most Common: Limonite, Chromite, Hematite
+						<Answer
+							commonMin={['Limonite', 'Chromite', 'Hematite']}
+						/>
 					</div>
 				);
 				break;
 			case'mharddgmag':
 				return(
 					<div>
-						mharddgmag
-						Most Common: Magnetite
+						<Answer
+							commonMin={['Magnetite']}
+						/>
 					</div>
 				);
 				break;
 			case'mharddgcube':
 				return(
 					<div>
-						mharddgcube
-						Most Common: Pyrite
+						<Answer
+							commonMin={['Pyrite']}
+						/>
 					</div>
 				);
 				break;
 			case'nmlighthardgood':
 				return(
 					<div>
-						nmlighthardgood
-						Most Common: Sillimanite, Kyanite
+						<Answer
+							commonMin={['Sillimanite', 'Kyanite']}
+						/>
 					</div>
 				);
 				break;
 			case'nmlighthardpoor':
 				return(
 					<div>
-						nmlighthardpoor
-						Most Common: Corundum, Quartz, Olivine
+						<Answer
+							commonMin={['Corundum', 'Quartz', 'Olivine']}
+						/>
 					</div>
 				);
 				break;
 			case'nmlightsoftgood':
 				return(
 					<div>
-						nmlightsoftgood
-						Most Common: Calcite, Dolomite, Barite, Gypsum, Natrolite, Halite, Fluorite, Muscovite
+						<Answer
+							commonMin={['Calcite', 'Dolomite', 'Barite', 'Gypsum', 'Natrolite', 'Halite', 'Fluorite', 'Muscovite']}
+						/>
 					</div>
 				);
 				break;
 			case'nmlightsoftpoor':
 				return(
 					<div>
-						nmlightsoftpoor
-						Most Common: Sulfur, Chrysocolla, Serpentine, Talc, Kaolinite, Opal, Apatite
+						<Answer
+							commonMin={['Sulfur', 'Chrysocolla', 'Serpentine', 'Talc', 'Kaolinite', 'Opal', 'Apatite']}
+						/>
 					</div>
 				);
 				break;
 			case'nmdarkhardgood':
 				return(
 					<div>
-						nmdarkhardgood
-						Most Common: Actinolite, Hornblende, Augite
+						<Answer
+							commonMin={['Actinolite', 'Hornblende', 'Augite']}
+						/>
 					</div>
 				);
 				break;
 			case'nmdarkhardpoor':
 				return(
 					<div>
-						nmdarkhardpoor
-						Most Common: Staurolite, Tourmaline, Garnet, Jasper, Chert
+						<Answer
+							commonMin={['Staurolite', 'Tourmaline', 'Garnet', 'Jasper', 'Chert']}
+						/>
 					</div>
 				);
 				break;
 			case'nmdarksoftgood':
 				return(
 					<div>
-						nmdarksoftgood
-						Most Common: Sphalerite, Fluorite, Biotite, Chlorite
+						<Answer
+							commonMin={['Sphalerite', 'Fluorite', 'Biotite', 'Chlorite']}
+						/>
 					</div>
 				);
 				break;
 			case'nmdarksoftpoor':
 				return(
 					<div>
-						nmdarksoftpoor
-						Most Common: Limonite, Bauxite, Azurite, Serpentine, Malachite, Talc, Apatite, Hematite
+						<Answer
+							commonMin={['Limonite', 'Bauxite', 'Azurite', 'Serpentine', 'Malachite', 'Talc', 'Apatite', 'Hematite']}
+						/>
 					</div>
 				);
 				break;
