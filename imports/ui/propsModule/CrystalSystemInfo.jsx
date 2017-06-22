@@ -5,7 +5,7 @@ import Divider from 'material-ui/Divider';
 
 import MinBanner from '../MinBanner';
 
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export default class CrystalSystemInfo extends Component {
@@ -14,7 +14,7 @@ export default class CrystalSystemInfo extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	render() {

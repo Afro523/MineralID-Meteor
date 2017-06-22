@@ -6,7 +6,7 @@ import QuestionContainer from './QuestionContainer';
 import MinBanner from '../MinBanner';
 
 
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 export default class IdPage extends Component {
 	constructor(props) {

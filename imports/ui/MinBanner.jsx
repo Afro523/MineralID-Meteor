@@ -5,7 +5,7 @@ import {browserHistory} from 'react-router';
 
 
 //MUi stuff
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import IconButton from 'material-ui/IconButton';
 import AppBar from 'material-ui/AppBar';

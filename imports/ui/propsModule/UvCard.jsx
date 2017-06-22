@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 const exampleStyle = {
@@ -19,7 +19,7 @@ export default class UvCard extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	toggleVisible(){

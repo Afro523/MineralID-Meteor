@@ -1,15 +1,15 @@
-/*//node_modules/material-ui/styles/baseThemes/myBaseTheme.js
+//node_modules/material-ui/styles/baseThemes/myBaseTheme.js
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _colors = require('../colors');
+var _colors = require('material-ui/styles/colors');
 
-var _colorManipulator = require('../../utils/colorManipulator');
+var _colorManipulator = require('material-ui/utils/colorManipulator');
 
-var _spacing = require('../spacing');
+var _spacing = require('material-ui/styles/spacing');
 
 var _spacing2 = _interopRequireDefault(_spacing);
 

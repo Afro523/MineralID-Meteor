@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 //MUi stuff
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 

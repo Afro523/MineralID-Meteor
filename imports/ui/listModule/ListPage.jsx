@@ -15,7 +15,7 @@ import Infinite from 'react-infinite';
 
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {List} from 'material-ui/List';
 import MinBanner from '../MinBanner';

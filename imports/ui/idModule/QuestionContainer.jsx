@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Question from './Question';
@@ -13,7 +13,7 @@ export default class QuestionContainer extends Component {
 	}
 
 	getChildContext() {
-		return { muiTheme: getMuiTheme(baseTheme) };
+		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
 	render() {

@@ -7,7 +7,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Help from 'material-ui/svg-icons/action/help';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export default class WhatIsBtn extends Component {

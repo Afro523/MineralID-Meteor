@@ -7,7 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FilterList from 'material-ui/svg-icons/content/filter-list';

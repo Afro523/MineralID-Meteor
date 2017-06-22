@@ -5,7 +5,7 @@ import {Link} from 'react-router';
 import MinBanner from '../MinBanner';
 
 //MUI
-import myBaseTheme from 'material-ui/styles/baseThemes/myBaseTheme';
+import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
