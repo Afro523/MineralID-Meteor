@@ -465,7 +465,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Staurolite', 'Tourmaline', 'Garnet', 'Jasper', 'Chert']}
+							commonMin={['Staurolite', 'Tourmaline', 'Garnet', 'Jasper']}
 						/>
 					</div>
 				);
@@ -474,7 +474,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Sphalerite', 'Fluorite', 'Biotite', 'Chlorite']}
+							commonMin={['Sphalerite', 'Fluorite', 'Biotite']}
 						/>
 					</div>
 				);
