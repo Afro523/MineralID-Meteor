@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
 //My Components
+import ResetBtn from './ResetBtn';
 import WhatIsBtn from './WhatIsBtn';
 import Answer from './Answer';
 const btnStyle={
@@ -438,7 +439,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Calcite', 'Dolomite', 'Barite', 'Gypsum', 'Natrolite', 'Halite', 'Fluorite', 'Muscovite']}
+							commonMin={['Calcite', 'Dolomite', 'Baryte', 'Gypsum', 'Natrolite', 'Halite', 'Fluorite', 'Muscovite']}
 						/>
 					</div>
 				);
@@ -447,7 +448,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Sulfur', 'Chrysocolla', 'Talc', 'Kaolinite', 'Opal']}
+							commonMin={['Sulfur', 'Chrysocolla', 'Talc', 'Kaolinite']}
 						/>
 					</div>
 				);
@@ -489,9 +490,14 @@ export default class Question extends Component {
 				);
 				break;
 			default:
+				console.log('Shit aint working in answer');
 				break;
 
 		}
+	}
+
+	resetState(){
+		this.setState({isAnswer:false, currentQuestionType:'luster', currentQuestion: 'default'});
 	}
 
 	renderQuestionBtn(isAnswer){
@@ -499,6 +505,17 @@ export default class Question extends Component {
 			return (
 				<WhatIsBtn
 					currentQuestion={this.state.currentQuestionType}
+				/>
+			)
+		}
+	}
+
+	renderReturnBtn(){
+		if(this.state.currentQuestion != 'default'){
+			return(
+				<ResetBtn
+					isAnswer={this.state.isAnswer}
+					resetState = { () => this.resetState()}
 				/>
 			)
 		}
@@ -517,7 +534,7 @@ export default class Question extends Component {
 			<div>
 				{this.renderQuestionOrAnswer(this.state.isAnswer)}
 				{this.renderQuestionBtn(this.state.isAnswer)}
-
+				{this.renderReturnBtn()}
 			</div>
 		);
 	}

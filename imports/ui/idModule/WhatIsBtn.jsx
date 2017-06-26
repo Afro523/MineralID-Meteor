@@ -57,7 +57,8 @@ export default class WhatIsBtn extends Component {
 		case 'color':
 			return(
 				<p>
-					This is color
+					Observe the mineral in question and select the color that it corespondsmost closely with.  Sometimes color can be very
+					ineffective at helping to determine a mineral because a particular species such as quartz can come in almost every color in the rainbow.
 				</p>
 			);
 		case 'cleavage':

@@ -10,6 +10,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import IconButton from 'material-ui/IconButton';
 import AppBar from 'material-ui/AppBar';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import Back from 'material-ui/svg-icons/image/navigate-before';
 
 // App component - represents the whole app
 export default class MinBanner extends Component {
@@ -27,13 +28,11 @@ export default class MinBanner extends Component {
 		return (
 			<div>
 				<div className='navbar-fixed'>
-
 					<AppBar
 						style={{position:'fixed'}}
-						iconElementLeft={<IconButton onClick={browserHistory.goBack}><NavigationClose/></IconButton>}
+						iconElementLeft={<IconButton onClick={browserHistory.goBack}><Back/></IconButton>}
 						title="Mineral ID"
 					/>
-
 				</div>
 			</div>
 		);

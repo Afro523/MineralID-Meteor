@@ -41,7 +41,7 @@ export default class Answer extends Component {
 	render() {
 		return (
 			<div className='container-fluid'>
-				<h4>Common Minerals</h4>
+				<h4 style={{textAlign:'center'}}> Most Common Minerals</h4>
 				{this.renderCommonMin(this.props.commonMin)}
 			</div>
 		);

@@ -45,10 +45,10 @@ export default class CrystalSystemInfo extends Component {
 					<Divider/>
 
 
-					<p style={{textAlign:'center'}}>
+					<div style={{textAlign:'center'}}>
 						<h5>Isometric System</h5>
 						<i>Characteristics</i>
-					</p>
+					</div>
 					<div className='container'>
 						<ul style={{listStyleType:'circle'}}>
 							<li style={{listStyleType:'circle'}}>Three crystallographic axes are all equal in length</li>
@@ -69,10 +69,10 @@ export default class CrystalSystemInfo extends Component {
 
 					<Divider/>
 
-					<p style={{textAlign:'center'}}>
+					<div style={{textAlign:'center'}}>
 						<h5>Hexagonal System</h5>
 						<i>Characteristics</i>
-					</p>
+					</div>
 					<div className='container'>
 						<ul style={{listStyleType:'circle'}}>
 							<li style={{listStyleType:'circle'}}>12 crystal classes divided into two groups</li>
@@ -95,10 +95,10 @@ export default class CrystalSystemInfo extends Component {
 
 					<Divider/>
 
-					<p style={{textAlign:'center'}}>
+					<div style={{textAlign:'center'}}>
 						<h5>Tetragonal System</h5>
 						<i>Characteristics</i>
-					</p>
+					</div>
 					<div className='container'>
 						<ul style={{listStyleType:'circle'}}>
 							<li style={{listStyleType:'circle'}}>Three crystallographic axes that make right angles with each other</li>
@@ -120,10 +120,10 @@ export default class CrystalSystemInfo extends Component {
 
 					<Divider/>
 
-					<p style={{textAlign:'center'}}>
+					<div style={{textAlign:'center'}}>
 						<h5>Orthorhombic System</h5>
 						<i>Characteristics</i>
-					</p>
+					</div>
 					<div className='container'>
 						<ul style={{listStyleType:'circle'}}>
 							<li style={{listStyleType:'circle'}}>Three crystallographic axes of unequal length that make angles of 90 degrees with each other</li>
@@ -144,10 +144,10 @@ export default class CrystalSystemInfo extends Component {
 
 					<Divider/>
 
-					<p style={{textAlign:'center'}}>
+					<div style={{textAlign:'center'}}>
 						<h5>Monoclinic System</h5>
 						<i>Characteristics</i>
-					</p>
+					</div>
 					<div className='container'>
 						<ul style={{listStyleType:'circle'}}>
 							<li style={{listStyleType:'circle'}}>Three crystallographic axes of unequal lengths</li>
@@ -167,10 +167,10 @@ export default class CrystalSystemInfo extends Component {
 
 					<Divider/>
 
-					<p style={{textAlign:'center'}}>
+					<div style={{textAlign:'center'}}>
 						<h5>Triclinic System</h5>
 						<i>Characteristics</i>
-					</p>
+					</div>
 					<div className='container'>
 						<ul style={{listStyleType:'circle'}}>
 							<li style={{listStyleType:'circle'}}>Three crystallographic axes are of unequal lengths that make oblique angles to each other</li>

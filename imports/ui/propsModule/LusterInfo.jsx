@@ -86,9 +86,9 @@ export default class LusterInfo extends Component {
 					<Divider style={{marginBottom:'10px'}}/>
 					<Card style={exampleStyle}>
 						<CardMedia
-							overlay={<CardTitle title="Boracite" subtitle="Adamantine Luster" />}
+							overlay={<CardTitle title="Diamond" subtitle="Adamantine Luster" />}
 							>
-								<img src='/img/Boracite.jpg' />
+								<img src='/img/Diamond.jpg' />
 						</CardMedia>
 					</Card>
 					<Card style={exampleStyle}>
