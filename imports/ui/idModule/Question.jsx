@@ -511,14 +511,13 @@ export default class Question extends Component {
 	}
 
 	renderReturnBtn(){
-		if(this.state.currentQuestion != 'default'){
 			return(
 				<ResetBtn
 					isAnswer={this.state.isAnswer}
 					resetState = { () => this.resetState()}
+					currentQuestion={this.state.currentQuestion}
 				/>
 			)
-		}
 	}
 
 	renderQuestionOrAnswer(isAnswer){

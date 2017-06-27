@@ -17,7 +17,8 @@ const columnStyle = {
 };
 
 const exampleStyle = {
-	marginTop:'10px'
+	marginTop:'10px',
+	marginBottom:'10px'
 };
 
 export default class LusterInfo extends Component {
@@ -56,6 +57,18 @@ export default class LusterInfo extends Component {
 								<TableRowColumn>Adamantine</TableRowColumn>
 								<TableRowColumn style={columnStyle}>Transparent to translucent minerals that display brilliance and shine.</TableRowColumn>
 							</TableRow>
+						</TableBody>
+					</Table>
+					<Divider/>
+								<Card style={exampleStyle}>
+									<CardMedia
+										overlay={<CardTitle title="Diamond" subtitle="Adamantine Luster" />}
+										>
+											<img src='/img/Diamond.jpg' />
+									</CardMedia>
+								</Card>
+								<Table selectable={false}>
+									<TableBody displayRowCheckbox={false}>
 							<TableRow>
 								<TableRowColumn>Vitreous</TableRowColumn>
 								<TableRowColumn style={columnStyle}>Resembling the luster of a glossy photograph</TableRowColumn>
@@ -84,13 +97,7 @@ export default class LusterInfo extends Component {
 					</Table>
 					<b>Examples: </b>
 					<Divider style={{marginBottom:'10px'}}/>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Diamond" subtitle="Adamantine Luster" />}
-							>
-								<img src='/img/Diamond.jpg' />
-						</CardMedia>
-					</Card>
+
 					<Card style={exampleStyle}>
 						<CardMedia
 							overlay={<CardTitle title="Pyrite" subtitle="Metallic Luster" />}
