@@ -5,8 +5,10 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 //My Components
 import ResetBtn from './ResetBtn';
+import AnswerList from './AnswerList';
 import WhatIsBtn from './WhatIsBtn';
 import Answer from './Answer';
+
 const btnStyle={
 
 	marginTop:'30px'
@@ -350,6 +352,12 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Chalcopyrite', 'Bornite', 'Galena', 'Graphite']}
 						/>
+						<AnswerList
+							currColor={'Gray'}
+							currLust={'Metallic'}
+							mohMin={'0'}
+							mohMax={'5'}
+						/>
 					</div>
 
 				);
@@ -360,6 +368,12 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Goethite']}
 						/>
+						<AnswerList
+							currColor={'Yellow'}
+							currLust={'Metallic'}
+							mohMin={'0'}
+							mohMax={'5'}
+						/>
 					</div>
 				);
 				break;
@@ -368,6 +382,12 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Sphalerite']}
+						/>
+						<AnswerList
+							currColor={'White'}
+							currLust={'Metallic'}
+							mohMin={'0'}
+							mohMax={'5'}
 						/>
 					</div>
 				);
@@ -378,6 +398,12 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Copper']}
 						/>
+						<AnswerList
+							currColor={'Copper'}
+							currLust={'Metallic'}
+							mohMin={'0'}
+							mohMax={'5'}
+						/>
 					</div>
 				);
 				break;
@@ -386,6 +412,12 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Gold']}
+						/>
+						<AnswerList
+							currColor={'Gold'}
+							currLust={'Metallic'}
+							mohMin={'0'}
+							mohMax={'5'}
 						/>
 					</div>
 				);
@@ -404,6 +436,12 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Magnetite']}
+						/>
+						<AnswerList
+							currColor={'Gray'}
+							currLust={'Metallic'}
+							mohMin={'5'}
+							mohMax={'10'}
 						/>
 					</div>
 				);
