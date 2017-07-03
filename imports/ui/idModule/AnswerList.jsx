@@ -43,7 +43,9 @@ export default class AnswerList extends Component {
 			Green:['olive', 'emerald'],
 			Pink:['salmon'],
 			Bronze:['copper'],
-			Yellow:['lemon']
+			Yellow:['lemon'],
+			Light:['beige', 'cream', 'yellow', 'lemon', 'pink', 'salmon', 'light blue', 'light green', 'light purple', 'lavander', 'orange'],
+			Dark:['green', 'olive', 'emerald', 'purple','lavander', 'violet', 'purpl', 'lilac', 'magenta', 'red', 'vermilion', 'cherry', 'brown', 'black', 'grey']
 		};
 		let tempData = [];
 		let currentColors = [this.props.currColor];
@@ -55,7 +57,7 @@ export default class AnswerList extends Component {
 			let incomingString = value.color.toUpperCase();
 			//for each alt color
 			for(let j = 0; j < currentColors.length; j++){
-				if(incomingString.includes(currentColors[j].toUpperCase()) && !incomingString.includes('ISH')){
+				if(incomingString.includes(currentColors[j].toUpperCase())){
 					tempData.push(value);
 					break;
 				}
@@ -68,6 +70,11 @@ export default class AnswerList extends Component {
 		let tempData = [];
 		let len = data.length;
 		for(let i=0; i < len; i++){
+			if(this.props.currLust === 'Non-Metallic'){
+				if(data[i].luster != 'Metallic' || data[i].luster != 'Adamantine'){
+					tempData.push(data[i]);
+				}
+			}
 			//Matches the categories and pushes the matching objects
 			if(data[i].luster == this.props.currLust ){
 				tempData.push(data[i]);
@@ -84,31 +91,52 @@ export default class AnswerList extends Component {
 			if(data[i].hardness.length == 1){
 				let moh = parseFloat(data[i].hardness[0]);
 				//Remove all minerals where mohMin <= hardness >= mohMax
-				if (moh >= parseInt(this.props.mohMin, 10) && moh <= parseInt(this.props.mohMax, 10)){
+				if (moh >= parseInt(this.props.mohMin, 10) || moh <= parseInt(this.props.mohMax, 10)){
 					tempData.push(data[i]);
-				}
-			}else if (data[i].hardness.length == 2){
-				let mohMin = parseFloat(data[i].hardness[0]);
-				let mohMax = parseFloat(data[i].hardness[1]);
-				if (mohMin >= parseInt(this.props.mohMin, 10) && mohMax <= parseInt(this.props.mohMax, 10) ){
-					tempData.push(data[i]);
-				}
-			} else{
-				console.log('no hardness');
+					}
+				} else if (data[i].hardness.length == 2){
+					let mohMin = parseFloat(data[i].hardness[0]);
+					let mohMax = parseFloat(data[i].hardness[1]);
+					if (mohMin >= parseInt(this.props.mohMin, 10) || mohMax <= parseInt(this.props.mohMax, 10) ){
+						tempData.push(data[i]);
+					}
+				} else{
+					console.log('no hardness');
 			}
 		}
 		return tempData;
-	}	
+	}
+
+	applyCleavageFilter(data){
+		let tempData = [];
+		let currCleave = this.props.cleavage.toUpperCase();
+		data.map((mineral) => {
+			let incomingCleavage = mineral.cleavage.toUpperCase();
+
+			if(currCleave === 'PERFECT' || currCleave === 'GOOD'){
+				if(incomingCleavage.includes(currCleave)){
+					tempData.push(mineral);
+				}
+			} else if (currCleave === 'POOR' || currCleave === 'NONE'){
+				if(incomingCleavage.includes(currCleave)){
+					tempData.push(mineral);
+				}
+			} else{
+				console.log('Error in Cleavage Filter');
+			}
+		});
+
+		return tempData;
+	}
 
 	getMinFromDb(){
-		
+
 		var minData = allMin;
 
 		//Apply category filter through this.state.currCat
 		if(this.props.currColor != undefined){
 			minData = this.applyColorFilter(minData);
 		}
-		console.log(minData);
 		//Apply Luster filter through this.state.currCat
 		if(this.props.currLust != undefined){
 			minData = this.applyLustFilter(minData);
@@ -118,18 +146,22 @@ export default class AnswerList extends Component {
 		if(parseInt(this.props.mohMin) > 0 || parseInt(this.props.mohMax) < 10 ){
 			minData = this.applyMohFilter(minData);
 		}
-		console.log(minData);
+
+		//filter by cleavage
+		if(this.props.cleavage != undefined){
+			minData = this.applyCleavageFilter(minData);
+		}
 		return minData.sort(this.compare);
 	}
 
 	renderMinerals () {
 		//react-infinit-scroll
 		let minData = this.getMinFromDb();
-		
+
 		return minData.map((mineral) => (
 			<MinItem key={mineral.minName} mineral={mineral}/>
 		));
-	}	
+	}
 
 	render() {
 		return (

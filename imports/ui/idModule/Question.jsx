@@ -461,6 +461,13 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Sillimanite', 'Kyanite']}
 						/>
+						<AnswerList
+							color={'Light'}
+							luster={'Non-Metallic'}
+							cleavage={'Good'}
+							mohMin={'5'}
+							mohMax={'10'}
+						/>
 					</div>
 				);
 				break;
@@ -469,6 +476,13 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Corundum', 'Quartz', 'Olivine']}
+						/>
+						<AnswerList
+							color={'Light'}
+							luster={'Non-Metallic'}
+							cleavage={'Poor'}
+							mohMin={'5'}
+							mohMax={'10'}
 						/>
 					</div>
 				);
@@ -479,6 +493,13 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Calcite', 'Dolomite', 'Baryte', 'Gypsum', 'Natrolite', 'Halite', 'Fluorite', 'Muscovite']}
 						/>
+						<AnswerList
+							color={'Light'}
+							luster={'Non-Metallic'}
+							cleavage={'Good'}
+							mohMin={'0'}
+							mohMax={'5'}
+						/>
 					</div>
 				);
 				break;
@@ -487,6 +508,13 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Sulfur', 'Chrysocolla', 'Talc', 'Kaolinite']}
+						/>
+						<AnswerList
+							color={'Light'}
+							luster={'Non-Metallic'}
+							cleavage={'Poor'}
+							mohMin={'0'}
+							mohMax={'5'}
 						/>
 					</div>
 				);
@@ -497,6 +525,13 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Actinolite', 'Hornblende', 'Augite']}
 						/>
+						<AnswerList
+							color={'Dark'}
+							luster={'Non-Metallic'}
+							cleavage={'Good'}
+							mohMin={'5'}
+							mohMax={'10'}
+						/>
 					</div>
 				);
 				break;
@@ -505,6 +540,13 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Staurolite', 'Tourmaline', 'Garnet', 'Jasper']}
+						/>
+						<AnswerList
+							color={'Dark'}
+							luster={'Non-Metallic'}
+							cleavage={'Poor'}
+							mohMin={'5'}
+							mohMax={'10'}
 						/>
 					</div>
 				);
@@ -515,6 +557,13 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Sphalerite', 'Fluorite', 'Biotite']}
 						/>
+						<AnswerList
+							color={'Dark'}
+							luster={'Non-Metallic'}
+							cleavage={'Good'}
+							mohMin={'0'}
+							mohMax={'5'}
+						/>
 					</div>
 				);
 				break;
@@ -523,6 +572,13 @@ export default class Question extends Component {
 					<div>
 						<Answer
 							commonMin={['Limonite', 'Bauxite', 'Azurite', 'Malachite', 'Talc', 'Hematite']}
+						/>
+						<AnswerList
+							color={'Dark'}
+							luster={'Non-Metallic'}
+							cleavage={'Poor'}
+							mohMin={'0'}
+							mohMax={'5'}
 						/>
 					</div>
 				);

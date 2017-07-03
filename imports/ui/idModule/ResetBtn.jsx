@@ -59,10 +59,17 @@ export default class ResetBtn extends Component {
 
 	render() {
 		return (
-			<div>
+			<div
+				onClick={() => this.toastAndReset()}
+				>
 				<FloatingActionButton
-					style={{marginTop:'20px', display:this.beVisible(this.props.currentQuestion), position:'fixed', bottom:20, right:this.renderPosition(this.props.isAnswer)}}
-					onClick={() => this.toastAndReset()}
+					style={{
+						marginTop:'20px',
+						display:this.beVisible(this.props.currentQuestion),
+						position:'fixed',
+						bottom:20,
+						right:this.renderPosition(this.props.isAnswer)
+					}}
 					>
 					<Reset/>
 				</FloatingActionButton>
