@@ -30,43 +30,51 @@ export default class CleavageInfo extends Component {
 					<p>
 					The tendency of a mineral to break along flat planar surfaces as determined by the structure of its crystal lattice. These two-dimensional surfaces are known as cleavage planes and are caused by the alignment of weaker bonds between atoms in the crystal lattice. Cleavage planes are distinguished from fracture by being smooth and often having reflective surfaces.
 					</p>
-
-					<b> How It Works: </b>
 					<Divider/>
+					<b> How It Works: </b>
 					<p>
 						To describe the clevage of a mineral use one of the terms below:
-						<br/>
-						Perfect - Produces smooth surfaces (often seen as parallel sets of straight lines).
-						<br/>
-						Imperfect - Produces planes that are not smooth.
-						<br/>
-						Poor - Less regular.
-						<br/>
-						Non-existent - Amorphus
 					</p>
-					<b>Examples: </b>
+					<Divider style={{width:'50%', marginLeft:'auto', marginRight: 'auto'}}/>
+					<p>
+						<b>Perfect</b> - Produces smooth surfaces (often seen as parallel sets of straight lines).
+					</p>
+					<Card style={{marginTop:'15px'}}>
+						<CardMedia
+							overlay={<CardTitle title="Kulanite" subtitle="Perfect Clevage" />}
+						>
+							<img src='/img/Kulanite.jpg' />
+						</CardMedia>
+					</Card>
+					<br/>
 					<Divider/>
-						<Card style={{marginTop:'15px'}}>
-							<CardMedia
-								overlay={<CardTitle title="Kulanite" subtitle="Perfect Clevage" />}
-							>
-								<img src='/img/Kulanite.jpg' />
-							</CardMedia>
-						</Card>
-						<Card style={{marginTop:'15px'}}>
-							<CardMedia
-								overlay={<CardTitle title="Chondrodite" subtitle="Good Clevage" />}
-							>
-								<img src='/img/Chondrodite.jpg' />
-							</CardMedia>
-						</Card>
-						<Card style={{marginTop:'15px'}}>
-							<CardMedia
-								overlay={<CardTitle title="Weberite" subtitle="Poor Clevage" />}
-							>
-								<img src='/img/Weberite.jpg' />
-							</CardMedia>
-						</Card>
+					<p>
+						<b>Good</b> - Produces planes that are not smooth.
+					</p>
+					<Card style={{marginTop:'15px'}}>
+						<CardMedia
+							overlay={<CardTitle title="Chondrodite" subtitle="Good Clevage" />}
+						>
+							<img src='/img/Chondrodite.jpg' />
+						</CardMedia>
+					</Card>
+					<br/>
+					<Divider/>
+					<p>
+						<b>Poor</b> - Less regular, hard to see distinct lines.
+					</p>
+					<Card style={{marginTop:'15px'}}>
+						<CardMedia
+							overlay={<CardTitle title="Weberite" subtitle="Poor Clevage" />}
+						>
+							<img src='/img/Weberite.jpg' />
+						</CardMedia>
+					</Card>
+					<br/>
+					<Divider/>
+					<p>
+						<b>Non-existent</b> - Amorphus, no clean cuts or angles
+					</p>
 						<Card style={{marginTop:'15px', marginBottom:'15px'}}>
 							<CardMedia
 								overlay={<CardTitle title="Hidalgoite" subtitle="Non-Existent Clevage" />}

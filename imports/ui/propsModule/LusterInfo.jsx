@@ -1,19 +1,21 @@
 //React
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Divider from 'material-ui/Divider';
 
 import MinBanner from '../MinBanner';
+import TableExample from './TableExample';
 
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import {Table, TableHeader, TableHeaderColumn, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
+import Divider from 'material-ui/Divider';
 
 const columnStyle = {
 	whiteSpace: 'pre-wrap',
 	wordWrap: 'break-word',
-	width:'60%'
+	width:'60%',
+	paddingRight:'0px'
 };
 
 const exampleStyle = {
@@ -50,103 +52,69 @@ export default class LusterInfo extends Component {
 					</p>
 					<b> Common Terms </b>
 					<Divider/>
-					<p style={{marginBottom:'0px', textAlign:'center'}}><i>Non-Metallic Luster Terms</i></p>
-					<Table selectable={false}>
-						<TableBody displayRowCheckbox={false}>
+					<Table>
+						<TableHeader adjustForCheckbox={false} displaySelectAll={false}>
 							<TableRow>
-								<TableRowColumn>Adamantine</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Transparent to translucent minerals that display brilliance and shine.</TableRowColumn>
+								<TableHeaderColumn>
+									Luster
+								</TableHeaderColumn>
+								<TableHeaderColumn style={{width:'60%'}}>
+									Description
+								</TableHeaderColumn>
 							</TableRow>
-						</TableBody>
+						</TableHeader>
 					</Table>
-					<Divider/>
-								<Card style={exampleStyle}>
-									<CardMedia
-										overlay={<CardTitle title="Diamond" subtitle="Adamantine Luster" />}
-										>
-											<img src='/img/Diamond.jpg' />
-									</CardMedia>
-								</Card>
-								<Table selectable={false}>
-									<TableBody displayRowCheckbox={false}>
-							<TableRow>
-								<TableRowColumn>Vitreous</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Resembling the luster of a glossy photograph</TableRowColumn>
-							</TableRow>
-							<TableRow>
-								<TableRowColumn>Waxy</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Resembling the luster of a candle</TableRowColumn>
-							</TableRow>
-							<TableRow>
-								<TableRowColumn>Pearly</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Resembling the luster of a pearl</TableRowColumn>
-							</TableRow>
-							<TableRow>
-								<TableRowColumn>Satiny</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Resembling the luster of a satin or silk cloth</TableRowColumn>
-							</TableRow>
-							<TableRow>
-								<TableRowColumn>Earthy</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Lacking reflection, completely dull</TableRowColumn>
-							</TableRow>
-							<TableRow>
-								<TableRowColumn>Greasy</TableRowColumn>
-								<TableRowColumn style={columnStyle}>Resembling the luster of grease or oil</TableRowColumn>
-							</TableRow>
-						</TableBody>
-					</Table>
-					<b>Examples: </b>
-					<Divider style={{marginBottom:'10px'}}/>
+					<TableExample
+						name={'Metallic'}
+						description={'Reflective and opaque, with luster resembling that of metal'}
+						img={'Pyrite'}
+						columnStyle={columnStyle}
+					/>
 
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Pyrite" subtitle="Metallic Luster" />}
-							>
-								<img src='/img/Pyrite.jpg' />
-						</CardMedia>
-					</Card>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Quartz" subtitle="Vitreous Luster" />}
-							>
-								<img src='/img/Quartz.jpg' />
-						</CardMedia>
-					</Card>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Chalcedony" subtitle="Waxy Luster" />}
-							>
-								<img src='/img/Chalcedony.jpg' />
-						</CardMedia>
-					</Card>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Muscovite" subtitle="Pearly Luster" />}
-							>
-								<img src='/img/Muscovite.jpg' />
-						</CardMedia>
-					</Card>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Gypsum" subtitle="Satiny Luster" />}
-							>
-								<img src='/img/Talc.jpg' />
-						</CardMedia>
-					</Card>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Kankite" subtitle="Earthy Luster" />}
-							>
-								<img src='/img/Kankite.jpg' />
-						</CardMedia>
-					</Card>
-					<Card style={exampleStyle}>
-						<CardMedia
-							overlay={<CardTitle title="Metasideronatrite" subtitle="Greasy Luster" />}
-							>
-								<img src='/img/Metasideronatrite.jpg' />
-						</CardMedia>
-					</Card>
+					<p style={{marginBottom:'0px', textAlign:'center'}}><i>Non-Metallic Luster Terms</i></p>
+
+					<TableExample
+						name={'Adamantine'}
+						description={'Transparent to translucent minerals that display brilliance and shine'}
+						img={'Diamond'}
+						columnStyle={columnStyle}
+					/>
+					<TableExample
+						name={'Vitreous'}
+						description={'Resembling the luster of a glossy photograph'}
+						img={'Chondrodite'}
+						columnStyle={columnStyle}
+					/>
+					<TableExample
+						name={'Waxy'}
+						description={'Resembling the luster of a candle'}
+						img={'Chalcedony'}
+						columnStyle={columnStyle}
+					/>
+					<TableExample
+						name={'Pearly'}
+						description={'Resembling the luster of a pearl'}
+						img={'Muscovite'}
+						columnStyle={columnStyle}
+					/>
+					<TableExample
+						name={'Satiny'}
+						description={'Resembling the luster of a satin or silk cloth'}
+						img={'Gypsum'}
+						columnStyle={columnStyle}
+					/>
+					<TableExample
+						name={'Earthy'}
+						description={'Lacking reflection, completely dull'}
+						img={'Kankite'}
+						columnStyle={columnStyle}
+					/>
+					<TableExample
+						name={'Greasy'}
+						description={'Resembling the luster of grease or oil'}
+						img={'Metasideronatrite'}
+						columnStyle={columnStyle}
+					/>
 					</div>
 			</div>
 		);

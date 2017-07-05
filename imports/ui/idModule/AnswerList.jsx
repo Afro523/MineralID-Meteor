@@ -57,7 +57,7 @@ export default class AnswerList extends Component {
 			let incomingString = value.color.toUpperCase();
 			//for each alt color
 			for(let j = 0; j < currentColors.length; j++){
-				if(incomingString.includes(currentColors[j].toUpperCase())){
+				if(incomingString.includes(currentColors[j].toUpperCase()) && !incomingString.includes('ISH')){
 					tempData.push(value);
 					break;
 				}
@@ -76,8 +76,10 @@ export default class AnswerList extends Component {
 				}
 			}
 			//Matches the categories and pushes the matching objects
-			if(data[i].luster == this.props.currLust ){
-				tempData.push(data[i]);
+			if(this.props.currLust === 'Metallic'){
+				if(data[i].luster === 'Metallic' || data[i].luster === 'Adamantine'){
+					tempData.push(data[i]);
+				}
 			}
 		}
 		return tempData;
@@ -91,16 +93,17 @@ export default class AnswerList extends Component {
 			if(data[i].hardness.length == 1){
 				let moh = parseFloat(data[i].hardness[0]);
 				//Remove all minerals where mohMin <= hardness >= mohMax
-				if (moh >= parseInt(this.props.mohMin, 10) || moh <= parseInt(this.props.mohMax, 10)){
+				if (moh >= parseFloat(this.props.mohMin, 10) && moh <= parseFloat(this.props.mohMax, 10)){
 					tempData.push(data[i]);
 					}
 				} else if (data[i].hardness.length == 2){
 					let mohMin = parseFloat(data[i].hardness[0]);
 					let mohMax = parseFloat(data[i].hardness[1]);
-					if (mohMin >= parseInt(this.props.mohMin, 10) || mohMax <= parseInt(this.props.mohMax, 10) ){
+					if (mohMin >= parseFloat(this.props.mohMin, 10) && mohMax <= parseFloat(this.props.mohMax, 10) ){
 						tempData.push(data[i]);
 					}
 				} else{
+					console.log(data[i]);
 					console.log('no hardness');
 			}
 		}

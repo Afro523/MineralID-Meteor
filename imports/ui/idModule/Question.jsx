@@ -428,6 +428,12 @@ export default class Question extends Component {
 						<Answer
 							commonMin={['Limonite', 'Chromite', 'Hematite']}
 						/>
+						<AnswerList
+							currColor={'Light'}
+							currLust={'Metallic'}
+							mohMin={'5'}
+							mohMax={'10'}
+						/>
 					</div>
 				);
 				break;
