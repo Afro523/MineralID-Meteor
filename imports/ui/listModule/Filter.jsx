@@ -212,13 +212,13 @@ export default class Filter extends React.Component {
 					<Divider style={{backgroundColor:grey900}} />
 
 						<RaisedButton
-							style={{ width:'90%', position:'absolute', bottom:10, left:'5%'}}
+							style={{ width:'90%', marginTop:'5px'}}
 							labelColor={deepPurple900}
 							label="Close"
 							primary={true}
 							labelPosition="before"
 							icon={<Clear />}
-							onTouchTap={this.cancelFilter.bind(this)}
+							onClick={this.cancelFilter.bind(this)}
 						/>
 
         </Drawer>
