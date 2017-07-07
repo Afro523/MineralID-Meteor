@@ -10,6 +10,8 @@ import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
 import {deepPurple200, grey300, grey500} from 'material-ui/styles/colors';
 
+import FullScreenDialog from 'material-ui-fullscreen-dialog';
+
 const customContentStyle = {
 	width: '97%',
 	maxWidth: 'none'
@@ -49,7 +51,7 @@ export default class MinItem extends Component {
 					secondaryText={mineral.formula}
 					onTouchTap={this.handleOpen.bind(this)}
 				/>
-				<Dialog
+				<FullScreenDialog
 					title={mineral.minName}
 					titleStyle={{borderBottom:'none'}}
 					leftAvatar={<Avatar src="minImage.jpg"/>}
@@ -62,7 +64,7 @@ export default class MinItem extends Component {
 					bodyStyle={{padding:'0px', borderTop:'2px solid', borderBottom:'2px solid', borderColor:grey500}}
 				>
 				<MinCard mineral={mineral}/>
-				</Dialog>
+			</FullScreenDialog>
 		</div>
 		);
 	}

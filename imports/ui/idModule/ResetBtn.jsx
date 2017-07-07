@@ -66,7 +66,7 @@ export default class ResetBtn extends Component {
 					style={{
 						marginTop:'20px',
 						display:this.beVisible(this.props.currentQuestion),
-						position:'fixed',
+						position:'absolute',
 						bottom:20,
 						right:this.renderPosition(this.props.isAnswer)
 					}}

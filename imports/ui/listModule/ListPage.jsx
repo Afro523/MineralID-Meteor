@@ -120,6 +120,12 @@ export default class ListPage extends Component {
 			if(data[i].luster == this.state.currLust ){
 				tempData.push(data[i]);
 			}
+
+			if(this.state.currLust == 'Earthy/Dull'){
+				if(data[i].luster == 'Earthy' || data[i].luster == 'Dull'){
+					tempData.push(data[i]);
+				}
+			}
 		}
 		return tempData;
 	}
@@ -281,6 +287,7 @@ export default class ListPage extends Component {
 						useWindowAsScrollContainer={true}
 						elementHeight={40}
 						infiniteLoadBeginEdgeOffset={100}
+						preloadBatchSize={Infinite.containerHeightScaleFactor(2)}
 					>
 						{	this.renderMinerals()	}
 					</Infinite>
