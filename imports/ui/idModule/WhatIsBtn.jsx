@@ -9,6 +9,9 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {grey500} from 'material-ui/styles/colors';
+
+import FullScreenDialog from 'material-ui-fullscreen-dialog';
 
 export default class WhatIsBtn extends Component {
 	constructor(props) {
@@ -57,7 +60,7 @@ export default class WhatIsBtn extends Component {
 		case 'color':
 			return(
 				<p>
-					Observe the mineral in question and select the color that it corespondsmost closely with.  Sometimes color can be very
+					Observe the mineral in question and select the color that it coresponds most closely with.  Sometimes color can be very
 					ineffective at helping to determine a mineral because a particular species such as quartz can come in almost every color in the rainbow.
 				</p>
 			);
@@ -85,20 +88,21 @@ export default class WhatIsBtn extends Component {
 		return (
 			<div>
 				<FloatingActionButton
-					style={{marginTop:'20px', position:'absolute', bottom:20, right:10}}
+					style={{marginTop:'20px', position:'fixed', bottom:20, right:10, zIndex:1000}}
 					onClick={this.handleOpen.bind(this)}
 					>
 					<Help/>
 				</FloatingActionButton>
-				<Dialog
-					contentStyle={{width:'98%', maxWidth: 'none'}}
+				<FullScreenDialog
+					containerStyle={{ margin:'15px'}}
           title={'What is '+this.props.currentQuestion+'?'}
           actions={actions}
           open={this.state.open}
 					autoScrollBodyContent={true}
+					onRequestClose={this.handleClose.bind(this)}
         >
           {this.renderSummary(this.props.currentQuestion)}
-        </Dialog>
+        </FullScreenDialog>
 			</div>
 		);
 	}

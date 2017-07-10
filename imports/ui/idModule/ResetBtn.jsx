@@ -66,9 +66,10 @@ export default class ResetBtn extends Component {
 					style={{
 						marginTop:'20px',
 						display:this.beVisible(this.props.currentQuestion),
-						position:'absolute',
+						position:'fixed',
 						bottom:20,
-						right:this.renderPosition(this.props.isAnswer)
+						right:this.renderPosition(this.props.isAnswer),
+						zIndex:1000
 					}}
 					>
 					<Reset/>
@@ -76,7 +77,7 @@ export default class ResetBtn extends Component {
 				<Snackbar
 					bodyStyle={{textAlign:'center'}}
           open={this.state.open}
-          message="Reset I.D. Process"
+          message="Reset Sorting Process"
           autoHideDuration={1000}
           onRequestClose={this.handleRequestClose.bind(this)}
         />

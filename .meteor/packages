@@ -23,3 +23,4 @@ ground:db
 # appcache
 aldeed:collection2-core@2.0.0
 fourseven:scss
+less

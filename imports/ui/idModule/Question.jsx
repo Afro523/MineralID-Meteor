@@ -426,7 +426,7 @@ export default class Question extends Component {
 				return(
 					<div>
 						<Answer
-							commonMin={['Limonite', 'Chromite', 'Hematite']}
+							commonMin={['Limonite', 'Hematite']}
 						/>
 						<AnswerList
 							currColor={'Light'}

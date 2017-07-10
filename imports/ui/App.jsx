@@ -19,7 +19,7 @@ const iconStyles ={
 };
 
 const buttonStyles ={
-	width:'45%',
+	width:'30%',
 	height:'auto',
 	textAlign:'center',
 	padding:'0px',
@@ -47,7 +47,6 @@ export default class App extends Component {
 						title="Mineral ID"
 					/>
 					<div style={{
-						height:'90vh',
 						display:'flex',
 						flexWrap:'wrap',
 						justifyContent:'space-around',
@@ -57,24 +56,24 @@ export default class App extends Component {
 							to="/id"
 							className="waves-effect waves-light btn"
 							style={buttonStyles}>
-							<div style={{fontSize:'20px'}}>Mineral <br/> I.D.</div>
+							<div>Mineral <br/> I.D.</div>
 								<Page style={iconStyles}/>
 						</Link>
 						<Link
 							to="/list"
 							className="waves-effect waves-light btn"
 							style={buttonStyles}>
-							<div style={{fontSize:'20px'}}>Mineral <br/> DB</div>
+							<div>Mineral <br/> DB</div>
 								<List style={iconStyles}/>
 						</Link>
 						<Link
 							to="/props"
 							className="waves-effect waves-light btn"
 							style={buttonStyles}>
-							<div style={{fontSize:'20px'}}>Physical Properties</div>
+							<div>Physical Properties</div>
 								<Board style={iconStyles}/>
 						</Link>
-						<p style={{fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
+						<p style={{position:'fixed', bottom:10, fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
 
 					</div>
 				</div>

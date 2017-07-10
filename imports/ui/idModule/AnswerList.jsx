@@ -44,8 +44,8 @@ export default class AnswerList extends Component {
 			Pink:['salmon'],
 			Bronze:['copper'],
 			Yellow:['lemon'],
-			Light:['beige', 'cream', 'yellow', 'lemon', 'pink', 'salmon', 'light blue', 'light green', 'light purple', 'lavander', 'orange'],
-			Dark:['green', 'olive', 'emerald', 'purple','lavander', 'violet', 'purpl', 'lilac', 'magenta', 'red', 'vermilion', 'cherry', 'brown', 'black', 'grey']
+			Light:['beige', 'cream', 'yellow', 'lemon', 'pink', 'salmon', 'light blue', 'light green', 'light purple', 'lavander', 'orange', 'red'],
+			Dark:['green', 'olive', 'emerald', 'purple','lavander', 'violet', 'purpl', 'lilac', 'magenta', 'vermilion', 'cherry', 'brown', 'black', 'grey']
 		};
 		let tempData = [];
 		let currentColors = [this.props.currColor];
@@ -57,7 +57,7 @@ export default class AnswerList extends Component {
 			let incomingString = value.color.toUpperCase();
 			//for each alt color
 			for(let j = 0; j < currentColors.length; j++){
-				if(incomingString.includes(currentColors[j].toUpperCase()) && !incomingString.includes('ISH')){
+				if(incomingString.includes(currentColors[j].toUpperCase())){
 					tempData.push(value);
 					break;
 				}

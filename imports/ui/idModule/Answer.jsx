@@ -4,34 +4,52 @@ import PropTypes from 'prop-types';
 
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {Card, CardMedia, CardTitle} from 'material-ui/Card';
+import FlipCard from './FlipCard';
 
 const exampleStyle = {
-	marginTop:'10px'
+	marginTop:'10px',
 };
 
 export default class Answer extends Component {
 	constructor(props) {
 		super(props);
+		this.state ={
+			isFlipped: false
+		}
 	}
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
+	showBack() {
+    this.setState({
+      isFlipped: true
+    });
+  }
+
+  showFront() {
+    this.setState({
+      isFlipped: false
+    });
+  }
+
+  handleOnFlip(flipped) {
+    if (flipped) {
+      this.refs.backButton.getDOMNode().focus();
+    }
+  }
+
+  handleKeyDown(e) {
+    if (this.state.isFlipped && e.keyCode === 27) {
+      this.showFront();
+    }
+  }
+
 	renderCommonMin(arr){
 		return(
 			arr.map((commonMin) =>(
-
-				<Card style={exampleStyle} key={commonMin}>
-					<CardMedia
-						overlayContentStyle={{paddingTop:'0px'}}
-						overlayStyle={{paddingTop:'0px'}}
-						overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title={commonMin} />}
-						>
-							<img src={'/img/'+commonMin+'.jpg'}/>
-					</CardMedia>
-				</Card>
+					<FlipCard key={commonMin} mineral={commonMin}/>
 			))
 		)
 
