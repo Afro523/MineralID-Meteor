@@ -11,8 +11,8 @@ export default class FlipCard extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-      flipped: false,
-    };
+      		flipped: false,
+    	};
 	}
 
 	getChildContext() {
@@ -21,21 +21,29 @@ export default class FlipCard extends Component {
 
 	flip() {
     this.setState({ flipped: !this.state.flipped });
-  }
+  	}
+
+  	getData(minName){
+  		for (let i = 0; i < allMin.length; i++) {
+  			if(allMin[i].minName === minName){
+  				return allMin[i];
+  			}
+  		}
+  	}
 
 	render() {
 		return (
 			<div
 				onClick={() => this.flip()}
 				>
-				 <Flipper mineral={this.props.mineral} flipped={this.state.flipped} orientation="horizontal" />
+				 <Flipper mineral={this.getData(this.props.mineral)} flipped={this.state.flipped} orientation="horizontal" />
 			</div>
 		);
 	}
 }
 
 FlipCard.propTypes ={
-	mineral: PropTypes.object.isRequired,
+	mineral: PropTypes.string.isRequired,
 };
 
 FlipCard.childContextTypes = {
