@@ -32,6 +32,7 @@ export default class Flipper extends Component {
 
 Flipper.propTypes ={
 	mineral: PropTypes.object.isRequired,
+	orientation: PropTypes.string.isRequired,
 };
 
 Flipper.childContextTypes = {

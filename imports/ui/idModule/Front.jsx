@@ -7,10 +7,6 @@ import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-const exampleStyle = {
-	marginTop:'10px'
-};
-
 export default class Front extends Component {
 	constructor(props) {
 		super(props);
@@ -24,13 +20,13 @@ export default class Front extends Component {
 	render() {
 		return (
 			<div className='front tile'>
-				<Card style={exampleStyle}>
+				<Card>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
 						overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title={this.props.mineral.minName} />}
 						>
-							<img src={'/img/'+this.props.mineral.minName+'.jpg'}/>
+							<img className='img-responsive' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
 					</CardMedia>
 				</Card>
     	</div>
