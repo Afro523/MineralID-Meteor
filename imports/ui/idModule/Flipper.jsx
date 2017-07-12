@@ -21,11 +21,11 @@ export default class Flipper extends Component {
 	render() {
 		return (
 			<div className={"flipper-container " + this.props.orientation}>
-      <div className={"flipper" + (this.props.flipped ? " flipped" : "")}>
-        <Front mineral={this.props.mineral}/>
-        <Back mineral={this.props.mineral}/>
-      </div>
-    </div>
+				<div className={"flipper" + (this.props.flipped ? " flipped" : "")}>
+        			<Front mineral={this.props.mineral}/>
+        			<Back mineral={this.props.mineral}/>
+      			</div>
+    		</div>
 		);
 	}
 }

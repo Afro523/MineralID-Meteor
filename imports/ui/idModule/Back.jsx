@@ -39,7 +39,7 @@ export default class Back extends Component {
 	render() {
 		const mineral = this.props.mineral;
 		return (
-			<div className='back tile'>
+			<div className='back tile' style={{overflow:'scroll'}}>
 				<Card>
 				<CardText>
 					<b>Summary</b>

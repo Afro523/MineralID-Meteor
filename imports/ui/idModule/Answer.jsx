@@ -50,7 +50,6 @@ export default class Answer extends Component {
 		return(
 			arr.map((commonMin) =>(
 				<FlipCard key={commonMin} mineral={commonMin}/>
-
 			))
 		)
 	}

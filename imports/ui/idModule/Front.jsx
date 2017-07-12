@@ -19,8 +19,7 @@ export default class Front extends Component {
 
 	render() {
 		return (
-			<div className='front tile'>
-				<Card>
+				<Card className='front tile'>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
@@ -29,7 +28,7 @@ export default class Front extends Component {
 							<img className='img-responsive' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
 					</CardMedia>
 				</Card>
-    	</div>
+
 		);
 	}
 }

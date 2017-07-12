@@ -7,9 +7,10 @@
 
 .flipper-container {
   width:100%;
-	height: 500px;
   margin-right:15px;
-  display:block; .perspective;
+  display:inline-flex; .perspective;
+  flex-wrap:wrap;
+  justify-content:space-between;
   span {
     color:white;
   }
@@ -55,15 +56,5 @@
   div.flipper.flipped {
     .front { .transform(rotateY(180deg)); }
     .back { .transform(rotateY(0deg)); }
-  }
-}
-
-.flipper-container.vertical {
-  .front { .transform(rotateX(0deg)); }
-  .back { .transform(rotateX(-180deg)); }
-
-  div.flipper.flipped {
-    .front { .transform(rotateX(180deg)); }
-    .back { .transform(rotateX(0deg)); }
   }
 }
