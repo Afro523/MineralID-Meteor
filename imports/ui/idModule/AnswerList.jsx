@@ -168,7 +168,7 @@ export default class AnswerList extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='container-fluid'>
 				<h5 style={{textAlign:'center'}} >Other Matching Minerals</h5>
 				<Divider/>
 				<Infinite

@@ -3,12 +3,12 @@
 .transform-style(@style:preserve-3d) { transform-style:@style; -webkit-transform-style:@style; -moz-transform-style:@style; -ms-transform-style:@style; }
 .backface-visibility-hidden { backface-visibility:hidden; -webkit-backface-visibility:hidden; }
 .perspective(@amount: 1000px) { perspective:@amount; -webkit-perspective:@amount; -moz-perspective:@amount; -ms-perspective:@amount; }
-.tile { color:white; padding:15px; box-sizing:border-box; -moz-box-sizing:border-box; }
+.tile { color:black; padding:15px; box-sizing:border-box; -moz-box-sizing:border-box; }
 
 .flipper-container {
   width:100%;
   margin-right:15px;
-  display:inline-flex; .perspective;
+  display:block; .perspective;
   flex-wrap:wrap;
   justify-content:space-between;
   span {
@@ -17,14 +17,11 @@
 
   >div.flipper {
     width:100%;
-    height:100%;
     position:relative;
     .transform-style(preserve-3d);
-
     .front, .back {
 			display:block;
       width:100%;
-      height:100%;
       .backface-visibility-hidden;
       position:absolute;
       top:0;

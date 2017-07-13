@@ -49,7 +49,7 @@ export default class Answer extends Component {
 	renderCommonMin(arr){
 		return(
 			arr.map((commonMin) =>(
-				<FlipCard key={commonMin} mineral={commonMin}/>
+				<FlipCard key={commonMin} mineral={commonMin} />
 			))
 		)
 	}

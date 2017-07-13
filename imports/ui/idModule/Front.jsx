@@ -10,16 +10,28 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 export default class Front extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			height: null
+		};
+	}
+
+	setHeight(){
+		var targetDiv = this.props.mineral.minName + 'Ref'
+		console.log(targetDiv);
+		var childHeight = this.refs.targetDiv.getDOMNode();
+		var childDimensions = childHeight.getBoundingClientRect();
+		console.log(childDimensions);
 	}
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
-
-
+	componentDidMount(){
+		this.setHeight();
+	}
 	render() {
 		return (
-				<Card className='front tile'>
+				<Card ref={this.props.mineral.minName + 'Ref'} className='front tile'>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
