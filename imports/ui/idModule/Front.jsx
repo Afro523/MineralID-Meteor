@@ -1,5 +1,6 @@
 //React
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
@@ -16,11 +17,11 @@ export default class Front extends Component {
 	}
 
 	setHeight(){
-		var targetDiv = this.props.mineral.minName + 'Ref'
-		console.log(targetDiv);
-		var childHeight = this.refs.targetDiv.getDOMNode();
+
+		var childHeight = ReactDOM.findDOMNode(this);
+		//console.log(childHeight);
 		var childDimensions = childHeight.getBoundingClientRect();
-		console.log(childDimensions);
+		//console.log(childDimensions);
 	}
 
 	getChildContext() {
@@ -31,7 +32,7 @@ export default class Front extends Component {
 	}
 	render() {
 		return (
-				<Card ref={this.props.mineral.minName + 'Ref'} className='front tile'>
+				<Card className='front tile'>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
