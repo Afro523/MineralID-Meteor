@@ -16,23 +16,31 @@ export default class Front extends Component {
 		};
 	}
 
-	setHeight(){
-
-		var childHeight = ReactDOM.findDOMNode(this);
-		//console.log(childHeight);
-		var childDimensions = childHeight.getBoundingClientRect();
-		//console.log(childDimensions);
-	}
-
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
+	setHeight(){
+
+		var targetDiv = this.props.mineral.minName + 'Ref'
+		var test = this.props.ref;
+		//console.log(this.refs[targetDiv]);
+		var childHeight = ReactDOM.findDOMNode(this.refs[targetDiv]);
+		//console.log(targetDiv + ' : '+childHeight.getComputedStyle);
+		//console.log(document.getElementById(this.props.mineral.minName + 'Front').clientHeight)
+		var computedStyles =  window.getComputedStyle(childHeight);
+		//console.log(computedStyles);
+		//var childDimensions = childHeight.getBoundingClientRect();
+		//console.log(childDimensions);
+	}
+
 	componentDidMount(){
+		console.log(document.getElementById(this.props.mineral.minName + 'Front').offsetHeight)
 		this.setHeight();
 	}
 	render() {
+		var frontRef = this.props.mineral.minName + 'Ref';
 		return (
-				<Card className='front tile'>
+				<Card id={this.props.mineral.minName + 'Front'} ref={frontRef} className='front tile'>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
