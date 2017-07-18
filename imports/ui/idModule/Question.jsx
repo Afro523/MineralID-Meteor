@@ -348,7 +348,7 @@ export default class Question extends Component {
 		switch (endState) {
 			case'msoftgrey':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Chalcopyrite', 'Bornite', 'Galena', 'Graphite']}
 						/>
@@ -364,7 +364,7 @@ export default class Question extends Component {
 				break;
 			case'msoftyellow':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Goethite']}
 						/>
@@ -379,7 +379,7 @@ export default class Question extends Component {
 				break;
 			case'msoftwhite':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Sphalerite']}
 						/>
@@ -394,7 +394,7 @@ export default class Question extends Component {
 				break;
 			case'msoftcopper':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Copper']}
 						/>
@@ -409,7 +409,7 @@ export default class Question extends Component {
 				break;
 			case'msoftgold':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Gold']}
 						/>
@@ -424,7 +424,7 @@ export default class Question extends Component {
 				break;
 			case'mhardother':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Limonite', 'Hematite']}
 						/>
@@ -439,7 +439,7 @@ export default class Question extends Component {
 				break;
 			case'mharddgmag':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Magnetite']}
 						/>
@@ -454,7 +454,7 @@ export default class Question extends Component {
 				break;
 			case'mharddgcube':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Pyrite']}
 						/>
@@ -463,7 +463,7 @@ export default class Question extends Component {
 				break;
 			case'nmlighthardgood':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Sillimanite', 'Kyanite']}
 						/>
@@ -479,7 +479,7 @@ export default class Question extends Component {
 				break;
 			case'nmlighthardpoor':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Corundum', 'Quartz', 'Olivine']}
 						/>
@@ -495,7 +495,7 @@ export default class Question extends Component {
 				break;
 			case'nmlightsoftgood':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Calcite', 'Dolomite', 'Baryte', 'Gypsum', 'Natrolite', 'Halite', 'Fluorite', 'Muscovite']}
 						/>
@@ -511,7 +511,7 @@ export default class Question extends Component {
 				break;
 			case'nmlightsoftpoor':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Sulfur', 'Chrysocolla', 'Talc', 'Kaolinite']}
 						/>
@@ -527,7 +527,7 @@ export default class Question extends Component {
 				break;
 			case'nmdarkhardgood':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Actinolite', 'Hornblende', 'Augite']}
 						/>
@@ -543,7 +543,7 @@ export default class Question extends Component {
 				break;
 			case'nmdarkhardpoor':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Staurolite', 'Tourmaline', 'Garnet', 'Jasper']}
 						/>
@@ -559,7 +559,7 @@ export default class Question extends Component {
 				break;
 			case'nmdarksoftgood':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Sphalerite', 'Fluorite', 'Biotite']}
 						/>
@@ -575,7 +575,7 @@ export default class Question extends Component {
 				break;
 			case'nmdarksoftpoor':
 				return(
-					<div>
+					<div className='container-fluid'>
 						<Answer
 							commonMin={['Limonite', 'Bauxite', 'Azurite', 'Malachite', 'Talc', 'Hematite']}
 						/>

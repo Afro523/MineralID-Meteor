@@ -172,6 +172,7 @@ export default class AnswerList extends Component {
 				<h5 style={{textAlign:'center'}} >Other Matching Minerals</h5>
 				<Divider/>
 				<Infinite
+					style={{position:'relative'}}
 					containerHeight={500}
 					elementHeight={60}
 					infiniteLoadBeginEdgeOffset={300}

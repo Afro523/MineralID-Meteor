@@ -11,49 +11,44 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 export default class Front extends Component {
 	constructor(props) {
 		super(props);
+		this.setHeight = this.setHeight.bind(this);
 		this.state = {
-			height: null
+			height: 0
 		};
 	}
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
+
 	setHeight(){
-
-		var targetDiv = this.props.mineral.minName + 'Ref';
-		var test = this.props.ref;
-		//console.log(this.refs[targetDiv]);
-		var childHeight = ReactDOM.findDOMNode(this.refs[targetDiv]);
-		//console.log(targetDiv + ' : '+childHeight.getComputedStyle);
-		//console.log(document.getElementById(this.props.mineral.minName + 'Front').clientHeight)
-		var computedStyles =  window.getComputedStyle(childHeight);
-		//console.log(computedStyles);
-		//var childDimensions = childHeight.getBoundingClientRect();
-		//console.log(childDimensions);
-		console.log(ReactDOM.findDOMNode(this.refs[this.props.mineral.minName + 'Ref']).height)
+		let cardHeight = ReactDOM.findDOMNode(this.refs[this.props.mineral.minName + 'Ref']).clientHeight;
+		console.log(cardHeight);
+		this.setState({
+			height: cardHeight
+		});
 	}
 
-	componentWillMount() {
-		//this.setHeight();
+	componentDidMount() {
+		setTimeout( () => this.setHeight(), 10);
 	}
-
-	shouldComponentUpdate(nextProps, nextState){
-		
-		this.setHeight();
-	}
+	
 	render() {
 		var frontRef = this.props.mineral.minName + 'Ref';
 		return (
-				<Card className='front tile'>
+				
+				<Card id={this.props.mineral.minName + 'Front'} className='front tile'>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
 						overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title={this.props.mineral.minName} />}
 						>
-							<img id={this.props.mineral.minName + 'Front'} ref={frontRef} className='responsive-img' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
+						
+							<img ref={frontRef} className='responsive-img' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
+						
 					</CardMedia>
 				</Card>
+				
 
 		);
 	}

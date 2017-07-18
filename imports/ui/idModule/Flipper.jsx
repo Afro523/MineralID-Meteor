@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+
 //My Components
 import Front from './Front';
 import Back from './Back';
@@ -19,11 +20,16 @@ export default class Flipper extends Component {
 	}
 
 	render() {
+		
 		return (
 			<div className={"container flipper-container " + this.props.orientation}>
 				<div className={"container flipper" + (this.props.flipped ? " flipped" : "")}>
+
+
       			<Front mineral={this.props.mineral}/>
       			<Back mineral={this.props.mineral}/>
+      			
+
       		</div>
     	</div>
 		);
