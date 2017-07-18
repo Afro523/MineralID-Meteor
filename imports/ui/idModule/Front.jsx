@@ -21,7 +21,7 @@ export default class Front extends Component {
 	}
 	setHeight(){
 
-		var targetDiv = this.props.mineral.minName + 'Ref'
+		var targetDiv = this.props.mineral.minName + 'Ref';
 		var test = this.props.ref;
 		//console.log(this.refs[targetDiv]);
 		var childHeight = ReactDOM.findDOMNode(this.refs[targetDiv]);
@@ -31,22 +31,27 @@ export default class Front extends Component {
 		//console.log(computedStyles);
 		//var childDimensions = childHeight.getBoundingClientRect();
 		//console.log(childDimensions);
+		console.log(ReactDOM.findDOMNode(this.refs[this.props.mineral.minName + 'Ref']).height)
 	}
 
-	componentDidMount(){
-		console.log(document.getElementById(this.props.mineral.minName + 'Front').offsetHeight)
+	componentWillMount() {
+		//this.setHeight();
+	}
+
+	shouldComponentUpdate(nextProps, nextState){
+		
 		this.setHeight();
 	}
 	render() {
 		var frontRef = this.props.mineral.minName + 'Ref';
 		return (
-				<Card id={this.props.mineral.minName + 'Front'} ref={frontRef} className='front tile'>
+				<Card className='front tile'>
 					<CardMedia
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
 						overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title={this.props.mineral.minName} />}
 						>
-							<img className='img-responsive' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
+							<img id={this.props.mineral.minName + 'Front'} ref={frontRef} className='responsive-img' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
 					</CardMedia>
 				</Card>
 
