@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlipCard from './FlipCard';
-import FlipCard2 from './FlipCard2';
 
 const exampleStyle = {
 	marginTop:'10px',
