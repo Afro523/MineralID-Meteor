@@ -13,22 +13,31 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 export default class Flipper extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+      		height: 400,
+    	};
 	}
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
+	setHeight(incHeight){
+		this.setState({
+			height:incHeight 
+		});
+	}
+
 	render() {
 		
 		return (
-			<div className={"container flipper-container " + this.props.orientation}>
+			<div className={"container flipper-container " + this.props.orientation} style={{height:this.state.height}}>
 				<div className={"container flipper" + (this.props.flipped ? " flipped" : "")}>
 
 
-      			<Front mineral={this.props.mineral}/>
+      			<Front handleHeight={this.setHeight.bind(this)} mineral={this.props.mineral}/>
       			<Back mineral={this.props.mineral}/>
-      			
+
 
       		</div>
     	</div>
