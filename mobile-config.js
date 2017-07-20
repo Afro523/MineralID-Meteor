@@ -29,7 +29,14 @@ App.icons({
 App.launchScreens({
   //'iphone': 'splash/Default~iphone.png',
   //'iphone_2x': 'splash/Default@2x~iphone.png',
-  // More screen sizes and platforms...
+	'android_mdpi_portrait': 'splash/android_mdpi_portrait.png',
+	'android_mdpi_landscape': 'splash/android_mdpi_landscape.png',
+	'android_hdpi_portrait': 'splash/android_hdpi_portrait.png',
+	'android_hdpi_landscape': 'splash/android_hdpi_landscape.png',
+	'android_xhdpi_portrait': 'splash/android_xhdpi_portrait.png',
+	'android_xhdpi_landscape': 'splash/android_xhdpi_landscape.png',
+	'android_xxhdpi_portrait': 'splash/android_xxhdpi_portrait.png',
+	'android_xxhdpi_landscape': 'splash/android_xxhdpi_landscape.png',
 });
 // Set PhoneGap/Cordova preferences.
 App.setPreference('BackgroundColor', '0xff0000ff');
