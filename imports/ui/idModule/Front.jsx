@@ -49,13 +49,9 @@ export default class Front extends Component {
 						overlayStyle={{paddingTop:'0px'}}
 						overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title={this.props.mineral.minName} />}
 						>
-						
-							<img style={{maxHeight:'500px'}} className='responsive-img' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
-						
+						<img style={{maxHeight:'500px'}} className='responsive-img' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
 					</CardMedia>
 				</Card>
-				
-
 		);
 	}
 }
