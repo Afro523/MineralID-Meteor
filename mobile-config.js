@@ -1,7 +1,7 @@
 // This section sets up some basic app metadata, the entire section is optional.
 App.info({
   id: 'com.example.josh.mineral',
-  name: 'Mineral I.D.',
+  name: 'Mineral Pocket Guide.',
   description: 'Educational app for mineralology',
   author: 'Joshua Resnick',
   email: 'contact@example.com',

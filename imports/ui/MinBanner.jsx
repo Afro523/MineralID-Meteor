@@ -31,7 +31,7 @@ export default class MinBanner extends Component {
 					<AppBar
 						style={{position:'fixed'}}
 						iconElementLeft={<IconButton onClick={browserHistory.goBack}><Back/></IconButton>}
-						title="Mineral ID"
+						title="Mineral Pocket Guide"
 					/>
 				</div>
 			</div>

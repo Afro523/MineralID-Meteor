@@ -23,12 +23,12 @@ export default class Front extends Component {
 		let cardHeight = ReactDOM.findDOMNode(this.refs[minName + 'Ref']).clientHeight;
 		console.log(cardHeight);
 
-		//adds 25 pixels to hold overlay 
+		//adds 25 pixels to hold overlay
 		this.props.handleHeight(cardHeight+25);
 	}
 
 	componentDidMount() {
-		setTimeout( () => this.setHeight(), 500);
+		setTimeout( () => this.setHeight(), 100);
 		window.addEventListener("orientationchange", this.setHeight);
 		window.addEventListener("resize", this.setHeight);
 	}
@@ -37,11 +37,11 @@ export default class Front extends Component {
         window.removeEventListener("orientationchange", this.setHeight);
         window.removeEventListener("resize", this.setHeight);
     }
-	
+
 	render() {
 		var frontRef = this.props.mineral.minName + 'Ref';
 		return (
-				
+
 				<Card id={this.props.mineral.minName + 'Front'} className='front tile'>
 					<CardMedia
 						ref={frontRef}

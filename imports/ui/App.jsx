@@ -23,6 +23,7 @@ const buttonStyles ={
 	height:'auto',
 	textAlign:'center',
 	padding:'0px',
+	border:'2px black solid'
 };
 
 // App component - represents the whole app
@@ -44,33 +45,34 @@ export default class App extends Component {
 				<div className="container-fluid">
 					<AppBar
 						showMenuIconButton={false}
-						title="Mineral ID"
+						title="Mineral Pocket Guide"
 					/>
 					<div style={{
 						display:'flex',
 						flexWrap:'wrap',
-						justifyContent:'space-around',
+						justifyContent:'space-between',
 						alignItems:'center',
+						marginTop: '40px',
 					}}>
 						<Link
 							to="/id"
-							className="waves-effect waves-light btn"
+							className="waves-effect waves-light"
 							style={buttonStyles}>
-							<div>Mineral <br/> I.D.</div>
+							<p>Mineral <br/> I.D.</p>
 								<Page style={iconStyles}/>
 						</Link>
 						<Link
 							to="/list"
-							className="waves-effect waves-light btn"
+							className="waves-effect waves-light "
 							style={buttonStyles}>
-							<div>Mineral <br/> DB</div>
+							<p>Mineral <br/> DB</p>
 								<List style={iconStyles}/>
 						</Link>
 						<Link
 							to="/props"
-							className="waves-effect waves-light btn"
+							className="waves-effect waves-light "
 							style={buttonStyles}>
-							<div>Physical Properties</div>
+							<p>Physical <br/> Properties</p>
 								<Board style={iconStyles}/>
 						</Link>
 						<p style={{position:'fixed', bottom:10, fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
