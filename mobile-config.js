@@ -1,11 +1,10 @@
 // This section sets up some basic app metadata, the entire section is optional.
 App.info({
-  id: 'com.example.josh.mineral',
+  id: 'com.meteor.josh.mineral',
   name: 'Mineral Pocket Guide.',
   description: 'Educational app for discovering and learning about mineralology',
   author: 'Joshua Resnick',
-  email: 'contact@example.com',
-  website: 'http://example.com'
+  email: 'Jresnick.public@gmail.com'
 });
 // Set up resources such as icons and launch screens.
 App.icons({
