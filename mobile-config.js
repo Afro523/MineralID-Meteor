@@ -8,7 +8,7 @@ App.info({
 });
 // Set up resources such as icons and launch screens.
 App.icons({
-  'iphone_2x': 'icons/icon-120.png',
+  	'iphone_2x': 'icons/icon-120.png',
 	'iphone_3x': 'icons/icon-180.png',
 	'ipad ': 'icons/icon-76.png',
 	'ipad_2x': 'icons/icon-152.png',
@@ -26,8 +26,15 @@ App.icons({
 });
 
 App.launchScreens({
-  //'iphone': 'splash/Default~iphone.png',
-  //'iphone_2x': 'splash/Default@2x~iphone.png',
+  	'iphone_2x': 'splash/iphone2.png',
+	'iphone5': 'splash/iphone5.png',
+	'iphone6': 'splash/iphone6.png',
+	'iphone6p_portrait': 'splash/iphone6p_portrait.png',
+	'iphone6p_landscape': 'splash/iphone6p_landscape.png',
+	'ipad_portrait': 'splash/ipad_portrait.png',
+	'ipad_portrait_2x': 'splash/ipad_portrait_2x.png',
+	'ipad_landscape': 'splash/ipad_landscape.png',
+	'ipad_landscape_2x': 'splash/ipad_landscape_2x.png',
 	'android_mdpi_portrait': 'splash/android_mdpi_portrait.png',
 	'android_mdpi_landscape': 'splash/android_mdpi_landscape.png',
 	'android_hdpi_portrait': 'splash/android_hdpi_portrait.png',
