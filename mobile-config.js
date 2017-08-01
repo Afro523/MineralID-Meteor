@@ -10,17 +10,8 @@ App.info({
 App.icons({
   'iphone_2x': 'icons/icon-120.png',
 	'iphone_3x': 'icons/icon-180.png',
-	'ipad ': 'icons/icon-76.png',
 	'ipad_2x': 'icons/icon-152.png',
 	'ipad_pro': 'icons/icon-167.png',
-	'ios_settings ': 'icons/icon-29.png',
-	'ios_settings_2x ': 'icons/icon-58.png',
-	'ios_settings_3x ': 'icons/icon-87.png',
-	'ios_spotlight ': 'icons/icon-40.png',
-	'ios_spotlight_2x ': 'icons/icon-80.png',
-	'android_mdpi ': 'icons/icon-48.png',
-	'android_hdpi ': 'icons/icon-72.png',
-	'android_xhdpi ': 'icons/icon-96.png',
 	'android_xxhdpi': 'icons/icon-144.png',
 	'android_xxxhdpi': 'icons/icon-192.png',
 });
