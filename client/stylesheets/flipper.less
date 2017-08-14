@@ -3,7 +3,7 @@
 .transform-style(@style:preserve-3d) { transform-style:@style; -webkit-transform-style:@style; -moz-transform-style:@style; -ms-transform-style:@style; }
 .backface-visibility-hidden { backface-visibility:hidden; -webkit-backface-visibility:hidden; }
 .perspective(@amount: 1000px) { perspective:@amount; -webkit-perspective:@amount; -moz-perspective:@amount; -ms-perspective:@amount; }
-.tile { color:black; padding:15px; box-sizing:border-box; -moz-box-sizing:border-box; }
+.tile {padding:15px; box-sizing:border-box; -moz-box-sizing:border-box; }
 
 .flipper-container {
   width:100%;
@@ -38,12 +38,6 @@
       background:white;
 
       /* front tile styles go here! */
-    }
-
-    .back {
-      background:white;
-
-      /* back tile styles go here! */
     }
   }
 }

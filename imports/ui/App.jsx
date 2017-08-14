@@ -19,11 +19,12 @@ const iconStyles ={
 };
 
 const buttonStyles ={
-	width:'30%',
+	width:'40%',
 	height:'auto',
 	textAlign:'center',
 	padding:'0px',
-	border:'2px black solid'
+	border:'2px black solid',
+	margin: '10px'
 };
 
 // App component - represents the whole app
@@ -50,34 +51,33 @@ export default class App extends Component {
 					<div style={{
 						display:'flex',
 						flexWrap:'wrap',
-						justifyContent:'space-between',
+						justifyContent:'center',
 						alignItems:'center',
-						marginTop: '40px',
+						marginTop: '40px'
 					}}>
 						<Link
 							to="/id"
 							className="waves-effect waves-light"
 							style={buttonStyles}>
-							<p>Mineral <br/> I.D.</p>
+							<p className='flow-text'>Mineral <br/> I.D.</p>
 								<Page style={iconStyles}/>
 						</Link>
 						<Link
 							to="/list"
 							className="waves-effect waves-light "
 							style={buttonStyles}>
-							<p>Mineral <br/> DB</p>
+							<p className='flow-text'>Mineral <br/> DB</p>
 								<List style={iconStyles}/>
 						</Link>
 						<Link
 							to="/props"
 							className="waves-effect waves-light "
 							style={buttonStyles}>
-							<p>Physical <br/> Properties</p>
+							<p className='flow-text'>Physical <br/> Properties</p>
 								<Board style={iconStyles}/>
 						</Link>
-						<p style={{position:'fixed', bottom:10, fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
-
 					</div>
+					<p style={{textAlign:'center', fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
 				</div>
       </MuiThemeProvider>
 		);

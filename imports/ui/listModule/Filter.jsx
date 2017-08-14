@@ -127,31 +127,31 @@ export default class Filter extends React.Component {
 				>
 					<FilterList />
 				</FloatingActionButton>
-        <Drawer
+        		<Drawer
 					docked={false}
 					modal={false}
 					open={this.state.open}
 					disableSwipeToOpen = {true}
-					containerStyle={{textAlign:'center', backgroundColor:'white'}}
+					containerStyle={{textAlign:'center', backgroundColor:'white', height:'100%'}}
 					>
 						<div style={{backgroundColor:deepPurple900, height:'64px', display:'flex', alignItems:'center', justifyContent:'center'}}>
 							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Sort By:</h4>
 						</div>
 
 					<Divider style={{backgroundColor:grey900}} />
-						<MenuItem>
-							Mineral Color
-						</MenuItem>
-						<DropDownMenu
-							maxHeight={300}
-							value={this.props.currColor}
-							underlineStyle={{borderColor:deepPurple900}}
-							iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
-							onChange={(event,index, value) => this.props.handleColor(value)}
-							selectedMenuItemStyle={{color:purpleA400}}
-							>
-								{colorMenuItem}
-						</DropDownMenu>
+					<MenuItem>
+						Mineral Color
+					</MenuItem>
+					<DropDownMenu
+						maxHeight={300}
+						value={this.props.currColor}
+						underlineStyle={{borderColor:deepPurple900}}
+						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
+						onChange={(event,index, value) => this.props.handleColor(value)}
+						selectedMenuItemStyle={{color:purpleA400}}
+						>
+							{colorMenuItem}
+					</DropDownMenu>
 
 					<Divider style={{backgroundColor:grey900}} />
 					<MenuItem>
@@ -211,18 +211,17 @@ export default class Filter extends React.Component {
 					</DropDownMenu>
 					<Divider style={{backgroundColor:grey900}} />
 
-						<RaisedButton
-							style={{ width:'90%', marginTop:'5px'}}
-							labelColor={deepPurple900}
-							label="Close"
-							primary={true}
-							labelPosition="before"
-							icon={<Clear />}
-							onClick={this.cancelFilter.bind(this)}
+					<RaisedButton
+						style={{ width:'90%', marginTop:'10px'}}
+						labelColor={deepPurple900}
+						label="Close"
+						primary={true}
+						labelPosition="before"
+						icon={<Clear />}
+						onClick={this.cancelFilter.bind(this)}
 						/>
-
-        </Drawer>
-      </div>
+				</Drawer>
+      		</div>
 		);
 	}
 }

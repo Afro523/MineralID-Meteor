@@ -12,7 +12,6 @@ import MinItem from './MinItem';
 import Filter from './Filter';
 import Infinite from 'react-infinite';
 
-
 //MUI
 import CircularProgress from 'material-ui/CircularProgress';
 import myBaseTheme from '../../../client/myBaseTheme';
@@ -21,7 +20,6 @@ import {List} from 'material-ui/List';
 import MinBanner from '../MinBanner';
 
 export default class ListPage extends Component {
-
 
 	constructor(props) {
 		super(props);
@@ -242,59 +240,53 @@ export default class ListPage extends Component {
 
 	renderMinerals () {
 		//react-infinit-scroll
-		return this.data.minerals.map((mineral) => (
-			<MinItem key={mineral.minName} mineral={mineral}/>
-		));
+		if(this.state.mohMin === '0' && this.state.mohMax === '10' && this.state.currCat === 'None'
+			&& this.state.currLust === 'None' && this.state.currSearch === '' && this.state.currColor === 'None'){
+			return(
+				<div style={{textAlign:'center', marginTop:'50%', color:'grey'}}>
+					You currently have nothing in your search
+					<br/>
+					Either enter text above or use the filter below
+				</div>
+				)
+		} else {
+			return this.data.minerals.map((mineral) => (
+				<MinItem key={mineral.minName} mineral={mineral}/>
+			));	
+		}
 	}
 
 	render() {
-		if(!this.data.ready){
-			return (
-				<div className="container-fluid">
-					<MinBanner/>
-					<div style={{textAlign: 'center'}}>
-						<CircularProgress
-							style={{marginTop:'30px'}}
-							size={300}
-							thickness={10}
-						/>
-					</div>
+		return (
+			<div className="container-fluid">
+				<MinBanner/>
+				<SearchBar
+					handleSearch={this.setChars.bind(this)}
+				/>
+				<Filter
+					mohMin={this.state.mohMin}
+					mohMax={this.state.mohMax}
+					currCat={this.state.currCat}
+					currLust={this.state.currLust}
+					currColor={this.state.currColor}
+					handleChar={this.setChar.bind(this)}
+					handleColor={this.setColor.bind(this)}
+					handleCat={this.setCat.bind(this)}
+					handleMohMin={this.setMohMin.bind(this)}
+					handleMohMax={this.setMohMax.bind(this)}
+					handleLust={this.setLust.bind(this)}
+				/>
+
+				<Infinite
+					useWindowAsScrollContainer={true}
+					elementHeight={40}
+					infiniteLoadBeginEdgeOffset={100}
+					preloadBatchSize={Infinite.containerHeightScaleFactor(2)}
+				>
+					{	this.renderMinerals()	}
+				</Infinite>
 			</div>
-			);
-		} else {
-
-			return (
-				<div className="container-fluid">
-					<MinBanner/>
-						<SearchBar
-							handleSearch={this.setChars.bind(this)}
-						/>
-						<Filter
-							mohMin={this.state.mohMin}
-							mohMax={this.state.mohMax}
-							currCat={this.state.currCat}
-							currLust={this.state.currLust}
-							currColor={this.state.currColor}
-							handleChar={this.setChar.bind(this)}
-							handleColor={this.setColor.bind(this)}
-							handleCat={this.setCat.bind(this)}
-							handleMohMin={this.setMohMin.bind(this)}
-							handleMohMax={this.setMohMax.bind(this)}
-							handleLust={this.setLust.bind(this)}
-						/>
-
-					<Infinite
-						useWindowAsScrollContainer={true}
-						elementHeight={40}
-						infiniteLoadBeginEdgeOffset={100}
-						preloadBatchSize={Infinite.containerHeightScaleFactor(2)}
-					>
-						{	this.renderMinerals()	}
-					</Infinite>
-
-				</div>
-			);
-		}
+		);
 	}
 }
 

@@ -21,14 +21,13 @@ export default class Front extends Component {
 	setHeight(){
 		let minName = this.props.mineral.minName;
 		let cardHeight = ReactDOM.findDOMNode(this.refs[minName + 'Ref']).clientHeight;
-		console.log(cardHeight);
 
 		//adds 25 pixels to hold overlay
 		this.props.handleHeight(cardHeight+25);
 	}
 
 	componentDidMount() {
-		setTimeout( () => this.setHeight(), 100);
+		setTimeout( () => this.setHeight(), 75);
 		window.addEventListener("orientationchange", this.setHeight);
 		window.addEventListener("resize", this.setHeight);
 	}
