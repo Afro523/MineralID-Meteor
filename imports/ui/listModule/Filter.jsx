@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
@@ -106,11 +107,11 @@ export default class Filter extends React.Component {
 		lustList = lustList.sort();
 
 		for (let i = 0; i< lustList.length; i++){
-			lustMenuItem.push(<div className='flow-text' style={{padding:'15px'}} value={lustList[i]} key={i}>{lustList[i]} </div>);
+			lustMenuItem.push(<FlatButton label={lustList[i]} key={i}/>);
 		}
 
 		//Throws a 'None' option to the top
-		lustMenuItem.unshift(<div value={'None'} key={lustMenuItem.length + 1} />);
+		lustMenuItem.unshift(<FlatButton label={'None'} key={lustMenuItem.length + 1} />);
 
 		return (
 			<div>
@@ -195,30 +196,16 @@ export default class Filter extends React.Component {
 						>
 							{catMenuItem}
 					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
-
-					<MenuItem>
-					Mineral Luster
-					</MenuItem>
-					<DropDownMenu
-						maxHeight={300}
-						value={this.props.currLust}
-						underlineStyle={{borderColor:deepPurple900}}
-						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
-						onChange={this.props.handleLust}
-						selectedMenuItemStyle={{color:purpleA400}}
-						>
-							{lustMenuItem}
-					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{backgroundColor:grey900, marginBottom:'5px'}} />
+					<div>Mineral Luster</div>
 					<SwipeableViews
+						animateHeight={true}
 						axis='y'
 						children={lustMenuItem}
-						resistance={true}
-						>
-					
-					</SwipeableViews>
-    				  <Divider style={{backgroundColor:grey900}} />
+						
+						onTransitionEnd={console.log()}
+						/>
+    				<Divider style={{backgroundColor:grey900}} />
 					<RaisedButton
 						style={{ width:'90%', marginTop:'10px'}}
 						labelColor={deepPurple900}
