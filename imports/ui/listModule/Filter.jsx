@@ -6,6 +6,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
+import SwipeableViews from 'react-swipeable-views';
 
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -105,11 +106,11 @@ export default class Filter extends React.Component {
 		lustList = lustList.sort();
 
 		for (let i = 0; i< lustList.length; i++){
-			lustMenuItem.push(<MenuItem value={lustList[i]} key={i} primaryText={lustList[i]}/>);
+			lustMenuItem.push(<div className='flow-text' style={{padding:'15px'}} value={lustList[i]} key={i}>{lustList[i]} </div>);
 		}
 
 		//Throws a 'None' option to the top
-		lustMenuItem.unshift(<MenuItem value={'None'} key={lustMenuItem.length + 1} primaryText={'None'}/>);
+		lustMenuItem.unshift(<div value={'None'} key={lustMenuItem.length + 1} />);
 
 		return (
 			<div>
@@ -128,18 +129,18 @@ export default class Filter extends React.Component {
 					<FilterList />
 				</FloatingActionButton>
         		<Drawer
-					docked={false}
+					docked={true}
 					modal={false}
 					open={this.state.open}
 					disableSwipeToOpen = {true}
 					containerStyle={{textAlign:'center', backgroundColor:'white', height:'100%'}}
 					>
 						<div style={{backgroundColor:deepPurple900, height:'64px', display:'flex', alignItems:'center', justifyContent:'center'}}>
-							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Sort By:</h4>
+							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Filter By:</h4>
 						</div>
 
 					<Divider style={{backgroundColor:grey900}} />
-					<MenuItem>
+					<MenuItem className = 'flow-text'>
 						Mineral Color
 					</MenuItem>
 					<DropDownMenu
@@ -210,7 +211,14 @@ export default class Filter extends React.Component {
 							{lustMenuItem}
 					</DropDownMenu>
 					<Divider style={{backgroundColor:grey900}} />
-
+					<SwipeableViews
+						axis='y'
+						children={lustMenuItem}
+						resistance={true}
+						>
+					
+					</SwipeableViews>
+    				  <Divider style={{backgroundColor:grey900}} />
 					<RaisedButton
 						style={{ width:'90%', marginTop:'10px'}}
 						labelColor={deepPurple900}
