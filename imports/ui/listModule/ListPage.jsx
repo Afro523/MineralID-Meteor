@@ -152,8 +152,8 @@ export default class ListPage extends Component {
 		return tempData;
 	}
 
-	setCat(event){
-		this.setState( {currCat:event.target.textContent});
+	setCat(incCat){
+		this.setState( {currCat:incCat});
 	}
 
 	setChar(event){
@@ -164,17 +164,16 @@ export default class ListPage extends Component {
 		this.setState( {currColor:value});
 	}
 
-	setMohMin(event){
-		this.setState( {mohMin: event.target.textContent});
+	setMohMin(incNum){
+		this.setState( {mohMin: incNum});
 	}
 
-	setMohMax(event){
-		this.setState( {mohMax: event.target.textContent});
+	setMohMax(incNum){
+		this.setState( {mohMax: incNum});
 	}
 
-
-	setLust(event){
-		this.setState( {currLust:event.target.textContent});
+	setLust(incLust){
+		this.setState( {currLust:incLust});
 	}
 
 	setChars(value){

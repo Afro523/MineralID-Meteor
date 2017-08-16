@@ -7,7 +7,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
-import SwipeableViews from 'react-swipeable-views';
+import SwipeableTabs from 'react-swipeable-tabs';
 
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -70,17 +70,17 @@ export default class Filter extends React.Component {
 		colorList = colorList.sort();
 
 		for (let i = 0; i< colorList.length; i++){
-			colorMenuItem.push(<MenuItem value={colorList[i]} key={i} primaryText={colorList[i]}/>);
+			colorMenuItem.push(<div value={colorList[i]} key={i} label={colorList[i]}>{colorList[i]}</div>);
 		}
 
 		//Throws a 'None' option to the top
-		colorMenuItem.unshift(<MenuItem value={'None'} key={colorMenuItem.length + 1} primaryText={'None'}/>);
+		colorMenuItem.unshift(<div value={'None'} key={colorMenuItem.length + 1} label={'None'}>None</div>);
 
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
-			minMenuItem.push(<MenuItem value={mohsScale[i]} key={i} primaryText={mohsScale[i]}/>);
+			minMenuItem.push(<div value={mohsScale[i]} key={i} label={mohsScale[i]}>{mohsScale[i]}</div>);
 		}
 		//Creates Category list for drop down
 		var catList = [
@@ -94,11 +94,11 @@ export default class Filter extends React.Component {
 		catList = catList.sort();
 
 		for (let i = 0; i< catList.length; i++){
-			catMenuItem.push(<MenuItem value={catList[i]} key={i} primaryText={catList[i]}/>);
+			catMenuItem.push(<div label={catList[i]} key={i}>{catList[i]}</div>);
 		}
 
 		//Throws a 'None' option to the top
-		catMenuItem.unshift(<MenuItem value={'None'} key={catMenuItem.length + 1} primaryText={'None'}/>);
+		catMenuItem.unshift(<div value={'None'} key={catMenuItem.length + 1} label={'None'}>None</div>);
 
 		//Creates Luster list for drop down
 		var lustList = [
@@ -107,11 +107,11 @@ export default class Filter extends React.Component {
 		lustList = lustList.sort();
 
 		for (let i = 0; i< lustList.length; i++){
-			lustMenuItem.push(<FlatButton label={lustList[i]} key={i}/>);
+			lustMenuItem.push(<div label={lustList[i]} key={i}> {lustList[i]} </div>);
 		}
 
 		//Throws a 'None' option to the top
-		lustMenuItem.unshift(<FlatButton label={'None'} key={lustMenuItem.length + 1} />);
+		lustMenuItem.unshift(<div label={'None'} key={lustMenuItem.length + 1} >None </div>);
 
 		return (
 			<div>
@@ -140,72 +140,88 @@ export default class Filter extends React.Component {
 							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Filter By:</h4>
 						</div>
 
-					<Divider style={{backgroundColor:grey900}} />
-					<MenuItem className = 'flow-text'>
-						Mineral Color
-					</MenuItem>
-					<DropDownMenu
-						maxHeight={300}
-						value={this.props.currColor}
-						underlineStyle={{borderColor:deepPurple900}}
-						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
-						onChange={(event,index, value) => this.props.handleColor(value)}
-						selectedMenuItemStyle={{color:purpleA400}}
-						>
-							{colorMenuItem}
-					</DropDownMenu>
-
-					<Divider style={{backgroundColor:grey900}} />
-					<MenuItem>
-						<p style={{margin:'0px', lineHeight:'30px'}}>
-							Moh's Scale of Hardness: <br/> Low - High
-						</p>
-					</MenuItem>
-					<DropDownMenu
-						maxHeight={300}
-						value={this.props.mohMin}
-						underlineStyle={{borderColor:deepPurple900}}
-						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
-						onChange={this.props.handleMohMin}
-						selectedMenuItemStyle={{color:purpleA400}}
-						>
-							{minMenuItem}
-					</DropDownMenu>
-					<DropDownMenu
-						maxHeight={300}
-						value={this.props.mohMax}
-						underlineStyle={{borderColor:deepPurple900}}
-						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
-						onChange={this.props.handleMohMax}
-						selectedMenuItemStyle={{color:purpleA400}}
-						>
-							{minMenuItem}
-					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900}} />
-
-					<MenuItem>
-						Mineral Category
-					</MenuItem>
-					<DropDownMenu
-						maxHeight={300}
-						value={this.props.currCat}
-						underlineStyle={{borderColor:deepPurple900}}
-						iconStyle={{paddingRight:'0px', paddingLeft:'0px', fill:deepPurple900}}
-						onChange={this.props.handleCat}
-						selectedMenuItemStyle={{color:purpleA400}}
-						>
-							{catMenuItem}
-					</DropDownMenu>
-					<Divider style={{backgroundColor:grey900, marginBottom:'5px'}} />
-					<div>Mineral Luster</div>
-					<SwipeableViews
-						animateHeight={true}
-						axis='y'
-						children={lustMenuItem}
-						
-						onTransitionEnd={console.log()}
+					<Divider style={{backgroundColor:grey900, marginBottom:'10px'}} />
+					<div>Mineral Color</div>
+					<SwipeableTabs
+						noFirstLeftPadding={false}
+        				noLastRightPadding={false}
+        				fitItems={false}
+        				borderWidthRatio={1}
+        				onItemClick={(item, index) => this.props.handleColor(item.element.props.label)}
+        				items={colorMenuItem}
+        				borderThickness={2}
+        				borderColor={deepPurple900}
+        				activeStyle={{
+        				  color: deepPurple900
+        				}}
 						/>
-    				<Divider style={{backgroundColor:grey900}} />
+					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
+					<div>
+						<p style={{margin:'0px', lineHeight:'30px'}}>
+							Moh's Scale of Hardness: 
+						</p>
+					</div>
+					<p>Low</p>
+					<SwipeableTabs
+					style= {{width:'50%'}}
+						noFirstLeftPadding={false}
+        				noLastRightPadding={false}
+        				fitItems={false}
+        				borderWidthRatio={1}
+        				onItemClick={(item, index) => this.props.handleMohMin(item.element.props.label)}
+        				items={minMenuItem}
+        				borderThickness={2}
+        				borderColor={deepPurple900}
+        				activeStyle={{
+        				  color: deepPurple900
+        				}}
+						/>
+						<p>High</p>
+					<SwipeableTabs
+						noFirstLeftPadding={false}
+        				noLastRightPadding={false}
+        				fitItems={false}
+        				borderWidthRatio={1}
+        				activeItemIndex={10}
+        				onItemClick={(item, index) => this.props.handleMohMax(item.element.props.label)}
+        				items={minMenuItem}
+        				borderThickness={2}
+        				borderColor={deepPurple900}
+        				activeStyle={{
+        				  color: deepPurple900
+        				}}
+						/>
+					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
+					<div>Mineral Category</div>
+					<SwipeableTabs
+						noFirstLeftPadding={false}
+        				noLastRightPadding={false}
+        				fitItems={false}
+        				borderWidthRatio={1}
+        				onItemClick={(item, index) => this.props.handleCat(item.element.props.label)}
+        				items={catMenuItem}
+        				borderThickness={2}
+        				borderColor={deepPurple900}
+        				activeStyle={{
+        				  color: deepPurple900
+        				}}
+						/>
+					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
+					<div>Mineral Luster</div>
+					<SwipeableTabs
+						noFirstLeftPadding={false}
+        				noLastRightPadding={false}
+        				fitItems={false}
+        				borderWidthRatio={1}
+        				onItemClick={(item, index) => this.props.handleLust(item.element.props.label)}
+        				items={lustMenuItem}
+        				borderThickness={2}
+        				borderColor={deepPurple900}
+        				activeStyle={{
+        				  color: deepPurple900
+        				}}
+						/>
+					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
 					<RaisedButton
 						style={{ width:'90%', marginTop:'10px'}}
 						labelColor={deepPurple900}
