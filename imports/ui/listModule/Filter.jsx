@@ -7,7 +7,9 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
+
 import SwipeableTabs from 'react-swipeable-tabs';
+import SwipeableViews from 'react-swipeable-views';
 
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -21,6 +23,11 @@ export default class Filter extends React.Component {
 		super(props);
 		this.state = {
 			open: false,
+			currLust: 'None',
+			currCat: 'None',
+			currColor:'None',
+			mohMin: '0',
+			mohMax: '10',
 		};
 	}
 
@@ -142,85 +149,69 @@ export default class Filter extends React.Component {
 
 					<Divider style={{backgroundColor:grey900, marginBottom:'10px'}} />
 					<div>Mineral Color</div>
-					<SwipeableTabs
-						noFirstLeftPadding={false}
-        				noLastRightPadding={false}
-        				fitItems={false}
-        				borderWidthRatio={1}
-        				onItemClick={(item, index) => this.props.handleColor(item.element.props.label)}
-        				items={colorMenuItem}
-        				borderThickness={2}
-        				borderColor={deepPurple900}
-        				activeStyle={{
-        				  color: deepPurple900
-        				}}
-						/>
+					<SwipeableViews
+						onTransitionEnd={() => this.props.handleColor(this.state.currColor)}
+						onChangeIndex={(index, indexLatest) => this.setState({currColor:colorMenuItem[index].props.label})}
+						containerStyle={{margin:'10px', width:'50%'}}
+						style={{display:'flex', justifyContent:'center', width:'60%', marginLeft:'20%'}}
+						hysteresis={0.2}
+
+						>
+ 						{colorMenuItem}
+ 					</SwipeableViews>
 					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
 					<div>
 						<p style={{margin:'0px', lineHeight:'30px'}}>
 							Moh's Scale of Hardness: 
 						</p>
 					</div>
-					<p>Low</p>
-					<SwipeableTabs
-					style= {{width:'50%'}}
-						noFirstLeftPadding={false}
-        				noLastRightPadding={false}
-        				fitItems={false}
-        				borderWidthRatio={1}
-        				onItemClick={(item, index) => this.props.handleMohMin(item.element.props.label)}
-        				items={minMenuItem}
-        				borderThickness={2}
-        				borderColor={deepPurple900}
-        				activeStyle={{
-        				  color: deepPurple900
-        				}}
-						/>
-						<p>High</p>
-					<SwipeableTabs
-						noFirstLeftPadding={false}
-        				noLastRightPadding={false}
-        				fitItems={false}
-        				borderWidthRatio={1}
-        				activeItemIndex={10}
-        				onItemClick={(item, index) => this.props.handleMohMax(item.element.props.label)}
-        				items={minMenuItem}
-        				borderThickness={2}
-        				borderColor={deepPurple900}
-        				activeStyle={{
-        				  color: deepPurple900
-        				}}
-						/>
+					<p>Low - High</p>
+					<div style={{display:'flex', justifyContent:'space-around'}}>
+						<SwipeableViews
+							onTransitionEnd={() => this.props.handleMohMin(this.state.mohMin)}
+							onChangeIndex={(index, indexLatest) => this.setState({mohMin:minMenuItem[index].props.label})}
+							axis={'y'}
+							animateHeight={true}
+							style={{width:'30%', margin:'10px', border:'2px solid #e0e0e0'}}
+							containerStyle={{margin:'10px'}}
+							>
+ 							{minMenuItem}
+ 						</SwipeableViews>
+							
+						<SwipeableViews
+							index={10}
+							onTransitionEnd={() => this.props.handleMohMax(this.state.mohMax)}
+							onChangeIndex={(index, indexLatest) => this.setState({mohMax:minMenuItem[index].props.label})}
+							axis={'y'}
+							animateHeight={true}
+							style={{width:'30%', margin:'10px', border:'2px solid #e0e0e0'}}
+							containerStyle={{margin:'10px'}}
+							>
+ 							{minMenuItem}
+ 						</SwipeableViews>
+ 					</div>
 					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
 					<div>Mineral Category</div>
-					<SwipeableTabs
-						noFirstLeftPadding={false}
-        				noLastRightPadding={false}
-        				fitItems={false}
-        				borderWidthRatio={1}
-        				onItemClick={(item, index) => this.props.handleCat(item.element.props.label)}
-        				items={catMenuItem}
-        				borderThickness={2}
-        				borderColor={deepPurple900}
-        				activeStyle={{
-        				  color: deepPurple900
-        				}}
-						/>
+					<SwipeableViews
+						onTransitionEnd={() => this.props.handleCat(this.state.currCat)}
+						onChangeIndex={(index, indexLatest) => this.setState({currCat:catMenuItem[index].props.label})}
+						containerStyle={{marginTop:'10px', marginBottom:'10px', width:'65%'}}
+						style={{display:'flex', justifyContent:'center', width:'60%', marginLeft:'20%'}}
+						hysteresis={0.2}
+						>
+ 						{catMenuItem}
+ 					</SwipeableViews>
 					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
 					<div>Mineral Luster</div>
-					<SwipeableTabs
-						noFirstLeftPadding={false}
-        				noLastRightPadding={false}
-        				fitItems={false}
-        				borderWidthRatio={1}
-        				onItemClick={(item, index) => this.props.handleLust(item.element.props.label)}
-        				items={lustMenuItem}
-        				borderThickness={2}
-        				borderColor={deepPurple900}
-        				activeStyle={{
-        				  color: deepPurple900
-        				}}
-						/>
+					<SwipeableViews
+						onTransitionEnd={() => this.props.handleLust(this.state.currLust)}
+						onChangeIndex={(index, indexLatest) => this.setState({currLust:lustMenuItem[index].props.label})}
+						containerStyle={{margin:'10px', width:'65%'}}
+						style={{display:'flex', justifyContent:'center', width:'60%', marginLeft:'20%'}}
+						hysteresis={0.2}
+						>
+ 						{lustMenuItem}
+ 					</SwipeableViews>
 					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
 					<RaisedButton
 						style={{ width:'90%', marginTop:'10px'}}
@@ -240,23 +231,10 @@ Filter.childContextTypes = {
 	muiTheme: PropTypes.object.isRequired,
 };
 
-Filter.defaultProps ={
-	currCat: 'None',
-	currChar: '-',
-	currLust:'None',
-	mohMin: '0',
-	mohMax: '10',
-};
-
 Filter.propTypes = {
 	handleCat: PropTypes.func.isRequired,
 	handleChar: PropTypes.func.isRequired,
 	handleMohMin: PropTypes.func.isRequired,
 	handleMohMax: PropTypes.func.isRequired,
 	handleLust: PropTypes.func.isRequired,
-	currCat: PropTypes.string.isRequired,
-	currLust: PropTypes.string.isRequired,
-	currChar: PropTypes.string.isRequired,
-	mohMin: PropTypes.string.isRequired,
-	mohMax: PropTypes.string.isRequired,
 };

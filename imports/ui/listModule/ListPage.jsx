@@ -173,6 +173,7 @@ export default class ListPage extends Component {
 	}
 
 	setLust(incLust){
+		console.log(incLust)
 		this.setState( {currLust:incLust});
 	}
 
