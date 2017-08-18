@@ -87,7 +87,7 @@ export default class Filter extends React.Component {
 		const mohsScale = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
-			minMenuItem.push(<div value={mohsScale[i]} key={i} label={mohsScale[i]}>{mohsScale[i]}</div>);
+			minMenuItem.push(<div style={{height:'40px',textAlign:'center', verticalAlign: 'middle', lineHeight:'40px'}} value={mohsScale[i]} key={i} label={mohsScale[i]}>{mohsScale[i]}</div>);
 		}
 		//Creates Category list for drop down
 		var catList = [
@@ -146,34 +146,31 @@ export default class Filter extends React.Component {
 						<div style={{backgroundColor:deepPurple900, height:'64px', display:'flex', alignItems:'center', justifyContent:'center'}}>
 							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Filter By:</h4>
 						</div>
-
 					<Divider style={{backgroundColor:grey900, marginBottom:'10px'}} />
 					<div>Mineral Color</div>
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleColor(this.state.currColor)}
 						onChangeIndex={(index, indexLatest) => this.setState({currColor:colorMenuItem[index].props.label})}
-						containerStyle={{margin:'10px', width:'50%'}}
-						style={{display:'flex', justifyContent:'center', width:'60%', marginLeft:'20%'}}
-						hysteresis={0.2}
-
+						slideStyle={{border:'2px solid '+deepPurple900, borderRadius:'5px'}}
 						>
  						{colorMenuItem}
  					</SwipeableViews>
-					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
+					<Divider style={{marginTop:'2px', marginBottom:'10px'}} />
 					<div>
 						<p style={{margin:'0px', lineHeight:'30px'}}>
 							Moh's Scale of Hardness: 
+							<br/>
+							Low - High
 						</p>
 					</div>
-					<p>Low - High</p>
+					
 					<div style={{display:'flex', justifyContent:'space-around'}}>
 						<SwipeableViews
 							onTransitionEnd={() => this.props.handleMohMin(this.state.mohMin)}
 							onChangeIndex={(index, indexLatest) => this.setState({mohMin:minMenuItem[index].props.label})}
 							axis={'y'}
 							animateHeight={true}
-							style={{width:'30%', margin:'10px', border:'2px solid #e0e0e0'}}
-							containerStyle={{margin:'10px'}}
+							style={{width:'30%', border:'2px solid '+deepPurple900}}
 							>
  							{minMenuItem}
  						</SwipeableViews>
@@ -184,8 +181,7 @@ export default class Filter extends React.Component {
 							onChangeIndex={(index, indexLatest) => this.setState({mohMax:minMenuItem[index].props.label})}
 							axis={'y'}
 							animateHeight={true}
-							style={{width:'30%', margin:'10px', border:'2px solid #e0e0e0'}}
-							containerStyle={{margin:'10px'}}
+							style={{width:'30%', border:'2px solid '+deepPurple900}}
 							>
  							{minMenuItem}
  						</SwipeableViews>
@@ -195,9 +191,7 @@ export default class Filter extends React.Component {
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleCat(this.state.currCat)}
 						onChangeIndex={(index, indexLatest) => this.setState({currCat:catMenuItem[index].props.label})}
-						containerStyle={{marginTop:'10px', marginBottom:'10px', width:'65%'}}
-						style={{display:'flex', justifyContent:'center', width:'60%', marginLeft:'20%'}}
-						hysteresis={0.2}
+						slideStyle={{border:'2px solid '+deepPurple900, borderRadius:'5px'}}
 						>
  						{catMenuItem}
  					</SwipeableViews>
@@ -206,9 +200,7 @@ export default class Filter extends React.Component {
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleLust(this.state.currLust)}
 						onChangeIndex={(index, indexLatest) => this.setState({currLust:lustMenuItem[index].props.label})}
-						containerStyle={{margin:'10px', width:'65%'}}
-						style={{display:'flex', justifyContent:'center', width:'60%', marginLeft:'20%'}}
-						hysteresis={0.2}
+						slideStyle={{border:'2px solid '+deepPurple900, borderRadius:'5px'}}
 						>
  						{lustMenuItem}
  					</SwipeableViews>
