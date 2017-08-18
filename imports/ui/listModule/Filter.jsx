@@ -76,17 +76,17 @@ export default class Filter extends React.Component {
 		colorList = colorList.sort();
 
 		for (let i = 0; i< colorList.length; i++){
-			colorMenuItem.push(<div value={colorList[i]} key={i} label={colorList[i]}>{colorList[i]}</div>);
+			colorMenuItem.push(<RaisedButton primary={true} value={colorList[i]} key={i} label={colorList[i]}/>);
 		}
 
 		//Throws a 'None' option to the top
-		colorMenuItem.unshift(<div value={'None'} key={colorMenuItem.length + 1} label={'None'}>None</div>);
+		colorMenuItem.unshift(<RaisedButton primary={true} value={'None'} key={colorMenuItem.length + 1} label={'None'}/>);
 
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
-			minMenuItem.push(<div style={{height:'40px',textAlign:'center', verticalAlign: 'middle', lineHeight:'40px'}} value={mohsScale[i]} key={i} label={mohsScale[i]}>{mohsScale[i]}</div>);
+			minMenuItem.push(<RaisedButton primary={true} style={{height:'40px',textAlign:'center', verticalAlign: 'middle', lineHeight:'40px'}} value={mohsScale[i]} key={i} label={mohsScale[i]}/>);
 		}
 		//Creates Category list for drop down
 		var catList = [
@@ -100,11 +100,11 @@ export default class Filter extends React.Component {
 		catList = catList.sort();
 
 		for (let i = 0; i< catList.length; i++){
-			catMenuItem.push(<div label={catList[i]} key={i}>{catList[i]}</div>);
+			catMenuItem.push(<RaisedButton primary={true} label={catList[i]} key={i}/>);
 		}
 
 		//Throws a 'None' option to the top
-		catMenuItem.unshift(<div value={'None'} key={catMenuItem.length + 1} label={'None'}>None</div>);
+		catMenuItem.unshift(<RaisedButton primary={true} value={'None'} key={catMenuItem.length + 1} label={'None'}/>);
 
 		//Creates Luster list for drop down
 		var lustList = [
@@ -113,11 +113,11 @@ export default class Filter extends React.Component {
 		lustList = lustList.sort();
 
 		for (let i = 0; i< lustList.length; i++){
-			lustMenuItem.push(<div label={lustList[i]} key={i}> {lustList[i]} </div>);
+			lustMenuItem.push(<RaisedButton primary={true} label={lustList[i]} key={i}/>);
 		}
 
 		//Throws a 'None' option to the top
-		lustMenuItem.unshift(<div label={'None'} key={lustMenuItem.length + 1} >None </div>);
+		lustMenuItem.unshift(<RaisedButton primary={true} label={'None'} key={lustMenuItem.length + 1} />);
 
 		return (
 			<div>
@@ -146,16 +146,15 @@ export default class Filter extends React.Component {
 							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Filter By:</h4>
 						</div>
 					<Divider style={{backgroundColor:grey900, marginBottom:'10px'}} />
-					<div>Mineral Color</div>
+					<div className='flow-text' style={{marginBottom:'5px'}}>Mineral Color</div>
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleColor(this.state.currColor)}
 						onChangeIndex={(index, indexLatest) => this.setState({currColor:colorMenuItem[index].props.label})}
-						slideStyle={{border:'2px solid '+deepPurple900, borderRadius:'5px'}}
 						>
  						{colorMenuItem}
  					</SwipeableViews>
-					<Divider style={{marginTop:'2px', marginBottom:'10px'}} />
-					<div>
+					<Divider style={{marginTop:'10px', marginBottom:'10px'}} />
+					<div className='flow-text' style={{marginBottom:'5px'}}>
 						<p style={{margin:'0px', lineHeight:'30px'}}>
 							Moh's Scale of Hardness: 
 							<br/>
@@ -169,7 +168,8 @@ export default class Filter extends React.Component {
 							onChangeIndex={(index, indexLatest) => this.setState({mohMin:minMenuItem[index].props.label})}
 							axis={'y'}
 							animateHeight={true}
-							style={{width:'30%', border:'2px solid '+deepPurple900}}
+							hysteresis={1.0}
+							threshold={9}
 							>
  							{minMenuItem}
  						</SwipeableViews>
@@ -180,30 +180,29 @@ export default class Filter extends React.Component {
 							onChangeIndex={(index, indexLatest) => this.setState({mohMax:minMenuItem[index].props.label})}
 							axis={'y'}
 							animateHeight={true}
-							style={{width:'30%', border:'2px solid '+deepPurple900}}
+							hysteresis={1.0}
+							threshold={9}
 							>
  							{minMenuItem}
  						</SwipeableViews>
  					</div>
-					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
-					<div>Mineral Category</div>
+					<Divider className='flow-text' style={{marginTop:'10px', marginBottom:'10px'}} />
+					<div className='flow-text' style={{marginBottom:'5px'}}>Mineral Category</div>
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleCat(this.state.currCat)}
 						onChangeIndex={(index, indexLatest) => this.setState({currCat:catMenuItem[index].props.label})}
-						slideStyle={{border:'2px solid '+deepPurple900, borderRadius:'5px'}}
 						>
  						{catMenuItem}
  					</SwipeableViews>
-					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
-					<div>Mineral Luster</div>
+					<Divider style={{marginTop:'10px', marginBottom:'10px'}} />
+					<div className='flow-text' style={{marginBottom:'5px'}}>Mineral Luster</div>
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleLust(this.state.currLust)}
 						onChangeIndex={(index, indexLatest) => this.setState({currLust:lustMenuItem[index].props.label})}
-						slideStyle={{border:'2px solid '+deepPurple900, borderRadius:'5px'}}
 						>
  						{lustMenuItem}
  					</SwipeableViews>
-					<Divider style={{marginTop:'1px', marginBottom:'10px'}} />
+					<Divider style={{marginTop:'10px', marginBottom:'10px'}} />
 					<RaisedButton
 						style={{ width:'90%', marginTop:'10px'}}
 						labelColor={deepPurple900}
