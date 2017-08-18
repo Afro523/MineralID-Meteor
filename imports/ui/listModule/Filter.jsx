@@ -8,7 +8,6 @@ import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 
-import SwipeableTabs from 'react-swipeable-tabs';
 import SwipeableViews from 'react-swipeable-views';
 
 import myBaseTheme from '../../../client/myBaseTheme';
