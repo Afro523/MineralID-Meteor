@@ -11,44 +11,25 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 export default class Front extends Component {
 	constructor(props) {
 		super(props);
-		this.setHeight = this.setHeight.bind(this);
 	}
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
-	setHeight(){
-		let minName = this.props.mineral.minName;
-		let cardHeight = ReactDOM.findDOMNode(this.refs[minName + 'Ref']).clientHeight;
-
-		//adds 25 pixels to hold overlay
-		this.props.handleHeight(cardHeight+25);
-	}
-
-	componentDidMount() {
-		setTimeout( () => this.setHeight(), 75);
-		window.addEventListener("orientationchange", this.setHeight);
-		window.addEventListener("resize", this.setHeight);
-	}
-
-	componentWillUnmount() {
-        window.removeEventListener("orientationchange", this.setHeight);
-        window.removeEventListener("resize", this.setHeight);
-    }
-
 	render() {
 		var frontRef = this.props.mineral.minName + 'Ref';
 		return (
 
-				<Card id={this.props.mineral.minName + 'Front'} className='front tile'>
+				<Card id={this.props.mineral.minName + 'Front'} className='front tile' style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
 					<CardMedia
+						className='minImg'
 						ref={frontRef}
 						overlayContentStyle={{paddingTop:'0px'}}
 						overlayStyle={{paddingTop:'0px'}}
 						overlay={<CardTitle style={{paddingTop:'0px', paddingBottom:'0px'}} title={this.props.mineral.minName} />}
 						>
-						<img style={{maxHeight:'500px'}} className='responsive-img' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
+						<img className='minImg' src={'/img/'+this.props.mineral.minName+'.jpg'}/>
 					</CardMedia>
 				</Card>
 		);
@@ -57,7 +38,6 @@ export default class Front extends Component {
 
 Front.propTypes ={
 	mineral: PropTypes.object.isRequired,
-	handleHeight: PropTypes.func.isRequired,
 };
 
 Front.childContextTypes = {

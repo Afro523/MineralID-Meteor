@@ -66,9 +66,13 @@ export default class WhatIsBtn extends Component {
 			);
 		case 'cleavage':
 			return(
-				<p>
-					This is cleavage
-				</p>
+				<div>
+					<h5>Definition:</h5>
+					The tendency of a mineral to break along flat planar surfaces as determined by the structure of its crystal lattice. These two-dimensional surfaces are known as cleavage planes and are caused by the alignment of weaker bonds between atoms in the crystal lattice. Cleavage planes are distinguished from fracture by being smooth and often having reflective surfaces.
+					<br/>
+					<h5>Usage:</h5>					
+						Observe the mineral, minerals that have "perfect" cleavage almost always break in a preferred direction. Minerals that have "good" cleavage will sometimes break in a particular direction, and other times, they may not.
+				</div>
 			);
 		default:
 		console.log('error in WhatIsBtn(switch)')

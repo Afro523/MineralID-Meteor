@@ -5,9 +5,24 @@
 .perspective(@amount: 1000px) { perspective:@amount; -webkit-perspective:@amount; -moz-perspective:@amount; -ms-perspective:@amount; }
 .tile {padding:15px; box-sizing:border-box; -moz-box-sizing:border-box; }
 
+@media only screen and (min-device-width : 320px) {
+  .flipper-container{
+    height:300px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px){
+  .flipper-container{
+    height:600px;
+  }
+  .minImg{
+    max-width: 500px !important ;
+  }
+}
+
 .flipper-container {
   width:100%;
-  //height:400px;
   margin-right:15px;
   margin-top: 20px;
   display:block; .perspective;

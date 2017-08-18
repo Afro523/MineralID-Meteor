@@ -168,8 +168,9 @@ export default class Filter extends React.Component {
 							onChangeIndex={(index, indexLatest) => this.setState({mohMin:minMenuItem[index].props.label})}
 							axis={'y'}
 							animateHeight={true}
-							hysteresis={1.0}
+							
 							threshold={9}
+							style={{overflowScroll:'true'}}
 							>
  							{minMenuItem}
  						</SwipeableViews>
@@ -180,8 +181,9 @@ export default class Filter extends React.Component {
 							onChangeIndex={(index, indexLatest) => this.setState({mohMax:minMenuItem[index].props.label})}
 							axis={'y'}
 							animateHeight={true}
-							hysteresis={1.0}
+							
 							threshold={9}
+							style={{overflowScroll:'true'}}
 							>
  							{minMenuItem}
  						</SwipeableViews>

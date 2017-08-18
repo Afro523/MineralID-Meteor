@@ -33,12 +33,8 @@ export default class Flipper extends Component {
 		return (
 			<div className={"container flipper-container " + this.props.orientation} style={{height:this.state.height}}>
 				<div className={"container flipper" + (this.props.flipped ? " flipped" : "")}>
-
-
-      			<Front handleHeight={this.setHeight.bind(this)} mineral={this.props.mineral}/>
+      			<Front className='frontFlip'  /*handleHeight={this.setHeight.bind(this)}*/ mineral={this.props.mineral}/>
       			<Back mineral={this.props.mineral}/>
-
-
       		</div>
     	</div>
 		);
