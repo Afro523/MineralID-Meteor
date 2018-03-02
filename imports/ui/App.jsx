@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router';
+
+import BottomNav from './BottomNav';
+
 //MUi stuff
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import myBaseTheme from '../../client/myBaseTheme';
@@ -78,6 +81,7 @@ export default class App extends Component {
 						</Link>
 					</div>
 					<p style={{textAlign:'center', fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
+					<BottomNav/>
 				</div>
       </MuiThemeProvider>
 		);
