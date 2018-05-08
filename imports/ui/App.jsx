@@ -81,7 +81,7 @@ export default class App extends Component {
 						</Link>
 					</div>
 					<p style={{textAlign:'center', fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
-					<BottomNav/>
+					{/* <BottomNav/> */}
 				</div>
       </MuiThemeProvider>
 		);
