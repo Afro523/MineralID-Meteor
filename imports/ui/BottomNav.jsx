@@ -47,7 +47,8 @@ export default class BottomNav extends Component {
           <BottomNavigationItem
           	style={{
           		width:'33%',
-          		display:'block'
+          		display:'block',
+				textAlign: 'center',
           	}}
             label="Identify"
             icon={recentsIcon}
