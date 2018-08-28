@@ -77,7 +77,9 @@ export default class App extends Component {
 								<Board style={iconStyles}/>
 						</Link>
 					</div>
-					<p style={{textAlign:'center', fontSize:'10px'}}><i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i></p>
+					<p style={{textAlign:'center', fontSize:'10px'}}>
+						<i>Images and data courtesy of https://www.dakotamatrix.com/mineralpedia</i>
+					</p>
 				</div>
       </MuiThemeProvider>
 		);

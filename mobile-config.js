@@ -1,7 +1,7 @@
 // This section sets up some basic app metadata, the entire section is optional.
 App.info({
   id: 'com.meteor.josh.mineral',
-  name: 'Mineral Pocket Guide.',
+  name: 'Mineral Pocket Guide',
   description: 'Educational app for discovering and learning about mineralology',
   author: 'Joshua Resnick',
   email: 'Jresnick.public@gmail.com'
@@ -12,8 +12,6 @@ App.icons({
 	'iphone_3x': 'icons/icon-180.png',
 	'ipad_2x': 'icons/icon-152.png',
 	'ipad_pro': 'icons/icon-167.png',
-	'android_xxhdpi': 'icons/icon-144.png',
-	'android_xxxhdpi': 'icons/icon-192.png',
 });
 
 App.launchScreens({
@@ -26,14 +24,6 @@ App.launchScreens({
 	'ipad_portrait_2x': 'splash/ipad_portrait_2x.png',
 	'ipad_landscape': 'splash/ipad_landscape.png',
 	'ipad_landscape_2x': 'splash/ipad_landscape_2x.png',
-	'android_mdpi_portrait': 'splash/android_mdpi_portrait.png',
-	'android_mdpi_landscape': 'splash/android_mdpi_landscape.png',
-	'android_hdpi_portrait': 'splash/android_hdpi_portrait.png',
-	'android_hdpi_landscape': 'splash/android_hdpi_landscape.png',
-	'android_xhdpi_portrait': 'splash/android_xhdpi_portrait.png',
-	'android_xhdpi_landscape': 'splash/android_xhdpi_landscape.png',
-	'android_xxhdpi_portrait': 'splash/android_xxhdpi_portrait.png',
-	'android_xxhdpi_landscape': 'splash/android_xxhdpi_landscape.png',
 });
 // Set PhoneGap/Cordova preferences.
 App.setPreference('HideKeyboardFormAccessoryBar', true);
