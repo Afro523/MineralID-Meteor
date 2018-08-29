@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 import MinBanner from '../MinBanner';
-
+import BottomNav from '../BottomNav';
 //MUI
 import myBaseTheme from '../../../client/myBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -19,6 +19,31 @@ export default class PropsPage extends Component {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
 	}
 
+	renderRouteBtns () {
+		let paths = [
+			{ name: 'Cleavage', path: 'cleavage'},
+			{ name: 'Crystal Habit', path: 'crystalhabit'},
+			{ name: 'Crystal System', path: 'crystalsystem'},
+			{ name: 'Fluorescence', path: 'fluorescence'},
+			{ name: 'Fracture', path: 'fracture'},
+			{ name: 'Hardness', path: 'hardness'},
+			{ name: 'Luster', path: 'luster'},
+			{ name: 'Streak', path: 'streak'}
+		]
+
+		return paths.map((pathObj) => (
+			<FlatButton style={{marginTop:'15px'}}>
+				<Link
+					style={{width:'100%'}}
+					to={`props/${pathObj.path}`}
+					className="waves-effect waves-light btn"
+				>
+					<div>{pathObj.name}</div>
+				</Link>
+			</FlatButton>
+		));	
+	}
+
 	render() {
 		return (
 			<div>
@@ -29,81 +54,15 @@ export default class PropsPage extends Component {
 				<p>
 					These are a list of the main physial properties which minerals are commonly defined by.
 				</p>
-				<div style={{display:'flex', flexDirection:'column'}}>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/cleavage"
-							className="waves-effect waves-light btn"
-						>
-							<div>Cleavage</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/crystalhabit"
-							className="waves-effect waves-light btn"
-						>
-							<div>Crystal Habit</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/crystalsystem"
-							className="waves-effect waves-light btn"
-						>
-							<div>Crystal System</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/fluorescence"
-							className="waves-effect waves-light btn"
-						>
-							<div>Fluorescence</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/fracture"
-							className="waves-effect waves-light btn"
-						>
-							<div>Fracture</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/hardness"
-							className="waves-effect waves-light btn"
-						>
-							<div>Hardness</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/luster"
-							className="waves-effect waves-light btn"
-						>
-							<div>Luster</div>
-						</Link>
-					</FlatButton>
-					<FlatButton style={{marginTop:'15px'}}>
-						<Link
-							style={{width:'65%'}}
-							to="/props/streak"
-							className="waves-effect waves-light btn"
-						>
-							<div>Streak</div>
-						</Link>
-					</FlatButton>
+				<div style={{
+					textAlign:'center',
+					padding: '0 20%',
+					paddingBottom: '60px'
+					}}>
+					{this.renderRouteBtns()}
 				</div>
 				</div>
+				<BottomNav/>
 			</div>
 		);
 	}

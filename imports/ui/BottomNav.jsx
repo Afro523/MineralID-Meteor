@@ -19,6 +19,7 @@ const nearbyIcon = <IconLocationOn />;
 export default class BottomNav extends Component {
 	constructor(props) {
 		super(props);
+		console.log(props);
 		this.state = {
 			selectedIndex: 0,
 		};
@@ -35,10 +36,11 @@ export default class BottomNav extends Component {
       <Paper
       	zDepth={1}
       	style={{
-			bottom:'0',
-			position:'fixed',
-			width:'100%'
-		}}
+					bottom:'0',
+					position:'fixed',
+					width:'100%',
+					zIndex:'1'
+				}}
       >
         <BottomNavigation
         	selectedIndex={this.state.selectedIndex}
@@ -48,34 +50,36 @@ export default class BottomNav extends Component {
           	style={{
           		width:'33%',
           		display:'block',
-				textAlign: 'center',
+							textAlign: 'center',
           	}}
             label="Identify"
             icon={recentsIcon}
             onClick={() => this.select(0)}
             containerElement={<Link to="/id"/>}
           >
-        	<Link
-				to="/id">
-			</Link>
           </BottomNavigationItem>
           <BottomNavigationItem
           	style={{
           		width:'33%',
-          		display:'block'
+							display:'block',
+							textAlign: 'center'
           	}}
             label="Database"
             icon={favoritesIcon}
-            onClick={() => this.select(1)}
-          />
+						onClick={() => this.select(1)}
+						containerElement={<Link to="/list"/>}
+          >
+					</BottomNavigationItem>
           <BottomNavigationItem
           	style={{
           		width:'33%',
-          		display:'block'
+							display:'block',
+							textAlign: 'center',
           	}}
             label="Learning"
             icon={nearbyIcon}
-            onClick={() => this.select(2)}
+						onClick={() => this.select(2)}
+						containerElement={<Link to="/props"/>}
           />
         </BottomNavigation>
       </Paper>
