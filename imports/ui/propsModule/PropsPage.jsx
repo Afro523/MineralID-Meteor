@@ -31,10 +31,13 @@ export default class PropsPage extends Component {
 			{ name: 'Streak', path: 'streak'}
 		]
 
-		return paths.map((pathObj) => (
-			<FlatButton style={{marginTop:'15px'}}>
+		return paths.map((pathObj, index) => (
+			<FlatButton 
+				style={{marginTop:'15px'}}
+				key={index}
+			>
 				<Link
-					style={{width:'100%'}}
+					style={{width:'60vw'}}
 					to={`props/${pathObj.path}`}
 					className="waves-effect waves-light btn"
 				>
@@ -62,7 +65,7 @@ export default class PropsPage extends Component {
 					{this.renderRouteBtns()}
 				</div>
 				</div>
-				<BottomNav/>
+				<BottomNav navPos={2}/>
 			</div>
 		);
 	}

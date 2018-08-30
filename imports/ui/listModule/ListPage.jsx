@@ -10,6 +10,7 @@ import {ReactMeteorData} from 'meteor/react-meteor-data';
 import SearchBar from './SearchBar';
 import MinItem from './MinItem';
 import Filter from './Filter';
+import BottomNav from '../BottomNav';
 import Infinite from 'react-infinite';
 
 //MUI
@@ -283,8 +284,9 @@ export default class ListPage extends Component {
 					infiniteLoadBeginEdgeOffset={100}
 					preloadBatchSize={Infinite.containerHeightScaleFactor(2)}
 				>
-					{	this.renderMinerals()	}
+					{ this.renderMinerals() }
 				</Infinite>
+				<BottomNav navPos={1}/>
 			</div>
 		);
 	}

@@ -19,9 +19,8 @@ const nearbyIcon = <IconLocationOn />;
 export default class BottomNav extends Component {
 	constructor(props) {
 		super(props);
-		console.log(props);
 		this.state = {
-			selectedIndex: 0,
+			selectedIndex: this.props.navPos,
 		};
 	}
 
@@ -29,6 +28,29 @@ export default class BottomNav extends Component {
 
 	getChildContext() {
 		return { muiTheme: getMuiTheme(myBaseTheme) };
+	}
+
+	renderNavItems(){
+		let btnArr = [
+			{label:'Identify', icon: recentsIcon, path:"/id"},
+			{label:'Database', icon: favoritesIcon, path:"/list"},
+			{label:'Learning', icon: nearbyIcon, path:"/props"}
+		];
+
+			return btnArr.map((btn, index) => (
+				<BottomNavigationItem
+						key={"nav"+index}
+          	style={{
+          		width:'33%',
+          		display:'block',
+							textAlign: 'center',
+          	}}
+            label={btn.label}
+            icon={btn.icon}
+            onClick={() => this.select(0)}
+            containerElement={<Link to={btn.path}/>}
+        	/>
+			));	
 	}
 
 	render() {
@@ -46,46 +68,16 @@ export default class BottomNav extends Component {
         	selectedIndex={this.state.selectedIndex}
         	style={{display:'flex'}}
         >
-          <BottomNavigationItem
-          	style={{
-          		width:'33%',
-          		display:'block',
-							textAlign: 'center',
-          	}}
-            label="Identify"
-            icon={recentsIcon}
-            onClick={() => this.select(0)}
-            containerElement={<Link to="/id"/>}
-          >
-          </BottomNavigationItem>
-          <BottomNavigationItem
-          	style={{
-          		width:'33%',
-							display:'block',
-							textAlign: 'center'
-          	}}
-            label="Database"
-            icon={favoritesIcon}
-						onClick={() => this.select(1)}
-						containerElement={<Link to="/list"/>}
-          >
-					</BottomNavigationItem>
-          <BottomNavigationItem
-          	style={{
-          		width:'33%',
-							display:'block',
-							textAlign: 'center',
-          	}}
-            label="Learning"
-            icon={nearbyIcon}
-						onClick={() => this.select(2)}
-						containerElement={<Link to="/props"/>}
-          />
+					{this.renderNavItems()}
         </BottomNavigation>
       </Paper>
     );
   }
 }
+
+BottomNav.propTypes = {
+	navPos: PropTypes.number.isRequired,
+};
 
 BottomNav.childContextTypes = {
 	muiTheme: PropTypes.object.isRequired,

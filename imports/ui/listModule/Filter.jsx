@@ -126,14 +126,14 @@ export default class Filter extends React.Component {
 						margin: 0,
 						top: 'auto',
 						right: 20,
-						bottom: 20,
+						bottom: 65,
 						left: 'auto',
 						position: 'fixed',
 						zIndex:2
 					}}
 					onTouchTap={this.handleToggle.bind(this)}
 				>
-					<FilterList />
+				<FilterList />
 				</FloatingActionButton>
         		<Drawer
 					docked={true}
@@ -206,7 +206,7 @@ export default class Filter extends React.Component {
  					</SwipeableViews>
 					<Divider style={{marginTop:'10px', marginBottom:'10px'}} />
 					<RaisedButton
-						style={{ width:'90%', marginTop:'10px'}}
+						style={{ width:'90%', marginTop:'10px', position:'absolute', bottom:'13px', left:'13px' }}
 						labelColor={deepPurple900}
 						label="Close"
 						primary={true}

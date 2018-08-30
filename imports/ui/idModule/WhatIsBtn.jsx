@@ -92,7 +92,7 @@ export default class WhatIsBtn extends Component {
 		return (
 			<div>
 				<FloatingActionButton
-					style={{marginTop:'20px', position:'fixed', bottom:20, right:10, zIndex:1000}}
+					style={{marginTop:'20px', position:'fixed', bottom:65, right:20, zIndex:1000}}
 					onClick={this.handleOpen.bind(this)}
 					>
 					<Help/>
