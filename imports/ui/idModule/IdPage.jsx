@@ -7,7 +7,7 @@ import MinBanner from '../MinBanner';
 import BottomNav from '../BottomNav';
 
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// 'material-ui/core/styles/getMuiTheme
 export default class IdPage extends Component {
 	constructor(props) {
 		super(props);

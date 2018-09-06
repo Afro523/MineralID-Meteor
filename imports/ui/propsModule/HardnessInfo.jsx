@@ -1,13 +1,13 @@
 //React
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Divider from 'material-ui/Divider';
+import Divider from '@material-ui/core/Divider';
 
 import MinBanner from '../MinBanner';
 
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {Table, TableBody, TableRow, TableRowColumn, TableHeader, TableHeaderColumn} from 'material-ui/Table';
+// 'material-ui/core/styles/getMuiTheme
+import {Table, TableBody, TableRow, TableRowColumn, TableHeader, TableHeaderColumn} from '@material-ui/core/Table';
 
 
 export default class HardnessInfo extends Component {

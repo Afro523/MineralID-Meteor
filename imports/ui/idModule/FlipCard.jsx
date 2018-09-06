@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Flipper from './Flipper'
 
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// 'material-ui/core/styles/getMuiTheme
 
 export default class FlipCard extends Component {
 	constructor(props) {

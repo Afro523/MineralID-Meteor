@@ -8,7 +8,7 @@ import Front from './Front';
 import Back from './Back';
 //MUi
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// 'material-ui/core/styles/getMuiTheme
 
 export default class Flipper extends Component {
 	constructor(props) {

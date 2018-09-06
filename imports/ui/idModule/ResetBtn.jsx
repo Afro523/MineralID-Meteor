@@ -3,10 +3,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import Snackbar from 'material-ui/Snackbar';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import Reset from 'material-ui/svg-icons/av/replay';
+// 'material-ui/core/styles/getMuiTheme
+import Snackbar from '@material-ui/core/Snackbar';
+// import FloatingActionButton from '@material-ui/core/FloatingActionButton';
+import Button from '@material-ui/core/Button';
+// import Reset from '@material-ui/core/icons/av/replay';
 const exampleStyle = {
 	marginTop:'10px'
 };
@@ -62,7 +63,8 @@ export default class ResetBtn extends Component {
 			<div
 				onClick={() => this.toastAndReset()}
 				>
-				<FloatingActionButton
+				<Button
+					variant="fab"
 					style={{
 						marginTop:'20px',
 						display:this.beVisible(this.props.currentQuestion),
@@ -73,7 +75,8 @@ export default class ResetBtn extends Component {
 					}}
 					>
 					<Reset/>
-				</FloatingActionButton>
+					<i class="material-icon">reset</i>
+				</Button>
 				<Snackbar
 					bodyStyle={{textAlign:'center'}}
           open={this.state.open}

@@ -2,11 +2,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import {Card, CardText, CardTitle} from 'material-ui/Card';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
-import Divider from 'material-ui/Divider';
+import {Card, CardText, CardTitle} from '@material-ui/core/Card';
+import {Table, TableBody, TableRow, TableRowColumn} from '@material-ui/core/Table';
+import Divider from '@material-ui/core/Divider';
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// 'material-ui/core/styles/getMuiTheme
 
 const tableStyle={
 	whiteSpace: 'pre-wrap',

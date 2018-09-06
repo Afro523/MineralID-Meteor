@@ -3,13 +3,12 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 //MUi
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import Help from 'material-ui/svg-icons/action/help';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+// import FloatingActionButton from '@material-ui/core/FloatingActionButton';
+// import Help from '@material-ui/core/icons/action/help';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {grey500} from 'material-ui/styles/colors';
+// 'material-ui/core/styles/getMuiTheme
 
 import FullScreenDialog from 'material-ui-fullscreen-dialog';
 
@@ -82,7 +81,7 @@ export default class WhatIsBtn extends Component {
 
 	render() {
 		const actions = [
-			<FlatButton
+			<Button
         label="Close"
         primary={true}
         onTouchTap={this.handleClose.bind(this)}
@@ -91,12 +90,14 @@ export default class WhatIsBtn extends Component {
 
 		return (
 			<div>
-				<FloatingActionButton
+				<Button
+					variant="fab"
 					style={{marginTop:'20px', position:'fixed', bottom:65, right:20, zIndex:1000}}
 					onClick={this.handleOpen.bind(this)}
 					>
-					<Help/>
-				</FloatingActionButton>
+					{/* <Help/> */}
+					<i class="material-icon">help</i>
+				</Button>
 				<FullScreenDialog
 					containerStyle={{ margin:'15px'}}
           title={'What is '+this.props.currentQuestion+'?'}

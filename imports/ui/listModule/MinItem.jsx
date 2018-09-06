@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 //Components
 import MinCard from './MinCard';
 //MUI
-import {ListItem} from 'material-ui/List';
-import Avatar from 'material-ui/Avatar';
-import Dialog from 'material-ui/Dialog';
-import RaisedButton from 'material-ui/RaisedButton';
-import {deepPurple200, grey300, grey500} from 'material-ui/styles/colors';
+import {ListItem} from '@material-ui/core/List';
+import Avatar from '@material-ui/core/Avatar';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
+// import {deepPurple200, grey300, grey500} from '@material-ui/core/styles/colors';
+import grey from '@material-ui/core/colors/grey';
+
+const lightGrey = grey[500];
+
 
 import FullScreenDialog from 'material-ui-fullscreen-dialog';
 
@@ -37,11 +41,12 @@ export default class MinItem extends Component {
 	render() {
 		const mineral =  this.props.mineral;
 		const actions = [
-			<RaisedButton
-        label="Close"
-        primary={true}
-        onTouchTap={this.handleClose.bind(this)}
-      />,
+			<Button
+				variant="contained"
+        		label="Close"
+        		primary={true}
+        		onTouchTap={this.handleClose.bind(this)}
+      		/>
 		];
 		return (
 			<div>
@@ -61,7 +66,7 @@ export default class MinItem extends Component {
 					onRequestClose={this.handleClose.bind(this)}
 					autoScrollBodyContent={true}
 					contentStyle={customContentStyle}
-					bodyStyle={{padding:'0px', borderTop:'2px solid', borderBottom:'2px solid', borderColor:grey500}}
+					bodyStyle={{padding:'0px', borderTop:'2px solid', borderBottom:'2px solid', borderColor:lightGrey}}
 				>
 				<MinCard mineral={mineral}/>
 			</FullScreenDialog>

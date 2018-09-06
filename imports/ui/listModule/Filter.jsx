@@ -1,21 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
-import Drawer from 'material-ui/Drawer';
-import Divider from 'material-ui/Divider';
+import Button from '@material-ui/core/Button';
+// import DropDownMenu from '@material-ui/core/DropDownMenu';
+import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
 
 import SwipeableViews from 'react-swipeable-views';
 
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import FilterList from 'material-ui/svg-icons/content/filter-list';
-import {deepPurple200, deepPurple300, deepPurple900, grey900, grey300, indigo100, indigo200, purpleA400} from 'material-ui/styles/colors';
-import Clear from 'material-ui/svg-icons/content/clear';
+// 'material-ui/core/styles/getMuiTheme
+// import FloatingActionButton from '@material-ui/core/FloatingActionButton';
+// import FilterList from '@material-ui/core/icons/content/filter-list';
+// import {deepPurple200, deepPurple300, deepPurple900, grey900, grey300, indigo100, indigo200, purpleA400} from '@material-ui/core/styles/colors';
+import deepPurple from '@material-ui/core/colors/deepPurple';
+import grey from '@material-ui/core/colors/grey';
+// import Clear from '@material-ui/core/icons/content/clear';
+
+const lightGrey = grey[900];
+const deeperPurper = deepPurple[900];
 
 export default class Filter extends React.Component {
 	constructor(props) {
@@ -76,17 +79,17 @@ export default class Filter extends React.Component {
 		colorList = colorList.sort();
 
 		for (let i = 0; i< colorList.length; i++){
-			colorMenuItem.push(<RaisedButton primary={true} value={colorList[i]} key={i} label={colorList[i]}/>);
+			colorMenuItem.push(<Button primary={true} value={colorList[i]} key={i} label={colorList[i]}/>);
 		}
 
 		//Throws a 'None' option to the top
-		colorMenuItem.unshift(<RaisedButton primary={true} value={'None'} key={colorMenuItem.length + 1} label={'None'}/>);
+		colorMenuItem.unshift(<Button primary={true} value={'None'} key={colorMenuItem.length + 1} label={'None'}/>);
 
 		//Creates Mohs Scale list for drop down
 		const mohsScale = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 		const minMenuItem = [];
 		for (let i = 0; i< mohsScale.length; i++){
-			minMenuItem.push(<RaisedButton primary={true} style={{height:'40px',textAlign:'center', verticalAlign: 'middle', lineHeight:'40px'}} value={mohsScale[i]} key={i} label={mohsScale[i]}/>);
+			minMenuItem.push(<Button primary={true} style={{height:'40px',textAlign:'center', verticalAlign: 'middle', lineHeight:'40px'}} value={mohsScale[i]} key={i} label={mohsScale[i]}/>);
 		}
 		//Creates Category list for drop down
 		var catList = [
@@ -100,11 +103,11 @@ export default class Filter extends React.Component {
 		catList = catList.sort();
 
 		for (let i = 0; i< catList.length; i++){
-			catMenuItem.push(<RaisedButton primary={true} label={catList[i]} key={i}/>);
+			catMenuItem.push(<Button primary={true} label={catList[i]} key={i}/>);
 		}
 
 		//Throws a 'None' option to the top
-		catMenuItem.unshift(<RaisedButton primary={true} value={'None'} key={catMenuItem.length + 1} label={'None'}/>);
+		catMenuItem.unshift(<Button primary={true} value={'None'} key={catMenuItem.length + 1} label={'None'}/>);
 
 		//Creates Luster list for drop down
 		var lustList = [
@@ -113,15 +116,16 @@ export default class Filter extends React.Component {
 		lustList = lustList.sort();
 
 		for (let i = 0; i< lustList.length; i++){
-			lustMenuItem.push(<RaisedButton primary={true} label={lustList[i]} key={i}/>);
+			lustMenuItem.push(<Button primary={true} label={lustList[i]} key={i}/>);
 		}
 
 		//Throws a 'None' option to the top
-		lustMenuItem.unshift(<RaisedButton primary={true} label={'None'} key={lustMenuItem.length + 1} />);
+		lustMenuItem.unshift(<Button primary={true} label={'None'} key={lustMenuItem.length + 1} />);
 
 		return (
 			<div>
-				<FloatingActionButton
+				<Button
+					variant="fab"
 					style={{
 						margin: 0,
 						top: 'auto',
@@ -134,7 +138,8 @@ export default class Filter extends React.Component {
 					onTouchTap={this.handleToggle.bind(this)}
 				>
 				<FilterList />
-				</FloatingActionButton>
+				<i className="material-icons">filter_list</i>
+				</Button>
         		<Drawer
 					docked={true}
 					modal={false}
@@ -142,10 +147,10 @@ export default class Filter extends React.Component {
 					disableSwipeToOpen = {true}
 					containerStyle={{textAlign:'center', backgroundColor:'white', height:'100%'}}
 					>
-						<div style={{backgroundColor:deepPurple900, height:'64px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+						<div style={{backgroundColor:deeperPurper, height:'64px', display:'flex', alignItems:'center', justifyContent:'center'}}>
 							<h4 style={{textAlign:'center', color:'white', margin:'0'}}>Filter By:</h4>
 						</div>
-					<Divider style={{backgroundColor:grey900, marginBottom:'10px'}} />
+					<Divider style={{backgroundColor:lightGrey, marginBottom:'10px'}} />
 					<div className='flow-text' style={{marginBottom:'5px'}}>Mineral Color</div>
 					<SwipeableViews
 						onTransitionEnd={() => this.props.handleColor(this.state.currColor)}
@@ -205,13 +210,13 @@ export default class Filter extends React.Component {
  						{lustMenuItem}
  					</SwipeableViews>
 					<Divider style={{marginTop:'10px', marginBottom:'10px'}} />
-					<RaisedButton
+					<Button
 						style={{ width:'90%', marginTop:'10px', position:'absolute', bottom:'13px', left:'13px' }}
-						labelColor={deepPurple900}
+						labelColor={deeperPurper}
 						label="Close"
 						primary={true}
 						labelPosition="before"
-						icon={<Clear />}
+						icon={<i className="material-icons">clear</i>}
 						onClick={this.cancelFilter.bind(this)}
 						/>
 				</Drawer>

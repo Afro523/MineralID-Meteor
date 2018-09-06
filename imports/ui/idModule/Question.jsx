@@ -1,7 +1,7 @@
 //React
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 //My Components
 import ResetBtn from './ResetBtn';
@@ -33,7 +33,8 @@ export default class Question extends Component {
 					<div>
 						<h3 style={{textAlign:'center'}}>What is the hardness of the mineral?</h3>
 						<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-							<RaisedButton
+							<Button
+								variant="contained"
 								labelPosition={'before'}
 								label={'Hard:'}
 								children={'Hardness > 5.5'}
@@ -42,7 +43,8 @@ export default class Question extends Component {
 								onClick={()=>this.setState({currentQuestion:'mhard', currentQuestionType:'color'})}
 							/>
 
-							<RaisedButton
+							<Button
+								variant="contained"
 								labelPosition={'before'}
 								label={'Soft:'}
 								children={'Hardness < 5.5'}
@@ -59,7 +61,8 @@ export default class Question extends Component {
 				<div>
 					<h3 style={{textAlign:'center'}}>What is the color of the mineral?</h3>
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Light'}
 							fullWidth={true}
@@ -67,7 +70,8 @@ export default class Question extends Component {
 							onClick={()=>this.setState({currentQuestion:'nmlight', currentQuestionType:'hardness'})}
 						/>
 
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Dark'}
 							fullWidth={true}
@@ -83,7 +87,8 @@ export default class Question extends Component {
 			<div>
 				<h3 style={{textAlign:'center'}}>What is the color of the mineral?</h3>
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Color:'}
 						children={'Grey - Dark Grey'}
@@ -92,7 +97,8 @@ export default class Question extends Component {
 						onClick={()=>this.setState({currentQuestion:'mharddg'})}
 					/>
 
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Color:'}
 						children={'other'}
@@ -109,7 +115,8 @@ export default class Question extends Component {
 				<div>
 					<h3 style={{textAlign:'center'}}>Other Distinctive Factors</h3>
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Magnetic:'}
 							children={'Attracted to magnets'}
@@ -118,7 +125,8 @@ export default class Question extends Component {
 							onClick={()=>this.setState({currentQuestion:'mharddgmag', isAnswer:true })}
 						/>
 
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Cubic Habit:'}
 							children={'Shows cubic crystals'}
@@ -135,35 +143,40 @@ export default class Question extends Component {
 				<div>
 					<h3 style={{textAlign:'center'}}>What is the Color of the mineral?</h3>
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Grey to Dark Grey'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({currentQuestion:'msoftgrey', isAnswer:true})}
 						/>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Yellow to Brownish Yellow'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({currentQuestion:'msoftyellow', isAnswer:true})}
 						/>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'White / Whiteish'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({currentQuestion:'msoftwhite', isAnswer:true})}
 						/>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Copper'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({currentQuestion:'msoftcopper', isAnswer:true})}
 						/>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Gold'}
 							fullWidth={true}
@@ -180,7 +193,8 @@ export default class Question extends Component {
 			<div>
 				<h3 style={{textAlign:'center'}}>What is the Hardness of the mineral?</h3>
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Hard:'}
 						children={'Hardness > 5.5'}
@@ -188,7 +202,8 @@ export default class Question extends Component {
 						style={btnStyle}
 						onClick={()=>this.setState({currentQuestion:'nmlighthard',  currentQuestionType:'cleavage'})}
 					/>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Soft:'}
 						children={'Hardness < 5.5'}
@@ -206,7 +221,8 @@ export default class Question extends Component {
 			<div>
 				<h3 style={{textAlign:'center'}}>What is the Hardness of the mineral?</h3>
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Hard:'}
 						children={'Hardness > 5.5'}
@@ -214,7 +230,8 @@ export default class Question extends Component {
 						style={btnStyle}
 						onClick={()=>this.setState({currentQuestion:'nmdarkhard',  currentQuestionType:'cleavage'})}
 					/>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Soft:'}
 						children={'Hardness < 5.5'}
@@ -232,14 +249,16 @@ export default class Question extends Component {
 			<div>
 				<h3 style={{textAlign:'center'}}>What is the Cleavage of the mineral?</h3>
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({currentQuestion:'nmlighthardgood', isAnswer:true})}
 					/>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Poor to Indistinct'}
 						fullWidth={true}
@@ -256,14 +275,16 @@ export default class Question extends Component {
 				<div>
 					<h3 style={{textAlign:'center'}}>What is the Cleavage of the mineral?</h3>
 					<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Excellent to Good'}
 							fullWidth={true}
 							style={btnStyle}
 							onClick={()=>this.setState({currentQuestion:'nmlightsoftgood', isAnswer:true})}
 						/>
-						<RaisedButton
+						<Button
+							variant="contained"
 							labelPosition={'before'}
 							label={'Poor to Indistinct'}
 							fullWidth={true}
@@ -280,14 +301,16 @@ export default class Question extends Component {
 			<div>
 				<h3 style={{textAlign:'center'}}>What is the Cleavage of the mineral?</h3>
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({currentQuestion:'nmdarkhardgood', isAnswer:true})}
 					/>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Poor to Indistinct'}
 						fullWidth={true}
@@ -304,14 +327,16 @@ export default class Question extends Component {
 			<div>
 				<h3 style={{textAlign:'center'}}>What is the Hardness of the mineral?</h3>
 				<div style={{display:'flex', flexWrap:'wrap', alignContent:'center'}}>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Excellent to Good'}
 						fullWidth={true}
 						style={btnStyle}
 						onClick={()=>this.setState({currentQuestion:'nmdarksoftgood', isAnswer:true})}
 					/>
-					<RaisedButton
+					<Button
+						variant="contained"
 						labelPosition={'before'}
 						label={'Poor to Indistinct'}
 						fullWidth={true}
@@ -326,13 +351,15 @@ export default class Question extends Component {
 					<div>
 						<h3 style={{textAlign:'center'}}>What is the luster of the mineral?</h3>
 						<div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-around', alignContent:'center'}}>
-							<RaisedButton
+							<Button
+								variant="contained"
 								label={'Metallic'}
 								fullWidth={true}
 								style={btnStyle}
 								onClick={()=>this.setState({currentQuestion:'m', currentQuestionType:'hardness'})}
 							/>
-							<RaisedButton
+							<Button
+								variant="contained"
 								label={'Non-Metallic'}
 								fullWidth={true}
 								style={btnStyle}

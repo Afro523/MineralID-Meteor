@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// 'material-ui/core/styles/getMuiTheme
 import FlipCard from './FlipCard';
 
 const exampleStyle = {

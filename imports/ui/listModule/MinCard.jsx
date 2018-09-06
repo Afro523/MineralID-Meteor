@@ -2,11 +2,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 //MUI
-import Paper from 'material-ui/Paper';
-import {Card, CardMedia, CardText} from 'material-ui/Card';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
-import Divider from 'material-ui/Divider';
-import {deepPurple200, deepPurple300, deepPurple900, grey900} from 'material-ui/styles/colors';
+import Paper from '@material-ui/core/Paper';
+import {Card, CardMedia, CardText} from '@material-ui/core/Card';
+import {Table, TableBody, TableRow, TableRowColumn} from '@material-ui/core/Table';
+import Divider from '@material-ui/core/Divider';
+// import {deepPurple200, deepPurple300, deepPurple900, grey900} from '@material-ui/core/styles/colors';
 
 
 const tableStyle={

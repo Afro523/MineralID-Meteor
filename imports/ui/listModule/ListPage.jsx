@@ -14,10 +14,10 @@ import BottomNav from '../BottomNav';
 import Infinite from 'react-infinite';
 
 //MUI
-import CircularProgress from 'material-ui/CircularProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {List} from 'material-ui/List';
+// 'material-ui/core/styles/getMuiTheme
+import {List} from '@material-ui/core/List';
 import MinBanner from '../MinBanner';
 
 export default class ListPage extends Component {

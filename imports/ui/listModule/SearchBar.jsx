@@ -2,9 +2,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 //Material UI
-import TextField from 'material-ui/TextField';
-import FontIcon from 'material-ui/FontIcon';
-import {indigo200} from 'material-ui/styles/colors';
+import TextField from '@material-ui/core/TextField';
+// import FontIcon from '@material-ui/core/FontIcon';
+// import {indigo200} from '@material-ui/core/styles/colors';
+import indigo from '@material-ui/core/colors/indigo';
+
+const indigo200 = indigo[200];
 
 export default class SearchBar extends Component {
 	constructor(props) {
@@ -28,7 +31,7 @@ export default class SearchBar extends Component {
 						alignItems:'center',
 						zIndex:5,
 						backgroundColor:indigo200}}>
-					<FontIcon style={{fontSize:'32px'}} className="material-icons">search</FontIcon>
+					<i style={{fontSize:'32px'}} className="material-icons">search</i>
 					<TextField
 						hintText="Search"
 						fullWidth={true}

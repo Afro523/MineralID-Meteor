@@ -6,9 +6,9 @@ import MinBanner from '../MinBanner';
 import BottomNav from '../BottomNav';
 //MUI
 import myBaseTheme from '../../../client/myBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import FlatButton from 'material-ui/FlatButton';
-import Divider from 'material-ui/Divider';
+// 'material-ui/core/styles/getMuiTheme
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 
 export default class PropsPage extends Component {
 	constructor(props) {
@@ -32,7 +32,7 @@ export default class PropsPage extends Component {
 		]
 
 		return paths.map((pathObj, index) => (
-			<FlatButton 
+			<Button 
 				style={{marginTop:'15px'}}
 				key={index}
 			>
@@ -43,7 +43,7 @@ export default class PropsPage extends Component {
 				>
 					<div>{pathObj.name}</div>
 				</Link>
-			</FlatButton>
+			</Button>
 		));	
 	}
 
